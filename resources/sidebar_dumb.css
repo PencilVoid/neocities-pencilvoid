@@ -1,0 +1,213 @@
+h1 {
+	color: navy ;
+	background : rgba(255, 255, 255, 0.75) ;
+	border : none ;
+	padding : 7px ;
+	text-decoration: none ;
+	text-align: center ;
+}
+h2 {
+	color: navy ;
+	background :rgba(255, 255, 255, 0.5) ;
+	border : none ;
+	padding : 7px ;
+	text-decoration: none ;
+	text-align: center;
+}
+h3 {
+	color: navy ;
+	background : rgba(255, 255, 255, 0.35) ;
+	border : none ;
+	padding : 7px ;
+	text-decoration: none ;
+	text-align: center;
+}
+bold {
+  font-weight : bold ;
+}
+ital {
+  font-style : italic ;
+}
+body {
+  background-color: #f49a48; /* Black */
+  background-image: linear-gradient(to top, #00ff99, #fff200);
+  background-image: url("sidebar.png");
+  background-repeat: repeat;
+}
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+div {
+	background: rgba(255, 255, 255, 0.5) ;
+	padding : 2 ;
+	border : none ;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 32, 0.4), 0 6px 20px 0 rgba(0, 0, 32, 0.2);
+}
+.fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	min-height: 300px;
+	max-width: 240px;
+	border : none ;
+	background: rgba(255, 255, 255, 0.5);
+	text-align: center
+}
+.absolute {
+	position: absolute;
+	top: 80px;
+	right: 0;
+	width: 200px;
+	height: 100px;
+	border: none;
+}
+.relative {
+	position: relative;
+	left: 0;
+	border: none;
+}
+.card {
+	background: #ff8989;
+	text-align: center;
+}
+nav {
+	position: fixed;
+	max-width: 25%;
+	margin: auto;
+	background: rgba(255, 255, 255, 0.5) ;
+	padding : 0 ;
+	border : 5px #000 ;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.gallery {
+	margin: auto;
+	border: 1px solid #ccc;
+	width: 512px;
+	background-image: url("/resources/showcasepane.png");
+}
+div.gallery:hover {
+	border: 1px solid #777;
+	margin: auto;
+}
+
+div.gallery img {
+	margin: auto;
+}
+
+.desc {
+	padding: 15px;
+	text-align: center;
+	margin: auto;
+}
+.srb2gallery {
+	margin: auto;
+	border: 1px solid #ccc;
+	background-image: url("/resources/showcasepane.png");
+  width: 50%;
+  padding: 5px;
+}
+
+div.srb2gallery img {
+	margin: auto;
+}
+
+.srb2desc {
+	padding: 15px;
+	text-align: center;
+	margin: auto;
+}
+a {
+	border : none ;
+	font-weight: 600;
+	text-decoration: underline;
+}
+hr {
+	 color : rgba(255, 255, 255, 0.75) ;
+	 border-style: solid;
+	 border-width: 1px;
+}
+p {
+	text-align: center ;
+	color: #140E21 ;
+}
+a {
+	text-align: center ;
+	background: rgb(240, 240, 240) ;
+	background: rgba(240, 240, 240, 0.5) ;
+}
+body {
+	text-align: center ;
+	color: darkslateblue ;
+}
+/* unvisited link */
+a:link {
+	color: dimgrey;
+}
+
+/* visited link */
+a:visited {
+	color: darkgrey;
+}
+
+/* mouse over link */
+a:hover {
+	color: darkgrey;
+}
+
+/* selected link */
+a:active {
+	color: navy;
+}
+a {
+	font-size: 100%;
+}
+p {
+	font-size: 100%;
+}
+body {
+  font-family: 'Tahoma', sans-serif;
+}
+p {
+  font-family: 'Tahoma', sans-serif;
+}
+h {
+  font-family: 'Tahoma', sans-serif;
+}
+iframe {
+  outline: none;
+  border-style: none;
+}
+
+/* The sidebar menu */
+.sidenav {
+    /*height: 100%; Full-height: remove this if you want "auto" height */
+    width: 240px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #f49a48; /* Black */
+    background-image: linear-gradient(to top, #00ff99, #fff200);
+    background-image: url("sidebar.png");
+    background-attachment: scroll;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10px ;
+    border-right: -6px solid cornsilk ;
+}
+
+/* Style page content */
+main {
+    margin-left: 240px; /* Same as the width of the sidebar */
+    padding: 0px ;
+    /*background: rgb(240, 240, 240) ;
+	  background: rgba(240, 240, 240, 0.25) ;*/
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+    
