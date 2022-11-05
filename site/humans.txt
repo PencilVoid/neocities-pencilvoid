@@ -1,6 +1,0 @@
-This site was mainly created by me, but I do have some people to thank.
-
-www.w3schools.com was a big help with HTML and CSS
-I would also like to thank my family and friends for supporting me with this project.
-
-This was shorter than I expected it to be at the time.
