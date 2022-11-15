@@ -126,10 +126,10 @@ body {
 #HCB_comment_box .home-desc,
 #HCB_comment_box .hcb_form_name_container,
 #HCB_comment_box .hcb_submit {
-  font-family: Overpass;
+	font-family: Overpass;
 	font-size: 14pt;
 }
-  
+
 /* Link Styling */
 a {
 	border: none;
