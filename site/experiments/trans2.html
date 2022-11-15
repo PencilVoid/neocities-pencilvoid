@@ -26,27 +26,27 @@
 			}
 			
 			body { 
-       opacity: 0;
-       transition: opacity .5s;
-      }
-      
-      body {
-        animation-duration: 1.15s;
-        animation-name: slidein;
-        animation-timing-function: cubic-bezier(0,.6,.6,1);
-      }
+				opacity: 0;
+				transition: opacity .5s;
+			}
+			
+			body {
+				animation-duration: 1.15s;
+				animation-name: slidein;
+				animation-timing-function: cubic-bezier(0,.6,.6,1);
+			}
 
-      @keyframes slidein {
-        from {
-          margin-left: 100%;
-          width: 100%;
-        } 
+			@keyframes slidein {
+				from {
+					margin-left: 100%;
+					width: 100%;
+				}
 
-        to {
-          margin-left: 0%;
-          width: 100%;
-        }
-      }
+				to{
+					margin-left: 0%;
+					width: 100%;
+				}
+			}
 		</style>
 		<script>
 			window.transitionToPage = function(href) {
