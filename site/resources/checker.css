@@ -8,17 +8,17 @@
 }
 @font-face {
 	font-family: "Inconsolata";
-	src: url(https://pencilvoid.neocities.org/resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf);
+	src: url(/resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf);
 	format("truetype");
 }
 @font-face {
 	font-family: "Overpass";
-	src: url(https://pencilvoid.neocities.org/resources/fonts/Overpass-VariableFont_wght.ttf);
+	src: url(/resources/fonts/Overpass-VariableFont_wght.ttf);
 	format("truetype");
 }
 @font-face {
 	font-family: "Overpass Mono";
-	src: url(https://pencilvoid.neocities.org/resources/fonts/OverpassMono-VariableFont_wght.ttf);
+	src: url(/resources/fonts/OverpassMono-VariableFont_wght.ttf);
 	format("truetype");
 }
 
@@ -38,11 +38,11 @@ em.ital {
 	font-style: italic;
 }
 em.bold-ital {
-  font-weight: bold;
+	font-weight: bold;
 	font-style: italic;
 }
 em.ital-bold {
-  font-weight: bold;
+	font-weight: bold;
 	font-style: italic;
 }
 
@@ -196,11 +196,11 @@ body {
 
 /* Horizontal Rule */
 hr {
-	 color: var(--hr-colour);
-	 display: block;
-	 border: none;
-	 height: 0;	
-	 border-style: double;
+	color: var(--hr-colour);
+	display: block;
+	border: none;
+	height: 0;	
+	border-style: double;
 }
 
 /*Division Styles*/
@@ -258,10 +258,10 @@ nav {
 
 /* Gallery Styling */
 div.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	height: max-content;
 	background-color: #fff;
 	background-color: rgba(255, 255, 255, 0.15);
@@ -289,7 +289,7 @@ div.gallery img {
 	.gallery {
 		width: 100%;
 	}
-} 
+}
 
 div.desc {
 	padding: 15px;
