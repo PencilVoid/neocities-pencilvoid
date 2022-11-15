@@ -7,24 +7,59 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
 		<link href="https://pencilvoid.neocities.org/resources/checker.css" rel="stylesheet" type="text/css" media="all">
 		<title>
-			Stylesheet testing
+			Transition page 2
 		</title>
 		<style>
 			:root {
-				--header-colour: #220029;
-				--bg-colour: #220029;
-				--bg-checkerdark: #42004E;
-				--bg-checkerlight: #680068;
-				--bg-triangle: #220029;
-				--sidebar-colour: #1C0023;
-				--text-colour: #FFEAFC;
-				--a-colour: #FF9EBC;
-				--a-visited-colour: #FF7FAC;
-				--a-hover-colour: #FBD1FF;
+				--header-colour: #18294F;
+				--bg-colour: #18294F;
+				--bg-checkerdark: #074156;
+				--bg-checkerlight: #196E64;
+				--bg-triangle: #18294F;
+				--sidebar-colour: #08193A;
+				--text-colour: #B2FFB2;
+				--a-colour: #8BFF56;
+				--a-visited-colour: #2CE06E;
+				--a-hover-colour: #B2FFB2;
 				--a-active-colour: #FFFFFF;
-				--hr-colour: #FF417D;
+				--hr-colour: #6CBF00;
 			}
+			
+			body { 
+       opacity: 0;
+       transition: opacity .5s;
+      }
+      
+      body {
+        animation-duration: 1.15s;
+        animation-name: slidein;
+        animation-timing-function: cubic-bezier(0,.6,.6,1);
+      }
+
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 100%;
+        } 
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
 		</style>
+		<script>
+			window.transitionToPage = function(href) {
+				document.querySelector('body').style.opacity = 0
+				setTimeout(function() { 
+					window.location.href = href
+				}, 500)
+			}
+
+			document.addEventListener('DOMContentLoaded', function(event) {
+				document.querySelector('body').style.opacity = 1
+			})
+		</script>
 	</head>
 
 	<body>
@@ -32,7 +67,7 @@
 		<main>
 			<header>
 				<h1>
-					Stylesheet Testing
+					Transition page 2
 				</h1>
 			</header>
 			<hr>
@@ -45,7 +80,7 @@
 			<h4>
 				Header 4
 			</h4>
-			<p>
+			<p><span onclick="transitionToPage('/experiments/trans1.html')">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget ligula nec nunc viverra venenatis in in neque. Aliquam gravida elementum magna, non egestas nulla. Nullam in neque elementum, aliquet mauris sit amet, hendrerit leo. Curabitur fringilla volutpat tortor in molestie. Sed eu rutrum magna, a imperdiet mauris. Fusce quis augue in ipsum tempor pellentesque. Sed rutrum gravida scelerisque. Sed at tempor lorem. Nunc aliquet nunc ac vehicula lobortis. Maecenas in lorem malesuada, commodo sapien id, luctus odio. Nullam sollicitudin nunc ac mollis bibendum. Sed nec mollis turpis. Pellentesque venenatis nunc et mi aliquam laoreet. Maecenas nulla eros, pharetra nec rutrum at, laoreet sed lectus. Donec fermentum nibh sit amet eros porta mattis. Nulla leo tellus, tempor ut elit a, facilisis malesuada dolor.
 				<br>
 				<bold>
@@ -61,7 +96,7 @@
 				</ital></bold>
 				<br>
 				Sed tincidunt laoreet hendrerit. Curabitur luctus maximus dui, et vestibulum sem egestas at. Praesent nunc sapien, lacinia consectetur blandit nec, ultrices vitae risus. Fusce vitae luctus massa. Aenean consectetur efficitur rhoncus. Etiam et tempor ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla non mauris eget risus commodo pretium. Pellentesque ultrices, dolor vel pretium laoreet, turpis mi lobortis erat, ut blandit odio purus at quam. In at mauris non eros egestas aliquet in in est. Proin lectus metus, viverra et tempor malesuada, congue eu dui. In nec nulla eget tortor fermentum sollicitudin. Aliquam erat volutpat. Integer eget neque sit amet urna egestas pretium sed non nisi. Donec volutpat sed lacus a eleifend. Integer lobortis libero et dui pharetra, eu bibendum lectus ultricies.
-			<p>
+			</span></p>
 			<hr>
 			<h4> Lists </h4>
 			<ul>
