@@ -17,7 +17,7 @@
 	format("truetype");
 }
 @font-face {
-	font-family: "Overpass Mono";
+	font-family: "OverpassMono";
 	src: url(/resources/fonts/OverpassMono-VariableFont_wght.ttf);
 	format("truetype");
 }
@@ -108,10 +108,16 @@ h4 {
 	font-stretch: 100%;
 }
 
-/*Body Text Styling*/
-
+/*Text Styling*/
 body {
 	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour);
+}
+
+code {
+	font-family: OverpassMono;
 	font-size: 14pt;
 }
 
@@ -136,10 +142,6 @@ a {
 	text-decoration: underline;
 }
 
-body {
-	text-align: left;
-	color: var(--text-colour);
-}
 /* unvisited link */
 a:link {
 	color: var(--a-colour);
