@@ -116,11 +116,6 @@ body {
 	color: var(--text-colour);
 }
 
-code {
-	font-family: OverpassMono;
-	font-size: 14pt;
-}
-
 #HCB_comment_box #hcb_form_content,
 #HCB_comment_box #hcb_form_email,
 #HCB_comment_box #hcb_form_name,
@@ -258,6 +253,20 @@ nav {
 	border: 5px #000;
 }
 
+span.code-inline {
+	font-family: OverpassMono;
+	font-size: 14pt;
+	background-color: var(--sidebar-colour);
+	padding: 2px;
+}
+
+div.code-block {
+	font-family: OverpassMono;
+	font-size: 14pt;
+	background-color: var(--sidebar-colour);
+	padding: 4px;
+}
+
 /* Gallery Styling */
 div.row {
 	display: flex;
@@ -298,7 +307,7 @@ div.desc {
 	text-align: center;
 }
 
-.desc {
+div.desc {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	text-align: center;
