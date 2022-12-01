@@ -204,10 +204,12 @@ hr {
 img {
 	display: inline;
 }
+/*
 div {
 	padding: 2px;
 	border: none;
 }
+*/
 .factDisplay {
 	display: inline;
 }
@@ -381,4 +383,8 @@ main {
 	padding: 0;
 	/*background: rgb(240, 240, 240);
 	background: rgba(240, 240, 240, 0.25);*/
+}
+div.content {
+	margin: 0 20%;
+	padding: 0;
 }
