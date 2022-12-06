@@ -1,7 +1,4 @@
-/* FINALLY organising this beast*/
-/* like some weird mid-october celebration */
-
-/*Typefaces*/
+/* --- Typefaces --- */
 @font-face {
 	font-family: DTM-Sans;
 	src: url(DTM-Sans.otf);
@@ -22,15 +19,7 @@
 	format("truetype");
 }
 
-/*Emphasis Types*/
-/*I'm going to stop using <bold> and <ital> and start using different classes of <em> instead. Their stylings will be left here in case I forget to remove <bold> and <ital> from any pages*/
-bold {
-	font-weight: bold;
-}
-ital {
-	font-style: italic;
-}
-
+/* --- Emphasis Types --- */
 em.bold {
 	font-weight: bold;
 }
@@ -46,7 +35,7 @@ em.ital-bold {
 	font-style: italic;
 }
 
-/*Headers*/
+/* --- Headers --- */
 h1 {
 	color: var(--header-colour);
 	background-color: white;
@@ -62,6 +51,7 @@ h1 {
 	font-weight: 750;
 	font-stretch: 135%;
 }
+
 h2 {
 	color: var(--header-colour);
 	background-color: white;
@@ -77,6 +67,7 @@ h2 {
 	font-weight: 650;
 	font-stretch: 125%;
 }
+
 h3 {
 	color: var(--text-colour);
 	background-color: white;
@@ -92,6 +83,7 @@ h3 {
 	font-weight: 550;
 	font-stretch: 112.5%;
 }
+
 h4 {
 	color: var(--text-colour);
 	background-color: white;
@@ -108,7 +100,7 @@ h4 {
 	font-stretch: 100%;
 }
 
-/*Text Styling*/
+/* --- Text Styling --- */
 body {
 	font-family: Overpass;
 	font-size: 14pt;
@@ -131,7 +123,12 @@ body {
 	font-size: 14pt;
 }
 
-/* Link Styling */
+.HCB_comment_box {
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Link Styling --- */
 a {
 	border: none;
 	text-decoration: underline;
@@ -156,6 +153,7 @@ a:hover {
 a:active {
 	color: var(--a-active-colour);
 }
+
 a::before { 
 	content: "[[";
 	opacity: 0.7;
@@ -181,7 +179,7 @@ a[nobrackets="true"]::before {
 	opacity: 0.7;
 }
 
-/*Background Gradient Pseudo-image*/
+/* --- Background Gradient Pseudo-image --- */
 body {
 	background-color: var(--bg-color);
 	background-color: var(--bg-checkerdark);
@@ -191,7 +189,7 @@ body {
 	background-attachment: fixed, scroll, scroll;
 }
 
-/* Horizontal Rule */
+/* --- Horizontal Rule --- */
 hr {
 	color: var(--hr-colour);
 	display: block;
@@ -200,51 +198,16 @@ hr {
 	border-style: double;
 }
 
-/*Division Styles*/
+/* --- Division Styles --- */
 img {
 	display: inline;
 }
-/*
-div {
-	padding: 2px;
-	border: none;
-}
-*/
-.factDisplay {
-	display: inline;
-}
-.fixed {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	min-height: 300px;
-	max-width: 240px;
-	border: none;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-	text-align: left
-}
-.absolute {
-	position: absolute;
-	top: 80px;
-	right: 0;
-	width: 200px;
-	height: 100px;
-	border: none;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-}
-.relative {
-	position: relative;
-	left: 0;
-	border: none;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-}
+
 .card {
 	background: #ff8989;
 	text-align: center;
 }
+
 nav {
 	position: fixed;
 	max-width: 25%;
@@ -269,7 +232,7 @@ div.code-block {
 	padding: 4px;
 }
 
-/* Gallery Styling */
+/* --- Gallery Styling --- */
 div.row {
 	display: flex;
 	flex-direction: row;
@@ -307,9 +270,6 @@ div.gallery img {
 div.desc {
 	padding: 15px;
 	text-align: center;
-}
-
-div.desc {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	text-align: center;
@@ -318,7 +278,7 @@ div.desc {
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* SRB2 Gallery Styling (do i still need this?) */
+/* --- SRB2 Gallery Styling (do i still need this?) --- */
 .srb2gallery {
 	margin: auto;
 	border: 1px solid #ccc;
@@ -343,48 +303,22 @@ div.srb2gallery img {
 	background: rgba(255, 255, 255, 0.5);
 }
 
-.HCB_comment_box {
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.5);
-}
-
-iframe {
+/* --- Sidenav Styling --- */
+.sidenav {
 	outline: none;
 	border-style: none;
 	background-image: none;
-}
-
-/* Sidenav Styling */
-.sidenav {
-	height: 100%; /*height: 100%; Full-height: remove this if you want "auto" height */
-	max-width: 13.75%; /* Set the width of the sidebar */
-	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-	z-index: 1; /* Stay on top */
-	top: 0; /* Stay at the top */
+	height: 100%;
+	max-width: 13.75%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
 	left: 0;
 	background-color: var(--sidebar-colour);
-	/*background-image: linear-gradient(to top, #ffff99, #00ccff 75%);
-	background-image: url(triangle.png), url(checker.png);
-	background-position: left-top, left top;
-	background-repeat: no-repeat, repeat;
-	background-attachment: fixed, scroll;*/
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size)
-@media screen and (max-height: 450px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}
-}
-*/
 
 /* Separate main content from sidebar */
-main {
-	margin: 0 20%;
-	padding: 0;
-	/*background: rgb(240, 240, 240);
-	background: rgba(240, 240, 240, 0.25);*/
-}
-div.content {
+.content {
 	margin: 0 20%;
 	padding: 0;
 }
