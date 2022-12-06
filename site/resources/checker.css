@@ -1,9 +1,5 @@
 /* --- Typefaces --- */
 @font-face {
-	font-family: DTM-Sans;
-	src: url(DTM-Sans.otf);
-}
-@font-face {
 	font-family: "Inconsolata";
 	src: url(/resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf);
 	format("truetype");
