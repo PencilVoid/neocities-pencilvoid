@@ -25,26 +25,24 @@
 				--hr-colour: #6CBF00;
 			}
 			
-			body { 
+			.content { 
 				opacity: 0;
 				transition: opacity .5s;
 			}
 			
-			body {
-				animation-duration: 1.15s;
+			.content {
+				animation-duration: 0.75s;
 				animation-name: slidein;
-				animation-timing-function: cubic-bezier(0,.6,.6,1);
+				animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1);
 			}
 
 			@keyframes slidein {
 				from {
-					margin-left: 100%;
-					width: 100%;
+					transform: translateX(100vw);
 				}
 
 				to{
-					margin-left: 0%;
-					width: 100%;
+					transform: translateX(0);
 				}
 			}
 		</style>
@@ -57,7 +55,7 @@
 			}
 
 			document.addEventListener('DOMContentLoaded', function(event) {
-				document.querySelector('body').style.opacity = 1
+				document.querySelector('.content').style.opacity = 1
 			})
 		</script>
 	</head>
