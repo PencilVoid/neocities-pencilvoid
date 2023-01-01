@@ -41,31 +41,7 @@
 		<script>
 			frame.addEventListener("load", ev => {
 			const new_style_element = document.createElement("style");
-			new_style_element.textContent = ".sidenav { /* --- Link Styling --- */
-				a {
-					border: none;
-					text-decoration: underline;
-				}
-
-				/* unvisited link */
-				a:link {
-					color: var(--a-colour);
-				}
-
-				/* visited link */
-				a:visited {
-					color: var(--a-visited-colour);
-				}
-
-				/* mouse over link */
-				a:hover {
-					color: var(--a-hover-colour);
-				}
-
-				/* selected link */
-				a:active {
-					color: var(--a-active-colour);
-				} }"
+			new_style_element.textContent = ".sidenav {a {border: none; text-decoration: underline;} a:link {color: var(--a-colour);} a:visited {color: var(--a-visited-colour);} a:hover {color: var(--a-hover-colour);} a:active {color: var(--a-active-colour);} }"
 			ev.target.contentDocument.head.appendChild(new_style_element);
 			});
 		</script>
