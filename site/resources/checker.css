@@ -253,6 +253,8 @@ div.gallery {
 	border: 1px solid var(--text-colour);
 	width: 31%;
 	height: fit-content;
+	flex: 5 1 auto;
+	justify-content: center;
 }
 
 div.gallery:hover {
@@ -262,6 +264,7 @@ div.gallery:hover {
 div.gallery img {
 	width: 100%;
 	height: auto;
+	max-width:max-content;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
