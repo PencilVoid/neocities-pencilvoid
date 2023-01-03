@@ -1,10 +1,4 @@
-/*cleaning this up too*/
-
-/*Typefaces*/
-@font-face {
-	font-family: DTM-Sans;
-	src: url(DTM-Sans.otf);
-}
+/* --- Typefaces --- */
 @font-face {
 	font-family: "Inconsolata";
 	src: url("/resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
@@ -20,7 +14,6 @@
 	src: url("/resources/fonts/OverpassMono-VariableFont_wght.ttf");
 	format("truetype");
 }
-
 @font-face {
 	font-family: 'Fira Code VF';
 	src: url("/resources/FiraCode-VF.woff2") format('woff2-variations'),
@@ -30,20 +23,28 @@
 	font-style: normal;
 }
 
-bold {
+/* --- Emphasis Types --- */
+em.bold {
 	font-weight: bold;
 }
-ital {
+em.ital {
+	font-style: italic;
+}
+em.bold-ital {
+	font-weight: bold;
+	font-style: italic;
+}
+em.ital-bold {
+	font-weight: bold;
 	font-style: italic;
 }
 
-/*Body Text Styling*/
-
+/* --- Text Styling --- */
 body {
 	font-family: Overpass;
 	font-size: 12pt;
+	text-align: left;
 	color: azure;
-	padding: 4px;
 }
 
 /* unvisited link */
@@ -84,6 +85,11 @@ a[target="_blank"]::after {
 	content: "]";
 	opacity: 0.7;
 }
+
+a[target="_top"] {
+	text-decoration: none;
+}
+
 hr {
 	color: white;
 	display: block;
