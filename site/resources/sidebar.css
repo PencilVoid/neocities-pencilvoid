@@ -106,3 +106,7 @@ hr {
 	height: 0;
 	border-style: double;
 }
+
+/* Make buttons stay pixelated when scaled */
+body {
+	image-rendering: pixelated;
