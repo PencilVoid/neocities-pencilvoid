@@ -109,4 +109,4 @@ hr {
 
 /* Make buttons stay pixelated when scaled */
 body {
-	image-rendering: pixelated;
+	image-rendering: crisp-edges;
