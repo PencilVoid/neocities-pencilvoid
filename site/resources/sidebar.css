@@ -26,8 +26,10 @@
 /* --- Emphasis Types --- */
 em.bold {
 	font-weight: bold;
+	font-style: normal;
 }
 em.ital {
+	font-weight: normal;
 	font-style: italic;
 }
 em.bold-ital {
