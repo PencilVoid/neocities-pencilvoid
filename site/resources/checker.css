@@ -39,6 +39,7 @@ em.bold-ital {
 em.ital-bold {
 	font-weight: bold;
 	font-style: italic;
+}
 
 /* --- Headers --- */
 h1 {
