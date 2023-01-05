@@ -37,8 +37,8 @@ em.bold-ital {
 	font-style: italic;
 }
 em.ital-bold {
-	font-weight: bold;
 	font-style: italic;
+	font-weight: bold;
 }
 
 /* --- Headers --- */
