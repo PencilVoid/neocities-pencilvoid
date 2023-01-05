@@ -49,25 +49,36 @@ body {
 	color: azure;
 }
 
+
+
 /* unvisited link */
 a:link {
 	color: #A5B8D1;
+	text-decoration: none;
 }
 
 /* visited link */
 a:visited {
 	color: #9494B5;
+	text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
 	color: #CBDDEF;
+	text-decoration: underline;
 }
 
 /* selected link */
 a:active {
 	color: #FFFFFF;
+	text-decoration: underline;
 }
+
+a.img {
+	text-decoration: none;
+}
+
 a[brackets="true"]::before {
 	content: "[[";
 	color: #A5B8D1;
@@ -86,10 +97,6 @@ a[target="_blank"]::before {
 a[target="_blank"]::after {
 	content: "]";
 	opacity: 0.7;
-}
-
-a[target="_top"] {
-	text-decoration: none;
 }
 
 hr {

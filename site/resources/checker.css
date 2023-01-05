@@ -143,21 +143,25 @@ a {
 /* unvisited link */
 a:link {
 	color: var(--a-colour);
+	text-decoration: none;
 }
 
 /* visited link */
 a:visited {
 	color: var(--a-visited-colour);
+	text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
 	color: var(--a-hover-colour);
+	text-decoration: underline;
 }
 
 /* selected link */
 a:active {
 	color: var(--a-active-colour);
+	text-decoration: underline;
 }
 
 a::before { 
