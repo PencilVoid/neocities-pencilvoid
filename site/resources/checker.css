@@ -26,8 +26,10 @@
 /* --- Emphasis Types --- */
 em.bold {
 	font-weight: bold;
+	font-style: normal;
 }
 em.ital {
+	font-weight: normal;
 	font-style: italic;
 }
 em.bold-ital {
@@ -35,8 +37,8 @@ em.bold-ital {
 	font-style: italic;
 }
 em.ital-bold {
-	font-weight: bold;
 	font-style: italic;
+	font-weight: bold;
 }
 
 /* --- Headers --- */
@@ -141,21 +143,25 @@ a {
 /* unvisited link */
 a:link {
 	color: var(--a-colour);
+	text-decoration: none;
 }
 
 /* visited link */
 a:visited {
 	color: var(--a-visited-colour);
+	text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
 	color: var(--a-hover-colour);
+	text-decoration: underline;
 }
 
 /* selected link */
 a:active {
 	color: var(--a-active-colour);
+	text-decoration: underline;
 }
 
 a::before { 
@@ -268,6 +274,12 @@ div.gallery img {
 	width: 100%;
 	height: auto;
 	max-width:max-content;
+}
+
+/* UFSC Icons */
+span.icon-ufsc {
+	height: 1em;
+	width: 1em;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
