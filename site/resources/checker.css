@@ -194,7 +194,7 @@ body {
 	background-color: var(--bg-color);
 	background-color: var(--bg-checkerdark);
 	background-image: linear-gradient(to bottom left , transparent 0%, transparent 50%, var(--bg-triangle) 50%, var(--bg-triangle) 100%),linear-gradient(45deg, var(--bg-checkerlight) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight) 75%, var(--bg-checkerlight)), linear-gradient(45deg, var(--bg-checkerlight) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight) 75%, var(--bg-checkerlight));
-	background-size: 100dvw 100dvh, 64px 64px, 64px 64px;
+	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
 	background-position: 0 0, 32px 32px;
 	background-attachment: fixed, scroll, scroll;
 }
