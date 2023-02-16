@@ -1,18 +1,15 @@
 /* --- Typefaces --- */
 @font-face {
 	font-family: "Inconsolata";
-	src: url("/resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
-	format("truetype");
+	src: url("/resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Overpass";
-	src: url("/resources/fonts/Overpass-VariableFont_wght.ttf");
-	format("truetype");
+	src: url("/resources/fonts/Overpass-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {
 	font-family: "Overpass Mono";
-	src: url("/resources/fonts/OverpassMono-VariableFont_wght.ttf");
-	format("truetype");
+	src: url("/resources/fonts/OverpassMono-VariableFont_wght.ttf") format("truetype");
 }
 @font-face {
 	font-family: 'Fira Code VF';
@@ -110,3 +107,4 @@ hr {
 /* Make buttons stay pixelated when scaled */
 body {
 	image-rendering: crisp-edges;
+}
