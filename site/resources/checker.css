@@ -369,7 +369,7 @@ div.srb2gallery img {
 	border-style: none;
 	background-image: none;
 	height: 100%;
-	max-width: 13.75%;
+	width: 13.75%;
 	position: fixed;
 	z-index: 1;
 	top: 0;
