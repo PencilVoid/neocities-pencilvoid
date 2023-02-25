@@ -142,7 +142,7 @@ h6 {
 }
 
 /* --- Text Styling --- */
-body {
+p {
 	font-family: Overpass;
 	font-size: 14pt;
 	text-align: left;
@@ -267,6 +267,7 @@ span.code-inline {
 	font-family: Fira Code;
 	font-size: 14pt;
 	background-color: var(--sidebar-colour);
+	color: var(--text-colour);
 	padding: 2px;
 }
 
@@ -274,6 +275,7 @@ div.code-block {
 	font-family: Fira Code;
 	font-size: 14pt;
 	background-color: var(--sidebar-colour);
+	color: var(--text-colour);
 	padding: 4px;
 }
 
@@ -318,7 +320,7 @@ span.icon-ufsc {
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
 	.gallery {
 		width: 100%;
 	}
@@ -336,6 +338,7 @@ div.desc {
 span.desc-metadata {
 	font-family: Overpass Mono;
 	background-color:  rgba(255, 255, 255, 0.15);
+	color: var(--text-colour);
 }
 
 /* --- SRB2 Gallery Styling (do i still need this?) --- */
@@ -381,4 +384,10 @@ div.srb2gallery img {
 .content {
 	margin: 0 20%;
 	padding: 0;
+}
+
+@media screen and (max-width: 720px) {
+	.content {
+		margin: 0 0 0 15%;
+	}
 }
