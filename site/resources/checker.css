@@ -335,23 +335,15 @@ span.icon-ufsc {
 
 /* Collapsible segments */
 label.dropdown-label {
-	font-size: 14pt;
-	padding: 4px;
+	font-size: 12pt;
+	padding: 0.572em;
+	margin-bottom: 0;
 	color: var(--a-active-colour);
-	text-decoration: underline;
 	font-family: Overpass Mono;
 
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.1);
-	border: none;
-}
-
-.dropdown-label input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	height: 0;
-	width: 0;
+	border-left: 1px solid white;
 }
 
 .dropdown .dropdown-content {
@@ -365,10 +357,11 @@ label.dropdown-label {
 	border-bottom: 1px dotted white;
 	border-left: 1px dotted white;
 	
-	padding-top: 1ex;
 	padding-right: 1em;
-	padding-bottom: 1ex;
+	padding-bottom: 1em;
 	padding-left: 1em;
+
+	margin-top: 1ex;
 }
 
 .dropdown > input[name="collapse"]:checked ~ .dropdown-content {
@@ -383,6 +376,7 @@ label.dropdown-label {
 		width: 100%;
 	}
 }
+
 div.desc {
 	font-family: Overpass;
 	font-size: 14pt;
