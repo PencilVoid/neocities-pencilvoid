@@ -366,7 +366,7 @@ input[type="checkbox"] {
 	vertical-align: middle;
 
 	transform: rotate(0deg);
-	transition: transform 0.25s cubic-bezier(0, 0.5, 0.25, 1);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 input[type="checkbox"]:checked {
@@ -376,15 +376,14 @@ input[type="checkbox"]:checked {
 	vertical-align: middle;
 
 	transform:  rotate(90deg);
-	transition: transform 0.25s cubic-bezier(0, 0.5, 0.25, 1);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 .dropdown .dropdown-content {
 	overflow: hidden;
 	
 	height: 0;
-	transition: 0.5s;
-	transition-timing-function: cubic-bezier(0, 0.5, 0.25, 1);
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 	
 	border-top: 1px solid white;
 	border-right: 1px dotted white;
@@ -400,8 +399,7 @@ input[type="checkbox"]:checked {
 
 .dropdown > input[name="collapse"]:checked ~ .dropdown-content {
 	height: auto;
-	transition: height 0.5s;
-	transition-timing-function: ease-out;
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
