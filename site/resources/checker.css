@@ -331,6 +331,7 @@ div.gallery img {
 span.icon-ufsc {
 	height: 1em;
 	width: 1em;
+	vertical-align: middle;
 }
 
 /* Collapsible segments */
@@ -346,11 +347,44 @@ label.dropdown-label {
 	border-left: 1px solid white;
 }
 
+input[type="checkbox"] ~ label.dropdown-label::before {
+	content: "Show"
+}
+
+input[type="checkbox"]:checked ~ label.dropdown-label::before {
+	content: "Hide"
+}
+
+input[type="checkbox"] {
+	appearance: none;
+}
+
+input[type="checkbox"] {
+	content: url("/resources/img/icon_dropdown.svg");
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+
+	transform: rotate(0deg);
+	transition: transform 0.25s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+input[type="checkbox"]:checked {
+	content: url("/resources/img/icon_dropdown.svg");
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+
+	transform:  rotate(90deg);
+	transition: transform 0.25s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
 .dropdown .dropdown-content {
 	overflow: hidden;
 	
 	height: 0;
 	transition: 0.5s;
+	transition-timing-function: cubic-bezier(0, 0.5, 0.25, 1);
 	
 	border-top: 1px solid white;
 	border-right: 1px dotted white;
