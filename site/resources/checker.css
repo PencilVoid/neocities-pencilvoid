@@ -149,6 +149,20 @@ p {
 	color: var(--text-colour);
 }
 
+ul {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour);
+}
+
+ol {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour);
+}
+
 #HCB_comment_box #hcb_form_content,
 #HCB_comment_box #hcb_form_email,
 #HCB_comment_box #hcb_form_name,
@@ -319,14 +333,62 @@ span.icon-ufsc {
 	width: 1em;
 }
 
+/* Collapsible segments */
+label.dropdown-label {
+	font-size: 14pt;
+	padding: 4px;
+	color: var(--a-active-colour);
+	text-decoration: underline;
+	font-family: Overpass Mono;
+
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: none;
+}
+
+.dropdown-label input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.dropdown .dropdown-content {
+	overflow: hidden;
+	
+	height: 0;
+	transition: 0.5s;
+	
+	border-top: 1px solid white;
+	border-right: 1px dotted white;
+	border-bottom: 1px dotted white;
+	border-left: 1px dotted white;
+	
+	padding-top: 1ex;
+	padding-right: 1em;
+	padding-bottom: 1ex;
+	padding-left: 1em;
+}
+
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content {
+	height: auto;
+	transition: height 0.5s;
+	transition-timing-function: ease-out;
+}
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
 @media screen and (max-width: 720px) {
 	.gallery {
 		width: 100%;
 	}
 }
-
 div.desc {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour);
+
 	text-align: center;
 	padding-top: 1ex;
 	padding-bottom: 1ex;
