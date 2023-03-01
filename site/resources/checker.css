@@ -331,7 +331,7 @@ div.gallery img {
 span.icon-ufsc {
 	height: 1em;
 	width: 1em;
-	vertical-align: middle;
+	vertical-align: bottom;
 }
 
 /* Collapsible segments */
