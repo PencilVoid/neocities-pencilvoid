@@ -402,6 +402,13 @@ input[type="checkbox"]:checked {
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
+.dropdown > .dropdown-content > .dropdown-hider {
+	display: none;
+}
+
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
+	display: contents;
+}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
 @media screen and (max-width: 720px) {
 	.gallery {
