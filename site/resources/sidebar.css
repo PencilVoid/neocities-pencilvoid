@@ -96,6 +96,81 @@ a[target="_blank"]::after {
 	opacity: 0.7;
 }
 
+/* Collapsible segments */
+label.dropdown-label {
+	font-size: 12pt;
+	display: inline-block;
+	padding: 0.5em;
+	color: var(--a-active-colour);
+	font-family: Overpass Mono;
+
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left: 1px solid white;
+}
+
+input[type="checkbox"] ~ label.dropdown-label::before {
+	content: "Show"
+}
+
+input[type="checkbox"]:checked ~ label.dropdown-label::before {
+	content: "Hide"
+}
+
+input[type="checkbox"] {
+	appearance: none;
+}
+
+input[type="checkbox"] {
+	content: url("/resources/img/icon_dropdown.svg");
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+
+	transform: rotate(0deg);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+input[type="checkbox"]:checked {
+	content: url("/resources/img/icon_dropdown.svg");
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+
+	transform:  rotate(90deg);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+.dropdown .dropdown-content {
+	overflow: hidden;
+	
+	height: 0;
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+	
+	border-top: 1px solid white;
+	border-right: 1px dashed white;
+	border-bottom: 1px dashed white;
+	border-left: 1px dashed white;
+	
+	padding-top: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+}
+
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content {
+	height: auto;
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+.dropdown > .dropdown-content > .dropdown-hider {
+	display: none;
+}
+
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
+	display: contents;
+}
+
 hr {
 	color: white;
 	display: block;
