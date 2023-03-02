@@ -40,7 +40,7 @@ em.ital-bold {
 
 /* --- Headers --- */
 h1 {
-	color: var(--header-colour);
+	color: var(--header-colour,#220029);
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.75);
 	border-bottom: 1px solid white;
@@ -57,7 +57,7 @@ h1 {
 }
 
 h2 {
-	color: var(--header-colour);
+	color: var(--header-colour,#220029);
 	background-color: white;
 	background-color:rgba(255, 255, 255, 0.5);
 	border-bottom: 1px solid white;
@@ -74,7 +74,7 @@ h2 {
 }
 
 h3 {
-	color: var(--text-colour);
+	color: var(--header-colour,#220029);
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.35);
 	border-bottom: 1px solid white;
@@ -91,7 +91,7 @@ h3 {
 }
 
 h4 {
-	color: var(--text-colour);
+	color: var(--text-colour,#FFEAFC);
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-bottom: 1px solid white;
@@ -108,7 +108,7 @@ h4 {
 }
 
 h5 {
-	color: var(--text-colour);
+	color: var(--text-colour,#FFEAFC);
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.15);
 	border-bottom: 1px solid white;
@@ -125,7 +125,7 @@ h5 {
 }
 
 h6 {
-	color: var(--text-colour);
+	color: var(--text-colour,#FFEAFC);
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.1);
 	border-bottom: 1px solid white;
@@ -146,21 +146,21 @@ p {
 	font-family: Overpass;
 	font-size: 14pt;
 	text-align: left;
-	color: var(--text-colour);
+	color: var(--text-colour,#FFEAFC);
 }
 
 ul {
 	font-family: Overpass;
 	font-size: 14pt;
 	text-align: left;
-	color: var(--text-colour);
+	color: var(--text-colour,#FFEAFC);
 }
 
 ol {
 	font-family: Overpass;
 	font-size: 14pt;
 	text-align: left;
-	color: var(--text-colour);
+	color: var(--text-colour,#FFEAFC);
 }
 
 #HCB_comment_box #hcb_form_content,
@@ -191,25 +191,25 @@ a {
 
 /* unvisited link */
 a:link {
-	color: var(--a-colour);
+	color: var(--a-colour,#FF9EBC);
 	text-decoration: none;
 }
 
 /* visited link */
 a:visited {
-	color: var(--a-visited-colour);
+	color: var(--a-visited-colour,#FF7FAC);
 	text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
-	color: var(--a-hover-colour);
+	color: var(--a-hover-colour,#FBD1FF);
 	text-decoration: underline;
 }
 
 /* selected link */
 a:active {
-	color: var(--a-active-colour);
+	color: var(--a-active-colour,#FFFFFF);
 	text-decoration: underline;
 }
 
@@ -240,9 +240,11 @@ a[nobrackets="true"]::before {
 
 /* --- Background Gradient Pseudo-image --- */
 body {
-	background-color: var(--bg-color);
-	background-color: var(--bg-checkerdark);
-	background-image: linear-gradient(to bottom left , transparent 0%, transparent 50%, var(--bg-triangle) 50%, var(--bg-triangle) 100%),linear-gradient(45deg, var(--bg-checkerlight) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight) 75%, var(--bg-checkerlight)), linear-gradient(45deg, var(--bg-checkerlight) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight) 75%, var(--bg-checkerlight));
+	background-color: var(--bg-color,#220029);
+	background-color: var(--bg-checkerdark,#42004E);
+	background-image: linear-gradient(to bottom left , transparent 0%, transparent 50%, var(--bg-triangle) 50%, var(--bg-triangle) 100%),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068));
 	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
 	background-position: 0 0, 32px 32px;
 	background-attachment: fixed, scroll, scroll;
@@ -250,7 +252,7 @@ body {
 
 /* --- Horizontal Rule --- */
 hr {
-	color: var(--hr-colour);
+	color: var(--hr-colour,var(--text-colour,#FF417D));
 	display: block;
 	border: none;
 	height: 0;	
@@ -280,16 +282,16 @@ nav {
 span.code-inline {
 	font-family: Fira Code;
 	font-size: 14pt;
-	background-color: var(--sidebar-colour);
-	color: var(--text-colour);
+	background-color: var(--sidebar-colour,#1C0023);
+	color: var(--text-colour,#FFEAFC);
 	padding: 2px;
 }
 
 div.code-block {
 	font-family: Fira Code;
 	font-size: 14pt;
-	background-color: var(--sidebar-colour);
-	color: var(--text-colour);
+	background-color: var(--sidebar-colour,#1C0023);
+	color: var(--text-colour,#FFEAFC);
 	padding: 4px;
 }
 
@@ -310,7 +312,7 @@ div.gallery {
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 5px;
-	border: 1px solid var(--text-colour);
+	border: 1px solid var(--text-colour,#FFEAFC);
 	width: 31%;
 	height: fit-content;
 	flex: 5 1 auto;
@@ -318,7 +320,7 @@ div.gallery {
 }
 
 div.gallery:hover {
-	border: 1px solid var(--a-hover-colour);
+	border: 1px solid var(--a-hover-colour,#FBD1FF);
 }
 
 div.gallery img {
@@ -431,7 +433,7 @@ div.desc {
 span.desc-metadata {
 	font-family: Overpass Mono;
 	background-color:  rgba(255, 255, 255, 0.15);
-	color: var(--text-colour);
+	color: var(--text-colour,#FFEAFC);
 }
 
 /* --- SRB2 Gallery Styling (do i still need this?) --- */
@@ -466,11 +468,12 @@ div.srb2gallery img {
 	background-image: none;
 	height: 100%;
 	width: 13.75%;
+	min-width: 140px;
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: var(--sidebar-colour);
+	background-color: var(--sidebar-colour,#1C0023);
 }
 
 /* Separate main content from sidebar */
