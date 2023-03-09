@@ -269,16 +269,6 @@ img {
 	text-align: center;
 }
 
-nav {
-	position: fixed;
-	max-width: 25%;
-	margin: auto;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-	padding: 0;
-	border: 5px #000;
-}
-
 span.code-inline {
 	font-family: Fira Code;
 	font-size: 14pt;
@@ -319,6 +309,12 @@ div.gallery {
 	justify-content: center;
 }
 
+@media (max-width: 720px) {
+	div.gallery {
+		flex: 2 1 auto;
+	}
+}
+
 div.gallery:hover {
 	border: 1px solid var(--a-hover-colour,#FBD1FF);
 }
@@ -327,6 +323,50 @@ div.gallery img {
 	width: 100%;
 	height: auto;
 	max-width:max-content;
+}
+
+div.desc {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour);
+
+	text-align: center;
+	padding: 0.75em 0.75em;
+	margin: auto;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+span.desc-metadata {
+	font-family: Overpass Mono;
+	background-color:  rgba(255, 255, 255, 0.15);
+	color: var(--text-colour,#FFEAFC);
+}
+
+/* --- SRB2 Gallery Styling (do i still need this?) --- */
+.srb2gallery {
+	margin: auto;
+	border: 1px solid #ccc;
+	background-image: url("/resources/showcasepane.png");
+	width: 50%;
+	padding: 5px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+div.srb2gallery img {
+	margin: auto;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.srb2desc {
+	padding: 15px;
+	text-align: center;
+	margin: auto;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
 }
 
 /* UFSC Icons */
@@ -409,57 +449,6 @@ input[type="checkbox"]:checked {
 .dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
 	display: contents;
 }
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-@media screen and (max-width: 720px) {
-	.gallery {
-		width: 100%;
-	}
-}
-
-div.desc {
-	font-family: Overpass;
-	font-size: 14pt;
-	text-align: left;
-	color: var(--text-colour);
-
-	text-align: center;
-	padding-top: 1ex;
-	padding-bottom: 1ex;
-	margin: auto;
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.15);
-}
-
-span.desc-metadata {
-	font-family: Overpass Mono;
-	background-color:  rgba(255, 255, 255, 0.15);
-	color: var(--text-colour,#FFEAFC);
-}
-
-/* --- SRB2 Gallery Styling (do i still need this?) --- */
-.srb2gallery {
-	margin: auto;
-	border: 1px solid #ccc;
-	background-image: url("/resources/showcasepane.png");
-	width: 50%;
-	padding: 5px;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-}
-
-div.srb2gallery img {
-	margin: auto;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-}
-
-.srb2desc {
-	padding: 15px;
-	text-align: center;
-	margin: auto;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-}
 
 /* --- Sidenav Styling --- */
 .sidenav {
@@ -482,8 +471,24 @@ div.srb2gallery img {
 	padding: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media (max-width: 720px) {
 	.content {
-		margin: 0 0 0 15%;
+		margin: 0 5vw;
 	}
+	.sidenav {
+		outline: none;
+		border-style: none;
+		background-image: none;
+		width: 100%;
+		height: min-content;
+		position: static;
+		background-color: var(--sidebar-colour,#1C0023);
+	}
+}
+
+/* i have no idea why i have to do this */
+body {
+	margin: 0;
+	border: none;
+	padding: 0;
 }
