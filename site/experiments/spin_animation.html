@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
+		<link href="/resources/checker.css" rel="stylesheet" type="text/css" media="all">
+		<title>
+			Spin animation test
+		</title>
+		<style>
+			:root {
+				--header-colour: #220029;
+				--bg-colour: #220029;
+				--bg-checkerdark: #42004E;
+				--bg-checkerlight: #680068;
+				--bg-triangle: #220029;
+				--sidebar-colour: #1C0023;
+				--text-colour: #FFEAFC;
+				--a-colour: #FF9EBC;
+				--a-visited-colour: #FF7FAC;
+				--a-hover-colour: #FBD1FF;
+				--a-active-colour: #FFFFFF;
+				--hr-colour: #FF417D;
+			}
+
+			.spinner-container {
+				align-items: center;
+				justify-content: center;
+				image-rendering: crisp-edges;
+			}
+
+			
+			.spinner1 {
+				position: fixed;
+				top: calc(50% - 720px);
+				left: calc(50% - 720px);
+				z-index: 0;
+				animation: spin1 30s infinite linear;
+				mix-blend-mode: screen;
+			}
+			.spinner2 {
+				position: fixed;
+				top: calc(50% - 360px);
+				left: calc(50% - 360px);
+				z-index: 1;
+				animation: spin2 20s infinite linear;
+				mix-blend-mode: screen;
+			}
+			.spinner3 {
+				position: fixed;
+				top: calc(50% - 180px);
+				left: calc(50% - 180px);
+				z-index: 2;
+				animation: spin3 10s infinite linear;
+				mix-blend-mode: screen;
+			}
+			
+			@keyframes spin1 {
+				0% {
+					transform: rotate(360deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+			@keyframes spin2 {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes spin3 {
+				0% {
+					transform: rotate(360deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<iframe class="sidenav" scrolling="no" src="/sidebar.html"></iframe>
+		<div class="content">
+			<header>
+				<h1>
+					Spin animation test
+				</h1>
+			</header>
+			<hr>
+			<div class="spinner-container">
+				<img class="spinner1" src="/resources/test_objects/object8.png" alt="object8" width="1440px" height="1440px">
+				<img class="spinner2" src="/resources/test_objects/object7.png" alt="object7" width="720px" height="720px">
+				<img class="spinner3" src="/resources/test_objects/object6.png" alt="object6" width="360px" height="360px">
+			</div>
+		</div>
+	</body>
+</html>
