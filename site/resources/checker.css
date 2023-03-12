@@ -141,6 +141,44 @@ h6 {
 	font-stretch: 100%;
 }
 
+/* Smaller headers on small screens*/
+@media screen and (max-width: 720px) {
+	h1 {
+		font-size: 32pt;
+		font-weight: 750;
+		font-stretch: 135%;
+	}
+	
+	h2 {
+		font-size: 28pt;
+		font-weight: 650;
+		font-stretch: 125%;
+	}
+	
+	h3 {
+		font-size: 24pt;
+		font-weight: 550;
+		font-stretch: 112.5%;
+	}
+	
+	h4 {
+		font-size: 16pt;
+		font-weight: 500;
+		font-stretch: 100%;
+	}
+	
+	h5 {
+		font-size: 14pt;
+		font-weight: 450;
+		font-stretch: 100%;
+	}
+	
+	h6 {
+		font-size: 12pt;
+		font-weight: 400;
+		font-stretch: 100%;
+	}
+}
 /* --- Text Styling --- */
 p {
 	font-family: Overpass;
@@ -163,6 +201,19 @@ ol {
 	color: var(--text-colour,#FFEAFC);
 }
 
+@media screen and (max-width: 720px) {
+	p {
+		font-size: 12pt;
+	}
+	
+	ul {
+		font-size: 12pt;
+	}
+	
+	ol {
+		font-size: 12pt;
+	}
+}
 #HCB_comment_box #hcb_form_content,
 #HCB_comment_box #hcb_form_email,
 #HCB_comment_box #hcb_form_name,
@@ -285,6 +336,16 @@ div.code-block {
 	padding: 4px;
 }
 
+@media screen and (max-width: 720px) {
+	span.code-inline {
+		font-size: 12pt;
+	}
+	
+	div.code-block {
+		font-size: 12pt;
+	}
+}
+
 /* --- Gallery Styling --- */
 div.row {
 	display: flex;
@@ -336,6 +397,13 @@ div.desc {
 	margin: auto;
 	background-color: #fff;
 	background-color: rgba(255, 255, 255, 0.15);
+}
+
+@media screen and (max-width: 720px) {
+	div.desc {
+		font-size: 12pt;
+		padding: 0.5em 0.5em;
+	}
 }
 
 span.desc-metadata {
@@ -437,9 +505,19 @@ input[type="checkbox"]:checked {
 	padding-left: 1em;
 }
 
+
+
 .dropdown > input[name="collapse"]:checked ~ .dropdown-content {
 	height: auto;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+@media screen and (max-width: 720px) {
+	.dropdown .dropdown-content {
+		padding-right: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 0.5em;
+	}
 }
 
 .dropdown > .dropdown-content > .dropdown-hider {
@@ -471,7 +549,7 @@ input[type="checkbox"]:checked {
 	padding: 0;
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
 	.content {
 		margin: 0 5vw;
 	}
