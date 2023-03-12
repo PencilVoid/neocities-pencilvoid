@@ -297,7 +297,7 @@ body {
 	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)),
 	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068));
 	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
-	background-position: 0 0, 32px 32px;
+	background-position: 0 0, 32px 32px, 0 0;
 	background-attachment: fixed, scroll, scroll;
 }
 
