@@ -220,24 +220,20 @@ ol {
 		font-size: 12pt;
 	}
 }
-#HCB_comment_box #hcb_form_content,
-#HCB_comment_box #hcb_form_email,
-#HCB_comment_box #hcb_form_name,
-#HCB_comment_box #hcb_form_website,
-#HCB_comment_box #hcb_submit,
-#HCB_comment_box .author-name,
-#HCB_comment_box .hcb-comment-body,
-#HCB_comment_box .hcb-comment-tb a,
-#HCB_comment_box .home-desc,
-#HCB_comment_box .hcb_form_name_container,
-#HCB_comment_box .hcb_submit {
-	font-family: Overpass;
-	font-size: 14pt;
+
+.home-desc {
+	color: var(--text-colour,#FFEAFC);
 }
 
-.HCB_comment_box {
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.5);
+span.author {
+	color: var(--text-colour,#FFEAFC);
+}
+
+#hcb_file_label::before {
+	content: "";
+}
+#hcb_file_label::after {
+	content: "";
 }
 
 /* --- Link Styling --- */
