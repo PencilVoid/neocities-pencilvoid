@@ -414,6 +414,12 @@ span.desc-metadata {
 	color: var(--text-colour,#FFEAFC);
 }
 
+@media screen and (max-width: 720px) {
+	span.desc-metadata {
+		font-size: 12pt;
+	}
+}
+
 /* --- SRB2 Gallery Styling (do i still need this?) --- */
 .srb2gallery {
 	margin: auto;
@@ -561,8 +567,6 @@ input[type="checkbox"]:checked {
 		background-image: none;
 		width: 100%;
 		height: min-content;
-		position: static;
-		background-color: var(--sidebar-colour,#1C0023);
 	}
 }
 
