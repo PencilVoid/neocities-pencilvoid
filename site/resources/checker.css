@@ -541,8 +541,8 @@ input[type="checkbox"]:checked {
 	outline: none;
 	border-style: none;
 	background-image: none;
-	height: 100%;
-	width: 13.75%;
+	height: 100vh;
+	width: 13.75vw;
 	min-width: 140px;
 	position: fixed;
 	z-index: 1;
@@ -553,20 +553,25 @@ input[type="checkbox"]:checked {
 
 /* Separate main content from sidebar */
 .content {
-	margin: 0 20%;
+	position: fixed;
+	margin: 0 20vw;
 	padding: 0;
 }
 
 @media screen and (max-width: 720px) {
 	.content {
-		margin: 0 5vw;
+		position: static;
+		margin: 0 5vw ;
 	}
 	.sidenav {
 		outline: none;
 		border-style: none;
 		background-image: none;
-		width: 100%;
-		height: min-content;
+		width: 100vw;
+		height: 15vh;
+		min-height: 90px;
+		max-height: 170px;
+		position: static;
 	}
 }
 
