@@ -72,10 +72,6 @@ a:active {
 	text-decoration: underline;
 }
 
-a.img {
-	text-decoration: none;
-}
-
 a[brackets="true"]::before {
 	content: "[[";
 	color: var(--a-colour,#A5B8D1);
