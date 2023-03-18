@@ -1,0 +1,596 @@
+/* --- Typefaces --- */
+@font-face {
+	font-family: "Inconsolata";
+	src: url("/resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Overpass";
+	src: url("/resources/fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Overpass Mono";
+	src: url("/resources/fonts/OverpassMono-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: 'Fira Code VF';
+	src: url("/resources/FiraCode-VF.woff2") format('woff2-variations'),
+	url("/resources/FiraCode-VF.woff") format('woff-variations');
+	/* font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes */
+	font-weight: 300 700;
+	font-style: normal;
+}
+
+/* --- Emphasis Types --- */
+em.bold {
+	font-weight: bold;
+	font-style: normal;
+}
+em.ital {
+	font-weight: normal;
+	font-style: italic;
+}
+em.bold-ital {
+	font-weight: bold;
+	font-style: italic;
+}
+em.ital-bold {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* --- Headers --- */
+h1 {
+	color: var(--header-colour,#220029);
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.75);
+	border-bottom: 1px solid white;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	
+	text-decoration: none;
+	text-align: left;
+	
+	font-family: Inconsolata;
+	font-size: 48pt;
+	font-weight: 750;
+	font-stretch: 135%;
+}
+
+h2 {
+	color: var(--header-colour,#220029);
+	background-color: white;
+	background-color:rgba(255, 255, 255, 0.5);
+	border-bottom: 1px solid white;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	
+	text-decoration: none;
+	text-align: left;
+	
+	font-family: Inconsolata;
+	font-size: 32pt;
+	font-weight: 650;
+	font-stretch: 125%;
+}
+
+h3 {
+	color: var(--header-colour,#220029);
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.35);
+	border-bottom: 1px solid white;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	
+	text-decoration: none;
+	text-align: left;
+	
+	font-family: Inconsolata;
+	font-size: 26pt;
+	font-weight: 550;
+	font-stretch: 112.5%;
+}
+
+h4 {
+	color: var(--text-colour,#FFEAFC);
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid white;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	
+	text-decoration: none;
+	text-align: left;
+	
+	font-family: Inconsolata;
+	font-size: 20pt;
+	font-weight: 500;
+	font-stretch: 100%;
+}
+
+h5 {
+	color: var(--text-colour,#FFEAFC);
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.15);
+	border-bottom: 1px solid white;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	
+	text-decoration: none;
+	text-align: left;
+	
+	font-family: Inconsolata;
+	font-size: 18pt;
+	font-weight: 450;
+	font-stretch: 100%;
+}
+
+h6 {
+	color: var(--text-colour,#FFEAFC);
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid white;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	
+	text-decoration: none;
+	text-align: left;
+	
+	font-family: Inconsolata;
+	font-size: 14pt;
+	font-weight: 400;
+	font-stretch: 100%;
+}
+
+/* Smaller headers on small screens*/
+@media screen and (max-width: 720px) {
+	h1 {
+		font-size: 32pt;
+		font-weight: 750;
+		font-stretch: 135%;
+	}
+	
+	h2 {
+		font-size: 28pt;
+		font-weight: 650;
+		font-stretch: 125%;
+	}
+	
+	h3 {
+		font-size: 24pt;
+		font-weight: 550;
+		font-stretch: 112.5%;
+	}
+	
+	h4 {
+		font-size: 16pt;
+		font-weight: 500;
+		font-stretch: 100%;
+	}
+	
+	h5 {
+		font-size: 14pt;
+		font-weight: 450;
+		font-stretch: 100%;
+	}
+	
+	h6 {
+		font-size: 12pt;
+		font-weight: 400;
+		font-stretch: 100%;
+	}
+}
+/* --- Text Styling --- */
+p {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour,#FFEAFC);
+}
+
+ul {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour,#FFEAFC);
+}
+
+ol {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour,#FFEAFC);
+}
+
+@media screen and (max-width: 720px) {
+	p {
+		font-size: 12pt;
+	}
+	
+	ul {
+		font-size: 12pt;
+	}
+	
+	ol {
+		font-size: 12pt;
+	}
+}
+
+.home-desc {
+	color: var(--text-colour,#FFEAFC);
+}
+
+span.author {
+	color: var(--text-colour,#FFEAFC);
+}
+
+#hcb_file_label::before {
+	content: "";
+}
+#hcb_file_label::after {
+	content: "";
+}
+
+/* --- Link Styling --- */
+a {
+	border: none;
+	text-decoration: underline;
+}
+
+/* unvisited link */
+a:link {
+	color: var(--a-colour,#FF9EBC);
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+	color: var(--a-visited-colour,#FF7FAC);
+	text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+	color: var(--a-hover-colour,#FBD1FF);
+	text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+	color: var(--a-active-colour,#FFFFFF);
+	text-decoration: underline;
+}
+
+a::before { 
+	content: "[[";
+	opacity: 0.7;
+}
+a::after { 
+	content: "]]";
+	opacity: 0.7;
+}
+a[target="_blank"]::before { 
+	content: "[";
+	opacity: 0.7;
+}
+a[target="_blank"]::after { 
+	content: "]";
+	opacity: 0.7;
+}
+a[nobrackets="true"]::after { 
+	content: "";
+	opacity: 0.7;
+}
+a[nobrackets="true"]::before { 
+	content: "";
+	opacity: 0.7;
+}
+
+/* --- Background Gradient Pseudo-image --- */
+body {
+	background-color: var(--bg-color,#220029);
+	background-color: var(--bg-checkerdark,#42004E);
+	background-image: linear-gradient(to bottom left , transparent 0%, transparent 50%, var(--bg-triangle) 50%, var(--bg-triangle) 100%),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068));
+	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
+	background-position: 0 0, 32px 32px, 0 0;
+	background-attachment: fixed, scroll, scroll;
+}
+
+/* --- Horizontal Rule --- */
+hr {
+	color: var(--hr-colour,var(--text-colour,#FF417D));
+	display: block;
+	border: none;
+	height: 0;	
+	border-style: double;
+}
+
+/* --- Division Styles --- */
+img {
+	display: inline;
+}
+
+.card {
+	background: #ff8989;
+	text-align: center;
+}
+
+span.code-inline {
+	font-family: Fira Code;
+	font-size: 14pt;
+	background-color: var(--sidebar-colour,#1C0023);
+	color: var(--text-colour,#FFEAFC);
+	padding: 2px;
+}
+
+div.code-block {
+	font-family: Fira Code;
+	font-size: 14pt;
+	background-color: var(--sidebar-colour,#1C0023);
+	color: var(--text-colour,#FFEAFC);
+	padding: 4px;
+}
+
+@media screen and (max-width: 720px) {
+	span.code-inline {
+		font-size: 12pt;
+	}
+	
+	div.code-block {
+		font-size: 12pt;
+	}
+}
+
+/* --- Gallery Styling --- */
+div.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	height: max-content;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.15);
+	margin: 10px 0px;
+}
+
+div.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 5px;
+	border: 1px solid var(--text-colour,#FFEAFC);
+	width: 31%;
+	height: fit-content;
+	flex: 5 1 auto;
+	justify-content: center;
+}
+
+@media (max-width: 720px) {
+	div.gallery {
+		flex: 2 1 auto;
+	}
+}
+
+div.gallery:hover {
+	border: 1px solid var(--a-hover-colour,#FBD1FF);
+}
+
+div.gallery img {
+	width: 100%;
+	height: auto;
+	max-width:max-content;
+}
+
+div.desc {
+	font-family: Overpass;
+	font-size: 14pt;
+	text-align: left;
+	color: var(--text-colour);
+
+	text-align: center;
+	padding: 0.75em 0.75em;
+	margin: auto;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+@media screen and (max-width: 720px) {
+	div.desc {
+		font-size: 12pt;
+		padding: 0.5em 0.5em;
+	}
+}
+
+span.desc-metadata {
+	font-family: Overpass Mono;
+	background-color:  rgba(255, 255, 255, 0.15);
+	color: var(--text-colour,#FFEAFC);
+}
+
+@media screen and (max-width: 720px) {
+	span.desc-metadata {
+		font-size: 12pt;
+	}
+}
+
+/* --- SRB2 Gallery Styling (do i still need this?) --- */
+.srb2gallery {
+	margin: auto;
+	border: 1px solid #ccc;
+	background-image: url("/resources/showcasepane.png");
+	width: 50%;
+	padding: 5px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+div.srb2gallery img {
+	margin: auto;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.srb2desc {
+	padding: 15px;
+	text-align: center;
+	margin: auto;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+/* UFSC Icons */
+span.icon-ufsc {
+	height: 1em;
+	width: 1em;
+	vertical-align: bottom;
+}
+
+/* Collapsible segments */
+label.dropdown-label {
+	font-size: 12pt;
+	display: inline-block;
+	padding: 0.5em;
+	color: var(--a-active-colour);
+	font-family: Overpass Mono;
+
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left: 1px solid white;
+}
+
+input[type="checkbox"] ~ label.dropdown-label::before {
+	content: "Show"
+}
+
+input[type="checkbox"]:checked ~ label.dropdown-label::before {
+	content: "Hide"
+}
+
+input[type="checkbox"] {
+	appearance: none;
+}
+
+input[type="checkbox"] {
+	content: url("/resources/img/icon_dropdown.svg");
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+
+	transform: rotate(0deg);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+input[type="checkbox"]:checked {
+	content: url("/resources/img/icon_dropdown.svg");
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+
+	transform:  rotate(90deg);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+.dropdown .dropdown-content {
+	overflow: hidden;
+	
+	height: 0;
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+	
+	border-top: 1px solid white;
+	border-right: 1px dashed white;
+	border-bottom: 1px dashed white;
+	border-left: 1px dashed white;
+	
+	padding-right: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+}
+
+
+
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content {
+	height: auto;
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+@media screen and (max-width: 720px) {
+	.dropdown .dropdown-content {
+		padding-right: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 0.5em;
+	}
+}
+
+.dropdown > .dropdown-content > .dropdown-hider {
+	display: none;
+}
+
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
+	display: contents;
+}
+
+/* Separate main content from sidebar */
+.page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.content {
+	height: fit-content;
+	flex: 1 1 auto;
+	justify-content: center;
+	max-width: 60vw;
+}
+
+.sidenav {
+	flex: 1 1 auto;
+	outline: none;
+	border-style: none;
+	background-image: none;
+	height: 100vh;
+	width: 13.75vw;
+	min-width: 140px;
+	margin-right: 6.25vw;
+	background-color: var(--sidebar-colour,#1C0023);
+	position: sticky;
+}
+
+.rightbox {
+	height: fit-content;
+	flex: 1 1 auto;
+	justify-content: center;
+	width: 13.75vw;
+	min-width: 140px;
+	margin-left: 6.25vw;
+}
+
+@media screen and (max-width: 720px) {
+	.content {
+		margin: 0 5vw;
+	}
+	.sidenav {
+		outline: none;
+		border-style: none;
+		background-image: none;
+		width: 100vw;
+		height: 15vh;
+		min-height: 67.5px;
+		max-height: 170px;
+		position: sticky;
+	}
+}
+
+/* i have no idea why i have to do this */
+body {
+	margin: 0;
+	border: none;
+	padding: 0;
+}
