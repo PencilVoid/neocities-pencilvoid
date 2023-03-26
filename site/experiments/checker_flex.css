@@ -538,38 +538,33 @@ input[type="checkbox"]:checked {
 
 /* Separate main content from sidebar */
 .page {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	display: grid;
+	grid-template-columns: 13.75% 60% 13.75%;
+	grid-auto-rows: repeat(3, auto);
+	column-gap: 6.25%;
 }
 
 .content {
 	height: fit-content;
-	flex: 1 1 auto;
 	justify-content: center;
-	width: 60vw;
+	grid-row: 1;
+	grid-column: 2;
 }
 
 .sidenav {
-	flex: 1 1 auto;
 	outline: none;
 	border-style: none;
 	background-image: none;
 	height: 100vh;
-	width: 13.75vw;
-	min-width: 140px;
-	margin-right: 6.25vw;
 	background-color: var(--sidebar-colour,#1C0023);
 	position: sticky;
+	grid-column: 1;
 }
 
 .rightbox {
 	height: fit-content;
-	flex: 1 1 auto;
 	justify-content: center;
-	width: 13.75vw;
-	min-width: 140px;
-	margin-left: 6.25vw;
+	grid-column: 3;
 }
 
 @media screen and (max-width: 720px) {
