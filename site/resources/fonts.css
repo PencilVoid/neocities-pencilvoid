@@ -291,9 +291,9 @@
 
 
 
-/* Fira code */
+/* Fira Code */
 @font-face {
-	font-family: 'Fira Code VF';
+	font-family: 'fira-code';
 	src: url("/resources/FiraCode-VF.woff2") format("woff2-variations");
 	font-weight: 300 700;
 	font-style: normal;
