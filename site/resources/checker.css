@@ -1,3 +1,8 @@
+/* Variables */
+:root {
+	--min-desktop-width: 840px;
+}
+
 /* --- Emphasis Types --- */
 em.bold {
 	font-weight: bold;
@@ -32,7 +37,7 @@ h1 {
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 48pt;
 	font-weight: 750;
-	font-stretch: 135%;
+	font-stretch: 150%;
 }
 
 h2 {
@@ -50,7 +55,7 @@ h2 {
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 32pt;
 	font-weight: 650;
-	font-stretch: 125%;
+	font-stretch: 137.5%;
 }
 
 h3 {
@@ -68,7 +73,7 @@ h3 {
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 26pt;
 	font-weight: 550;
-	font-stretch: 112.5%;
+	font-stretch: 125%;
 }
 
 h4 {
@@ -86,7 +91,7 @@ h4 {
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 20pt;
 	font-weight: 500;
-	font-stretch: 100%;
+	font-stretch: 112.5%;
 }
 
 h5 {
@@ -126,7 +131,7 @@ h6 {
 }
 
 /* Smaller headers on small screens*/
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
 	h1 {
 		font-size: 32pt;
 		font-weight: 750;
@@ -185,7 +190,7 @@ ol {
 	color: var(--text-colour,#FFEAFC);
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
 	p {
 		font-size: 12pt;
 	}
@@ -316,7 +321,7 @@ div.code-block {
 	padding: 4px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
 	span.code-inline {
 		font-size: 12pt;
 	}
@@ -350,7 +355,7 @@ div.gallery {
 	justify-content: center;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 840px) {
 	div.gallery {
 		flex: 2 1 auto;
 	}
@@ -379,7 +384,7 @@ div.desc {
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
 	div.desc {
 		font-size: 12pt;
 		padding: 0.5em 0.5em;
@@ -392,7 +397,7 @@ span.desc-metadata {
 	color: var(--text-colour,#FFEAFC);
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
 	span.desc-metadata {
 		font-size: 12pt;
 	}
@@ -499,7 +504,7 @@ input[type="checkbox"]:checked {
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
 	.dropdown .dropdown-content {
 		padding-right: 0.5em;
 		padding-bottom: 0.5em;
@@ -536,7 +541,7 @@ input[type="checkbox"]:checked {
 	padding: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
 	.content {
 		margin: 0 5vw;
 	}
