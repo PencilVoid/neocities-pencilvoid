@@ -23,6 +23,8 @@
 				--a-hover-colour: #FBD1FF;
 				--a-active-colour: #FFFFFF;
 				--hr-colour: #FF417D;
+
+				--thing-scale: 2;
 			}
 			
 			body {
@@ -33,6 +35,7 @@
 				top: 3vh;
 				left: 97vw;
 				overflow: visible;
+				
 			}
 			
 			.thing-supercore {
@@ -42,6 +45,7 @@
 				z-index: -1;
 				animation: hue-cycle 30s infinite linear, quiver 0.5s infinite steps(20, jump-none);
 				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
 			}
 			.thing-core {
 				position: absolute;
@@ -50,6 +54,7 @@
 				z-index: -2;
 				animation: hue-cycle 30s infinite linear, spin-core 7.5s infinite linear;
 				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
 			}
 			.thing-rays {
 				position: absolute;
@@ -58,6 +63,7 @@
 				z-index: -3;
 				animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 5s infinite ease-in-out;
 				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
 			}
 			.thing-shell {
 				position: absolute;
@@ -66,6 +72,7 @@
 				z-index: -4;
 				animation: hue-cycle 30s infinite linear, spin-shell 15s infinite linear;
 				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
 			}
 			.thing-fringe {
 				position: absolute;
@@ -74,6 +81,7 @@
 				z-index: -5;
 				animation: hue-cycle 30s infinite linear, spin-fringe 30s infinite linear;
 				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
 			}
 			
 			@keyframes spin-core {
@@ -111,13 +119,13 @@
 
 			@keyframes radiate-rays {
 				0% {
-					scale: 0.875;
+					scale: calc(var(--thing-scale) * 0.875);
 				}
 				50% {
-					scale: 1.75;
+					scale: calc(var(--thing-scale) * 1.75);
 				}
 				100% {
-					scale: 0.875;
+					scale: calc(var(--thing-scale) * 0.875);
 				}
 			}
 			@keyframes hue-cycle {
@@ -213,15 +221,6 @@
 				</h1>
 			</header>
 			<hr>
-			<h2>
-				Header 2
-			</h2>
-			<h3>
-				Header 3
-			</h3>
-			<h4>
-				Header 4
-			</h4>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget ligula nec nunc viverra venenatis in in neque. Aliquam gravida elementum magna, non egestas nulla. Nullam in neque elementum, aliquet mauris sit amet, hendrerit leo. Curabitur fringilla volutpat tortor in molestie. Sed eu rutrum magna, a imperdiet mauris. Fusce quis augue in ipsum tempor pellentesque. Sed rutrum gravida scelerisque. Sed at tempor lorem. Nunc aliquet nunc ac vehicula lobortis. Maecenas in lorem malesuada, commodo sapien id, luctus odio. Nullam sollicitudin nunc ac mollis bibendum. Sed nec mollis turpis. Pellentesque venenatis nunc et mi aliquam laoreet. Maecenas nulla eros, pharetra nec rutrum at, laoreet sed lectus. Donec fermentum nibh sit amet eros porta mattis. Nulla leo tellus, tempor ut elit a, facilisis malesuada dolor.
 				<br>
