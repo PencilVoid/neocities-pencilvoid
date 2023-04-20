@@ -296,10 +296,6 @@ hr {
 }
 
 /* --- Division Styles --- */
-img {
-	display: inline;
-}
-
 .card {
 	background: #ff8989;
 	text-align: center;
@@ -518,6 +514,26 @@ input[type="checkbox"]:checked {
 
 .dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
 	display: contents;
+}
+
+/* Scrollbar */
+* {
+	scrollbar-color: var(--hr-colour,var(--text-colour,#FF417D)) rgba(0,0,0,0);
+	scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar-track {
+	background: rgba(0,0,0,0);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--hr-colour,var(--text-colour,#FF417D));
+}
+
+@media screen and (pointer: none) {
+	* {
+		scrollbar-width: auto;
+	}
 }
 
 /* --- Sidenav Styling --- */
