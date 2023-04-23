@@ -30,36 +30,11 @@
 				--header-font: inconsolata;
 				--alt-font: overpass;
 				--alt-mono-font: overpass-mono;
-
-				--body-width: 1920;
-			}
-
-			body {
-				width: var(--body-width);
-				overflow-x: hidden;
 			}
 		</style>
 	</head>
 
 	<body>
-		<script>
-			const innerHeightOutput = document.querySelector("#innerHeight");
-			const innerWidthOutput = document.querySelector("#innerWidth");
-			const outerHeightOutput = document.querySelector("#outerHeight");
-			const outererWidthOutput = document.querySelector("#outerWidth");
-
-			function updateSize() {
-				document.querySelector("#innerHeight").textContent = window.innerHeight;
-				document.querySelector("#innerWidth").textContent = window.innerWidth;
-				document.querySelector("#outerHeight").textContent = window.outerHeight;
-				document.querySelector("#outerWidth").textContent = window.outerWidth;
-
-				document.documentElement.style.setProperty("--body-width", window.outerWidth + "px");
-			}
-
-			updateSize();
-			window.addEventListener("resize", updateSize);
-		</script>
 		<iframe class="sidenav" scrolling="no" src="/sidebar.html"></iframe>
 		<div class="content">
 			<header>

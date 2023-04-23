@@ -573,9 +573,11 @@ input[type="checkbox"]:checked {
 	}
 }
 
-/* i have no idea why i have to do this */
+/* bruh */
 body {
 	margin: 0;
 	border: none;
 	padding: 0;
+	width: 100vw;
+	overflow-x: hidden;
 }
