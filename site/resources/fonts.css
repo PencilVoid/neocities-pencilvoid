@@ -294,7 +294,7 @@
 /* Fira Code */
 @font-face {
 	font-family: 'fira-code';
-	src: url("/resources/FiraCode-VF.woff2") format("woff2") tech("variations");
+	src: url("/resources/fonts/FiraCode-VF.woff2") format("woff2") tech("variations");
 	font-weight: 300 700;
 	font-style: normal;
 }
