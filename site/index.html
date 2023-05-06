@@ -43,6 +43,186 @@
 				--header-font: inconsolata;
 				--alt-font: overpass;
 				--alt-mono-font: overpass-mono;
+
+				--thing-scale: 1.75;
+			}
+
+			.spinner-container {
+				position: absolute;
+				top: 3vh;
+				left: 97vw;
+				overflow: visible;
+			}
+
+			@media screen and (max-width: 840px) {
+				.spinner-container {
+					display: none
+				}
+			}
+			
+			.thing-supercore {
+				position: absolute;
+				top: calc(50% - 256px);
+				left: calc(50% - 256px);
+				z-index: -1;
+				animation: hue-cycle 30s infinite linear, quiver 0.5s infinite steps(20, jump-none);
+				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
+			}
+			.thing-core {
+				position: absolute;
+				top: calc(50% - 256px);
+				left: calc(50% - 256px);
+				z-index: -2;
+				animation: hue-cycle 30s infinite linear, spin-core 7.5s infinite linear;
+				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
+			}
+			.thing-rays {
+				position: absolute;
+				top: calc(50% - 256px);
+				left: calc(50% - 256px);
+				z-index: -3;
+				animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 5s infinite ease-in-out;
+				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
+			}
+			.thing-shell {
+				position: absolute;
+				top: calc(50% - 256px);
+				left: calc(50% - 256px);
+				z-index: -4;
+				animation: hue-cycle 30s infinite linear, spin-shell 15s infinite linear;
+				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
+			}
+			.thing-fringe {
+				position: absolute;
+				top: calc(50% - 256px);
+				left: calc(50% - 256px);
+				z-index: -5;
+				animation: hue-cycle 30s infinite linear, spin-fringe 30s infinite linear;
+				mix-blend-mode: plus-lighter;
+				scale: var(--thing-scale);
+			}
+			
+			@keyframes spin-core {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes spin-rays {
+				0% {
+					transform: rotate(360deg) ;
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+			@keyframes spin-shell {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes spin-fringe {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			@keyframes radiate-rays {
+				0% {
+					scale: calc(var(--thing-scale) * 0.875);
+				}
+				50% {
+					scale: calc(var(--thing-scale) * 1.75);
+				}
+				100% {
+					scale: calc(var(--thing-scale) * 0.875);
+				}
+			}
+			@keyframes hue-cycle {
+				0% {
+					filter: hue-rotate(0deg);
+				}
+				100% {
+					filter: hue-rotate(360deg);
+				}
+			}
+			
+			@keyframes quiver {
+				0% {
+					transform: scale(1);
+				}
+				5% {
+					transform: scale(0.991);
+				}
+				10% {
+					transform: scale(0.954);
+				}
+				15% {
+					transform: scale(0.997);
+				}
+				20% {
+					transform: scale(1.007);
+				}
+				25% {
+					transform: scale(0.929);
+				}
+				30% {
+					transform: scale(1.006);
+				}
+				35% {
+					transform: scale(1.053);
+				}
+				40% {
+					transform: scale(1.092);
+				}
+				45% {
+					transform: scale(0.947);
+				}
+				50% {
+					transform: scale(1.021);
+				}
+				55% {
+					transform: scale(1.096);
+				}
+				60% {
+					transform: scale(0.985);
+				}
+				65% {
+					transform: scale(0.978);
+				}
+				70% {
+					transform: scale(1.038);
+				}
+				75% {
+					transform: scale(1.115);
+				}
+				80% {
+					transform: scale(0.944);
+				}
+				85% {
+					transform: scale(0.985);
+				}
+				90% {
+					transform: scale(1.05);
+				}
+				95% {
+					transform: scale(0.988);
+				}
+				100% {
+					transform: scale(1);
+				}
 			}
 		</style>
 	</head>
@@ -50,48 +230,39 @@
 	<body>
 		<iframe class="sidenav" src="/sidebar.html"></iframe>
 		<div class="content">
+			<div class="spinner-container">
+				<img class="thing-supercore" src="/resources/img/thing_supercore.svg" alt="" width="512px" height="512px">
+				<img class="thing-core" src="/resources/img/thing_core.svg" alt="" width="512px" height="512px">
+				<img class="thing-rays" src="/resources/img/thing_rays.svg" alt="" width="512px" height="512px">
+				<img class="thing-shell" src="/resources/img/thing_shell.svg" alt="" width="512px" height="512px">
+				<img class="thing-fringe" src="/resources/img/thing_fringe.svg" alt="" width="512px" height="512px">
+			</div>
 			<header>
 				<h1>
 					pencilvoid<wbr>.neocities<wbr>.org
 				</h1>
 			</header>
 			<hr>
-			<div style="float:right;"><img src="/resources/mascot/fall.png"></div>
 			<p>
 				Internet home of the world's best worst pixel artist and actual coniferous plant creature in real life- it's PencilVoid. Take a look around, get comfy.
 			</p>
 			<h2>
-				Questions
+				Who/what/why are you?
 			</h2>
-			<h3>
-				What are you?
-			</h3>
 			<p>
-				I am a PencilVoid. Possibly the only one.
+				I am a PencilVoid. As far as I know, I am the only person who is me.
+			</p>
+			<p>
+				This place is a personal project that I became unexpectedly invested in. I've used this to learn basic web development and computer skills in general. It's been fun so far.
+			</p>
+			<p>
+				This place is also a place for me to talk about the things I do. Most of my hobbies involve sitting in front of an oversized calculator and pressing buttons until it shows cool stuff on its display. This website is an example of that. Some things I do with my giant calculator include <a href="/art">pixel art</a> and amateur video game modding. I use tools like <a href="https://www.getpaint.net/index.html" target="_blank">paint.net</a> and <a href="https://www.blockbench.net/" target="_blank">Blockbench</a>. Conveniently, this site holds <a href="/esoterrarium/freestuff">a list</a> of tools I use alongside some tools I don't use but are cool nonetheless. Maybe check that out?
 			</p>
 			<h3>
-				What is this place?
+				Credits
 			</h3>
 			<p>
-				In short, a personal project that I became unexpectedly invested in. I've used this to learn basic web development and computer skills in general. It's been fun so far.
-			</p>
-			<h3>
-				What stuff do you make?
-			</h3>
-			<p>
-				My most developed skill is pixel art. I also know HTML and CSS (evidently), and I have limited but growing knowledge of storytelling, 3D modelling and game design/development.
-			</p>
-			<h3>
-				What do you use to make the things?
-			</h3>
-			<p>
-				For pixel art I use <a href="https://www.getpaint.net/index.html" target="_blank">paint.net</a>, and <a href="http://www.rw-designer.com/image-editor" target="_blank">Realworld Paint</a> if I need to. I also know how to work with <a href="https://slade.mancubus.net/" target="_blank">SLADE</a> and <a href="https://www.blockbench.net/" target="_blank">Blockbench</a>.
-			</p>
-			<h3>
-				Obligatory credits section?
-			</h3>
-			<p>
-				This place is currently hosted by <a href="https://neocities.org/" target="_blank">Neocities</a>, a project similar to Geocities which allows users to create and host web pages for free. The code that wasn't written in Neocities' own code editor was written in <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>, which I have incorporated into my workflow using <a href="https://github.com/bcomnes/deploy-to-neocities" target="_blank">deploy-to-neocities</a>. HTML and CSS knowledge was provided by <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> and <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>. Under the terms of the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl" target="_blank">Open Font License</a> this website uses <a href="https://levien.com/type/myfonts/inconsolata.html" target="_blank">Inconsolata</a> for headings, <a href="https://github.com/tonsky/FiraCode" target="_blank">Fira Code</a> for monospace and <a href="https://overpassfont.org/" target="_blank">Overpass</a> for some text. <a href="https://brailleinstitute.org/freefont" target="_blank">Atkinson Hyperlegible</a> is provided under the terms of <a href="\resources\fonts\Atkinson-Hyperlegible-Font-License-2020-1104.pdf" target="_blank">its license agreement</a>. All art and other creative content featured on this website, unless stated otherwise, was created by me. If you're interested in picking apart my code and using it for your own purposes, you can view the source code on <a href="https://github.com/PencilVoid/neocities-pencilvoid" target="_blank">Github</a>.
+				This place is currently hosted by <a href="https://neocities.org/" target="_blank">Neocities</a>, a project similar to Geocities which allows users to create and host web pages for free. The code that wasn't written in Neocities' own code editor was written in <a href="https://code.visualstudio.com/" target=""_blank>Visual Studio Code</a> and <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>, which I have incorporated into my workflow using <a href="https://github.com/bcomnes/deploy-to-neocities" target="_blank">deploy-to-neocities</a>. HTML and CSS knowledge was provided by <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> and <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>. Under the terms of the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl" target="_blank">Open Font License</a> this website uses <a href="https://levien.com/type/myfonts/inconsolata.html" target="_blank">Inconsolata</a>, <a href="https://overpassfont.org/" target="_blank">Overpass</a>, and <a href="https://github.com/tonsky/FiraCode" target="_blank">Fira Code</a>. <a href="https://brailleinstitute.org/freefont" target="_blank">Atkinson Hyperlegible</a> is provided under the terms of <a href="\resources\fonts\Atkinson-Hyperlegible-Font-License-2020-1104.pdf" target="_blank">its license agreement</a>. All art and other creative content featured on this website, unless stated otherwise, was created by me. If you're interested in picking apart my code and using it for your own purposes, you can view the source code on <a href="https://github.com/PencilVoid/neocities-pencilvoid" target="_blank">Github</a>.
 			</p>
 			<hr>
 			<p>
