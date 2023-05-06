@@ -45,7 +45,7 @@
 			text-align: center;
 		}
 		canvas {
-			touch-action-delay: none;
+			/*touch-action-delay: none;*/
 			touch-action: none;
 			-ms-touch-action: none;
 		}
@@ -69,9 +69,11 @@
 			--alt-font: overpass;
 			--alt-mono-font: overpass-mono;
 		}
+
+		#c2canvasdiv {
+			padding-bottom: 1em;
+		}
 	</style>
-
-
 </head> 
  
 <body> 
@@ -165,7 +167,14 @@
 			}
 		};
     </script>
-    <p>Controls are listed ingame. Scribbled out text on the titlescreen is my old username. Ignore the "coming soon" message, I'm never updating this. Dated 13/09/2018.</p><br>
-    <a href="https://pencilvoid.neocities.org/games">Go Back</a>
+    <p style="text-align: center;">
+		Controls are listed ingame. Scribbled out text on the titlescreen is my old username. Ignore the "coming soon" message, I'm never updating this.
+	</p>
+	<p style="text-align: center;">
+		Dated 13/09/2018.
+	</p>
+	<p style="text-align: center;">
+		<a href="/games">Go Back</a>
+	</p>
 </body> 
-</html> 
+</html>

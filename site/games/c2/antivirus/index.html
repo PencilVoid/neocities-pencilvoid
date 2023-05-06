@@ -45,7 +45,7 @@
 			text-align: center
 		}
 		canvas {
-			touch-action-delay: none;
+			/*touch-action-delay: none;*/
 			touch-action: none;
 			-ms-touch-action: none;
 		}
@@ -68,6 +68,10 @@
 			--header-font: inconsolata;
 			--alt-font: overpass;
 			--alt-mono-font: overpass-mono;
+		}
+
+		#c2canvasdiv {
+			padding-bottom: 1em;
 		}
 	</style>
 </head> 
@@ -162,6 +166,14 @@
 			}
 		};
     </script>
-    <p>Left and right arrows to move. A to jump. S to shoot. Shift to sprint. R to reset level. Get to the green squares. Don't touch viruses or red squares. Dated 13/09/2018.</p><br><a href="https://pencilvoid.neocities.org/games">Go Back</a>
+    <p style="text-align: center;">
+		Left and right arrows to move. A to jump. S to shoot. Shift to sprint. Z to fall through platforms. R to reset level. Get to the green squares. Don't touch viruses or red squares.
+	</p>
+	<p style="text-align: center;">
+		Dated 13/09/2018.
+	</p>
+	<p style="text-align: center;">
+		<a href="/games">Go Back</a>
+	</p>
 </body> 
-</html> 
+</html>
