@@ -165,21 +165,24 @@ h6 {
 }
 /* --- Text Styling --- */
 p {
-	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-family: atkinson-hyperlegible, sans-serif;
+	font-family: var(--main-font,atkinson-hyperlegible);
 	font-size: 14pt;
 	text-align: left;
 	color: var(--text-colour,#FFEAFC);
 }
 
 ul {
-	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-family: atkinson-hyperlegible, sans-serif;
+	font-family: var(--main-font,atkinson-hyperlegible);
 	font-size: 14pt;
 	text-align: left;
 	color: var(--text-colour,#FFEAFC);
 }
 
 ol {
-	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-family: atkinson-hyperlegible, sans-serif;
+	font-family: var(--main-font,atkinson-hyperlegible);
 	font-size: 14pt;
 	text-align: left;
 	color: var(--text-colour,#FFEAFC);
@@ -297,7 +300,8 @@ hr {
 }
 
 span.code-inline {
-	font-family: var(--monospace-font,fira-code, monospace);
+	font-family: fira-code, monospace;
+	font-family: var(--monospace-font,fira-code);
 	font-size: 14pt;
 	background-color: var(--sidebar-colour,#1C0023);
 	color: var(--text-colour,#FFEAFC);
@@ -305,7 +309,8 @@ span.code-inline {
 }
 
 div.code-block {
-	font-family: var(--monospace-font,fira-code, monospace);
+	font-family: fira-code, monospace;
+	font-family: var(--monospace-font,fira-code);
 	font-size: 14pt;
 	background-color: var(--sidebar-colour,#1C0023);
 	color: var(--text-colour,#FFEAFC);
@@ -363,7 +368,8 @@ div.gallery img {
 }
 
 div.desc {
-	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-family: atkinson-hyperlegible, sans-serif;
+	font-family: var(--main-font,atkinson-hyperlegible);
 	font-size: 14pt;
 	text-align: left;
 	color: var(--text-colour);
@@ -383,7 +389,8 @@ div.desc {
 }
 
 span.desc-metadata {
-	font-family: var(--alt-mono-font,overpass-mono, monospace);
+	font-family: overpass-mono, monospace-serif;
+	font-family: var(--alt-mono-font,overpass-mono);
 	background-color:  rgba(255, 255, 255, 0.15);
 	color: var(--text-colour,#FFEAFC);
 }
@@ -433,7 +440,8 @@ label.dropdown-label {
 	display: inline-block;
 	padding: 0.5em;
 	color: var(--a-active-colour);
-	font-family: var(--alt-font,overpass, sans-serif);
+	font-family: overpass, sans-serif;
+	font-family: var(--main-font,overpass);
 
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.1);
