@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="480"
-   height="480"
-   viewBox="0 0 127 127"
+   width="106.8"
+   height="106.8"
+   viewBox="0 0 28.2575 28.257502"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="thing_shell.svg">
+   sodipodi:docname="thing_rays.svg">
   <defs
      id="defs2">
     <pattern
@@ -137,11 +137,7 @@
     <filter
        style="color-interpolation-filters:sRGB"
        id="filter3043"
-       inkscape:label="filter0"
-       x="-0.20227277"
-       y="-0.15965903"
-       width="1.3079547"
-       height="1.2227272">
+       inkscape:label="filter0">
       <feComposite
          in2="BackgroundImage"
          id="feComposite3047"
@@ -160,11 +156,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.86145824"
-     inkscape:cx="300.97606"
-     inkscape:cy="183.97068"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="5.1675661"
+     inkscape:cy="67.273098"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      inkscape:document-rotation="0"
      showgrid="true"
      units="px"
@@ -181,8 +177,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid833"
-       originx="0"
-       originy="0" />
+       originx="-8.5331615"
+       originy="-7.6593404" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -198,16 +194,30 @@
   </metadata>
   <g
      inkscape:groupmode="layer"
-     id="layer4"
-     inkscape:label="shell"
+     id="layer5"
+     inkscape:label="rays"
      style="display:inline;mix-blend-mode:screen"
-     transform="translate(-6.130657,-6.1306525)">
-    <path
-       style="fill:none;fill-opacity:1;stroke:#453756;stroke-width:4.23333;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 8.2473237,8.2473192 H 131.01399 V 131.01399 H 8.2473237 Z"
-       id="path856"
-       mask="none"
-       clip-path="none"
-       sodipodi:nodetypes="ccccc" />
+     transform="translate(-13.174162,-11.242007)">
+    <g
+       id="g858"
+       transform="matrix(1.7565789,0,0,1.7565789,-2.4418243,-4.373979)"
+       style="stroke-width:0.602497;stroke-miterlimit:4;stroke-dasharray:none">
+      <path
+         style="fill:none;stroke:#453756;stroke-width:0.602497;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3043)"
+         d="M 20.902083,12.964583 24.60625,9.2604166"
+         id="path859" />
+      <path
+         style="fill:none;stroke:#453756;stroke-width:0.602497;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3043)"
+         d="M 9.2604166,9.2604166 12.964583,12.964583"
+         id="path861" />
+      <path
+         style="fill:none;stroke:#453756;stroke-width:0.602497;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3043)"
+         d="M 9.2604166,24.60625 12.964583,20.902083"
+         id="path863" />
+      <path
+         style="fill:none;stroke:#453756;stroke-width:0.602497;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3043)"
+         d="M 20.902083,20.902083 C 21.43125,21.43125 24.60625,24.60625 24.60625,24.60625"
+         id="path865" />
+    </g>
   </g>
 </svg>

@@ -44,13 +44,13 @@
 				--alt-font: overpass;
 				--alt-mono-font: overpass-mono;
 
-				--thing-scale: 1.75;
+				--thing-scale: 1;
 			}
 
 			.spinner-container {
 				position: absolute;
-				top: 3vh;
-				left: 97vw;
+				top: 2.5vh;
+				left: 97.5vw;
 				overflow: visible;
 			}
 
@@ -62,8 +62,9 @@
 			
 			.thing-supercore {
 				position: absolute;
-				top: calc(50% - 256px);
-				left: calc(50% - 256px);
+				top: 50%;
+				left: 50%;
+				translate: -50% -50%;
 				z-index: -1;
 				animation: hue-cycle 30s infinite linear, quiver 0.5s infinite steps(20, jump-none);
 				mix-blend-mode: plus-lighter;
@@ -71,8 +72,9 @@
 			}
 			.thing-core {
 				position: absolute;
-				top: calc(50% - 256px);
-				left: calc(50% - 256px);
+				top: 50%;
+				left: 50%;
+				translate: -50% -50%;
 				z-index: -2;
 				animation: hue-cycle 30s infinite linear, spin-core 7.5s infinite linear;
 				mix-blend-mode: plus-lighter;
@@ -80,8 +82,9 @@
 			}
 			.thing-rays {
 				position: absolute;
-				top: calc(50% - 256px);
-				left: calc(50% - 256px);
+				top: 50%;
+				left: 50%;
+				translate: -50% -50%;
 				z-index: -3;
 				animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 5s infinite ease-in-out;
 				mix-blend-mode: plus-lighter;
@@ -89,8 +92,9 @@
 			}
 			.thing-shell {
 				position: absolute;
-				top: calc(50% - 256px);
-				left: calc(50% - 256px);
+				top: 50%;
+				left: 50%;
+				translate: -50% -50%;
 				z-index: -4;
 				animation: hue-cycle 30s infinite linear, spin-shell 15s infinite linear;
 				mix-blend-mode: plus-lighter;
@@ -98,8 +102,9 @@
 			}
 			.thing-fringe {
 				position: absolute;
-				top: calc(50% - 256px);
-				left: calc(50% - 256px);
+				top: 50%;
+				left: 50%;
+				translate: -50% -50%;
 				z-index: -5;
 				animation: hue-cycle 30s infinite linear, spin-fringe 30s infinite linear;
 				mix-blend-mode: plus-lighter;
@@ -116,18 +121,18 @@
 			}
 			@keyframes spin-rays {
 				0% {
-					transform: rotate(360deg) ;
+					transform: rotate(405deg) ;
 				}
 				100% {
-					transform: rotate(0deg);
+					transform: rotate(45deg);
 				}
 			}
 			@keyframes spin-shell {
 				0% {
-					transform: rotate(0deg);
+					transform: rotate(45deg);
 				}
 				100% {
-					transform: rotate(360deg);
+					transform: rotate(405deg);
 				}
 			}
 			@keyframes spin-fringe {
@@ -229,14 +234,15 @@
 
 	<body>
 		<iframe class="sidenav" src="/sidebar.html"></iframe>
+		<div class="spinner-container">
+			<img class="thing-supercore" src="/resources/img/thing_supercore.svg" alt="">
+			<img class="thing-core" src="/resources/img/thing_core.svg" alt="" >
+			<img class="thing-rays" src="/resources/img/thing_rays.svg" alt="">
+			<img class="thing-shell" src="/resources/img/thing_shell.svg" alt="">
+			<img class="thing-fringe" src="/resources/img/thing_fringe.svg" alt="">
+		</div>
 		<div class="content">
-			<div class="spinner-container">
-				<img class="thing-supercore" src="/resources/img/thing_supercore.svg" alt="" width="512px" height="512px">
-				<img class="thing-core" src="/resources/img/thing_core.svg" alt="" width="512px" height="512px">
-				<img class="thing-rays" src="/resources/img/thing_rays.svg" alt="" width="512px" height="512px">
-				<img class="thing-shell" src="/resources/img/thing_shell.svg" alt="" width="512px" height="512px">
-				<img class="thing-fringe" src="/resources/img/thing_fringe.svg" alt="" width="512px" height="512px">
-			</div>
+			
 			<header>
 				<h1>
 					pencilvoid<wbr>.neocities<wbr>.org

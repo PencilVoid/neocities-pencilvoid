@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="128"
-   height="128"
-   viewBox="0 0 33.866666 33.866668"
+   width="168"
+   height="168"
+   viewBox="0 0 44.45 44.45"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
@@ -144,7 +144,9 @@
          operator="arithmetic"
          k2="1"
          k3="1"
-         in="SourceGraphic" />
+         in="SourceGraphic"
+         k1="0"
+         k4="0" />
     </filter>
   </defs>
   <sodipodi:namedview
@@ -154,9 +156,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="61.518276"
-     inkscape:cy="88.466729"
+     inkscape:zoom="1.4142135"
+     inkscape:cx="0.94801122"
+     inkscape:cy="73.771591"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      inkscape:document-rotation="0"
@@ -167,10 +169,16 @@
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid833" />
+       id="grid833"
+       originx="3.0000001e-08"
+       originy="0" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -180,7 +188,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -190,8 +198,8 @@
      inkscape:label="supercore"
      style="mix-blend-mode:screen">
     <path
-       style="fill:#69698c;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 16.933333,13.758333 3.175,3.175 -3.175,3.175 c 0,0 -3.175,-3.175 -3.175,-3.175 l 3.175,-3.175"
+       style="fill:#69698c;fill-opacity:1;stroke:none;stroke-width:1.85208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 22.225,0 44.45,22.225 22.225,44.45 C 22.225,44.45 -3.0000002e-8,22.225 -3.0000002e-8,22.225 L 22.225,0"
        id="path853" />
   </g>
 </svg>
