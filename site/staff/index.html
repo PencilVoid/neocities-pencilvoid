@@ -25,9 +25,9 @@ customcss: ":root {
 <ul>
 	{% for author in site.authors %}
 	  <li>
-		<h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-		<h3>{{ author.position }}</h3>
+		<span class="post-list-title"><a href="{{ author.url }}">{{ author.name }}</a></span>
+		<em class="bold">{{ author.position }}</em>
 		<p>{{ author.content | markdownify }}</p>
 	  </li>
 	{% endfor %}
-  </ul>
+</ul>

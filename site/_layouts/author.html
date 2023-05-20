@@ -11,7 +11,7 @@
 		<link href="/resources/fonts.css" rel="stylesheet" type="text/css" media="all">
 		<link href="/resources/checker.css" rel="stylesheet" type="text/css" media="all">
 		<title>
-			{{ page.title }}
+			{{ page.title }} | Staff
 		</title>
 		{% feed_meta %}
 		{% seo %}
@@ -50,14 +50,15 @@
 				</h1>
 				<em class="bold">{{ page.position }}</em>
 			</header>
+			<hr>
 			{{ content }}
 
 			<h2>Posts</h2>
 			<ul>
-			{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-			{% for post in filtered_posts %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-			{% endfor %}
+				{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+				{% for post in filtered_posts %}
+				  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 	</body>
