@@ -27,6 +27,7 @@ plugins:
   - jekyll-seo-tag
 
 title: pencilvoid.neocities.org
+tagline: The Pencilzone
 url: https://pencilvoid.neocities.org
 twitter:
   username: pencilvoid
