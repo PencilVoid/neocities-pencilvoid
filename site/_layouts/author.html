@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/icons/favicon.ico">
+		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
+		<link rel="manifest" href="/icons/site.webmanifest">
+		<link href="/resources/fonts.css" rel="stylesheet" type="text/css" media="all">
+		<link href="/resources/checker.css" rel="stylesheet" type="text/css" media="all">
+		<title>
+			{{ page.title }}
+		</title>
+		{% feed_meta %}
+		{% seo %}
+		<style>
+			:root {
+				--header-colour: #18294F;
+				--bg-colour: #108587;
+				--bg-checkerdark: #108587;
+				--bg-checkerlight: #10A891;
+				--bg-triangle: #196E64;
+				--sidebar-colour: #074156;
+				--text-colour: #B2FFB2;
+				--a-colour: #8BFF56;
+				--a-visited-colour: #2CE06E;
+				--a-hover-colour: #B2FFB2;
+				--a-active-colour: #FFFFFF;
+				--hr-colour: #3FF460;
+
+				--main-font: atkinson-hyperlegible;
+				--monospace-font: fira-code;
+				--header-font: inconsolata;
+				--alt-font: overpass;
+				--alt-mono-font: overpass-mono;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			{% include sidebar.html %}
+		</nav>
+		<div class="content">
+			<header>
+				<h1>
+					{{ page.name }}
+				</h1>
+				<em class="bold">{{ page.position }}</em>
+			</header>
+			{{ content }}
+
+			<h2>Posts</h2>
+			<ul>
+			{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+			{% for post in filtered_posts %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>

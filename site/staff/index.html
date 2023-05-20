@@ -1,0 +1,33 @@
+---
+title: Staff
+header: Staff
+customcss: ":root {
+	--header-colour: #18294F;
+	--bg-colour: #108587;
+	--bg-checkerdark: #108587;
+	--bg-checkerlight: #10A891;
+	--bg-triangle: #196E64;
+	--sidebar-colour: #074156;
+	--text-colour: #B2FFB2;
+	--a-colour: #8BFF56;
+	--a-visited-colour: #2CE06E;
+	--a-hover-colour: #B2FFB2;
+	--a-active-colour: #FFFFFF;
+	--hr-colour: #3FF460;
+
+	--main-font: atkinson-hyperlegible;
+	--monospace-font: fira-code;
+	--header-font: inconsolata;
+	--alt-font: overpass;
+	--alt-mono-font: overpass-mono;
+}"
+---
+<ul>
+	{% for author in site.authors %}
+	  <li>
+		<h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+		<h3>{{ author.position }}</h3>
+		<p>{{ author.content | markdownify }}</p>
+	  </li>
+	{% endfor %}
+  </ul>

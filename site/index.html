@@ -1,293 +1,255 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="/icons/favicon.ico">
-		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/icons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
-		<link rel="manifest" href="/icons/site.webmanifest">
-		<link href="/resources/fonts.css" rel="stylesheet" type="text/css" media="all">
-		<link href="/resources/checker.css" rel="stylesheet" type="text/css" media="all">
-		<title>
-			PENCILVOID
-		</title>
-		<meta property="og:site_name" content="pencilvoid.neocities.org">
-		<meta property="og:title" content="PencilVoid"/>
-		<meta name="theme-color" content="#680068">
-		<meta property="og:description" content="Plant webmaster"/>
-		<meta property="og:locale" content="en_GB"/>
-		<meta property="og:url" content="https://pencilvoid.neocities.org"/>
-		<meta property="og:image" content="/resources/img/opengraph_banner.png"/>
-		
-		<meta name="twitter:card" content="summary">
-		<meta property="twitter:domain" content="pencilvoid.neocities.org">
-		<style>
-			:root {
-				--header-colour: #220029;
-				--bg-colour: #220029;
-				--bg-checkerdark: #42004E;
-				--bg-checkerlight: #680068;
-				--bg-triangle: #220029;
-				--sidebar-colour: #1C0023;
-				--text-colour: #FFEAFC;
-				--a-colour: #FF9EBC;
-				--a-visited-colour: #FF7FAC;
-				--a-hover-colour: #FBD1FF;
-				--a-active-colour: #FFFFFF;
-				--hr-colour: #FF417D;
+---
+title: PENCILVOID
+header: pencilvoid<wbr>.neocities<wbr>.org
+customcss: ":root {
+	--header-colour: #220029;
+	--bg-colour: #220029;
+	--bg-checkerdark: #42004E;
+	--bg-checkerlight: #680068;
+	--bg-triangle: #220029;
+	--sidebar-colour: #1C0023;
+	--text-colour: #FFEAFC;
+	--a-colour: #FF9EBC;
+	--a-visited-colour: #FF7FAC;
+	--a-hover-colour: #FBD1FF;
+	--a-active-colour: #FFFFFF;
+	--hr-colour: #FF417D;
 
-				--main-font: atkinson-hyperlegible;
-				--monospace-font: fira-code;
-				--header-font: inconsolata;
-				--alt-font: overpass;
-				--alt-mono-font: overpass-mono;
+	--main-font: atkinson-hyperlegible;
+	--monospace-font: fira-code;
+	--header-font: inconsolata;
+	--alt-font: overpass;
+	--alt-mono-font: overpass-mono;
 
-				--thing-scale: 1;
-			}
+	--thing-scale: 1;
+}
 
-			.spinner-container {
-				position: absolute;
-				top: 2.5vh;
-				left: 97.5vw;
-				overflow: visible;
-			}
+.spinner-container {
+	position: absolute;
+	top: 2.5vh;
+	left: 97.5vw;
+	overflow: visible;
+}
 
-			@media screen and (max-width: 840px) {
-				.spinner-container {
-					display: none
-				}
-			}
-			
-			.thing-supercore {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				translate: -50% -50%;
-				z-index: -1;
-				animation: hue-cycle 30s infinite linear, quiver 0.5s infinite steps(20, jump-none);
-				mix-blend-mode: plus-lighter;
-				scale: var(--thing-scale);
-			}
-			.thing-core {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				translate: -50% -50%;
-				z-index: -2;
-				animation: hue-cycle 30s infinite linear, spin-core 7.5s infinite linear;
-				mix-blend-mode: plus-lighter;
-				scale: var(--thing-scale);
-			}
-			.thing-rays {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				translate: -50% -50%;
-				z-index: -3;
-				animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 5s infinite ease-in-out;
-				mix-blend-mode: plus-lighter;
-				scale: var(--thing-scale);
-			}
-			.thing-shell {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				translate: -50% -50%;
-				z-index: -4;
-				animation: hue-cycle 30s infinite linear, spin-shell 15s infinite linear;
-				mix-blend-mode: plus-lighter;
-				scale: var(--thing-scale);
-			}
-			.thing-fringe {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				translate: -50% -50%;
-				z-index: -5;
-				animation: hue-cycle 30s infinite linear, spin-fringe 30s infinite linear;
-				mix-blend-mode: plus-lighter;
-				scale: var(--thing-scale);
-			}
-			
-			@keyframes spin-core {
-				0% {
-					transform: rotate(0deg);
-				}
-				100% {
-					transform: rotate(360deg);
-				}
-			}
-			@keyframes spin-rays {
-				0% {
-					transform: rotate(405deg) ;
-				}
-				100% {
-					transform: rotate(45deg);
-				}
-			}
-			@keyframes spin-shell {
-				0% {
-					transform: rotate(45deg);
-				}
-				100% {
-					transform: rotate(405deg);
-				}
-			}
-			@keyframes spin-fringe {
-				0% {
-					transform: rotate(0deg);
-				}
-				100% {
-					transform: rotate(360deg);
-				}
-			}
+@media screen and (max-width: 840px) {
+	.spinner-container {
+		display: none
+	}
+}
 
-			@keyframes radiate-rays {
-				0% {
-					scale: calc(var(--thing-scale) * 0.875);
-				}
-				50% {
-					scale: calc(var(--thing-scale) * 1.75);
-				}
-				100% {
-					scale: calc(var(--thing-scale) * 0.875);
-				}
-			}
-			@keyframes hue-cycle {
-				0% {
-					filter: hue-rotate(0deg);
-				}
-				100% {
-					filter: hue-rotate(360deg);
-				}
-			}
-			
-			@keyframes quiver {
-				0% {
-					transform: scale(1);
-				}
-				5% {
-					transform: scale(0.991);
-				}
-				10% {
-					transform: scale(0.954);
-				}
-				15% {
-					transform: scale(0.997);
-				}
-				20% {
-					transform: scale(1.007);
-				}
-				25% {
-					transform: scale(0.929);
-				}
-				30% {
-					transform: scale(1.006);
-				}
-				35% {
-					transform: scale(1.053);
-				}
-				40% {
-					transform: scale(1.092);
-				}
-				45% {
-					transform: scale(0.947);
-				}
-				50% {
-					transform: scale(1.021);
-				}
-				55% {
-					transform: scale(1.096);
-				}
-				60% {
-					transform: scale(0.985);
-				}
-				65% {
-					transform: scale(0.978);
-				}
-				70% {
-					transform: scale(1.038);
-				}
-				75% {
-					transform: scale(1.115);
-				}
-				80% {
-					transform: scale(0.944);
-				}
-				85% {
-					transform: scale(0.985);
-				}
-				90% {
-					transform: scale(1.05);
-				}
-				95% {
-					transform: scale(0.988);
-				}
-				100% {
-					transform: scale(1);
-				}
-			}
-		</style>
-	</head>
+.thing-supercore {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -1;
+	animation: hue-cycle 30s infinite linear, quiver 0.5s infinite steps(20, jump-none);
+	mix-blend-mode: plus-lighter;
+	scale: var(--thing-scale);
+}
+.thing-core {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -2;
+	animation: hue-cycle 30s infinite linear, spin-core 7.5s infinite linear;
+	mix-blend-mode: plus-lighter;
+	scale: var(--thing-scale);
+}
+.thing-rays {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -3;
+	animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 5s infinite ease-in-out;
+	mix-blend-mode: plus-lighter;
+	scale: var(--thing-scale);
+}
+.thing-shell {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -4;
+	animation: hue-cycle 30s infinite linear, spin-shell 15s infinite linear;
+	mix-blend-mode: plus-lighter;
+	scale: var(--thing-scale);
+}
+.thing-fringe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -5;
+	animation: hue-cycle 30s infinite linear, spin-fringe 30s infinite linear;
+	mix-blend-mode: plus-lighter;
+	scale: var(--thing-scale);
+}
 
-	<body>
-		<iframe class="sidenav" src="/sidebar.html"></iframe>
-		<div class="spinner-container">
-			<img class="thing-supercore" src="/resources/img/thing_supercore.svg" alt="">
-			<img class="thing-core" src="/resources/img/thing_core.svg" alt="" >
-			<img class="thing-rays" src="/resources/img/thing_rays.svg" alt="">
-			<img class="thing-shell" src="/resources/img/thing_shell.svg" alt="">
-			<img class="thing-fringe" src="/resources/img/thing_fringe.svg" alt="">
-		</div>
-		<div class="content">
-			
-			<header>
-				<h1>
-					pencilvoid<wbr>.neocities<wbr>.org
-				</h1>
-			</header>
-			<hr>
-			<p>
-				Internet home of the world's best worst pixel artist and actual coniferous plant creature in real life- it's PencilVoid. Take a look around, get comfy.
-			</p>
-			<h2>
-				Who/what/why are you?
-			</h2>
-			<p>
-				I am a PencilVoid. As far as I know, I am the only person who is me.
-			</p>
-			<p>
-				This place is a personal project that I became unexpectedly invested in. I've used this to learn basic web development and computer skills in general. It's been fun so far.
-			</p>
-			<p>
-				This place is also a place for me to talk about the things I do. Most of my hobbies involve sitting in front of an oversized calculator and pressing buttons until it shows cool stuff on its display. This website is an example of that. Some things I do with my giant calculator include <a href="/art">pixel art</a> and amateur video game modding. I use tools like <a href="https://www.getpaint.net/index.html" target="_blank">paint.net</a> and <a href="https://www.blockbench.net/" target="_blank">Blockbench</a>. Conveniently, this site holds <a href="/esoterrarium/freestuff">a list</a> of tools I use alongside some tools I don't use but are cool nonetheless. Maybe check that out?
-			</p>
-			<h3>
-				Credits
-			</h3>
-			<p>
-				This place is currently hosted by <a href="https://neocities.org/" target="_blank">Neocities</a>, a project similar to Geocities which allows users to create and host web pages for free. The code that wasn't written in Neocities' own code editor was written in <a href="https://code.visualstudio.com/" target=""_blank>Visual Studio Code</a> and <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>, which I have incorporated into my workflow using <a href="https://github.com/bcomnes/deploy-to-neocities" target="_blank">deploy-to-neocities</a>. HTML and CSS knowledge was provided by <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> and <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>. Under the terms of the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl" target="_blank">Open Font License</a> this website uses <a href="https://levien.com/type/myfonts/inconsolata.html" target="_blank">Inconsolata</a>, <a href="https://overpassfont.org/" target="_blank">Overpass</a>, and <a href="https://github.com/tonsky/FiraCode" target="_blank">Fira Code</a>. <a href="https://brailleinstitute.org/freefont" target="_blank">Atkinson Hyperlegible</a> is provided under the terms of <a href="\resources\fonts\Atkinson-Hyperlegible-Font-License-2020-1104.pdf" target="_blank">its license agreement</a>. All art and other creative content featured on this website, unless stated otherwise, was created by me. If you're interested in picking apart my code and using it for your own purposes, you can view the source code on <a href="https://github.com/PencilVoid/neocities-pencilvoid" target="_blank">Github</a>.
-			</p>
-			<hr>
-			<p>
-				Don't forget, you can use the sidebar to hop between directories. Exploring is encouraged.
-			</p>
-			<hr>
-			<!-- begin wwww.htmlcommentbox.com -->
- 			<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
- 			<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
- 			<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24rmBZ7PZQQ4CzyYtJGyILA%2F"+"&opts=16798&num=10&ts=1678655473633");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); </script>
-			<!-- end www.htmlcommentbox.com -->
-			<hr>
-			<p>
-				Note: I have done my best to make the site easy to browse on both desktop and mobile (i find that it works best when installed as a PWA but there's no reason to do that). Feel free to suggest any changes to make it easier to browser on any platform.
-			</p>
-			<h1>
-				THE END... so far
-			</h1>
-		<!-- the h1 text above has been here since the birth of this site! even before i learned what neocities is and i was just writing html for the fun of it! i guess you could call that the gestation period! i gestated! -->
-		</div>
-	</body>
-</html>
+@keyframes spin-core {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin-rays {
+	0% {
+		transform: rotate(405deg) ;
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+@keyframes spin-shell {
+	0% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(405deg);
+	}
+}
+@keyframes spin-fringe {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes radiate-rays {
+	0% {
+		scale: calc(var(--thing-scale) * 0.875);
+	}
+	50% {
+		scale: calc(var(--thing-scale) * 1.75);
+	}
+	100% {
+		scale: calc(var(--thing-scale) * 0.875);
+	}
+}
+@keyframes hue-cycle {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+
+@keyframes quiver {
+	0% {
+		transform: scale(1);
+	}
+	5% {
+		transform: scale(0.991);
+	}
+	10% {
+		transform: scale(0.954);
+	}
+	15% {
+		transform: scale(0.997);
+	}
+	20% {
+		transform: scale(1.007);
+	}
+	25% {
+		transform: scale(0.929);
+	}
+	30% {
+		transform: scale(1.006);
+	}
+	35% {
+		transform: scale(1.053);
+	}
+	40% {
+		transform: scale(1.092);
+	}
+	45% {
+		transform: scale(0.947);
+	}
+	50% {
+		transform: scale(1.021);
+	}
+	55% {
+		transform: scale(1.096);
+	}
+	60% {
+		transform: scale(0.985);
+	}
+	65% {
+		transform: scale(0.978);
+	}
+	70% {
+		transform: scale(1.038);
+	}
+	75% {
+		transform: scale(1.115);
+	}
+	80% {
+		transform: scale(0.944);
+	}
+	85% {
+		transform: scale(0.985);
+	}
+	90% {
+		transform: scale(1.05);
+	}
+	95% {
+		transform: scale(0.988);
+	}
+	100% {
+		transform: scale(1);
+	}
+}"
+---
+<div class="spinner-container">
+	<img class="thing-supercore" src="/resources/img/thing_supercore.svg" alt="">
+	<img class="thing-core" src="/resources/img/thing_core.svg" alt="" >
+	<img class="thing-rays" src="/resources/img/thing_rays.svg" alt="">
+	<img class="thing-shell" src="/resources/img/thing_shell.svg" alt="">
+	<img class="thing-fringe" src="/resources/img/thing_fringe.svg" alt="">
+</div>
+<p>
+	Internet home of the world's best worst pixel artist and actual coniferous plant creature in real life- it's PencilVoid. Take a look around, get comfy.
+</p>
+<h2>
+	Who/what/why are you?
+</h2>
+<p>
+	I am a PencilVoid. As far as I know, I am the only person who is me.
+</p>
+<p>
+	This place is a personal project that I became unexpectedly invested in. I've used this to learn basic web development and computer skills in general. It's been fun so far.
+</p>
+<p>
+	This place is also a place for me to talk about the things I do. Most of my hobbies involve sitting in front of an oversized calculator and pressing buttons until it shows cool stuff on its display. This website is an example of that. Some things I do with my giant calculator include <a href="/art">pixel art</a> and amateur video game modding. I use tools like <a href="https://www.getpaint.net/index.html" target="_blank">paint.net</a> and <a href="https://www.blockbench.net/" target="_blank">Blockbench</a>. Conveniently, this site holds <a href="/esoterrarium/freestuff">a list</a> of tools I use alongside some tools I don't use but are cool nonetheless. Maybe check that out?
+</p>
+<h3>
+	Credits
+</h3>
+<p>
+	This place is currently hosted by <a href="https://neocities.org/" target="_blank">Neocities</a>, a project similar to Geocities which allows users to create and host web pages for free. The code that wasn't written in Neocities' own code editor was written in <a href="https://code.visualstudio.com/" target=""_blank>Visual Studio Code</a> and <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>, which I have incorporated into my workflow using <a href="https://github.com/bcomnes/deploy-to-neocities" target="_blank">deploy-to-neocities</a>. HTML and CSS knowledge was provided by <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> and <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>. Under the terms of the <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl" target="_blank">Open Font License</a> this website uses <a href="https://levien.com/type/myfonts/inconsolata.html" target="_blank">Inconsolata</a>, <a href="https://overpassfont.org/" target="_blank">Overpass</a>, and <a href="https://github.com/tonsky/FiraCode" target="_blank">Fira Code</a>. <a href="https://brailleinstitute.org/freefont" target="_blank">Atkinson Hyperlegible</a> is provided under the terms of <a href="\resources\fonts\Atkinson-Hyperlegible-Font-License-2020-1104.pdf" target="_blank">its license agreement</a>. All art and other creative content featured on this website, unless stated otherwise, was created by me. If you're interested in picking apart my code and using it for your own purposes, you can view the source code on <a href="https://github.com/PencilVoid/neocities-pencilvoid" target="_blank">Github</a>.
+</p>
+<hr>
+<p>
+	Don't forget, you can use the sidebar to hop between directories. Exploring is encouraged.
+</p>
+<hr>
+<!-- begin wwww.htmlcommentbox.com -->
+<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24rmBZ7PZQQ4CzyYtJGyILA%2F"+"&opts=16798&num=10&ts=1678655473633");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+<!-- end www.htmlcommentbox.com -->
+<hr>
+<p>
+	Note: I have done my best to make the site easy to browse on both desktop and mobile (i find that it works best when installed as a PWA but there's no reason to do that). Feel free to suggest any changes to make it easier to browser on any platform.
+</p>
+<h1>
+	THE END... so far
+</h1>
+<!-- the h1 text above has been here since the birth of this site! even before i learned what neocities is and i was just writing html for the fun of it! i guess you could call that the gestation period! i gestated! -->
