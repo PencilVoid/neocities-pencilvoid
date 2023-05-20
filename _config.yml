@@ -28,11 +28,7 @@ url: https://pencilvoid.neocities.org
 twitter:
   username: pencilvoid
 locale: en_GB
-defaults:
-  - scope:
-      path: ""
-    values:
-      image: /icons/favicon_maxres.png
+image: /icons/favicon-maxres.png
 
 feed:
   posts_limit: 512
