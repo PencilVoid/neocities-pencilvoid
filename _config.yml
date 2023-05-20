@@ -8,15 +8,18 @@ defaults:
       type: "authors"
     values:
       layout: "author"
+      image: /icons/favicon-maxres.png
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      image: /icons/favicon-maxres.png
   - scope:
       path: ""
     values:
       layout: "default"
+      image: /icons/favicon-maxres.png
 
 plugins:
   - jekyll-feed
@@ -28,10 +31,8 @@ url: https://pencilvoid.neocities.org
 twitter:
   username: pencilvoid
 locale: en_GB
-image: /icons/favicon-maxres.png
 
 feed:
   posts_limit: 512
-  disable_in_development: true
 
 source: "./site"
