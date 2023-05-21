@@ -8,18 +8,15 @@ defaults:
       type: "authors"
     values:
       layout: "author"
-      image: /icons/favicon-maxres.png
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-      image: /icons/favicon-maxres.png
   - scope:
       path: ""
     values:
       layout: "default"
-      image: /icons/favicon-maxres.png
 
 plugins:
   - jekyll-feed
@@ -29,11 +26,15 @@ plugins:
 title: pencilvoid.neocities.org
 tagline: The Pencilzone
 url: https://pencilvoid.neocities.org
+logo: /icons/favicon-128x.png
 twitter:
   username: pencilvoid
+  card: summary
 locale: en_GB
 
 feed:
+  path: /sieveplate/feed.xml
   posts_limit: 512
+  excerpt_only: false
 
 source: "./site"
