@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/icons/favicon.ico">
+		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
+		<link rel="manifest" href="/icons/site.webmanifest">
+		<link href="/resources/fonts.css" rel="stylesheet" type="text/css" media="all">
+		<link href="/resources/checker.css" rel="stylesheet" type="text/css" media="all">
+
+		<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
+		<meta name="HandheldFriendly" content="true" />
+		
+		<!-- Chrome for Android web app tags -->
+		<meta name="mobile-web-app-capable" content="yes" />
+		<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+		<title>
+			{{ page.title }}
+		</title>
+		{% seo %}
+		<style>
+			{{ page.customcss }}
+
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			html, body {
+				overflow-x: hidden;
+				touch-action: none;
+				-ms-touch-action: none;
+				text-align: center
+			}
+			canvas {
+				/*touch-action-delay: none;*/
+				touch-action: none;
+				-ms-touch-action: none;
+			}
+			#c2canvasdiv {
+				padding-bottom: 1em;
+			}
+		</style>
+	</head>
+
+	<body>
+		{{ content }}
+		<span class="small-text">
+			<p>
+				Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+			</p>
+		</span>
+	</body>
+</html>

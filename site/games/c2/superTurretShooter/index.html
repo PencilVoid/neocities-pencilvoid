@@ -1,82 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<link href="/resources/fonts.css" rel="stylesheet" type="text/css" media="all">
-	<link href="/resources/checker.css" rel="stylesheet" type="text/css" media="all">
-	<link rel="icon" href="/icons/favicon.ico">
-	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
-	<link rel="manifest" href="/icons/site.webmanifest">
-	<title>Super Turret Shooter</title>
-	<meta property="og:site_name" content="pencilvoid.neocities.org">
-	<meta property="og:title" content="PV/games/c2/superTurretShooter" />
-	<meta name="theme-color" content="#BA472A">
-	<meta property="og:description" content="Pew pew" />
-	<meta property="og:locale" content="en_GB" />
-	<meta property="og:url" content="https://pencilvoid.neocities.org/games/c2/superTurretShooter" />
-	<meta property="og:image" content="https://pencilvoid.neocities.org/icons/favicon-32x.png" />
-	<!-- Standardised web app manifest -->
-	<link rel="manifest" href="appmanifest.json" />
-	
-	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
-	<meta name="HandheldFriendly" content="true" />
-	
-	<!-- Chrome for Android web app tags -->
-	<meta name="mobile-web-app-capable" content="yes" />
-	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+---
+layout: default_c2game
+title: Super Turret Shooter
+description: Pew pew
+customcss: ":root {
+	--header-colour: #29082C;
+	--bg-colour: #3D112D;
+	--bg-checkerdark: #722332;
+	--bg-checkerlight: #BA472A;
+	--bg-triangle: #3D112D;
+	--sidebar-colour: #29082C;
+	--text-colour: #FFE7D1;
+	--a-colour: #FFE7D1;
+	--a-visited-colour: #FFE7D1;
+	--a-hover-colour: #FFE7D1;
+	--a-active-colour: #032769;
+	--hr-colour: #FFBD26;
 
-	<!-- All margins and padding must be zero for the canvas to fill the screen. -->
-	<style type="text/css">
-		* {
-			padding: 0;
-			margin: 0;
-		}
-		html, body {
-			overflow: hidden;
-			touch-action: none;
-			-ms-touch-action: none;
-			text-align: center
-		}
-		canvas {
-			/*touch-action-delay: none;*/
-			touch-action: none;
-			-ms-touch-action: none;
-		}
-		:root {
-			--header-colour: #29082C;
-			--bg-colour: #3D112D;
-			--bg-checkerdark: #722332;
-			--bg-checkerlight: #BA472A;
-			--bg-triangle: #3D112D;
-			--sidebar-colour: #29082C;
-			--text-colour: #FFE7D1;
-			--a-colour: #FFE7D1;
-			--a-visited-colour: #FFE7D1;
-			--a-hover-colour: #FFE7D1;
-			--a-active-colour: #032769;
-			--hr-colour: #FF417D;
-
-			--main-font: atkinson-hyperlegible;
-			--monospace-font: fira-code;
-			--header-font: inconsolata;
-			--alt-font: overpass;
-			--alt-mono-font: overpass-mono;
-		}
-
-		#c2canvasdiv {
-			padding-bottom: 1em;
-		}
-	</style>
-</head> 
- 
-<body> 
+	--main-font: atkinson-hyperlegible;
+	--monospace-font: fira-code;
+	--header-font: inconsolata;
+	--alt-font: overpass;
+	--alt-mono-font: overpass-mono;
+}"
+---
 	<div id="fb-root"></div>
 	
 	<script>
@@ -176,5 +122,3 @@
 	<p style="text-align: center;">
 		<a href="/games">Go Back</a>
 	</p>
-</body> 
-</html>

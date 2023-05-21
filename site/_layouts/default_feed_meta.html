@@ -11,60 +11,28 @@
 		<link href="/resources/fonts.css" rel="stylesheet" type="text/css" media="all">
 		<link href="/resources/checker.css" rel="stylesheet" type="text/css" media="all">
 		<title>
-			{{ page.title }} | Posts
+			{{ page.title }}
 		</title>
 		{% feed_meta %}
 		{% seo %}
 		<style>
-			:root {
-				--header-colour: #18294F;
-				--bg-colour: #108587;
-				--bg-checkerdark: #108587;
-				--bg-checkerlight: #10A891;
-				--bg-triangle: #196E64;
-				--sidebar-colour: #074156;
-				--text-colour: #B2FFB2;
-				--a-colour: #8BFF56;
-				--a-visited-colour: #2CE06E;
-				--a-hover-colour: #B2FFB2;
-				--a-active-colour: #FFFFFF;
-				--hr-colour: #3FF460;
-
-				--main-font: atkinson-hyperlegible;
-				--monospace-font: fira-code;
-				--header-font: inconsolata;
-				--alt-font: overpass;
-				--alt-mono-font: overpass-mono;
-			}
+			{{ page.customcss }}
 		</style>
 	</head>
 
 	<body>
 		<nav>
-			{% include sidebar.html %}
+			{% include sidebar.html %}	
 		</nav>
 		<div class="content">
 			<header>
 				<h1>
-					{{ page.title }}
+					{{ page.header }}
 				</h1>
 			</header>
-			<em class="bold">
-				<p>
-					<p>{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }} 
-						{% assign author = site.authors | where: 'short_name', page.author | first %}
-						{% if author %}
-						- <a href="{{ author.url }}">{{ author.name }}</a>
-						{% endif %}
-					</p>
-				</p>
-			</em>
 			<hr>
 			{{ content }}
 			<hr>
-			<p>
-				<a href="/sieveplate">See all posts</a>
-			</p>
 			<span class="small-text">
 				<p>
 					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}

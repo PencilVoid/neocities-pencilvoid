@@ -306,6 +306,10 @@ div.code-block {
 span.post-list-title{
 	font-size: 24pt;
 }
+
+span.small-text{
+	font-size: 10pt;
+}
 /* --- Gallery Styling --- */
 div.row {
 	display: flex;

@@ -13,7 +13,6 @@
 		<title>
 			{{ page.title }}
 		</title>
-		{% feed_meta %}
 		{% seo %}
 		<style>
 			{{ page.customcss }}
@@ -22,7 +21,7 @@
 
 	<body>
 		<nav>
-			{% include sidebar.html %}
+			{% include sidebar.html %}	
 		</nav>
 		<div class="content">
 			<header>
@@ -32,6 +31,12 @@
 			</header>
 			<hr>
 			{{ content }}
+			<hr>
+			<span class="small-text">
+				<p>
+					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+				</p>
+			</span>
 		</div>
 	</body>
 </html>

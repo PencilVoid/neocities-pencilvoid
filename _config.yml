@@ -14,14 +14,20 @@ defaults:
     values:
       layout: "post"
   - scope:
+      path: "/games/c2"
+    values:
+      layout: "default_c2game"
+  - scope:
       path: ""
     values:
       layout: "default"
+
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 title: pencilvoid.neocities.org
 tagline: The Pencilzone
