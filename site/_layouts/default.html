@@ -30,13 +30,17 @@
 				</h1>
 			</header>
 			<hr>
+			<main>
 			{{ content }}
+			</main>
 			<hr>
-			<span class="small-text">
-				<p>
-					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
-				</p>
-			</span>
+			<footer>
+				<span class="small-text">
+					<p>
+						Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+					</p>
+				</span>
+			</footer>
 		</div>
 	</body>
 </html>

@@ -32,7 +32,7 @@ customcss: ":root {
 	{% for post in site.posts %}
 		<li>
 			<span class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
-			<em class="bold">{{ post.date | date_to_string }}</em>
+			<b>{{ post.date | date_to_string }}</b>
 			{{ post.excerpt }}
 		</li>
 	{% endfor %}
@@ -46,7 +46,7 @@ customcss: ":root {
 	<div class="dropdown-content">
 		<span class="dropdown-hider">
 			{% for tag in site.tags %}
-				<em class="bold">{{ tag[0] }}</em>
+				<b>{{ tag[0] }}</b>
 				<ul>
 					{% for post in tag[1] %}
 						<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -58,7 +58,7 @@ customcss: ":root {
 </section>
 
 <hr>
-<em class="bold"><a href="/sieveplate/feed.xml">Atom/RSS Feed</a></em>
+<b><a href="/sieveplate/feed.xml">Atom/RSS Feed</a></b>
 <p>
 	You can use your feed reader's "find feeds in current tab" tool to subscribe to SievePlate's Atom feed.
 </p>

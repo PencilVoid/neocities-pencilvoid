@@ -49,22 +49,26 @@
 				</h1>
 			</header>
 			<hr>
-			Position: <em class="bold">{{ page.position }}</em>
-			{{ content }}
+			<main>
+				Position: <b>{{ page.position }}</b>
+				{{ content }}
 
-			<h2>Posts</h2>
-			<ul>
-				{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-				{% for post in filtered_posts %}
-				  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
+				<h2>Posts</h2>
+				<ul>
+					{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+					{% for post in filtered_posts %}
+					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+					{% endfor %}
+				</ul>
+			</main>
 			<hr>
-			<span class="small-text">
-				<p>
-					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
-				</p>
-			</span>
+			<footer>
+				<span class="small-text">
+					<p>
+						Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+					</p>
+				</span>
+			</footer>
 		</div>
 	</body>
 </html>
