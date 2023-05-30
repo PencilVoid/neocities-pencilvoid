@@ -206,7 +206,26 @@ customcss: ":root {
 	100% {
 		transform: scale(1);
 	}
-}"
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.thing-supercore {
+		animation-play-state: paused;
+	}
+	.thing-core {
+		animation-play-state: paused;
+	}
+	.thing-rays {
+		animation-play-state: paused;
+	}
+	.thing-shell {
+		animation-play-state: paused;
+	}
+	.thing-fringe {
+		animation-play-state: paused;
+	}
+}
+"
 ---
 <div class="spinner-container">
 	<img class="thing-supercore" src="/resources/img/thing_supercore.svg" alt="">
