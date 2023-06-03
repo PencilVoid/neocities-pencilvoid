@@ -45,11 +45,7 @@ customcss: ":root {
 			<h2>
 				Games
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-games" checked>
-				<label class="dropdown-label" for="dropdown-games"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-games" %}
 						<p>
 							<b>Sonic Robo Blast 2</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_open.svg" alt=""></span> 
@@ -73,17 +69,11 @@ customcss: ":root {
 							<br>
 							<a href="https://cavestorymultiplayer.com/" target="_blank">Homepage</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
 			<h2>
 				Productivity software
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-productive" checked>
-				<label class="dropdown-label" for="dropdown-productive"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-productive" %}
 						<p>
 							<b>LibreOffice</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_open.svg" alt=""></span> 
@@ -101,17 +91,11 @@ customcss: ":root {
 							<br>
 							<a href="https://obsidian.md/" target="_blank">Homepage</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
 			<h2>
 				Image manipulation
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-image-editing" checked>
-				<label class="dropdown-label" for="dropdown-image-editing"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-image-editing" %}
 						<p>
 							<b>Paint.NET</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_closed.svg" alt=""></span> 
@@ -130,17 +114,11 @@ customcss: ":root {
 							<br>
 							<a href="https://gitlab.gnome.org/GNOME/gimp" target="_blank">Source code</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
 			<h2>
 				Art and animation
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-art-animation" checked>
-				<label class="dropdown-label" for="dropdown-art-animation"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-art-animation" %}
 						<p>
 							<b>Krita</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_open.svg" alt=""></span> 
@@ -177,17 +155,11 @@ customcss: ":root {
 							<br>
 							<a href="https://github.com/motion-canvas/motion-canvas" target="_blank">Source code</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
 			<h2>
 				DAWs
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-daw" checked>
-				<label class="dropdown-label" for="dropdown-daw"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-daw" %}
 						<p>
 							<b>OpenMPT</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_open.svg" alt=""></span> 
@@ -204,17 +176,11 @@ customcss: ":root {
 							<br>
 							<a href="https://github.com/tildearrow/furnace" target="_blank">Source code</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
 			<h2>
 				Media viewers & processors/Audio players
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-media-viewers" checked>
-				<label class="dropdown-label" for="dropdown-media-viewers"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-media-player" %}
 						<p>
 							<b>VLC</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_open.svg" alt=""></span> 
@@ -247,17 +213,11 @@ customcss: ":root {
 							<br>
 							<a href="https://github.com/HandBrake/HandBrake" target="_blank">Source code</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
 			<h2>
 				Power user utilities
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-power-user" checked>
-				<label class="dropdown-label" for="dropdown-power-user"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-power-user" %}
 						<p>
 							<b>Microsoft PowerToys</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_open.svg" alt=""></span> 
@@ -292,17 +252,11 @@ customcss: ":root {
 							<br>
 							<a href="https://github.com/Klocman/Bulk-Crap-Uninstaller" target="_blank">Source code</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
 			<h2>
 				Miscellaneous
 			</h2>
-			<section class="dropdown">
-				<input type="checkbox" name="collapse" id="dropdown-misc" checked>
-				<label class="dropdown-label" for="dropdown-misc"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
+			{% include dropdown_checked.html id="dropdown-misc" %}
 						<p>
 							<b>Notepad++</b> 
 							<span class="icon-ufsc"><img src="/resources/img/icon_ufsc_open.svg" alt=""></span> 
@@ -346,6 +300,4 @@ customcss: ":root {
 							<br>
 							<a href="https://github.com/neocities/neocities" target="_blank">Source code</a>
 						</p>
-					</span>
-				</div>
-			</section>
+			{% include dropdown_end.html %}
