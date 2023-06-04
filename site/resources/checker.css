@@ -293,13 +293,22 @@ div.code-block {
 	}
 }
 
-span.post-list-title{
+span.post-list-title {
 	font-size: 24pt;
 }
 
-span.small-text{
+span.small-text {
 	font-size: 10pt;
 }
+
+span.joke {
+	text-decoration: underline dotted;
+}
+
+span.sarc {
+	text-decoration: underline dotted;
+}
+
 /* --- Gallery Styling --- */
 div.row {
 	display: flex;
