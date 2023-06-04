@@ -310,6 +310,7 @@ span.small-text {
 	font-size: 10pt;
 }
 
+/* --- Interjection boxes --- */
 div.info,
 div.warning,
 div.deny,
@@ -323,97 +324,39 @@ div.urgent {
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 }
-div.info > .info-content {
+
+div.info > .info-content,
+div.warning > .warning-content,
+div.deny > .deny-content,
+div.urgent > .urgent-content {
 	background-color: rgba(255, 255, 255, 0.1);
-	background-image: url(/resources/img/watermark_info.svg);
-	background-position: 5% 50%;
+	background-position: -2.5% 50%;
 	background-repeat: no-repeat;
 	background-size: 20%;
 	padding: 1em;
+}
+div.info > .info-content {
+	background-image: url(/resources/img/watermark_info.svg);
 }
 
 div.warning > .warning-content{
-	background-color: rgba(255, 255, 255, 0.1);
 	background-image: url(/resources/img/watermark_warning.svg);
-	background-position: 5% 50%;
-	background-repeat: no-repeat;
-	background-size: 20%;
-	padding: 1em;
 }
 
 div.deny > .deny-content{
-	background-color: rgba(255, 255, 255, 0.1);
 	background-image: url(/resources/img/watermark_deny.svg);
-	background-position: 5% 50%;
-	background-repeat: no-repeat;
-	background-size: 20%;
-	padding: 1em;
 }
 
 div.urgent > .urgent-content {
-	background-color: rgba(255, 255, 255, 0.1);
 	background-image: url(/resources/img/watermark_urgent.svg);
-	background-position: 5% 50%;
-	background-repeat: no-repeat;
-	background-size: 20%;
-	padding: 1em;
 }
 
-div.info > .info-header {
-	background-color: white;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-bottom: 1px solid white;
-	padding: 0.1ex;
-	padding-left: 0.5em;
-	box-sizing: border-box;
-	width: 100%;
-	
-	text-decoration: none;
-	text-align: left;
-	
-	font-family: var(--header-font,inconsolata, monospace);
-	font-size: 16pt;
-	font-weight: 400;
-	font-stretch: 100%;
-}
-
-div.warning > .warning-header {
-	background-color: white;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-bottom: 1px solid white;
-	padding: 0.1ex;
-	padding-left: 0.5em;
-	box-sizing: border-box;
-	width: 100%;
-	
-	text-decoration: none;
-	text-align: left;
-	
-	font-family: var(--header-font,inconsolata, monospace);
-	font-size: 16pt;
-	font-weight: 400;
-	font-stretch: 100%;
-}
-div.deny > .deny-header {
-	background-color: white;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-bottom: 1px solid white;
-	padding: 0.1ex;
-	padding-left: 0.5em;
-	box-sizing: border-box;
-	width: 100%;
-	
-	text-decoration: none;
-	text-align: left;
-	
-	font-family: var(--header-font,inconsolata, monospace);
-	font-size: 16pt;
-	font-weight: 400;
-	font-stretch: 100%;
-}
+div.info > .info-header,
+div.warning > .warning-header,
+div.deny > .deny-header,
 div.urgent > .urgent-header {
 	background-color: white;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.375);
 	border-bottom: 1px solid white;
 	padding: 0.1ex;
 	padding-left: 0.5em;
@@ -424,11 +367,10 @@ div.urgent > .urgent-header {
 	text-align: left;
 	
 	font-family: var(--header-font,inconsolata, monospace);
-	font-size: 16pt;
+	font-size: 18pt;
 	font-weight: 400;
 	font-stretch: 100%;
 }
-
 
 /* --- Gallery Styling --- */
 div.row {
