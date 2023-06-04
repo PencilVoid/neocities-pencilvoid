@@ -40,11 +40,7 @@ customcss: ":root {
 
 <h2>Browse by tag</h2>
 
-<section class="dropdown">
-	<input type="checkbox" name="collapse" id="dropdown-taglist" checked>
-	<label class="dropdown-label" for="dropdown-taglist"></label>
-	<div class="dropdown-content">
-		<span class="dropdown-hider">
+{% include dropdown_checked.html id="dropdown-taglist" %}
 			{% for tag in site.tags %}
 				<b>{{ tag[0] }}</b>
 				<ul>
@@ -53,9 +49,7 @@ customcss: ":root {
 					{% endfor %}
 				</ul>
 			{% endfor %}
-		</span>
-	</div>
-</section>
+{% include dropdown_end.html %}
 <hr>
 <p>
 	<a href="/sieveplate/feed.xml">
