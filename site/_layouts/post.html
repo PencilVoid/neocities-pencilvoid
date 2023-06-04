@@ -54,7 +54,7 @@
 					<p>{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }} 
 						{% assign author = site.authors | where: 'short_name', page.author | first %}
 						{% if author %}
-						- <a href="{{ author.url }}">{{ author.name }}</a>
+						- written by <a href="{{ author.url }}">{{ author.name }}</a>
 						{% endif %}
 					</p>
 				</p>
