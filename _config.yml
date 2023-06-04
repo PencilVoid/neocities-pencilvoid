@@ -13,6 +13,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      permalink: sieveplate/:categories/:year/:month/:title/
   - scope:
       path: "/games/c2"
     values:
@@ -32,7 +33,6 @@ plugins:
 title: pencilvoid.neocities.org
 tagline: The Pencilzone
 url: https://pencilvoid.neocities.org
-logo: /icons/favicon-128x.png
 twitter:
   username: pencilvoid
   card: summary
