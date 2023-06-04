@@ -1,6 +1,6 @@
 ---
 short_name: xpv
-name: XPV
+name: "XPV"
 position: Webmaster
 url: https://pencilvoid.neocities.org
 ---
