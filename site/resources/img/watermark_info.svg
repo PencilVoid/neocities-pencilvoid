@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="64"
    height="64"
    viewBox="0 0 16.933333 16.933333"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="watermark_info.svg">
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="watermark_info.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
     <linearGradient
        id="linearGradient851"
-       osb:paint="solid">
+       inkscape:swatch="solid">
       <stop
          style="stop-color:#ffffff;stop-opacity:1;"
          offset="0"
@@ -33,9 +32,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="183.58074"
-     inkscape:cy="166.97696"
+     inkscape:zoom="11.2"
+     inkscape:cx="46.741071"
+     inkscape:cy="29.464286"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -46,7 +45,9 @@
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#002819">
     <inkscape:grid
        type="xygrid"
        id="grid833" />
@@ -59,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,15 +74,16 @@
        cx="8.4666662"
        cy="8.4666662"
        r="8.2020836" />
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:1.05833333;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:0.374;stroke-miterlimit:4;stroke-dasharray:none"
-       d="M 8.4666666,13.758333 V 7.4083332"
-       id="path859" />
-    <circle
-       style="opacity:1.0;fill:#ffffff;fill-opacity:0.375;stroke:none;stroke-width:1.05833;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.375;paint-order:stroke fill markers"
+    <ellipse
+       style="opacity:1;fill:#ffffff;fill-opacity:0.375;stroke:none;stroke-width:1.5875;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.375;paint-order:stroke fill markers"
        id="path863"
        cx="8.4666662"
-       cy="4.7624998"
-       r="0.52916664" />
+       cy="5.291666"
+       rx="0.79375023"
+       ry="0.79375011" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:0.38"
+       d="M 8.4666667,12.170833 V 7.9374996 H 7.4083333"
+       id="path2465" />
   </g>
 </svg>
