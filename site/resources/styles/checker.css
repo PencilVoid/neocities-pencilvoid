@@ -472,11 +472,27 @@ div.srb2gallery img {
 }
 
 /* UFSC Icons */
-span.icon-ufsc {
+span.icon-ufsc::after {
+	display: inline-block;
 	height: 1em;
 	width: 1em;
-	margin: 0 .05em 0 .1em;
-	vertical-align: -0.1em;
+	vertical-align: -0.125em;
+}
+
+span.icon-ufsc-open::after {
+	content: url("/resources/images/icons/icon_ufsc_open.svg");
+}
+
+span.icon-ufsc-avail::after {
+	content: url("/resources/images/icons/icon_ufsc_avail.svg");
+}
+
+span.icon-ufsc-closed::after {
+	content: url("/resources/images/icons/icon_ufsc_closed.svg");
+}
+
+span.icon-ufsc-paygate::after {
+	content: url("/resources/images/icons/icon_ufsc_paygate.svg");
 }
 
 /* Collapsible segments */
@@ -506,7 +522,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] {
-	content: url("/resources/img/icon_dropdown.svg");
+	content: url("/resources/images/icons/icon_dropdown.svg");
 	width: 1em;
 	height: 1em;
 	vertical-align: middle;
@@ -516,7 +532,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-	content: url("/resources/img/icon_dropdown.svg");
+	content: url("/resources/images/icons/icon_dropdown.svg");
 	width: 1em;
 	height: 1em;
 	vertical-align: middle;
