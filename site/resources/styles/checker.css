@@ -471,8 +471,9 @@ div.srb2gallery img {
 	background: rgba(255, 255, 255, 0.5);
 }
 
-/* UFSC Icons */
-span.icon-ufsc::after {
+/* Inline icons */
+span.inline-icon,
+span.inline-icon-from-class::after {
 	display: inline-block;
 	height: 1em;
 	width: 1em;
