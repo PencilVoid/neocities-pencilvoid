@@ -21,8 +21,111 @@ customcss: ":root {
 	--header-font: inconsolata;
 	--alt-font: overpass;
 	--alt-mono-font: overpass-mono;
-}"
+}
+
+.eso-deco-bottomright {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	overflow: visible;
+	image-rendering: crisp-edges;
+	z-index: -1;
+}
+
+.eso-deco-topright {
+	position: fixed;
+	top: 0;
+	right: 0;
+	overflow: visible;
+	image-rendering: crisp-edges;
+	z-index: -1;
+}
+
+@media screen and (max-width: 840px), screen and (max-height: 512px) {
+	.eso-deco-bottomright,
+	.eso-deco-topright {
+		display: none
+	}
+}
+
+.eso-deco-br-grass-front {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.eso-deco-br-grass-back {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: -3;
+}
+
+.eso-deco-br-red-flower-1 {
+	position: fixed;
+	z-index: -2;
+	bottom: 0;
+	right: 104px;
+	image-rendering: crisp-edges;
+}
+
+.eso-deco-br-red-flower-2 {
+	position: fixed;
+	z-index: -2;
+	bottom: 0;
+	right: 241px;
+	image-rendering: crisp-edges;
+}
+
+.eso-deco-br-red-flower-3 {
+	position: fixed;
+	z-index: -2;
+	bottom: 0;
+	right: 411px;
+	image-rendering: crisp-edges;
+}
+
+.eso-deco-tr-leaf-1 {
+	position: fixed;
+	z-index: -2;
+	top: -16px;
+	right: -24px;
+	transform: rotate(25deg);
+	transform-origin: 232px 16px;
+}
+
+.eso-deco-tr-leaf-2 {
+	position: fixed;
+	z-index: -3;
+	top: -16px;
+	right: -24px;
+	transform: rotate(0deg);
+	transform-origin: 232px 16px;
+}
+
+.eso-deco-tr-leaf-3 {
+	position: fixed;
+	z-index: -4;
+	top: -16px;
+	right: -24px;
+	transform: rotate(-25deg);
+	transform-origin: 232px 16px;
+}
+"
 ---
+<div class="eso-deco-bottomright" aria-hidden="true">
+	<img class="eso-deco-br-grass-back" src="/resources/images/eso/deco_bottomright_grass_back.png">
+	<img class="eso-deco-br-red-flower-1" src="/resources/images/eso/deco_red_flower_1.png">
+	<img class="eso-deco-br-red-flower-2" src="/resources/images/eso/deco_red_flower_2.png">
+	<img class="eso-deco-br-red-flower-3" src="/resources/images/eso/deco_red_flower_3.png">
+	<img class="eso-deco-br-grass-front"src="/resources/images/eso/deco_bottomright_grass_front.png">
+</div>
+<div class="eso-deco-topright" aria-hidden="true">
+	<img class="eso-deco-tr-leaf-1" src="/resources/images/eso/deco_topright_leaf_1.png">
+	<img class="eso-deco-tr-leaf-2" src="/resources/images/eso/deco_topright_leaf_2.png">
+	<img class="eso-deco-tr-leaf-3" src="/resources/images/eso/deco_topright_leaf_3.png">
+</div>
 <p>
 	You feel confused. You've found yourself in a strange, new place. There's green stuff everywhere and it's weirdly bright. You rub the crust off your eyes and rise to your feet.
 </p>
