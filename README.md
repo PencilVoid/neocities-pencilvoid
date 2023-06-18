@@ -8,6 +8,6 @@ The website's code (the data used to generate static pages for this website) is 
 
 Game code (the code used for the games available at this website) are also licensed under GNU General Public License v3.
 
-Non-code game assets and other art (vector and raster images used to decorate pages, and images featured in [the gallery](https://pencilvoid.neocities.org/art)) of my own creation are licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/) unless stated otherwise. This means that you can reuse them, but ony non-commercially and under the pre-tense that derivative works are not distributed.
+Non-code game assets and other art (vector and raster images used to decorate pages, and images featured in [the gallery](https://pencilvoid.neocities.org/art)) of my own creation are licensed under [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/) unless stated otherwise. This means that you can reuse them, but ony non-commercially and under the condition that derivative works are not distributed.
 
 Video game screenshots are licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Do whatever you want with them. Credit is not required at all but appreciated nonetheless.
