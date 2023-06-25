@@ -62,12 +62,12 @@
 			<hr>
 			<main>
 			{{ content }}
-			<hr>
-			<p>
-				<a href="/sieveplate">See all posts</a>
-			</p>
-			<main>
+			</main>
+			<hr style="clear: both">
 			<footer>
+				<p>
+					<a href="/sieveplate">See all posts</a>
+				</p>
 				<span class="small-text">
 					<p>
 						Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
