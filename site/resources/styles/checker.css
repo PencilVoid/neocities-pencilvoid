@@ -165,10 +165,6 @@ ol {
 	line-height: 1.5;
 }
 
-.home-desc {
-	color: var(--text-colour,#FFEAFC);
-}
-
 span.author {
 	color: var(--text-colour,#FFEAFC);
 }
@@ -311,19 +307,19 @@ div.urgent > .urgent-content {
 	padding: 1em;
 }
 div.info > .info-content {
-	background-image: url(/resources/img/watermark_info.svg);
+	background-image: url(/resources/images/backgrounds/watermark_info.svg);
 }
 
 div.warning > .warning-content{
-	background-image: url(/resources/img/watermark_warning.svg);
+	background-image: url(/resources/images/backgrounds/watermark_warning.svg);
 }
 
 div.deny > .deny-content{
-	background-image: url(/resources/img/watermark_deny.svg);
+	background-image: url(/resources/images/backgrounds/watermark_deny.svg);
 }
 
 div.urgent > .urgent-content {
-	background-image: url(/resources/img/wate.rmark_urgent.svg);
+	background-image: url(/resources/images/backgrounds/watermark_urgent.svg);
 }
 
 div.info > .info-header,
@@ -438,30 +434,6 @@ figcaption {
 	font-size: 10pt;
 	border-top: 1px solid var(--hr-colour,var(--text-colour,#FF417D));
 	padding: 0.25em;
-}
-/* --- SRB2 Gallery Styling (do i still need this?) --- */
-.srb2gallery {
-	margin: auto;
-	border: 1px solid #ccc;
-	background-image: url("/resources/showcasepane.png");
-	width: 50%;
-	padding: 5px;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-}
-
-div.srb2gallery img {
-	margin: auto;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-}
-
-.srb2desc {
-	padding: 15px;
-	text-align: center;
-	margin: auto;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
 }
 
 /* Inline icons */
