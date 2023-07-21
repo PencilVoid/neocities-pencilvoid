@@ -52,9 +52,11 @@
 			<em class="bold">
 				<p>
 					<p>{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }} 
-						{% assign author = site.authors | where: 'short_name', page.author | first %}
+						{% assign author = site.data.authors | find: "id", page.author %}
 						{% if author %}
-						- written by <a href="{{ author.url }}">{{ author.name }}</a>
+						- written by <a href="/authors/{{ author.id }}">{{ author.fullname }}</a>
+						{% else %}
+						- no author found
 						{% endif %}
 					</p>
 				</p>

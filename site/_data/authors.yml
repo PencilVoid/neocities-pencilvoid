@@ -1,3 +1,8 @@
-xpv:
-  name: XPV
+- id: xpv
+  fullname: XPV
   twitter: pencilvoid
+  position: Webmaster
+  description: "XPV is the webmaster who maintains and adds to this site."
+  links:
+    - url: https://pencilvoid.neocities.org
+      name: "Homepage"

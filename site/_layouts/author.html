@@ -11,7 +11,7 @@
 		<link href="/resources/styles/fonts.css" rel="stylesheet" type="text/css" media="all">
 		<link href="/resources/styles/checker.css" rel="stylesheet" type="text/css" media="all">
 		<title>
-			{{ page.title }} | Staff
+			{{ page.title }} | Authors
 		</title>
 		{% seo %}
 		<style>
@@ -45,20 +45,36 @@
 		<div class="content">
 			<header>
 				<h1>
-					{{ page.name }}
+					{{ page.fullname }}
 				</h1>
 			</header>
 			<hr>
 			<main>
 				Position: <b>{{ page.position }}</b>
-				{{ content }}
-
-				<h2>Posts</h2>
+				<p>
+					{{ page.description }}
+				</p>
+				<h2>
+					Posts
+				</h2>
 				<ul>
-					{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+					{% assign filtered_posts = site.posts | where: 'author', page.id %}
 					{% for post in filtered_posts %}
 					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+					{% else %}
+					<li>No posts by this author were found.</li>
 					{% endfor %}
+				</ul>
+				<h2>
+					Author links
+				</h2>
+				<ul>
+				{% for link in page.links %}
+				<li><a href="{{ link.url }}">{{ link.name }}</a></li>
+				{% else %}
+				<li>No links for this author were found.</li>
+				</p>
+				{% endfor %}
 				</ul>
 			</main>
 			<hr>

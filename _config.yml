@@ -1,13 +1,4 @@
-collections:
-  authors:
-    output: true
-
 defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
   - scope:
       path: ""
       type: "posts"
@@ -29,6 +20,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-last-modified-at
+  - jekyll-datapage-generator
 
 title: pencilvoid.neocities.org
 tagline: The Pencilzone
@@ -44,3 +36,12 @@ feed:
   excerpt_only: false
 
 source: "./site"
+
+page_gen-dirs: true
+
+page_gen:
+- data: authors
+  template: author
+  dir: /authors
+  name: id
+  title: fullname

@@ -1,7 +1,7 @@
 ---
-title: Staff
-description: It's Just One Guy!
-header: Staff
+title: Authors
+description: Authors
+header: Authors
 customcss: ":root {
 	--header-colour: #18294F;
 	--bg-colour: #108587;
@@ -24,11 +24,10 @@ customcss: ":root {
 }"
 ---
 <ul>
-	{% for author in site.authors %}
+	{% for author in site.data.authors %}
 	  <li>
-		<span class="post-list-title"><a href="{{ author.url }}">{{ author.name }}</a></span>
+		<span class="post-list-title"><a href="/authors/{{ author.id }}">{{ author.fullname }}</a></span>
 		<b>{{ author.position }}</b>
-		<p>{{ author.content | markdownify }}</p>
 	  </li>
 	{% endfor %}
 </ul>
