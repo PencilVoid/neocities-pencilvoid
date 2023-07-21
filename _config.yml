@@ -16,7 +16,6 @@ defaults:
 
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-last-modified-at
@@ -29,11 +28,6 @@ twitter:
   username: pencilvoid
   card: summary
 locale: en_GB
-
-feed:
-  path: /sieveplate/feed.xml
-  posts_limit: 512
-  excerpt_only: false
 
 source: "./site"
 
