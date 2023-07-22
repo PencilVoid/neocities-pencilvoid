@@ -2,7 +2,9 @@
 layout: none
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" >
+<?xml-stylesheet href="/resources/styles/fonts.css"?>
+<?xml-stylesheet href="/resources/styles/feed.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom"  xmlns:very="{{ site.url }}">
 	<generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">
 		Jekyll
 	</generator>
@@ -40,4 +42,5 @@ layout: none
 		-->
 	</entry>
 	{% endfor %}
+<very:veryimportant>Hey! If you're seeing this you probably just tried to open the Atom feed in your browser. It's just a bunch of XML code, and not the kind that some web pages are made of. So your browser can't really do anything with it. What you're supposed to do is use your feed reader's "find feeds in current tab" tool to detect the feed. It should work on this page, but it also works on SievePlate's main page and any post. You can use your browser's back button to go back to SievePlate. Thank you for your interest!</very:veryimportant>
 </feed>

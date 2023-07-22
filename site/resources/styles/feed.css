@@ -1,0 +1,15 @@
+feed :not(veryimportant) {
+	display: none;
+}
+
+veryimportant {
+	color: lightgrey;
+	display: unset;
+	font-size: 2em;
+	font-family: atkinson-hyperlegible;
+}
+
+* {
+	background-color: #111;
+	margin: 10em;
+}
