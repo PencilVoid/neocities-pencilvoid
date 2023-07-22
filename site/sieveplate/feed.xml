@@ -8,32 +8,24 @@ layout: none
 	</generator>
 	<link href="{{ site.url }}{{ page.url }}" rel="self" type="application/atom+xml" />
 	<link href="{{ site.url }}" rel="alternate" type="text/html" />
-	<id>
-		{{ site.url }}/sieveplate
-	</id>
+	<id>{{ site.url }}/sieveplate</id>
 	<title>
 		SievePlate
 	</title>
-	<updated> <!-- publish date of latest post -->
-		{{ site.posts.first.date | date_to_xmlschema }}
-	</updated>
+	<updated>{{ site.posts.first.date | date_to_xmlschema }}</updated> <!-- publish date of latest post -->
 	{% for post in site.posts %}
 	<entry>
-		<id>
-			{{ site.url }}{{ post.id }}
-		</id>
+		<id>{{ site.url }}{{ post.id }}</id>
 		<title>
 			{{ post.title | xml_escape | strip_html }}
 		</title>
 		<link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape}}" />
-		<published>
-			{{ post.date | date_to_xmlschema }}
-		</published>
-		<updated>
-			{{ post.date | date_to_xmlschema }}
-		</updated>
+		<published>{{ post.date | date_to_xmlschema }}</published>
+		<updated>{{ post.date | date_to_xmlschema }}</updated>
 		<content type="html">
+		<![CDATA[
 			{{ post.content | xml_escape }}
+		]]>
 		</content>
 		{% assign author = site.data.authors | find: "id", post.author %}
 		<author>
