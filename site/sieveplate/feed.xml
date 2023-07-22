@@ -23,9 +23,7 @@ layout: none
 		<published>{{ post.date | date_to_xmlschema }}</published>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 		<content type="html">
-		<![CDATA[
 			{{ post.content | xml_escape }}
-		]]>
 		</content>
 		{% assign author = site.data.authors | find: "id", post.author %}
 		<author>
