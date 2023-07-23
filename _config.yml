@@ -28,6 +28,7 @@ twitter:
   username: pencilvoid
   card: summary
 locale: en_GB
+author: xpv
 
 source: "./site"
 
