@@ -586,6 +586,24 @@ body {
 	overflow: auto;
 }
 
+.rightbox {
+	outline: none;
+	border-style: none;
+	background-image: none;
+	height: min-content;
+	width: 13.75vw;
+	min-width: 140px;
+	padding: 0.75em;
+	position: fixed;
+	vertical-align: bottom;
+	z-index: 2;
+	bottom: 0;
+	right: 0;
+	background-color: #1c002385;
+	font-size: 12pt;
+	overflow: auto;
+}
+
 #section-dropdown-sidebar a::before {
 	content: "";
 	opacity: 0.7;
@@ -616,6 +634,18 @@ body {
 		max-height: 170px;
 		padding: 0.5em;
 		position: sticky;
+		overflow: auto;
+	}
+	.rightbox {
+		outline: none;
+		border-style: none;
+		background-image: none;
+		height: min-content;
+		width: 100vw;
+		padding: 0.75em;
+		position: static;
+		background-color: #1c002385;
+		font-size: 12pt;
 		overflow: auto;
 	}
 }
