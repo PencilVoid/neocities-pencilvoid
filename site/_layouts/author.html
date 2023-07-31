@@ -1,3 +1,36 @@
+---
+css:
+  dark:
+    header-colour: "#220029"
+    bg-colour: "#0C4951"
+    bg-checkerdark: "#196E64"
+    bg-checkerlight: "#188183"
+    bg-triangle: "#0C4951"
+    sidebar-colour: "#152F3C"
+    text-colour: "#B2FFB2"
+    a-colour: "#8BFF56"
+    a-visited-colour: "#2CE06E"
+    a-hover-colour: "#B2FFB2"
+    a-active-colour: "#FFFFFF"
+    hr-colour: "#3FF460"
+    tone-colour: "#FFFFFF"
+    rightbox-colour: "#152F3C80"
+  light:
+    header-colour: "#220029"
+    bg-colour: "#F3BDFA"
+    bg-checkerdark: "#96F7D5"
+    bg-checkerlight: "#B6F9DB"
+    bg-triangle: "#81EAD3"
+    sidebar-colour: "#2BDBC9"
+    text-colour: "#152F3C"
+    a-colour: "#064D6E"
+    a-visited-colour: "#152F3C"
+    a-hover-colour: "#167397"
+    a-active-colour: "#2195B2"
+    hr-colour: "#188183"
+    tone-colour: "#152F3C"
+    rightbox-colour: "#2BDBC980"
+---
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -16,19 +49,6 @@
 		{% seo title=false %}
 		<style>
 			:root {
-				--header-colour: #18294F;
-				--bg-colour: #0C4951;
-				--bg-checkerdark: #196E64;
-				--bg-checkerlight: #188183;
-				--bg-triangle: #0C4951;
-				--sidebar-colour: #152F3C;
-				--text-colour: #B2FFB2;
-				--a-colour: #8BFF56;
-				--a-visited-colour: #2CE06E;
-				--a-hover-colour: #B2FFB2;
-				--a-active-colour: #FFFFFF;
-				--hr-colour: #3FF460;
-
 				--main-font: atkinson-hyperlegible;
 				--monospace-font: fira-code;
 				--header-font: inconsolata;
@@ -42,6 +62,7 @@
 		<nav>
 			{% include sidebar.html %}
 		</nav>
+		{% include display_controls.html %}
 		<div class="content">
 			<header>
 				<h1>
@@ -86,5 +107,101 @@
 				</span>
 			</footer>
 		</div>
+		<script>
+			function colourThemeDark() {
+				document.documentElement.style.setProperty('--header-colour', '{{ page.css.dark.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.dark.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ page.css.dark.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ page.css.dark.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ page.css.dark.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ page.css.dark.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ page.css.dark.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ page.css.dark.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ page.css.dark.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.dark.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.dark.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.dark.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.dark.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.dark.rightbox-colour }}');
+			}
+
+			function colourThemeLight() {
+				document.documentElement.style.setProperty('--header-colour', '{{ page.css.light.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.light.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ page.css.light.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ page.css.light.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ page.css.light.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ page.css.light.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ page.css.light.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ page.css.light.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ page.css.light.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.light.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.light.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.light.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.light.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.light.rightbox-colour }}');
+			}
+
+			function colourThemeAuto() {
+				let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
+
+				if (!mediaQueryList.matches) {
+					colourThemeDark()
+				} else {
+					colourThemeLight()
+				}
+			}
+
+			document.addEventListener("DOMContentLoaded", function(event) {
+				let cookieColourScheme = document.cookie
+				.split("; ")
+				.find((row) => row.startsWith("colour_theme="))
+				?.split("=")[1];
+
+				if (cookieColourScheme) {
+					if (cookieColourScheme === "dark") {
+						colourThemeDark()
+						document.getElementById("colour-theme-dark").checked = true;
+						document.getElementById("colour-theme-light").checked = false;
+						document.getElementById("colour-theme-auto").checked = false;
+					} else if (cookieColourScheme === "light") {
+						colourThemeLight()
+						document.getElementById("colour-theme-dark").checked = false;
+						document.getElementById("colour-theme-light").checked = true;
+						document.getElementById("colour-theme-auto").checked = false;
+					}
+				} else {
+					colourThemeAuto()
+					document.getElementById("colour-theme-dark").checked = false;
+					document.getElementById("colour-theme-light").checked = false;
+					document.getElementById("colour-theme-auto").checked = true;
+				}
+
+				let cookieDisplayBgChecker = document.cookie
+				.split("; ")
+				.find((row) => row.startsWith("display_bg_checker="))
+				?.split("=")[1];
+
+				if (cookieDisplayBgChecker) {
+					if (cookieDisplayBgChecker === "false") {
+						document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+						document.getElementById("display-bg-checker").checked = false;
+					} else {
+						document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+						document.getElementById("display-bg-checker").checked = true;
+					}
+				}
+			})
+
+			document.getElementById("display-bg-checker").addEventListener("change", function(event) {
+				if (document.getElementById("display-bg-checker").checked) {
+					document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+					document.cookie = 'display_bg_checker=true; max-age=1209600; Secure';
+				} else {
+					document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+					document.cookie = 'display_bg_checker=false; max-age=1209600; Secure';
+				}
+			})
+		</script>
 	</body>
 </html>

@@ -1,3 +1,36 @@
+---
+css:
+  dark:
+    header-colour: "#29082C"
+    bg-colour: "#3D112D"
+    bg-checkerdark: "#722332"
+    bg-checkerlight: "#BA472A"
+    bg-triangle: "#3D112D"
+    sidebar-colour: "#29082C"
+    text-colour: "#FFE7D1"
+    a-colour: "#FFFF8C"
+    a-visited-colour: "#FDF448"
+    a-hover-colour: "#FFFFCF"
+    a-active-colour: "#FFFFFF"
+    hr-colour: "#FFBD26"
+    tone-colour: "#FFFFFF"
+    rightbox-colour: "#22002980"
+  light:
+    header-colour: "#29082C"
+    bg-colour: "#FCF571"
+    bg-checkerdark: "#FCF571"
+    bg-checkerlight: "#FCFCDB"
+    bg-triangle: "#FFE226"
+    sidebar-colour: "#F9BD35"
+    text-colour: "#381C2E"
+    a-colour: "#641A47"
+    a-visited-colour: "#380837"
+    a-hover-colour: "#9F3F4B"
+    a-active-colour: "#CC6758"
+    hr-colour: "#6C2533"
+    tone-colour: "#381C2E"
+    rightbox-colour: "#F9BD3580"
+---
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -60,5 +93,82 @@
 				</p>
 			</span>
 		</footer>
+		<script> /* code related to controls removed as those aren't present here */
+			function colourThemeDark() {
+				document.documentElement.style.setProperty('--header-colour', '{{ layout.css.dark.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ layout.css.dark.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ layout.css.dark.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ layout.css.dark.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ layout.css.dark.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ layout.css.dark.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ layout.css.dark.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ layout.css.dark.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ layout.css.dark.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ layout.css.dark.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ layout.css.dark.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ layout.css.dark.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ layout.css.dark.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ layout.css.dark.rightbox-colour }}');
+			}
+
+			function colourThemeLight() {
+				document.documentElement.style.setProperty('--header-colour', '{{ layout.css.light.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ layout.css.light.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ layout.css.light.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ layout.css.light.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ layout.css.light.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ layout.css.light.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ layout.css.light.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ layout.css.light.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ layout.css.light.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ layout.css.light.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ layout.css.light.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ layout.css.light.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ layout.css.light.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ layout.css.light.rightbox-colour }}');
+			}
+
+			function colourThemeAuto() {
+				let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
+
+				if (!mediaQueryList.matches) {
+					colourThemeDark()
+				} else {
+					colourThemeLight()
+				}
+			}
+
+			document.addEventListener("DOMContentLoaded", function(event) {
+				let cookieColourScheme = document.cookie
+				.split("; ")
+				.find((row) => row.startsWith("colour_theme="))
+				?.split("=")[1];
+
+				if (cookieColourScheme) {
+					if (cookieColourScheme === "dark") {
+						colourThemeDark()
+					} else if (cookieColourScheme === "light") {
+						colourThemeLight()
+					}
+				} else {
+					colourThemeAuto()
+				}
+
+				let cookieDisplayBgChecker = document.cookie
+				.split("; ")
+				.find((row) => row.startsWith("display_bg_checker="))
+				?.split("=")[1];
+
+				if (cookieDisplayBgChecker) {
+					if (cookieDisplayBgChecker === "false") {
+						document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+						document.getElementById("display-bg-checker").checked = false;
+					} else {
+						document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+						document.getElementById("display-bg-checker").checked = true;
+					}
+				}
+			})
+		</script>
 	</body>
 </html>
