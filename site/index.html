@@ -2,19 +2,38 @@
 title: PENCILVOID
 description: Plant webmaster
 header: pencilvoid<wbr>.neocities<wbr>.org
+css:
+  dark:
+    header-colour: "#220029"
+    bg-colour: "#220029"
+    bg-checkerdark: "#42004E"
+    bg-checkerlight: "#680068"
+    bg-triangle: "#220029"
+    sidebar-colour: "#1C0023"
+    text-colour: "#FFEAFC"
+    a-colour: "#FF9EBC"
+    a-visited-colour: "#FF7FAC"
+    a-hover-colour: "#FBD1FF"
+    a-active-colour: "#FFFFFF"
+    hr-colour: "#FF417D"
+    tone-colour: "#FFFFFF"
+    rightbox-colour: "#1C002380"
+  light:
+    header-colour: "#18294F"
+    bg-colour: "#F3BDFA"
+    bg-checkerdark: "#F3BDFA"
+    bg-checkerlight: "#F9D3FC"
+    bg-triangle: "#EDA3F9"
+    sidebar-colour: "#D880F6"
+    text-colour: "#3E0349"
+    a-colour: "#29077F"
+    a-visited-colour: "#620562"
+    a-hover-colour: "#5412AA"
+    a-active-colour: "#742CCC"
+    hr-colour: "#620562"
+    tone-colour: "#29077F"
+    rightbox-colour: "#D880F680"
 customcss: ":root {
-	--header-colour: #220029;
-	--bg-colour: #220029;
-	--bg-checkerdark: #42004E;
-	--bg-checkerlight: #680068;
-	--bg-triangle: #220029;
-	--sidebar-colour: #1C0023;
-	--text-colour: #FFEAFC;
-	--a-colour: #FF9EBC;
-	--a-visited-colour: #EF6296;
-	--a-hover-colour: #FFD6F0;
-	--a-active-colour: #FFFFFF;
-	--hr-colour: #FF417D;
 
 	--main-font: atkinson-hyperlegible;
 	--monospace-font: fira-code;
@@ -45,7 +64,7 @@ customcss: ":root {
 	translate: -50% -50%;
 	z-index: -1;
 	animation: hue-cycle 30s infinite linear, quiver 0.5s infinite steps(20, jump-none);
-	mix-blend-mode: plus-lighter;
+	mix-blend-mode: color-dodge;
 	scale: var(--thing-scale);
 }
 .thing-core {
@@ -55,7 +74,7 @@ customcss: ":root {
 	translate: -50% -50%;
 	z-index: -2;
 	animation: hue-cycle 30s infinite linear, spin-core 7.5s infinite linear;
-	mix-blend-mode: plus-lighter;
+	mix-blend-mode: color-dodge;
 	scale: var(--thing-scale);
 }
 .thing-rays {
@@ -65,7 +84,7 @@ customcss: ":root {
 	translate: -50% -50%;
 	z-index: -3;
 	animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 5s infinite ease-in-out;
-	mix-blend-mode: plus-lighter;
+	mix-blend-mode: color-dodge;
 	scale: var(--thing-scale);
 }
 .thing-shell {
@@ -75,7 +94,7 @@ customcss: ":root {
 	translate: -50% -50%;
 	z-index: -4;
 	animation: hue-cycle 30s infinite linear, spin-shell 15s infinite linear;
-	mix-blend-mode: plus-lighter;
+	mix-blend-mode: color-dodge;
 	scale: var(--thing-scale);
 }
 .thing-fringe {
@@ -85,7 +104,7 @@ customcss: ":root {
 	translate: -50% -50%;
 	z-index: -5;
 	animation: hue-cycle 30s infinite linear, spin-fringe 30s infinite linear;
-	mix-blend-mode: plus-lighter;
+	mix-blend-mode: color-dodge;
 	scale: var(--thing-scale);
 }
 
