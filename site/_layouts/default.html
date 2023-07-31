@@ -115,7 +115,17 @@
 						document.getElementById("colour-theme-light").checked = true;
 					}
 				} else {
-					colourThemeDark()
+					let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
+
+					if (!mediaQueryList.matches) {
+						colourThemeDark()
+						document.getElementById("colour-theme-dark").checked = true;
+						document.getElementById("colour-theme-light").checked = false;
+					} else {
+						colourThemeLight()
+						document.getElementById("colour-theme-dark").checked = false;
+						document.getElementById("colour-theme-light").checked = true;
+					}
 				}
 
 				let cookieDisplayBgChecker = document.cookie
