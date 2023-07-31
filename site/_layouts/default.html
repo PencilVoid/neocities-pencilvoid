@@ -29,12 +29,16 @@
 			</h6>
 			<fieldset id="colour-theme-choice">
 				<div>
-					<input type="radio" id="colour-theme-light" name="colour-theme" value="colour-theme-light" onclick="colourThemeLight(true); document.cookie = 'colour_theme=light; max-age=1209600; Secure';">
+					<input type="radio" id="colour-theme-light" name="colour-theme" value="colour-theme-light" onclick="colourThemeLight(); document.cookie = 'colour_theme=light; max-age=1209600; Secure';">
 					<label for="colour-theme-light">Light colour theme</label>
 				</div>
 				<div>
-					<input type="radio" id="colour-theme-dark" name="colour-theme" value="colour-theme-dark" onclick="colourThemeDark(true); document.cookie = 'colour_theme=dark; max-age=1209600; Secure';">
+					<input type="radio" id="colour-theme-dark" name="colour-theme" value="colour-theme-dark" onclick="colourThemeDark(); document.cookie = 'colour_theme=dark; max-age=1209600; Secure';">
 					<label for="colour-theme-dark">Dark colour theme</label>
+				</div>
+				<div>
+					<input type="radio" id="colour-theme-auto" name="colour-theme" value="colour-theme-auto" onclick="colourThemeAuto(); document.cookie = 'colour_theme=auto; expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure';">
+					<label for="colour-theme-dark">Sync with device</label>
 				</div>
 			</fieldset>
 			<h6>
@@ -81,6 +85,8 @@
 				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.dark.a-hover-colour }}');
 				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.dark.a-active-colour }}');
 				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.dark.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.dark.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.dark.rightbox-colour }}');
 			}
 
 			function colourThemeLight() {
@@ -96,6 +102,18 @@
 				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.light.a-hover-colour }}');
 				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.light.a-active-colour }}');
 				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.light.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.light.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.light.rightbox-colour }}');
+			}
+
+			function colourThemeAuto() {
+				let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
+
+				if (!mediaQueryList.matches) {
+					colourThemeDark()
+				} else {
+					colourThemeLight()
+				}
 			}
 
 			document.addEventListener("DOMContentLoaded", function(event) {
@@ -109,23 +127,18 @@
 						colourThemeDark()
 						document.getElementById("colour-theme-dark").checked = true;
 						document.getElementById("colour-theme-light").checked = false;
+						document.getElementById("colour-theme-auto").checked = false;
 					} else if (cookieColourScheme === "light") {
 						colourThemeLight()
 						document.getElementById("colour-theme-dark").checked = false;
 						document.getElementById("colour-theme-light").checked = true;
+						document.getElementById("colour-theme-auto").checked = false;
 					}
 				} else {
-					let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
-
-					if (!mediaQueryList.matches) {
-						colourThemeDark()
-						document.getElementById("colour-theme-dark").checked = true;
-						document.getElementById("colour-theme-light").checked = false;
-					} else {
-						colourThemeLight()
-						document.getElementById("colour-theme-dark").checked = false;
-						document.getElementById("colour-theme-light").checked = true;
-					}
+					colourThemeAuto()
+					document.getElementById("colour-theme-dark").checked = false;
+					document.getElementById("colour-theme-light").checked = false;
+					document.getElementById("colour-theme-auto").checked = true;
 				}
 
 				let cookieDisplayBgChecker = document.cookie
