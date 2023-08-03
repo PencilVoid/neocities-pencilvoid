@@ -60,6 +60,9 @@
 				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.dark.hr-colour }}');
 				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.dark.tone-colour }}');
 				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.dark.rightbox-colour }}');
+				document.getElementById("colour-theme-dark").checked = true;
+				document.getElementById("colour-theme-light").checked = false;
+				document.getElementById("colour-theme-auto").checked = false;
 			}
 
 			function colourThemeLight() {
@@ -77,6 +80,9 @@
 				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.light.hr-colour }}');
 				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.light.tone-colour }}');
 				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.light.rightbox-colour }}');
+				document.getElementById("colour-theme-dark").checked = false;
+				document.getElementById("colour-theme-light").checked = true;
+				document.getElementById("colour-theme-auto").checked = false;
 			}
 
 			function colourThemeAuto() {
@@ -87,6 +93,11 @@
 				} else {
 					colourThemeDark()
 				}
+				/*
+				document.getElementById("colour-theme-dark").checked = false;
+				document.getElementById("colour-theme-light").checked = false;
+				document.getElementById("colour-theme-auto").checked = true;
+				*/
 			}
 
 			document.addEventListener("DOMContentLoaded", function(event) {
@@ -98,27 +109,19 @@
 				if (cookieColourScheme) {
 					if (cookieColourScheme === "dark") {
 						colourThemeDark()
-						document.getElementById("colour-theme-dark").checked = true;
-						document.getElementById("colour-theme-light").checked = false;
-						document.getElementById("colour-theme-auto").checked = false;
 					} else if (cookieColourScheme === "light") {
 						colourThemeLight()
-						document.getElementById("colour-theme-dark").checked = false;
-						document.getElementById("colour-theme-light").checked = true;
-						document.getElementById("colour-theme-auto").checked = false;
 					}
 				} else {
 					colourThemeAuto()
-					document.getElementById("colour-theme-dark").checked = false;
-					document.getElementById("colour-theme-light").checked = false;
-					document.getElementById("colour-theme-auto").checked = true;
 				}
 
 				let cookieDisplayBgChecker = document.cookie
 				.split("; ")
 				.find((row) => row.startsWith("display_bg_checker="))
 				?.split("=")[1];
-
+				
+				/* im so tired */
 				if (cookieDisplayBgChecker) {
 					if (cookieDisplayBgChecker === "false") {
 						document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";

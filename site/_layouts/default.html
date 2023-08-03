@@ -59,6 +59,9 @@
 				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.dark.hr-colour }}');
 				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.dark.tone-colour }}');
 				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.dark.rightbox-colour }}');
+				document.getElementById("colour-theme-dark").checked = true;
+				document.getElementById("colour-theme-light").checked = false;
+				document.getElementById("colour-theme-auto").checked = false;
 			}
 
 			function colourThemeLight() {
@@ -76,6 +79,9 @@
 				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.light.hr-colour }}');
 				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.light.tone-colour }}');
 				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.light.rightbox-colour }}');
+				document.getElementById("colour-theme-dark").checked = false;
+				document.getElementById("colour-theme-light").checked = true;
+				document.getElementById("colour-theme-auto").checked = false;
 			}
 
 			function colourThemeAuto() {
@@ -86,6 +92,11 @@
 				} else {
 					colourThemeDark()
 				}
+				/*
+				document.getElementById("colour-theme-dark").checked = false;
+				document.getElementById("colour-theme-light").checked = false;
+				document.getElementById("colour-theme-auto").checked = true;
+				*/
 			}
 
 			document.addEventListener("DOMContentLoaded", function(event) {
@@ -97,20 +108,11 @@
 				if (cookieColourScheme) {
 					if (cookieColourScheme === "dark") {
 						colourThemeDark()
-						document.getElementById("colour-theme-dark").checked = true;
-						document.getElementById("colour-theme-light").checked = false;
-						document.getElementById("colour-theme-auto").checked = false;
 					} else if (cookieColourScheme === "light") {
 						colourThemeLight()
-						document.getElementById("colour-theme-dark").checked = false;
-						document.getElementById("colour-theme-light").checked = true;
-						document.getElementById("colour-theme-auto").checked = false;
 					}
 				} else {
 					colourThemeAuto()
-					document.getElementById("colour-theme-dark").checked = false;
-					document.getElementById("colour-theme-light").checked = false;
-					document.getElementById("colour-theme-auto").checked = true;
 				}
 
 				let cookieDisplayBgChecker = document.cookie
