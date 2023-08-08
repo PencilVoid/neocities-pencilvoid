@@ -63,7 +63,7 @@
 				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.dark.rightbox-colour }}');
 				document.getElementById("colour-theme-dark").checked = true;
 				document.getElementById("colour-theme-light").checked = false;
-				document.getElementById("colour-theme-auto").checked = false;
+				/*document.getElementById("colour-theme-auto").checked = false;*/
 			}
 
 			function colourThemeLight() {
@@ -83,16 +83,16 @@
 				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.light.rightbox-colour }}');
 				document.getElementById("colour-theme-dark").checked = false;
 				document.getElementById("colour-theme-light").checked = true;
-				document.getElementById("colour-theme-auto").checked = false;
+				/*document.getElementById("colour-theme-auto").checked = false;*/
 			}
 
 			function colourThemeAuto() {
 				let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
 
 				if (!mediaQueryList.matches) {
-					colourThemeDark()
+					colourThemeDark();
 				} else {
-					colourThemeDark()
+					colourThemeDark();
 				}
 				/*
 				document.getElementById("colour-theme-dark").checked = false;
@@ -101,46 +101,74 @@
 				*/
 			}
 
+			function bgCheckerVisible() {
+				document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+			}
+
+			function bgCheckerInvisible() {
+				document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+			}
+
 			document.addEventListener("DOMContentLoaded", function(event) {
 				let cookieColourScheme = document.cookie
-				.split("; ")
+				.split(";")
 				.find((row) => row.startsWith("colour_theme="))
 				?.split("=")[1];
 
 				if (cookieColourScheme) {
-					if (cookieColourScheme === "dark") {
-						colourThemeDark()
-					} else if (cookieColourScheme === "light") {
-						colourThemeLight()
+					if (cookieColourScheme === "light") {
+						colourThemeLight();
+						document.cookie = "colour_theme=light; max-age=1209600; path=/; Secure";
+					} else if (cookieColourScheme === "dark") {
+						colourThemeDark();
+						document.cookie = "colour_theme=dark; max-age=1209600; path=/; Secure";
 					}
 				} else {
-					colourThemeAuto()
+					colourThemeAuto();
 				}
 
 				let cookieDisplayBgChecker = document.cookie
-				.split("; ")
+				.split(";")
 				.find((row) => row.startsWith("display_bg_checker="))
 				?.split("=")[1];
 				
-				/* im so tired */
 				if (cookieDisplayBgChecker) {
 					if (cookieDisplayBgChecker === "false") {
-						document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+						bgCheckerInvisible()
 						document.getElementById("display-bg-checker").checked = false;
-					} else {
-						document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+						document.cookie = "display_bg_checker=false; max-age=1209600; path=/; Secure";
+					} else if (cookieDisplayBgChecker === "true") {
+						bgCheckerVisible()
 						document.getElementById("display-bg-checker").checked = true;
+						document.cookie = "display_bg_checker=true; max-age=1209600; path=/; Secure";
 					}
+				} else {
+					bgCheckerVisible()
+					document.getElementById("display-bg-checker").checked = true;
 				}
 			})
 
 			document.getElementById("display-bg-checker").addEventListener("change", function(event) {
 				if (document.getElementById("display-bg-checker").checked) {
-					document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
-					document.cookie = 'display_bg_checker=true; max-age=1209600; Secure';
+					bgCheckerVisible()
+					document.cookie = "display_bg_checker=true; max-age=1209600; path=/; Secure";
 				} else {
-					document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
-					document.cookie = 'display_bg_checker=false; max-age=1209600; Secure';
+					bgCheckerInvisible()
+					document.cookie = "display_bg_checker=false; max-age=1209600; path=/; Secure";
+				}
+			})
+
+			document.getElementById("colour-theme-light").addEventListener("change", function(event) {
+				if (document.getElementById("colour-theme-light").checked) {
+					colourThemeLight()
+					document.cookie = "colour_theme=light; max-age=1209600; path=/; Secure";
+				}
+			})
+
+			document.getElementById("colour-theme-dark").addEventListener("change", function(event) {
+				if (document.getElementById("colour-theme-dark").checked) {
+					colourThemeDark()
+					document.cookie = "colour_theme=dark; max-age=1209600; path=/; Secure";
 				}
 			})
 		</script>
