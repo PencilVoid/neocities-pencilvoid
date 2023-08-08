@@ -48,7 +48,7 @@ css:
 		</title>
 		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/sieveplate/feed.xml" title="SievePlate" />
 		{% seo title=false %}
-		<meta name="theme-color" content="{{ page.css.dark.sidebar-colour }}">
+		<meta name="theme-color" content="{{ layout.css.dark.sidebar-colour }}">
 		<style>
 			:root {
 				--main-font: atkinson-hyperlegible;
@@ -101,40 +101,40 @@ css:
 		</div>
 		<script>
 			function colourThemeDark() {
-				document.documentElement.style.setProperty('--header-colour', '{{ page.css.dark.header-colour }}');
-				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.dark.bg-colour }}');
-				document.documentElement.style.setProperty('--bg-checkerdark', '{{ page.css.dark.bg-checkerdark }}');
-				document.documentElement.style.setProperty('--bg-checkerlight', '{{ page.css.dark.bg-checkerlight }}');
-				document.documentElement.style.setProperty('--bg-triangle', '{{ page.css.dark.bg-triangle }}');
-				document.documentElement.style.setProperty('--sidebar-colour', '{{ page.css.dark.sidebar-colour }}');
-				document.documentElement.style.setProperty('--text-colour', '{{ page.css.dark.text-colour }}');
-				document.documentElement.style.setProperty('--a-colour', '{{ page.css.dark.a-colour }}');
-				document.documentElement.style.setProperty('--a-visited-colour', '{{ page.css.dark.a-visited-colour }}');
-				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.dark.a-hover-colour }}');
-				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.dark.a-active-colour }}');
-				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.dark.hr-colour }}');
-				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.dark.tone-colour }}');
-				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.dark.rightbox-colour }}');
+				document.documentElement.style.setProperty('--header-colour', '{{ layout.css.dark.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ layout.css.dark.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ layout.css.dark.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ layout.css.dark.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ layout.css.dark.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ layout.css.dark.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ layout.css.dark.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ layout.css.dark.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ layout.css.dark.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ layout.css.dark.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ layout.css.dark.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ layout.css.dark.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ layout.css.dark.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ layout.css.dark.rightbox-colour }}');
 				document.getElementById("colour-theme-dark").checked = true;
 				document.getElementById("colour-theme-light").checked = false;
 				/*document.getElementById("colour-theme-auto").checked = false;*/
 			}
 
 			function colourThemeLight() {
-				document.documentElement.style.setProperty('--header-colour', '{{ page.css.light.header-colour }}');
-				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.light.bg-colour }}');
-				document.documentElement.style.setProperty('--bg-checkerdark', '{{ page.css.light.bg-checkerdark }}');
-				document.documentElement.style.setProperty('--bg-checkerlight', '{{ page.css.light.bg-checkerlight }}');
-				document.documentElement.style.setProperty('--bg-triangle', '{{ page.css.light.bg-triangle }}');
-				document.documentElement.style.setProperty('--sidebar-colour', '{{ page.css.light.sidebar-colour }}');
-				document.documentElement.style.setProperty('--text-colour', '{{ page.css.light.text-colour }}');
-				document.documentElement.style.setProperty('--a-colour', '{{ page.css.light.a-colour }}');
-				document.documentElement.style.setProperty('--a-visited-colour', '{{ page.css.light.a-visited-colour }}');
-				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.light.a-hover-colour }}');
-				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.light.a-active-colour }}');
-				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.light.hr-colour }}');
-				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.light.tone-colour }}');
-				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.light.rightbox-colour }}');
+				document.documentElement.style.setProperty('--header-colour', '{{ layout.css.light.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ layout.css.light.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ layout.css.light.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ layout.css.light.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ layout.css.light.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ layout.css.light.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ layout.css.light.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ layout.css.light.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ layout.css.light.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ layout.css.light.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ layout.css.light.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ layout.css.light.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ layout.css.light.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ layout.css.light.rightbox-colour }}');
 				document.getElementById("colour-theme-dark").checked = false;
 				document.getElementById("colour-theme-light").checked = true;
 				/*document.getElementById("colour-theme-auto").checked = false;*/
