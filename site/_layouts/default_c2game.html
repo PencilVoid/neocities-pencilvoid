@@ -58,9 +58,26 @@ css:
 			{{ page.title }}
 		</title>
 		{% seo title=false %}
-		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
+		<meta name="theme-color" content="{{ layout.css.dark.bg-checkerdark }}">
 		<style>
-			{{ page.customcss }}
+			{{ layout.customcss }}
+			
+			:root {
+				--header-colour: {{ layout.css.dark.header-colour }};
+				--bg-colour: {{ layout.css.dark.bg-colour }};
+				--bg-checkerdark: {{ layout.css.dark.bg-checkerdark }};
+				--bg-checkerlight: {{ layout.css.dark.bg-checkerlight }};
+				--bg-triangle: {{ layout.css.dark.bg-triangle }};
+				--sidebar-colour: {{ layout.css.dark.sidebar-colour }};
+				--text-colour: {{ layout.css.dark.text-colour }};
+				--a-colour: {{ layout.css.dark.a-colour }};
+				--a-visited-colour: {{ layout.css.dark.a-visited-colour }};
+				--a-hover-colour: {{ layout.css.dark.a-hover-colour }};
+				--a-active-colour: {{ layout.css.dark.a-active-colour }};
+				--hr-colour: {{ layout.css.dark.hr-colour }};
+				--tone-colour: {{ layout.css.dark.tone-colour }};
+				--rightbox-colour: {{ layout.css.dark.rightbox-colour }};
+			}
 
 			* {
 				padding: 0;
