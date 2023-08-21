@@ -60,10 +60,17 @@ css:
 	</head>
 
 	<body>
-		<nav>
-			{% include sidebar.html %}
-		</nav>
-		{% include display_controls.html %}
+		<div class="sidenav">
+			<nav>
+				<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
+				<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
+				<hr id="keyboard-nav-separator">
+				{% include sidebar.html %}
+			</nav>
+		</div>
+		<div class="rightbox">
+			{% include display_controls.html %}
+		</div>
 		<div class="content">
 			<header>
 				<h1>
@@ -71,7 +78,7 @@ css:
 				</h1>
 			</header>
 			<hr>
-			<main>
+			<main id="main-content">
 				Position: <b>{{ page.position }}</b>
 				<p>
 					{{ page.description }}

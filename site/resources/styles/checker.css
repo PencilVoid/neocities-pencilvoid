@@ -227,6 +227,44 @@ a[target="_blank"]:not([nobrackets="true"]):not(#section-dropdown-sidebar > div.
 	opacity: 0.7;
 }
 
+a.keyboard-nav-link {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+a.keyboard-nav-link:focus {
+	position: static;
+	left: 0;
+	top: 0;
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+
+a.keyboard-nav-link ~ #keyboard-nav-separator {
+	visibility: hidden;
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+a.keyboard-nav-link:focus ~ #keyboard-nav-separator {
+	visibility: visible;
+	position: static;
+	left: 0;
+	top: 0;
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+
 /* --- Background Gradient Pseudo-image --- */
 body {
 	background-color: var(--bg-checkerdark,#42004E);
