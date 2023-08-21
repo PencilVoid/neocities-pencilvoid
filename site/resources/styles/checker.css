@@ -285,6 +285,18 @@ hr {
 	border-style: double;
 }
 
+span.hr-light {
+	color: var(--tone-colour,#FFFFFF);
+	display: block;
+	border: 1px dotted;
+	max-height: 1px;
+	width: auto;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
 /* --- Division Styles --- */
 .card {
 	background: #ff8989;

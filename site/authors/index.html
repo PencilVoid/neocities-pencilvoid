@@ -41,12 +41,13 @@ customcss: ":root {
 	--alt-mono-font: overpass-mono;
 }"
 ---
-<ul>
-	{% for author_list in site.data.authors_list %}
+{% for author_list in site.data.authors_list %}
+	<article>
 	{% assign author = site.data.authors[author_list] %}
-	  <li>
 		<span class="post-list-title"><a href="/authors/{{ author.id }}">{{ author.fullname }}</a></span>
 		<b>{{ author.position }}</b>
-	  </li>
-	{% endfor %}
-</ul>
+	{% if forloop.last != true %}
+		<span class="hr-light"></span>
+		{% endif %}
+	</article>
+{% endfor %}
