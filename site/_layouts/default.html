@@ -13,6 +13,9 @@
 		<title>
 			{{ page.title }}
 		</title>
+		{% if page.feed_meta == "sieveplate" %}
+		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/sieveplate/feed.xml" title="SievePlate" />
+		{% endif %}
 		{% seo title=false %}
 		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
 		<style>
