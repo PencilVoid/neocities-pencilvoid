@@ -776,11 +776,13 @@ body {
 		border-style: none;
 		background-image: none;
 		height: min-content;
-		width: 100vw;
-		padding: 0.75rem;
-		position: static;
-		background-color: var(--rightbox-colour,#1c002380);
+		min-width: none;
+		width: 100%;
+		left: 0;
+		right: auto;
+		padding: 0.25rem;
+		background-color: var(--sidebar-colour,#1C0023);
 		font-size: 1rem;
-		overflow: auto;
+		overflow: hidden;
 	}
 }
