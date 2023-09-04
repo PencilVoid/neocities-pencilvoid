@@ -605,6 +605,33 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	display: contents;
 }
 
+/* Input buttons */
+input[type="button"] {
+	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-size: 1.2rem;
+	text-align: left;
+	border: 1px solid var(--a-colour,#FF9EBC);
+	color: var(--a-colour,#FF9EBC);
+	text-decoration: none;
+	background-color: transparent;
+	line-height: 1.5;
+}
+
+input[type="button"]a:hover {
+	border: 1px solid var(--a-hover-colour,#FBD1FF);
+	color: var(--a-hover-colour,#FBD1FF);
+	text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
+}
+
+input[type="button"]:active {
+	border: 1px solid var(--a-active-colour,#FFFFFF);
+	color: var(--a-active-colour,#FFFFFF);
+	text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
+}
+
+.rightbox input[type="button"] {
+	font-size: 1rem;
+}
 /* Scrollbar */
 * {
 	scrollbar-color: var(--hr-colour,var(--text-colour,#FF417D)) transparent;

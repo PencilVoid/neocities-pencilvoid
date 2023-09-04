@@ -72,6 +72,40 @@
 			</footer>
 		</div>
 		<script>
+			function deleteAllCookies() {
+				localStorage.clear()
+			}
+
+			function setWithExpiry(key, value, ttl) {
+				const now = new Date()
+
+				// `item` is an object which contains the original value
+				// as well as the time when it's supposed to expire
+				const item = {
+					value: value,
+					expiry: now.getTime() + ttl,
+				}
+				localStorage.setItem(key, JSON.stringify(item))
+			}
+			
+			function getWithExpiry(key) {
+				const itemStr = localStorage.getItem(key)
+				// if the item doesn't exist, return null
+				if (!itemStr) {
+					return null
+				}
+				const item = JSON.parse(itemStr)
+				const now = new Date()
+				// compare the expiry time of the item with the current time
+				if (now.getTime() > item.expiry) {
+					// If the item is expired, delete the item from storage
+					// and return null
+					localStorage.removeItem(key)
+					return null
+				}
+				return item.value
+			}
+
 			function colourThemeDark() {
 				document.documentElement.style.setProperty('--header-colour', '{{ page.css.dark.header-colour }}');
 				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.dark.bg-colour }}');
@@ -136,37 +170,31 @@
 			}
 
 			document.addEventListener("DOMContentLoaded", function(event) {
-				let cookieColourScheme = document.cookie
-				.split(";")
-				.find((row) => row.startsWith("colour_theme="))
-				?.split("=")[1];
+				let cookieColourScheme = getWithExpiry("colour_theme");
 
 				if (cookieColourScheme) {
 					if (cookieColourScheme === "light") {
 						colourThemeLight();
-						document.cookie = "colour_theme=light; max-age=1209600; path=/; Secure";
+						setWithExpiry("colour_theme", "light", 1209600000)
 					} else if (cookieColourScheme === "dark") {
 						colourThemeDark();
-						document.cookie = "colour_theme=dark; max-age=1209600; path=/; Secure";
+						setWithExpiry("colour_theme", "dark", 1209600000)
 					}
 				} else {
 					colourThemeAuto();
 				}
 
-				let cookieDisplayBgChecker = document.cookie
-				.split(";")
-				.find((row) => row.startsWith("display_bg_checker="))
-				?.split("=")[1];
+				let cookieDisplayBgChecker = getWithExpiry("display_bg_checker");
 				
 				if (cookieDisplayBgChecker) {
 					if (cookieDisplayBgChecker === "false") {
 						bgCheckerInvisible()
 						document.getElementById("display-bg-checker").checked = false;
-						document.cookie = "display_bg_checker=false; max-age=1209600; path=/; Secure";
+						setWithExpiry("display_bg_checker", "false", 1209600000)
 					} else if (cookieDisplayBgChecker === "true") {
 						bgCheckerVisible()
 						document.getElementById("display-bg-checker").checked = true;
-						document.cookie = "display_bg_checker=true; max-age=1209600; path=/; Secure";
+						setWithExpiry("display_bg_checker", "true", 1209600000)
 					}
 				} else {
 					bgCheckerVisible()
@@ -177,26 +205,28 @@
 			document.getElementById("display-bg-checker").addEventListener("change", function(event) {
 				if (document.getElementById("display-bg-checker").checked) {
 					bgCheckerVisible()
-					document.cookie = "display_bg_checker=true; max-age=1209600; path=/; Secure";
+					setWithExpiry("display_bg_checker", "true", 1209600000)
 				} else {
 					bgCheckerInvisible()
-					document.cookie = "display_bg_checker=false; max-age=1209600; path=/; Secure";
+					setWithExpiry("display_bg_checker", "false", 1209600000)
 				}
 			})
 
 			document.getElementById("colour-theme-light").addEventListener("change", function(event) {
 				if (document.getElementById("colour-theme-light").checked) {
 					colourThemeLight()
-					document.cookie = "colour_theme=light; max-age=1209600; path=/; Secure";
+					setWithExpiry("colour_theme", "light", 1209600000)
 				}
 			})
 
 			document.getElementById("colour-theme-dark").addEventListener("change", function(event) {
 				if (document.getElementById("colour-theme-dark").checked) {
 					colourThemeDark()
-					document.cookie = "colour_theme=dark; max-age=1209600; path=/; Secure";
+					setWithExpiry("colour_theme", "dark", 1209600000)
 				}
 			})
+
+			document.getElementById("clear-all-options").addEventListener("click", deleteAllCookies)
 		</script>
 	</body>
 </html>
