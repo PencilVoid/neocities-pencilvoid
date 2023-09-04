@@ -589,8 +589,57 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
+.dropdown-display-controls .dropdown-content {
+	overflow: hidden;
+	
+	height: 0;
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+	
+	border-top: none;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+	
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-top: 0;
+
+	margin-bottom: 0;
+}
+
+.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content {
+	height: auto;
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+	padding-right: 0.75rem;
+	padding-bottom: 0.75rem;
+	padding-left: 0.75rem;
+	padding-top: 0.75rem;
+	border-top: 1px solid var(--tone-colour,#FFFFFF);
+	border-right: 1px dashed var(--tone-colour,#FFFFFF);
+	border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
+	border-left: 1px dashed var(--tone-colour,#FFFFFF);
+}
+
+.dropdown-display-controls input[type="checkbox"]:not(#display-bg-checker) ~ label.dropdown-label::before {
+	content: "Show display controls"
+}
+
+.dropdown-display-controls input[type="checkbox"]:not(#display-bg-checker):checked ~ label.dropdown-label::before {
+	content: "Hide display controls"
+}
+
+.dropdown-display-controls input[type="checkbox"]:not(#display-bg-checker) {
+	appearance: none;
+}
+
 @media screen and (max-width: 840px) {
 	.dropdown .dropdown-content {
+		padding-right: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 0.5rem;
+	}
+	.dropdown-display-controls .dropdown-content {
 		padding-right: 0.5rem;
 		padding-bottom: 0.5rem;
 		padding-left: 0.5rem;
