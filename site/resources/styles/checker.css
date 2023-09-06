@@ -646,11 +646,13 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	}
 }
 
-.dropdown > .dropdown-content > .dropdown-hider {
+.dropdown > .dropdown-content > .dropdown-hider,
+.dropdown-display-controls > .dropdown-content > .dropdown-hider {
 	display: none;
 }
 
-.dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider,
+.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
 	display: contents;
 }
 
