@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	if (dropdownDisplayControls) {
 		if (dropdownDisplayControls === "true") {
-			document.getElementById("dropdown-display-controls").checked = true
+			document.getElementById("dropdown-display-controls").checked = true;
 		} else if (dropdownDisplayControls === "false") {
-			document.getElementById("dropdown-display-controls").checked = false
+			document.getElementById("dropdown-display-controls").checked = false;
 		}
 	} else {
-		document.getElementById("dropdown-display-controls").checked = true
+		document.getElementById("dropdown-display-controls").checked = !window.matchMedia("screen and (max-width: 840px)").matches;
 	}
 })
 
