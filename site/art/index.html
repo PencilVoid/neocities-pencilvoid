@@ -47,8 +47,9 @@ customcss: ":root {
 ---
 <p>
 	Wow, I can draw. Amazing. It's mostly pixel art. I've been doing pixel art for a while now and I'm fairly okay at it. I only ever draw for fun so it's mostly character art featuring my OCs (no write-ups on any of them, learn about them by playing the games they will eventually be in). I'm best at drawing anthropomorphic animals for some reason. I can count the amount of humans I've drawn on one hand. I do have some characters that aren't Funny Animals though. There's also occasional vector art and graphic design work but I don't do that frequently enough to feature anything on this page. All the vector assets this site uses were made by me though.
-	<br>
-	Click on any image below to view it at full resolution in a new tab.
+</p>
+<p>
+	Click on any image below to view it enlarged in its own page.
 </p>
 
 <div class="row">
@@ -57,12 +58,10 @@ customcss: ":root {
 {%- assign currentindex = forloop.index0 | modulo: 3 -%}
 	<div class="gallery">
 		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
-			<a href="/art/{{item.id}}" nobrackets="true"><img src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text }}" width="100%" height="100%"></a>
+			<a href="/art/{{item.id}}" nobrackets="true"><img src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%"></a>
 		</div>
-		<div class="desc">
-			<span class="desc-metadata">
-				{{ item.artname }}<br>{{ item.date | date_to_long_string }}
-			</span>
+		<div class="desc desc-metadata">
+			{{ item.artname }}<br>{{ item.date | date_to_long_string }}<br>{{ item.size }}
 		</div>
 	</div>
 {% endfor %}

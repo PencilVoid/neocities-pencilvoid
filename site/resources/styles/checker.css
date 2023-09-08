@@ -400,94 +400,89 @@ div.urgent > .urgent-header {
 }
 
 /* --- Gallery Styling --- */
-div.row {
+.row {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	max-width: 100%;
-	height: max-content;
+	height: auto;
 	margin: 0.625rem 0;
-}
-
-div.gallery {
-	display: flex;
-	flex: auto;
-	flex-flow: row wrap;
-	margin: 0.3125rem;
-	border: 1px solid var(--text-colour,#FFEAFC);
-	max-width: 320px;
-	max-height: fit-content;
 	justify-content: center;
 }
 
+.gallery {
+	display: flex;
+	flex: 0 0 auto;
+	flex-flow: row wrap;
+	margin: 0.5rem;
+	border: 1px solid var(--text-colour,#FFEAFC);
+	max-width: min-content;
+	min-width: 320px;
+	justify-content: center;
+}
+
+.gallery-img {
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-flow: column wrap;
+	align-self: end;
+}
+
 .gallery-img img {
-	margin: auto;
+	width: min-content;
+	height: min-content;
+}
+
+.gallery-large-img img{
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-flow: column wrap;
 	max-width: 100%;
 }
+
 .gallery-large {
 	display: flex;
 	flex-flow: row wrap;
 	margin: 0.3125rem;
 	border: none;
+	justify-content: center;
 	max-width: 100%;
-	justify-content: center;
 }
 
-div.gallery-large-img {
-	display: flex;
-	flex: 1 1 0;
-	flex-flow: row wrap;
-	margin: 0.3125rem;
-	border: 1px solid var(--text-colour,#FFEAFC);
-	max-width: 320px;
-	max-height: fit-content;
-	justify-content: center;
-}
-
-@media (max-width: 840px) {
-	div.gallery {
-		flex: 2 1 auto;
-	}
-}
-
-div.gallery:hover {
+.gallery:hover {
 	border: 1px solid var(--a-hover-colour,#FBD1FF);
 }
 
-div.gallery img {
-	width: 100%;
-	height: auto;
-	max-width:max-content;
-}
-
-div.desc {
+.desc {
+	display: flex;
+	flex: 0 0 auto;
+	flex-flow: column wrap;
 	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
 	font-size: 1.2rem;
-	text-align: left;
 	color: var(--text-colour);
-
 	text-align: center;
-	padding: 0.75rem 0.75rem;
-	margin: auto;
-	background-color: #fff;
+	width: 100%;
+	max-height: min-content;
+	justify-content: center;
+	align-self: end;
+}
+
+@media screen and (max-width: 840px) {
+	.desc {
+		font-size: 1rem;
+	}
+}
+
+.desc-metadata {
+	font-family: var(--alt-mono-font,overpass-mono, monospace);
+	color: var(--text-colour,#FFEAFC);
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
 @media screen and (max-width: 840px) {
-	div.desc {
-		font-size: 1rem;
-		padding: 0.5rem 0.5rem;
-	}
-}
-
-span.desc-metadata {
-	font-family: var(--alt-mono-font,overpass-mono, monospace);
-	background-color:  rgba(255, 255, 255, 0.15);
-	color: var(--text-colour,#FFEAFC);
-}
-
-@media screen and (max-width: 840px) {
-	span.desc-metadata {
+	.desc-metadata {
 		font-size: 1rem;
 	}
 }

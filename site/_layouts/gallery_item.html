@@ -104,13 +104,13 @@ css:
 			<main id="main-content">
 				<div class="row">
 					<div class="gallery-large">
-						<div class="gallery-img">
-							<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text }}"></a>
+						<div class="gallery-large-img">
+							<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text | xml_escape }}"></a>
 						</div>
 						<div class="desc">
-							<span class="desc-metadata">
+							<p class="desc-metadata">
 								{{ page.artname }} - {{ page.width}} x {{ page.height }}, {{page.size }}, {{ page.date | date_to_long_string }}
-							</span>
+							</p>
 							<p>
 								{{ page.caption }}
 							</p>
