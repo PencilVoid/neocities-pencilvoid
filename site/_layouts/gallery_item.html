@@ -73,6 +73,12 @@ css:
 				--tone-colour: {{ page.css.dark.tone-colour }};
 				--rightbox-colour: {{ page.css.dark.rightbox-colour }};
 			}
+
+			{% if page.pixelated %}
+			.gallery-img {
+				image-rendering: crisp-edges;
+			}
+			{% endif %}
 		</style>
 	</head>
 
@@ -96,15 +102,19 @@ css:
 			</header>
 			<hr>
 			<main id="main-content">
-				<div class="gallery-large">
-					<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text }}"></a>
-					<div class="desc">
-						<span class="desc-metadata">
-							{{ page.artname }} - {{ page.width}} x {{ page.height }}, {{page.size }}, {{ page.date | date_to_long_string }}
-						</span>
-						<p>
-							{{ page.caption }}
-						</p>
+				<div class="row">
+					<div class="gallery-large">
+						<div class="gallery-img">
+							<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text }}"></a>
+						</div>
+						<div class="desc">
+							<span class="desc-metadata">
+								{{ page.artname }} - {{ page.width}} x {{ page.height }}, {{page.size }}, {{ page.date | date_to_long_string }}
+							</span>
+							<p>
+								{{ page.caption }}
+							</p>
+						</div>
 					</div>
 				</div>
 				<p>

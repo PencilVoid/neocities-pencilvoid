@@ -402,36 +402,45 @@ div.urgent > .urgent-header {
 /* --- Gallery Styling --- */
 div.row {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
+	max-width: 100%;
 	height: max-content;
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.15);
-	margin: 10px 0px;
+	margin: 0.625rem 0;
 }
 
 div.gallery {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin: 5px;
+	flex: auto;
+	flex-flow: row wrap;
+	margin: 0.3125rem;
 	border: 1px solid var(--text-colour,#FFEAFC);
-	width: 31%;
-	height: fit-content;
-	flex: 5 1 auto;
+	max-width: 320px;
+	max-height: fit-content;
 	justify-content: center;
 }
 
+.gallery-img img {
+	margin: auto;
+	max-width: 100%;
+}
 .gallery-large {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin: 5px;
+	flex-flow: row wrap;
+	margin: 0.3125rem;
 	border: none;
-	width: 100%;
-	height: fit-content;
-	flex: auto auto auto;
+	max-width: 100%;
+	justify-content: center;
+}
+
+div.gallery-large-img {
+	display: flex;
+	flex: 1 1 0;
+	flex-flow: row wrap;
+	margin: 0.3125rem;
+	border: 1px solid var(--text-colour,#FFEAFC);
+	max-width: 320px;
+	max-height: fit-content;
 	justify-content: center;
 }
 
