@@ -199,31 +199,31 @@ css:
 			}
 
 			document.addEventListener("DOMContentLoaded", function(event) {
-				let cookieColourScheme = getWithExpiry("colour_theme");
+				let cookieColourScheme = localStorage.getItem("colour_theme");
 
 				if (cookieColourScheme) {
 					if (cookieColourScheme === "light") {
 						colourThemeLight();
-						setWithExpiry("colour_theme", "light", 1209600000)
+						localStorage.setItem("colour_theme", "light")
 					} else if (cookieColourScheme === "dark") {
 						colourThemeDark();
-						setWithExpiry("colour_theme", "dark", 1209600000)
+						localStorage.setItem("colour_theme", "dark")
 					}
 				} else {
 					colourThemeAuto();
 				}
 
-				let cookieDisplayBgChecker = getWithExpiry("display_bg_checker");
+				let cookieDisplayBgChecker = localStorage.getItem("display_bg_checker");
 				
 				if (cookieDisplayBgChecker) {
 					if (cookieDisplayBgChecker === "false") {
 						bgCheckerInvisible()
 						document.getElementById("display-bg-checker").checked = false;
-						setWithExpiry("display_bg_checker", "false", 1209600000)
+						localStorage.setItem("display_bg_checker", "false")
 					} else if (cookieDisplayBgChecker === "true") {
 						bgCheckerVisible()
 						document.getElementById("display-bg-checker").checked = true;
-						setWithExpiry("display_bg_checker", "true", 1209600000)
+						localStorage.setItem("display_bg_checker", "true")
 					}
 				} else {
 					bgCheckerVisible()
