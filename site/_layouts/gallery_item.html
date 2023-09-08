@@ -1,0 +1,282 @@
+---
+css:
+  dark:
+    header-colour: "#3B063A"
+    bg-colour: "#42004E"
+    bg-checkerdark: "#64004C"
+    bg-checkerlight: "#8E0C42"
+    bg-triangle: "#42004E"
+    sidebar-colour: "#220029"
+    text-colour: "#FFE7D1"
+    a-colour: "#FFD5B5"
+    a-visited-colour: "#FFB289"
+    a-hover-colour: "#FFEFE0"
+    a-active-colour: "#FFFFFF"
+    hr-colour: "#D46453"
+    tone-colour: "#FFFFFF"
+    rightbox-colour: "#22002980"
+  light:
+    header-colour: "#3B063A"
+    bg-colour: "#F3BDFA"
+    bg-checkerdark: "#F9C0B8"
+    bg-checkerlight: "#FCD4DE"
+    bg-triangle: "#F78D9A"
+    sidebar-colour: "#EA667A"
+    text-colour: "#58032B"
+    a-colour: "#620562"
+    a-visited-colour: "#3E0349"
+    a-hover-colour: "#8B0573"
+    a-active-colour: "#CA2184"
+    hr-colour: "#A01843"
+    tone-colour: "#58032B"
+    rightbox-colour: "#DE3E5980"
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/icons/favicon.ico">
+		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
+		<link rel="manifest" href="/icons/site.webmanifest">
+		<link href="/resources/styles/fonts.css" rel="stylesheet" type="text/css" media="all">
+		<link href="/resources/styles/checker.css" rel="stylesheet" type="text/css" media="all">
+		<title>
+			{{ page.fancyname }} | Art
+		</title>
+		{% if page.feed_meta == "sieveplate" %}
+		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/sieveplate/feed.xml" title="SievePlate" />
+		{% endif %}
+		{% seo title=false %}
+		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
+		<style>
+			:root {
+				--main-font: atkinson-hyperlegible;
+				--monospace-font: fira-code;
+				--header-font: inconsolata;
+				--alt-font: overpass;
+				--alt-mono-font: overpass-mono;
+				--header-colour: {{ page.css.dark.header-colour }};
+				--bg-colour: {{ page.css.dark.bg-colour }};
+				--bg-checkerdark: {{ page.css.dark.bg-checkerdark }};
+				--bg-checkerlight: {{ page.css.dark.bg-checkerlight }};
+				--bg-triangle: {{ page.css.dark.bg-triangle }};
+				--sidebar-colour: {{ page.css.dark.sidebar-colour }};
+				--text-colour: {{ page.css.dark.text-colour }};
+				--a-colour: {{ page.css.dark.a-colour }};
+				--a-visited-colour: {{ page.css.dark.a-visited-colour }};
+				--a-hover-colour: {{ page.css.dark.a-hover-colour }};
+				--a-active-colour: {{ page.css.dark.a-active-colour }};
+				--hr-colour: {{ page.css.dark.hr-colour }};
+				--tone-colour: {{ page.css.dark.tone-colour }};
+				--rightbox-colour: {{ page.css.dark.rightbox-colour }};
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="sidenav">
+			<nav>
+				<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
+				<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
+				<hr id="keyboard-nav-separator">
+				{% include sidebar.html %}
+			</nav>
+		</div>
+		<div class="rightbox">
+			{% include display_controls.html %}
+		</div>
+		<div class="content">
+			<header>
+				<h1>
+					{{ page.fancyname }}
+				</h1>
+			</header>
+			<hr>
+			<main id="main-content">
+				<div class="gallery-large">
+					<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text }}"></a>
+					<div class="desc">
+						<span class="desc-metadata">
+							{{ page.artname }} - {{ page.width}} x {{ page.height }}, {{page.size }}, {{ page.date | date_to_long_string }}
+						</span>
+						<p>
+							{{ page.caption }}
+						</p>
+					</div>
+				</div>
+				<p>
+					<a href="/art">Back to gallery</a>
+				</p>
+			</main>
+			<hr>
+			<footer>
+				<span class="small-text">
+					<p>
+						Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+					</p>
+				</span>
+			</footer>
+		</div>
+		<script>
+			function deleteAllCookies() {
+				localStorage.clear()
+			}
+
+			function setWithExpiry(key, value, ttl) {
+				const now = new Date()
+
+				// `item` is an object which contains the original value
+				// as well as the time when it's supposed to expire
+				const item = {
+					value: value,
+					expiry: now.getTime() + ttl,
+				}
+				localStorage.setItem(key, JSON.stringify(item))
+			}
+			
+			function getWithExpiry(key) {
+				const itemStr = localStorage.getItem(key)
+				// if the item doesn't exist, return null
+				if (!itemStr) {
+					return null
+				}
+				const item = JSON.parse(itemStr)
+				const now = new Date()
+				// compare the expiry time of the item with the current time
+				if (now.getTime() > item.expiry) {
+					// If the item is expired, delete the item from storage
+					// and return null
+					localStorage.removeItem(key)
+					return null
+				}
+				return item.value
+			}
+
+			function colourThemeDark() {
+				document.documentElement.style.setProperty('--header-colour', '{{ page.css.dark.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.dark.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ page.css.dark.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ page.css.dark.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ page.css.dark.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ page.css.dark.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ page.css.dark.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ page.css.dark.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ page.css.dark.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.dark.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.dark.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.dark.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.dark.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.dark.rightbox-colour }}');
+				document.getElementById("colour-theme-dark").checked = true;
+				document.getElementById("colour-theme-light").checked = false;
+				/*document.getElementById("colour-theme-auto").checked = false;*/
+			}
+
+			function colourThemeLight() {
+				document.documentElement.style.setProperty('--header-colour', '{{ page.css.light.header-colour }}');
+				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.light.bg-colour }}');
+				document.documentElement.style.setProperty('--bg-checkerdark', '{{ page.css.light.bg-checkerdark }}');
+				document.documentElement.style.setProperty('--bg-checkerlight', '{{ page.css.light.bg-checkerlight }}');
+				document.documentElement.style.setProperty('--bg-triangle', '{{ page.css.light.bg-triangle }}');
+				document.documentElement.style.setProperty('--sidebar-colour', '{{ page.css.light.sidebar-colour }}');
+				document.documentElement.style.setProperty('--text-colour', '{{ page.css.light.text-colour }}');
+				document.documentElement.style.setProperty('--a-colour', '{{ page.css.light.a-colour }}');
+				document.documentElement.style.setProperty('--a-visited-colour', '{{ page.css.light.a-visited-colour }}');
+				document.documentElement.style.setProperty('--a-hover-colour', '{{ page.css.light.a-hover-colour }}');
+				document.documentElement.style.setProperty('--a-active-colour', '{{ page.css.light.a-active-colour }}');
+				document.documentElement.style.setProperty('--hr-colour', '{{ page.css.light.hr-colour }}');
+				document.documentElement.style.setProperty('--tone-colour', '{{ page.css.light.tone-colour }}');
+				document.documentElement.style.setProperty('--rightbox-colour', '{{ page.css.light.rightbox-colour }}');
+				document.getElementById("colour-theme-dark").checked = false;
+				document.getElementById("colour-theme-light").checked = true;
+				/*document.getElementById("colour-theme-auto").checked = false;*/
+			}
+
+			function colourThemeAuto() {
+				let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
+
+				if (!mediaQueryList.matches) {
+					colourThemeDark();
+				} else {
+					colourThemeDark();
+				}
+				/*
+				document.getElementById("colour-theme-dark").checked = false;
+				document.getElementById("colour-theme-light").checked = false;
+				document.getElementById("colour-theme-auto").checked = true;
+				*/
+			}
+
+			function bgCheckerVisible() {
+				document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+			}
+
+			function bgCheckerInvisible() {
+				document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
+			}
+
+			document.addEventListener("DOMContentLoaded", function(event) {
+				let cookieColourScheme = getWithExpiry("colour_theme");
+
+				if (cookieColourScheme) {
+					if (cookieColourScheme === "light") {
+						colourThemeLight();
+						setWithExpiry("colour_theme", "light", 1209600000)
+					} else if (cookieColourScheme === "dark") {
+						colourThemeDark();
+						setWithExpiry("colour_theme", "dark", 1209600000)
+					}
+				} else {
+					colourThemeAuto();
+				}
+
+				let cookieDisplayBgChecker = getWithExpiry("display_bg_checker");
+				
+				if (cookieDisplayBgChecker) {
+					if (cookieDisplayBgChecker === "false") {
+						bgCheckerInvisible()
+						document.getElementById("display-bg-checker").checked = false;
+						setWithExpiry("display_bg_checker", "false", 1209600000)
+					} else if (cookieDisplayBgChecker === "true") {
+						bgCheckerVisible()
+						document.getElementById("display-bg-checker").checked = true;
+						setWithExpiry("display_bg_checker", "true", 1209600000)
+					}
+				} else {
+					bgCheckerVisible()
+					document.getElementById("display-bg-checker").checked = true;
+				}
+			})
+
+			document.getElementById("display-bg-checker").addEventListener("change", function(event) {
+				if (document.getElementById("display-bg-checker").checked) {
+					bgCheckerVisible()
+					setWithExpiry("display_bg_checker", "true", 1209600000)
+				} else {
+					bgCheckerInvisible()
+					setWithExpiry("display_bg_checker", "false", 1209600000)
+				}
+			})
+
+			document.getElementById("colour-theme-light").addEventListener("change", function(event) {
+				if (document.getElementById("colour-theme-light").checked) {
+					colourThemeLight()
+					setWithExpiry("colour_theme", "light", 1209600000)
+				}
+			})
+
+			document.getElementById("colour-theme-dark").addEventListener("change", function(event) {
+				if (document.getElementById("colour-theme-dark").checked) {
+					colourThemeDark()
+					setWithExpiry("colour_theme", "dark", 1209600000)
+				}
+			})
+
+			document.getElementById("clear-all-options").addEventListener("click", deleteAllCookies)
+		</script>
+		<script src="/resources/scripts/dropdown_display_controls.js"></script>
+	</body>
+</html>

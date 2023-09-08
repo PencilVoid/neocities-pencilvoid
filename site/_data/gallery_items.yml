@@ -1,5 +1,8 @@
 ---
 year_of_the_rabbit:
+  id: year_of_the_rabbit
+  artname: year_of_the_rabbit.png
+  fancyname: Year of the Rabbit 2023
   src: /resources/images/art_gallery/year_of_the_rabbit.png
   width: 800
   height: 800
@@ -10,7 +13,11 @@ year_of_the_rabbit:
   image-description: null
   caption: >-
     I totally messed up the "Go The Entirety Of 2023 Without Drawing" challenge. Miran is fun to draw though, and it's her year anyways.
+
 midna_secretsanta:
+  id: midna_secretsanta
+  artname: midna_secretsanta.png
+  fancyname: Midna Secret Santa
   src: /resources/images/art_gallery/midna_secretsanta.png
   width: 1400
   height: 1200
@@ -21,7 +28,11 @@ midna_secretsanta:
   image-description: null
   caption: >-
     Drawing of <a href="https://twitter.com/HypeReis" target="_blank">HypeReis</a>' character Midnight Ophelia. Made for a secret santa event.
+
 ascii_arm:
+  id: ascii_arm
+  artname: ascii_arm.png
+  fancyname: Classic Sonic ASCII Test
   src: /resources/images/art_gallery/ascii_arm.png
   width: 928
   height: 1116
@@ -32,7 +43,11 @@ ascii_arm:
   image-description: null
   caption: >-
     ASCII art of Classic Sonic. Pretty proud of it, but Twitter totally butchered it with the compression. (HIGHLY recommend opening in a new tab to view at original size, downscaling messes with the dithering)
+
 borealis:
+  id: borealis
+  artname: borealis.png
+  fancyname: Borealis
   src: /resources/images/art_gallery/borealis.png
   width: 960
   height: 540
@@ -43,9 +58,3 @@ borealis:
   image-description: null
   caption: >-
     A little landscape piece. I intended for it to have a sketchy look but it got more polished as I went on.
----
-_list:
-- year_of_the_rabbit
-- midna_secretsanta
-- ascii_arm
-- borealis

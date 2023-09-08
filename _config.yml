@@ -40,3 +40,8 @@ page_gen:
   dir: /authors
   name: id
   title: fullname
+- data: gallery_items
+  template: gallery_item
+  dir: /art
+  name: id
+  title: name
