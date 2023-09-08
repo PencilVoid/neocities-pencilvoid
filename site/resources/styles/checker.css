@@ -416,8 +416,8 @@ div.urgent > .urgent-header {
 	flex-flow: row wrap;
 	margin: 0.5rem;
 	border: 1px solid var(--text-colour,#FFEAFC);
-	max-width: min-content;
-	min-width: 320px;
+	width: 320px;
+	max-width: 100%;
 	justify-content: center;
 }
 
@@ -427,11 +427,15 @@ div.urgent > .urgent-header {
 	flex-shrink: 0;
 	flex-flow: column wrap;
 	align-self: end;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .gallery-img img {
-	width: min-content;
-	height: min-content;
+	width: fit-content;
+	height: fit-content;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .gallery-large-img img{
@@ -464,7 +468,7 @@ div.urgent > .urgent-header {
 	color: var(--text-colour);
 	text-align: center;
 	width: 100%;
-	max-height: min-content;
+	max-height: fit-content;
 	justify-content: center;
 	align-self: end;
 }
