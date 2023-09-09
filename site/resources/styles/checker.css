@@ -400,73 +400,93 @@ div.urgent > .urgent-header {
 }
 
 /* --- Gallery Styling --- */
-div.row {
+.row {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
-	height: max-content;
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.15);
-	margin: 10px 0px;
-}
-
-div.gallery {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin: 5px;
-	border: 1px solid var(--text-colour,#FFEAFC);
-	width: 31%;
-	height: fit-content;
-	flex: 5 1 auto;
+	max-width: 100%;
+	height: auto;
+	margin: 0.625rem 0;
 	justify-content: center;
 }
 
-@media (max-width: 840px) {
-	div.gallery {
-		flex: 2 1 auto;
-	}
+.gallery {
+	display: flex;
+	flex: 0 0 auto;
+	flex-flow: row wrap;
+	margin: 0.5rem;
+	border: 1px solid var(--text-colour,#FFEAFC);
+	width: 320px;
+	max-width: 100%;
+	justify-content: center;
 }
 
-div.gallery:hover {
+.gallery-img {
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-flow: column wrap;
+	align-self: end;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.gallery-img img {
+	width: fit-content;
+	height: fit-content;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.gallery-large-img img{
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-flow: column wrap;
+	max-width: 100%;
+}
+
+.gallery-large {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0.3125rem;
+	border: none;
+	justify-content: center;
+	max-width: 100%;
+}
+
+.gallery:hover {
 	border: 1px solid var(--a-hover-colour,#FBD1FF);
 }
 
-div.gallery img {
-	width: 100%;
-	height: auto;
-	max-width:max-content;
-}
-
-div.desc {
+.desc {
+	display: flex;
+	flex: 0 0 auto;
+	flex-flow: column wrap;
 	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
 	font-size: 1.2rem;
-	text-align: left;
 	color: var(--text-colour);
-
-	text-align: center;
-	padding: 0.75rem 0.75rem;
-	margin: auto;
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.15);
+	width: 100%;
+	max-height: fit-content;
+	justify-content: center;
+	align-self: end;
 }
 
 @media screen and (max-width: 840px) {
-	div.desc {
+	.desc {
 		font-size: 1rem;
-		padding: 0.5rem 0.5rem;
 	}
 }
 
-span.desc-metadata {
+.desc-metadata {
 	font-family: var(--alt-mono-font,overpass-mono, monospace);
-	background-color:  rgba(255, 255, 255, 0.15);
 	color: var(--text-colour,#FFEAFC);
+	background-color: rgba(255, 255, 255, 0.15);
+	text-align: center;
 }
 
 @media screen and (max-width: 840px) {
-	span.desc-metadata {
+	.desc-metadata {
 		font-size: 1rem;
 	}
 }
