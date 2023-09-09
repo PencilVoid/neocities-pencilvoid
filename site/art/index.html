@@ -1,6 +1,6 @@
 ---
 title: Art Gallery
-description: My best works and not so best works
+description: Assorted images
 header: Art Gallery
 css:
   dark:
@@ -46,15 +46,15 @@ customcss: ":root {
 }"
 ---
 <p>
-	Wow, I can draw. Amazing. It's mostly pixel art. I've been doing pixel art for a while now and I'm fairly okay at it. I only ever draw for fun so it's mostly character art featuring my OCs (no write-ups on any of them, learn about them by playing the games they will eventually be in). I'm best at drawing anthropomorphic animals for some reason. I can count the amount of humans I've drawn on one hand. I do have some characters that aren't Funny Animals though. There's also occasional vector art and graphic design work but I don't do that frequently enough to feature anything on this page. All the vector assets this site uses were made by me though.
+	Wow, I can draw. Amazing. It's mostly pixel art. I've been doing pixel art for a while now and I'm fairly okay at it. I pretty much only ever draw for fun so it's mostly character art featuring my OCs (no write-ups on any of them, learn about them by playing the games they will eventually be in) and other people's characters occasionally. I'm best at drawing anthropomorphic animals for some reason; I can count the amount of humans I've drawn on one hand. I do have some characters that aren't Funny Animals though. There's also occasional vector art and graphic design work.
 </p>
 <p>
 	Click on any image below to view it enlarged in its own page.
 </p>
 
 <div class="row">
-{% for listitem in site.data.gallery_list %}
-{%- assign item = site.data.gallery_items[listitem] -%}
+{%- assign sorted_gallery_items = site.data.gallery_items | sort: "date" | reverse -%}
+{%- for item in sorted_gallery_items -%}
 {%- assign currentindex = forloop.index0 | modulo: 3 -%}
 	<div class="gallery">
 		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
@@ -80,9 +80,11 @@ customcss: ":root {
 <p>
 	For 3D modelling work I normally use <a href="https://www.blockbench.net/" target="_blank">Blockbench</a>. It is primarily designed for Minecraft but it works for general 3D modelling as well.
 </p>
-<hr>
+<h2>
+	Copyright
+</h2>
 <p xmlns:cc="http://creativecommons.org/ns#">
-	All art featured in the gallery is licensed under 
+	All art featured in the gallery is licensed under
 	<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
 		CC BY-NC-ND 4.0
 		<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">

@@ -75,10 +75,10 @@ css:
 			}
 
 			{% if page.pixelated %}
-			.gallery-img {
+			.gallery-large-img {
 				image-rendering: crisp-edges;
 			}
-			{% endif %}
+			{% endif -%}
 		</style>
 	</head>
 
@@ -109,8 +109,17 @@ css:
 						</div>
 						<div class="desc">
 							<p class="desc-metadata">
-								{{ page.artname }} - {{ page.width}} x {{ page.height }}, {{page.size }}, {{ page.date | date_to_long_string }}
+								{{ page.artname }}<br>
+								Dimensions: {{ page.width }} x {{ page.height }}<br>
+								File size: {{page.size }}<br>
+								Date: {{ page.date | date_to_long_string }}
 							</p>
+							<details>
+								<summary>Image description</summary>
+								<p>
+									{{ page.image-description }}
+								</p>
+							</details>
 							<p>
 								{{ page.caption }}
 							</p>
@@ -146,7 +155,7 @@ css:
 				}
 				localStorage.setItem(key, JSON.stringify(item))
 			}
-			
+
 			function getWithExpiry(key) {
 				const itemStr = localStorage.getItem(key)
 				// if the item doesn't exist, return null
@@ -244,7 +253,7 @@ css:
 				}
 
 				let cookieDisplayBgChecker = getWithExpiry("display_bg_checker");
-				
+
 				if (cookieDisplayBgChecker) {
 					if (cookieDisplayBgChecker === "false") {
 						bgCheckerInvisible()

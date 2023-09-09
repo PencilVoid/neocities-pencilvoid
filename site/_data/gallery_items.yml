@@ -1,24 +1,48 @@
-year_of_the_rabbit:
-  id: year_of_the_rabbit
-  artname: year_of_the_rabbit.png
-  fancyname: Year of the Rabbit 2023
-  src: /resources/images/art_gallery/year_of_the_rabbit.png
-  thumbnail: /resources/images/art_gallery/thumbnail/year_of_the_rabbit.png
-  width: 800
-  height: 800
-  size: 24.16KB
-  date: 2023-01-01T00:00:00.000Z
-  alt-text: >-
-    Image: Shaded fullbody drawing of Miranmar, an anthropomorphic pink rabbit lady, in a purple dress with cyan leggings, earrings, and bracelets. She's posing for the camera, smiling and holding up two V signs with her fingers. The background is abstract, featuring grey circles and the text &quot;Year of the Rabbit; MMXXIII (2023)&quot;.
-  thumbnail-alt-text: >-
-    Thumbnail for gallery item "year_of_the_rabbit.png". It depicts the character Miran smiling at the camera.
-  image-description: null
-  caption: >-
+- year_of_the_rabbit:                                                       # this can be anything but should be the same as the ID
+  id: year_of_the_rabbit                                                    # the ID, determines the item's slug
+  artname: year_of_the_rabbit.png                                           # the file name
+  fancyname: Year of the Rabbit 2023                                        # the "fancy" name, for when a slug in snake case doesn't cut it
+  src: /resources/images/art_gallery/year_of_the_rabbit.png                 # location of the image
+  thumbnail: /resources/images/art_gallery/thumbnail/year_of_the_rabbit.png # location of the image's thumbnail
+  width: 800                                                                # width of the image in pixels
+  height: 800                                                               # height of the image in pixels
+  size: 24.16KB                                                             # size (just go with whatever vscode says)
+  date: 2023-01-01T00:00:00.000Z                                            # date of creation (look at file metadata)
+  alt-text: >-                                                              # the image's alt text
+    Pixel art piece depicting the anthropomorphic rabbit Miranmar smiling at the viewer and posing.
+  thumbnail-alt-text: >-                                                    # the thumbnail's alt text
+    Thumbnail for gallery item "year_of_the_rabbit.png". It depicts the character Miran smiling at the viewer.
+  image-description: >-                                                     # an image description (shown below the main image)
+    A pixel art image of Miranmar, an anthropomorphic pink rabbit lady, in a purple dress with cyan leggings, earrings, and bracelets. She's posing for the camera, smiling and holding up two V signs with her fingers. The background is abstract, featuring grey circles and the text "Year of the Rabbit; MMXXIII (2023)".
+  caption: >-                                                               # talk about the image here
     I totally messed up the "Go The Entirety Of 2023 Without Drawing" challenge. Miran is fun to draw though, and it's her year anyways.
+  pixelated: true                                                           # whether the image should be scaled pixelated
+  pixelated-thumbnail: true                                                 # ditto but for the thumbnail
+
+- af_3070410:
+  id: "3070410"
+  artname: 3070410.png
+  fancyname: Backstage
+  src: /resources/images/art_gallery/3070410.png
+  thumbnail: /resources/images/art_gallery/thumbnail/3070410.png
+  width: 1080
+  height: 900
+  size: 17.33KB
+  date: 2023-07-11T00:00:00.000Z
+  alt-text: >-
+    Pixel art piece depicting the anthropomorphic canine character Satine resting at a table.
+  thumbnail-alt-text: >-
+    Thumbnail for gallery item "3070410.png". It depicts a closeup of the character Satine resting at a table.
+  image-description: >-
+    A pixel art piece depicting Satine, an anthropomorphic canine lady. She is sat at a brown table, resting her head on her hand and holding a cigarette in a cigarette holder. She is wearing a red dress, and looking at something out of frame towards the right of the viewer with an expression of disdain. The background consists of abstract purple streaks, vaguely resembling a beam of light cast by a stagelight.
+  caption: >-
+    One of my Art Fight attacks from 2023. This one was a revenge attack, meaning I drew it in response to an attack I received. The terminology sounds aggressive but it's actually quite pleasant.
+    <br>
+    You can view the attack on Art Fight's website <a href="https://artfight.net/attack/4952994.backstage" target="_blank">here</a>.
   pixelated: true
   pixelated-thumbnail: true
 
-midna_secretsanta:
+- midna_secretsanta:
   id: midna_secretsanta
   artname: midna_secretsanta.png
   fancyname: Midna Secret Santa
@@ -29,16 +53,38 @@ midna_secretsanta:
   size: 31.64KB
   date: 2022-12-14T00:00:00.000Z
   alt-text: >-
-    Image: Fullbody image of Midnight Ophelia, a black Cat Viskian. She is walking towards the left with her head turned to her right, looking behind her. She is making a gesture with her left hand. Her right hand is on her hip. Towards the uper left corner of the image there is also a portrait drawing of her. She is looking at the viewer with her head tilted up slightly and sticking her tongue out.
+    A pixel art piece depicting the anthropomorphic cat Midnight Ophelia posing.
   thumbnail-alt-text: >-
     Thumbnail for gallery item "midna_secretsanta.png". It depicts the character Midnight Ophelia looking over her back.
-  image-description: null
+  image-description: >-
+    A pixel art image of Midnight Ophelia, a black Cat Viskian. She is walking towards the left, looking over her shoulder and upwards. She is making a gesture with her left hand and her right hand is on her hip. Towards the uper left corner of the image there is also a portrait drawing of her. She is looking at the viewer with her head tilted up slightly and sticking her tongue out. Both of these are situated on an abstract pink background.
   caption: >-
     Drawing of <a href="https://twitter.com/HypeReis" target="_blank">HypeReis</a>' character Midnight Ophelia. Made for a secret santa event.
   pixelated: true
   pixelated-thumbnail: true
 
-ascii_arm:
+- superrune:
+  id: superrune
+  artname: superrune.png
+  fancyname: Superrune
+  src: /resources/images/art_gallery/superrune.png
+  thumbnail: /resources/images/art_gallery/thumbnail/superrune.png
+  width: 1708
+  height: 960
+  size: 91.94KB
+  date: 2022-10-30T00:00:00.000Z
+  alt-text: >-
+    A mural-like pixel art piece depicting several characters from Deltarune and references to the Spamton Sweepstakes event.
+  thumbnail-alt-text: >-
+    Thumbnail for gallery item "superrune.png". It depicts a closeup of Kris Dreemurr in pixel art style.
+  image-description: >-
+    A mural-like pixel art piece depicting various Deltarune references. In the centre Kris Dreemurr is seen, in a reclining pose. Their face is non-articulated and they are wearing Spamton's signature glasses on their forehead. Below them, Susie can be seen falling downwards, into the direction the viewer is facing. Multiple miscellanous objects can be seen: sheets of paper, an egg, some pipis, Lancer plushies, a guitar, a framed picture of the Annoying Dog, ICE-E, a chair with a blue sheet caught on it, a blue closet, a changing room curtain, a half-illuminated television set, a golden Berdly statue, some holly and baubles, a green room, and a scarlet tree. Streaming across the image in the background is an abstract piano keyboard. A low-detail blog post tiles across the black background of the image.
+  caption: >-
+    This one is probably the longest I've ever spent on an artwork. I finished it around a month after I started it. (just in time for Halloween!) The Spamton Sweepstakes were a whole lot of fun. (If you asked me directly I'd probably say I don't care that much about Deltarune or RPGs in general, but the truth is I'm so excited for chapters 3-5.)
+  pixelated: true
+  pixelated-thumbnail: true
+
+- ascii_arm:
   id: ascii_arm
   artname: ascii_arm.png
   fancyname: Classic Sonic ASCII Test
@@ -49,16 +95,17 @@ ascii_arm:
   size: 6.97KB
   date: 2022-08-06T00:00:00.000Z
   alt-text: >-
-    Image: ASCII art of Sonic the Hedgehog, standing upright and staring into the distance. His appearance is closer to the Classic style.
+    ASCII art of Sonic the Hedgehog.
   thumbnail-alt-text: >-
     Thumbnail for gallery item "ascii_arm.png". It depicts a closeup of Sonic the Hedgehog in ASCII art.
-  image-description: null
+  image-description: >-
+    A greyscale ASCII art image of Sonic the Hedgehog in a 3/4 view. He is standing upright and staring straight forward into the distance with an expression of vague concentration. His left hand, which is further from the viewer, is held at his waist and the other hand is relaxed. Towards the upper right corner a signature written in normal text reads: "Sonic the Hedgehog; 2022-08-06; P.V."
   caption: >-
-    ASCII art of Classic Sonic. Pretty proud of it, but Twitter totally butchered it with the compression. (HIGHLY recommend opening in a new tab to view at original size, downscaling messes with the dithering)
+    My first time messing around with ASCII art. Decided to go with a cool Sonic. Pretty proud of it, but Twitter totally butchered it with the compression. (if the dithering looks strange, try clicking on the image to open it in a new tab)
   pixelated: true
   pixelated-thumbnail: false
 
-borealis:
+- borealis:
   id: borealis
   artname: borealis.png
   fancyname: Borealis
@@ -69,11 +116,54 @@ borealis:
   size: 21.77KB
   date: 2022-05-21T00:00:00.000Z
   alt-text: >-
-    Image: Landscape pixel art of a clearing in a snowy forest at night. Green and purple clouds are visible in the sky, apparently emanating from a distant yet visible star. Two footprint tracks can be seen side by side in the thick snow. On the left, a fallen tree trunk can be seen.
+    A pixel art piece depicting a snowy landscape at night with a star in the sky.
   thumbnail-alt-text: >-
     Thumbnail for gallery item "borealis.png". It depicts a star over a snowy forest at night.
-  image-description: null
+  image-description: >-
+    A landscape pixel art of a clearing in a snowy forest at night. Green and purple shapes resembling auroras are visible in the sky, apparently emanating from a distant yet visible star. Two footprint tracks can be seen side by side in the thick snow. On the left, a fallen tree trunk can be seen.
   caption: >-
     A little landscape piece. I intended for it to have a sketchy look but it got more polished as I went on.
   pixelated: true
   pixelated-thumbnail: true
+
+- crafting_table:
+  id: crafting_table
+  artname: crafting_table.png
+  fancyname: Custom crafting table design
+  src: /resources/images/art_gallery/crafting_table.png
+  thumbnail: /resources/images/art_gallery/thumbnail/crafting_table.png
+  width: 774
+  height: 862
+  size: 48.94KB
+  date: 2022-01-12T00:00:00.000Z
+  alt-text: >-
+    A low-spec 3D model of a crafting table from Minecraft.
+  thumbnail-alt-text: >-
+    A cropped image of a low-spec 3D model of a crafting table from Minecraft.
+  image-description: >-
+    An isometric image of a Minecraft-style 3D model of a crafting table with a unique design. The table stands on four legs rather than being a solid cube. A cloth with a grid pattern is draped on top of the table, and a saw and hammer are hung on one side. In the other visible side, a cavity containing some open books can be seen.
+  caption: >-
+    A Minecraft model I made inspired by an art piece from <a href="https://shockpine.itch.io/" target="_blank">Shockpine</a>. The model doesn't work very well in-game due to technical reasons.
+  pixelated: false
+  pixelated-thumbnail: false
+
+- animatetest:
+  id: animatetest
+  artname: animate.png
+  fancyname: Adobe Animate test
+  src: /resources/images/art_gallery/animate.png
+  thumbnail: /resources/images/art_gallery/thumbnail/animate.png
+  width: 600
+  height: 600
+  size: 28.44KB
+  date: 2021-06-22T00:00:00.000Z
+  alt-text: >-
+    A digital art piece depicting the cartoon potted plant Planty smiling and waving at the viewer.
+  thumbnail-alt-text: >-
+    Thumbnail for gallery item "animate.png". It depicts a closeup of a cartoon potted plant smiling at the viewer.
+  image-description: >-
+    A digital art piece depicting an anthropomorphic cartoony potted plant. He is smiling and waving at the viewer with a placid expression on his face.
+  caption: >-
+    A drawing made using Adobe Animate, to familiarise myself with the program.
+  pixelated: false
+  pixelated-thumbnail: false
