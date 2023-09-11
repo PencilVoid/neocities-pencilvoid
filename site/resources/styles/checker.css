@@ -8,10 +8,10 @@ h1 {
 	margin: 0.75rem 0;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	text-decoration: none;
 	text-align: left;
-	
+
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 4rem;
 	font-weight: 750;
@@ -27,10 +27,10 @@ h2 {
 	margin: 0.75rem 0;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	text-decoration: none;
 	text-align: left;
-	
+
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 2.67rem;
 	font-weight: 650;
@@ -46,10 +46,10 @@ h3 {
 	margin: 0.75rem 0;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	text-decoration: none;
 	text-align: left;
-	
+
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 2.2rem;
 	font-weight: 550;
@@ -65,10 +65,10 @@ h4 {
 	margin: 0.75rem 0;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	text-decoration: none;
 	text-align: left;
-	
+
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 1.67rem;
 	font-weight: 500;
@@ -84,10 +84,10 @@ h5 {
 	margin: 0.75rem 0;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	text-decoration: none;
 	text-align: left;
-	
+
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 1.5rem;
 	font-weight: 450;
@@ -103,10 +103,10 @@ h6 {
 	margin: 0.75rem 0;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	text-decoration: none;
 	text-align: left;
-	
+
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 1.2rem;
 	font-weight: 400;
@@ -120,31 +120,31 @@ h6 {
 		font-weight: 750;
 		font-stretch: 135%;
 	}
-	
+
 	h2 {
 		font-size: 2.35rem;
 		font-weight: 650;
 		font-stretch: 125%;
 	}
-	
+
 	h3 {
 		font-size: 2rem;
 		font-weight: 550;
 		font-stretch: 112.5%;
 	}
-	
+
 	h4 {
 		font-size: 1.35rem;
 		font-weight: 500;
 		font-stretch: 100%;
 	}
-	
+
 	h5 {
 		font-size: 1.2rem;
 		font-weight: 450;
 		font-stretch: 100%;
 	}
-	
+
 	h6 {
 		font-size: 1rem;
 		font-weight: 400;
@@ -281,7 +281,7 @@ hr {
 	color: var(--hr-colour,var(--text-colour,#FF417D));
 	display: block;
 	border: none;
-	height: 0;	
+	height: 0;
 	border-style: double;
 }
 
@@ -323,7 +323,7 @@ div.code-block {
 	span.code-inline {
 		font-size: 1rem;
 	}
-	
+
 	div.code-block {
 		font-size: 1rem;
 	}
@@ -389,10 +389,10 @@ div.urgent > .urgent-header {
 	padding-left: 0.5rem;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	text-decoration: none;
 	text-align: left;
-	
+
 	font-family: var(--header-font,inconsolata, monospace);
 	font-size: 1.5rem;
 	font-weight: 400;
@@ -419,6 +419,16 @@ div.urgent > .urgent-header {
 	width: 320px;
 	max-width: 100%;
 	justify-content: center;
+}
+
+.image-row-item {
+	display: flex;
+	flex: 0 0 auto;
+	flex-flow: row wrap;
+	margin: 0.5rem;
+	border: 1px solid var(--text-colour,#FFEAFC);
+	max-width: 100%;
+	max-height: min-content;
 }
 
 .gallery-img {
@@ -587,15 +597,15 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 
 .dropdown .dropdown-content {
 	overflow: hidden;
-	
+
 	height: 0;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
-	
+
 	border-top: 1px solid var(--tone-colour,#FFFFFF);
 	border-right: 1px dashed var(--tone-colour,#FFFFFF);
 	border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
 	border-left: 1px dashed var(--tone-colour,#FFFFFF);
-	
+
 	padding-right: 0.75rem;
 	padding-bottom: 0.75rem;
 	padding-left: 0.75rem;
@@ -611,15 +621,15 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 
 .dropdown-display-controls .dropdown-content {
 	overflow: hidden;
-	
+
 	height: 0;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
-	
+
 	border-top: none;
 	border-right: none;
 	border-bottom: none;
 	border-left: none;
-	
+
 	padding-right: 0;
 	padding-bottom: 0;
 	padding-left: 0;
