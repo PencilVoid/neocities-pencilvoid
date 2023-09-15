@@ -1,11 +1,11 @@
 ---
 css:
   dark:
-    header-colour: "#220029"
+    header-colour: "#18294F"
     bg-colour: "#0C4951"
-    bg-checkerdark: "#165B5A"
-    bg-checkerlight: "#12686C"
-    bg-triangle: "#0C4951"
+    bg-checkerdark: "#105154"
+    bg-checkerlight: "#19686D"
+    bg-triangle: "#103B46"
     sidebar-colour: "#152F3C"
     text-colour: "#B2FFB2"
     a-colour: "#8BFF56"
@@ -16,7 +16,7 @@ css:
     tone-colour: "#FFFFFF"
     rightbox-colour: "#152F3C80"
   light:
-    header-colour: "#220029"
+    header-colour: "#18294F"
     bg-colour: "#F3BDFA"
     bg-checkerdark: "#96F7D5"
     bg-checkerlight: "#B6F9DB"
@@ -94,7 +94,7 @@ css:
 			</header>
 			<em class="bold">
 				<p>
-					<p>{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }} 
+					<p>{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }}
 						{% assign author = site.data.authors | find: "id", page.author %}
 						{% if author %}
 						- written by <a href="/authors/{{ author.id }}">{{ author.fullname }}</a>
@@ -138,7 +138,7 @@ css:
 				}
 				localStorage.setItem(key, JSON.stringify(item))
 			}
-			
+
 			function getWithExpiry(key) {
 				const itemStr = localStorage.getItem(key)
 				// if the item doesn't exist, return null
@@ -236,7 +236,7 @@ css:
 				}
 
 				let cookieDisplayBgChecker = localStorage.getItem("display_bg_checker");
-				
+
 				if (cookieDisplayBgChecker) {
 					if (cookieDisplayBgChecker === "false") {
 						bgCheckerInvisible()
