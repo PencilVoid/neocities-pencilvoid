@@ -29,11 +29,17 @@
 				<input type="checkbox" id="display-bg-checker">
 				<label for="display-bg-checker">Display background checkerboard pattern</label>
 			</fieldset>
+			<fieldset id="main-content-width-choice">
+				<label for="main-content-width">Main content width (default 80)</label><br>
+				<input type="number" id="main-content-width" name="main-content-width" min="10" max="100" required>
+				<button id="main-content-width-apply">Apply</button>
+				<p id="main-content-width-input-notice"></p>
+			</fieldset>
 			<span class="hr-light"></span>
 			<p>
 				These options are saved in local storage. They expire after 14 days.
 			</p>
-			<input type="button" value="Clear all options" id="clear-all-options">
+			<button id="clear-all-options">Clear all options</button>
 		</span>
 	</div>
 </section>

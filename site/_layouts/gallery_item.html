@@ -140,40 +140,6 @@ css:
 			</footer>
 		</div>
 		<script>
-			function deleteAllCookies() {
-				localStorage.clear()
-			}
-
-			function setWithExpiry(key, value, ttl) {
-				const now = new Date()
-
-				// `item` is an object which contains the original value
-				// as well as the time when it's supposed to expire
-				const item = {
-					value: value,
-					expiry: now.getTime() + ttl,
-				}
-				localStorage.setItem(key, JSON.stringify(item))
-			}
-
-			function getWithExpiry(key) {
-				const itemStr = localStorage.getItem(key)
-				// if the item doesn't exist, return null
-				if (!itemStr) {
-					return null
-				}
-				const item = JSON.parse(itemStr)
-				const now = new Date()
-				// compare the expiry time of the item with the current time
-				if (now.getTime() > item.expiry) {
-					// If the item is expired, delete the item from storage
-					// and return null
-					localStorage.removeItem(key)
-					return null
-				}
-				return item.value
-			}
-
 			function colourThemeDark() {
 				document.documentElement.style.setProperty('--header-colour', '{{ page.css.dark.header-colour }}');
 				document.documentElement.style.setProperty('--bg-colour', '{{ page.css.dark.bg-colour }}');
@@ -229,14 +195,6 @@ css:
 				*/
 			}
 
-			function bgCheckerVisible() {
-				document.body.style.backgroundImage = "linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
-			}
-
-			function bgCheckerInvisible() {
-				document.body.style.backgroundImage = "linear-gradient(to bottom left, var(--bg-checkerdark,#42004E) 0%, var(--bg-checkerdark,#42004E) 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)), linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068))";
-			}
-
 			document.addEventListener("DOMContentLoaded", function(event) {
 				let cookieColourScheme = localStorage.getItem("colour_theme");
 
@@ -250,33 +208,6 @@ css:
 					}
 				} else {
 					colourThemeAuto();
-				}
-
-				let cookieDisplayBgChecker = localStorage.getItem("display_bg_checker");
-
-				if (cookieDisplayBgChecker) {
-					if (cookieDisplayBgChecker === "false") {
-						bgCheckerInvisible()
-						document.getElementById("display-bg-checker").checked = false;
-						localStorage.setItem("display_bg_checker", "false")
-					} else if (cookieDisplayBgChecker === "true") {
-						bgCheckerVisible()
-						document.getElementById("display-bg-checker").checked = true;
-						localStorage.setItem("display_bg_checker", "true")
-					}
-				} else {
-					bgCheckerVisible()
-					document.getElementById("display-bg-checker").checked = true;
-				}
-			})
-
-			document.getElementById("display-bg-checker").addEventListener("change", function(event) {
-				if (document.getElementById("display-bg-checker").checked) {
-					bgCheckerVisible()
-					localStorage.setItem("display_bg_checker", "true")
-				} else {
-					bgCheckerInvisible()
-					localStorage.setItem("display_bg_checker", "false")
 				}
 			})
 
@@ -293,9 +224,10 @@ css:
 					localStorage.setItem("colour_theme", "dark")
 				}
 			})
-
-			document.getElementById("clear-all-options").addEventListener("click", deleteAllCookies)
 		</script>
+		<script src="/resources/scripts/settings_management_functions.js"></script>
+		<script src="/resources/scripts/display_bg_checker.js"></script>
 		<script src="/resources/scripts/dropdown_display_controls.js"></script>
+		<script src="/resources/scripts/custom_main_content_width.js"></script>
 	</body>
 </html>

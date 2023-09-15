@@ -1,3 +1,8 @@
+/* --- Variables --- */
+:root {
+	--main-content-width: 80ch;
+}
+
 /* --- Headers --- */
 h1 {
 	color: var(--header-colour,#220029);
@@ -686,8 +691,9 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	display: contents;
 }
 
-/* Input buttons */
-input[type="button"] {
+/* Input */
+button,
+input[type="number"] {
 	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
 	font-size: 1.2rem;
 	text-align: left;
@@ -698,21 +704,51 @@ input[type="button"] {
 	line-height: 1.5;
 }
 
-input[type="button"]a:hover {
+button:hover {
 	border: 1px solid var(--a-hover-colour,#FBD1FF);
 	color: var(--a-hover-colour,#FBD1FF);
 	text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
 }
 
-input[type="button"]:active {
+button:active {
 	border: 1px solid var(--a-active-colour,#FFFFFF);
 	color: var(--a-active-colour,#FFFFFF);
 	text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
 }
 
-.rightbox input[type="button"] {
+.rightbox button {
 	font-size: 1rem;
 }
+
+.rightbox input[type="number"] {
+	width: 4rem;
+	font-size: 1rem;
+}
+
+input[type="radio"] {
+	appearance: none;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	border: 2px solid var(--a-colour,#FF9EBC);
+	transition: 0.2s all linear;
+	margin-right: 5px;
+	position: relative;
+	top: 4px;
+}
+
+input[type="radio"]:hover {
+	border: 3px solid var(--a-hover-colour,#FBD1FF);
+}
+
+input[type="radio"]:active {
+	border: 7px solid var(--a-active-colour,#FFFFFF);
+}
+
+input[type="radio"]:checked {
+	border: 6px solid var(--a-colour,#FF9EBC);
+}
+
 /* Scrollbar */
 * {
 	scrollbar-color: var(--hr-colour,var(--text-colour,#FF417D)) transparent;
@@ -757,7 +793,7 @@ body {
 	outline: none;
 	border-style: none;
 	background-image: none;
-	height: min-content;
+	max-height: 50vh;
 	width: 13.75vw;
 	min-width: 8.75rem;
 	padding: 0.75rem;
@@ -786,12 +822,12 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	width: 60vw;
-	max-width: 80ch;
+	max-width: var(--main-content-width,80ch);
 }
 
 @media screen and (max-width: 840px) {
 	.content {
-		margin: 0 5vw;
+		width: 90vw;
 	}
 	.sidenav {
 		outline: none;
@@ -809,7 +845,7 @@ body {
 		outline: none;
 		border-style: none;
 		background-image: none;
-		height: min-content;
+		max-height: 30vh;
 		min-width: none;
 		width: 100%;
 		left: 0;
@@ -817,6 +853,6 @@ body {
 		padding: 0.25rem;
 		background-color: var(--sidebar-colour,#1C0023);
 		font-size: 1rem;
-		overflow: hidden;
+		overflow: auto;
 	}
 }
