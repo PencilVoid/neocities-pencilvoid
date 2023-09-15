@@ -342,7 +342,7 @@ div.info,
 div.warning,
 div.deny,
 div.urgent {
-	margin: 1rem 10%;
+	margin: 1rem 7.5%;
 	min-height: 5rem;
 	box-sizing: border-box;
 }
@@ -414,7 +414,7 @@ div.urgent > .urgent-header {
 	display: flex;
 	flex: 0 0 auto;
 	flex-flow: row wrap;
-	margin: 0.5rem;
+	margin: 0.25rem;
 	border: 1px solid var(--text-colour,#FFEAFC);
 	width: 320px;
 	max-width: 100%;
@@ -783,8 +783,10 @@ body {
 
 /* Separate main content from sidebar */
 .content {
-	margin: 0 20vw;
+	margin: 0 auto;
 	padding: 0;
+	width: 60vw;
+	max-width: 80ch;
 }
 
 @media screen and (max-width: 840px) {
