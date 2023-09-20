@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById("display-bg-checker").checked = true;
 	}
 })
-if document.getElementById("display-bg-checker") {
+if (document.getElementById("display-bg-checker")) {
 	document.getElementById("display-bg-checker").addEventListener("change", function(event) {
 		if (document.getElementById("display-bg-checker").checked) {
 			bgCheckerVisible()
