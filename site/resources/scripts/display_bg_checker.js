@@ -13,17 +13,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		if (cookieDisplayBgChecker === "false") {
 			bgCheckerInvisible()
 			document.getElementById("display-bg-checker").checked = false;
-			localStorage.setItem("display_bg_checker", "false")
 		} else if (cookieDisplayBgChecker === "true") {
 			bgCheckerVisible()
 			document.getElementById("display-bg-checker").checked = true;
-			localStorage.setItem("display_bg_checker", "true")
 		}
 	} else {
 		bgCheckerVisible()
 		document.getElementById("display-bg-checker").checked = true;
 	}
 })
+
 if (document.getElementById("display-bg-checker")) {
 	document.getElementById("display-bg-checker").addEventListener("change", function(event) {
 		if (document.getElementById("display-bg-checker").checked) {
