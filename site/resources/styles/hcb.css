@@ -106,9 +106,8 @@
 	font-size: 1.2rem;
 	text-align: left;
 	border: 1px solid var(--a-colour,#FF9EBC);
-	color: var(--a-hover-colour,#FBD1FF);
+	color: var(--a-colour,#FF9EBC);
 	text-decoration: none;
-	background-color: transparent;
 	line-height: 1.5;
 	padding: 0.5rem;
 	margin: 0;
