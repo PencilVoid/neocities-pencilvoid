@@ -152,16 +152,26 @@ customcss: ":root {
 	<li>Item 4</li>
 </ol>
 <hr>
+<section class="dropdown">
+	<h2>
+		Checked dropdown
+	</h2>
 {% include dropdown_checked.html id="dropdown-checked" %}
 	<p>
 		This is a dropdown section. It is checked by default. This means it will be open upon page load. The show/hide label can be clicked to open or close it. The HTML for dropdown sections is inserted using Jekyll's include system to improve the readability of the source code and reduce the amount of repeated code.
 	</p>
 {% include dropdown_end.html %}
+</section>
+<section class="dropdown">
+	<h2>
+		Unchecked dropdown
+	</h2>
 {% include dropdown_unchecked.html id="dropdown-unchecked" %}
 	<p>
 		This is a dropdown section. It is unchecked by default. This means it will be closed upon page load. The show/hide label can be clicked to open or close it. The HTML for dropdown sections is inserted using Jekyll's include system to improve the readability of the source code and reduce the amount of repeated code.
 	</p>
 {% include dropdown_end.html %}
+</section>
 <hr>
 <div class="code-block">
 	This is a code block. It uses a monospace font. By default, text in code blocks is not preformatted; if this is needed then &lt;pre&gt; tags should be used.
