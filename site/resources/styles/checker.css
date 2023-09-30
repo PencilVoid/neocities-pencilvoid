@@ -531,6 +531,11 @@ figcaption {
 fieldset {
 	border: none;
 }
+
+blockquote p {
+	border-left: 0.125rem solid var(--text-colour,#FF417D);
+	padding-left: 1rem;
+}
 /* Inline icons */
 span.inline-icon,
 span.inline-icon-from-class::after {
