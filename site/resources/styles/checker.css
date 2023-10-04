@@ -630,6 +630,12 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	height: auto;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 	overflow: scroll;
+	max-width: 100%;
+}
+
+.rightbox .dropdown-display-controls,
+.sidenav-hamburger .dropdown-sidenav-hamburger {
+	margin: 0.5rem;
 }
 
 .dropdown-display-controls .dropdown-content,
@@ -682,31 +688,34 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 .sidenav-hamburger {
 	z-index: 1;
 	background-color: var(--sidebar-colour,#1C0023);
-	position: sticky;
+	position: fixed;
 	top: 0;
 	width: 100%;
-}
-.sidenav-hamburger .dropdown-sidenav-hamburger {
 	display: none;
 }
 
 .sidenav-hamburger .dropdown-sidenav-hamburger  input[type="checkbox"]:not(#display-bg-checker):checked ~ .dropdown-content {
-	min-height: 50vh;
-	max-height: 75vh;
+	height: 50vh;
+	max-height: 50vh;
 }
 @media screen and (max-width: 840px) {
+	.sidenav-hamburger {
+		display: block;
+	}
+	.dropdown > input[name="collapse"]:checked ~ .dropdown-content  {
+		padding-right: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 0.5rem;
+	}
+	.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content,
+	.dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content {
+		padding-right: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 0.5rem;
+	}
+	.rightbox .dropdown-display-controls,
 	.sidenav-hamburger .dropdown-sidenav-hamburger {
-		display: contents;
-	}
-	.dropdown .dropdown-content {
-		padding-right: 0.5rem;
-		padding-bottom: 0.5rem;
-		padding-left: 0.5rem;
-	}
-	.dropdown-display-controls .dropdown-content {
-		padding-right: 0.5rem;
-		padding-bottom: 0.5rem;
-		padding-left: 0.5rem;
+		margin: 0.25rem;
 	}
 }
 
@@ -719,12 +728,14 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 }
 
 .dropdown > .dropdown-content > .dropdown-hider,
-.dropdown-display-controls > .dropdown-content > .dropdown-hider {
+.dropdown-display-controls > .dropdown-content > .dropdown-hider,
+.dropdown-sidenav-hamburger > .dropdown-content > .dropdown-hider {
 	display: none;
 }
 
 .dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider,
-.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
+.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider,
+.dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
 	display: contents;
 }
 
@@ -833,7 +844,6 @@ body {
 	max-height: 50vh;
 	width: 13.75vw;
 	min-width: 8.75rem;
-	padding: 0.75rem;
 	position: fixed;
 	vertical-align: bottom;
 	z-index: 2;
@@ -878,7 +888,6 @@ body {
 		width: 100%;
 		left: 0;
 		right: auto;
-		padding: 0.25rem;
 		background-color: var(--sidebar-colour,#1C0023);
 		font-size: 1rem;
 		overflow: auto;
