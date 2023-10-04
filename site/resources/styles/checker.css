@@ -21,7 +21,7 @@ h1 {
 	font-size: 4rem;
 	font-weight: 750;
 	font-stretch: 150%;
-	transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, font-stretch 0.5s ease-in-out;
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 h2 {
@@ -41,7 +41,7 @@ h2 {
 	font-size: 2.67rem;
 	font-weight: 650;
 	font-stretch: 137.5%;
-	transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, font-stretch 0.5s ease-in-out;
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 h3 {
@@ -61,7 +61,7 @@ h3 {
 	font-size: 2.2rem;
 	font-weight: 550;
 	font-stretch: 125%;
-	transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, font-stretch 0.5s ease-in-out;
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 h4 {
@@ -81,7 +81,7 @@ h4 {
 	font-size: 1.67rem;
 	font-weight: 500;
 	font-stretch: 112.5%;
-	transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, font-stretch 0.5s ease-in-out;
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 h5 {
@@ -101,7 +101,7 @@ h5 {
 	font-size: 1.5rem;
 	font-weight: 450;
 	font-stretch: 100%;
-	transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, font-stretch 0.5s ease-in-out;
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 h6 {
@@ -121,7 +121,7 @@ h6 {
 	font-size: 1.2rem;
 	font-weight: 400;
 	font-stretch: 100%;
-	transition: font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, font-stretch 0.5s ease-in-out;
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 /* Smaller headers on small screens*/
@@ -168,7 +168,7 @@ body {
 	font-size: 1.2rem;
 	text-align: left;
 	color: var(--text-colour,#FFEAFC);
-	transition: font-size 0.5s ease-in-out;
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
 @media screen and (max-width: 840px) {
