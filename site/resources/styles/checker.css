@@ -715,7 +715,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	display: none;
 }
 
-.sidenav-hamburger .dropdown-sidenav-hamburger  input[type="checkbox"]:not(#display-bg-checker):checked ~ .dropdown-content {
+.sidenav-hamburger .dropdown-sidenav-hamburger > input[type="checkbox"]:not(#display-bg-checker):checked ~ .dropdown-content {
 	height: 50vh;
 	max-height: 50vh;
 }
