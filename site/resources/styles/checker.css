@@ -562,7 +562,7 @@ span.icon-ufsc-paygate::after {
 	content: url("/resources/images/icons/icon_ufsc_paygate.svg");
 }
 
-/* Collapsible segments */
+/* Dropdowns */
 label.dropdown-label {
 	font-size: 1rem;
 	display: inline-block;
@@ -614,14 +614,11 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 
 	border-top: 1px solid var(--tone-colour,#FFFFFF);
-	border-right: 1px dashed var(--tone-colour,#FFFFFF);
-	border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
-	border-left: 1px dashed var(--tone-colour,#FFFFFF);
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
 
-	padding-right: 0.75rem;
-	padding-bottom: 0.75rem;
-	padding-left: 0.75rem;
-	padding-top: 0.75rem;
+	padding: 0;
 
 	margin-bottom: 1rem;
 }
@@ -630,9 +627,30 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	height: auto;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 	overflow: scroll;
+
+	border-top: 1px solid var(--tone-colour,#FFFFFF);
+	border-right: 1px dashed var(--tone-colour,#FFFFFF);
+	border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
+	border-left: 1px dashed var(--tone-colour,#FFFFFF);
+
+	padding: 0.75rem;
 	max-width: 100%;
+
+}@media screen and (max-width: 840px) {
+	.dropdown > input[name="collapse"]:checked ~ .dropdown-content  {
+		padding: 0.5rem;
+	}
 }
 
+.dropdown > .dropdown-content > .dropdown-hider {
+	display: none;
+}
+
+.dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
+	display: contents;
+}
+
+/* Special dropdowns */
 .rightbox .dropdown-display-controls,
 .sidenav-hamburger .dropdown-sidenav-hamburger {
 	margin: 0.5rem;
@@ -662,16 +680,17 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 .dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content {
 	height: auto;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
-	padding-right: 0.75rem;
-	padding-bottom: 0.75rem;
-	padding-left: 0.75rem;
-	padding-top: 0.75rem;
+	padding: 0.75rem;
 	border-top: 1px solid var(--tone-colour,#FFFFFF);
 	border-right: 1px dashed var(--tone-colour,#FFFFFF);
 	border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
 	border-left: 1px dashed var(--tone-colour,#FFFFFF);
 }
 
+.dropdown-display-controls .dropdown-content {
+	max-height: 50vh;
+	overflow: scroll;
+}
 
 .dropdown-display-controls input[type="checkbox"]:not(#display-bg-checker) ~ label.dropdown-label::before {
 	content: "Show display controls"
@@ -698,24 +717,21 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	height: 50vh;
 	max-height: 50vh;
 }
+
 @media screen and (max-width: 840px) {
 	.sidenav-hamburger {
 		display: block;
 	}
-	.dropdown > input[name="collapse"]:checked ~ .dropdown-content  {
-		padding-right: 0.5rem;
-		padding-bottom: 0.5rem;
-		padding-left: 0.5rem;
-	}
 	.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content,
 	.dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content {
-		padding-right: 0.5rem;
-		padding-bottom: 0.5rem;
-		padding-left: 0.5rem;
+		padding: 0.5rem;
 	}
 	.rightbox .dropdown-display-controls,
 	.sidenav-hamburger .dropdown-sidenav-hamburger {
 		margin: 0.25rem;
+	}
+	.dropdown-display-controls .dropdown-content {
+		max-height: 30vh;
 	}
 }
 
@@ -727,13 +743,11 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	content: "Hide navigation"
 }
 
-.dropdown > .dropdown-content > .dropdown-hider,
 .dropdown-display-controls > .dropdown-content > .dropdown-hider,
 .dropdown-sidenav-hamburger > .dropdown-content > .dropdown-hider {
 	display: none;
 }
 
-.dropdown > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider,
 .dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider,
 .dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content > .dropdown-hider {
 	display: contents;
@@ -841,7 +855,6 @@ body {
 	outline: none;
 	border-style: none;
 	background-image: none;
-	max-height: 50vh;
 	width: 13.75vw;
 	min-width: 8.75rem;
 	position: fixed;
@@ -851,7 +864,6 @@ body {
 	right: 0;
 	background-color: var(--rightbox-colour,#1c002380);
 	font-size: 1rem;
-	overflow: auto;
 }
 
 #section-dropdown-sidebar a::before {
@@ -883,13 +895,11 @@ body {
 		outline: none;
 		border-style: none;
 		background-image: none;
-		max-height: 30vh;
 		min-width: none;
 		width: 100%;
 		left: 0;
 		right: auto;
 		background-color: var(--sidebar-colour,#1C0023);
 		font-size: 1rem;
-		overflow: auto;
 	}
 }
