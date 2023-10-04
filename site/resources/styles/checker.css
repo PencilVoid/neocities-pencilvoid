@@ -707,7 +707,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 .sidenav-hamburger {
 	z-index: 1;
 	background-color: var(--sidebar-colour,#1C0023);
-	position: fixed;
+	position: sticky;
 	top: 0;
 	width: 100%;
 	display: none;
