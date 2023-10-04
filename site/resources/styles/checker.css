@@ -629,9 +629,11 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 .dropdown > input[name="collapse"]:checked ~ .dropdown-content {
 	height: auto;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+	overflow: scroll;
 }
 
-.dropdown-display-controls .dropdown-content {
+.dropdown-display-controls .dropdown-content,
+.dropdown-sidenav-hamburger > .dropdown-content {
 	overflow: hidden;
 
 	height: 0;
@@ -650,7 +652,8 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	margin-bottom: 0;
 }
 
-.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content {
+.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content,
+.dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content {
 	height: auto;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 	padding-right: 0.75rem;
@@ -662,6 +665,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
 	border-left: 1px dashed var(--tone-colour,#FFFFFF);
 }
+
 
 .dropdown-display-controls input[type="checkbox"]:not(#display-bg-checker) ~ label.dropdown-label::before {
 	content: "Show display controls"
@@ -675,7 +679,25 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	appearance: none;
 }
 
+.sidenav-hamburger {
+	z-index: 1;
+	background-color: var(--sidebar-colour,#1C0023);
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+.sidenav-hamburger .dropdown-sidenav-hamburger {
+	display: none;
+}
+
+.sidenav-hamburger .dropdown-sidenav-hamburger  input[type="checkbox"]:not(#display-bg-checker):checked ~ .dropdown-content {
+	min-height: 50vh;
+	max-height: 75vh;
+}
 @media screen and (max-width: 840px) {
+	.sidenav-hamburger .dropdown-sidenav-hamburger {
+		display: contents;
+	}
 	.dropdown .dropdown-content {
 		padding-right: 0.5rem;
 		padding-bottom: 0.5rem;
@@ -686,6 +708,14 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 		padding-bottom: 0.5rem;
 		padding-left: 0.5rem;
 	}
+}
+
+.dropdown-sidenav-hamburger > input[type="checkbox"]:not(#display-bg-checker) ~ label.dropdown-label::before {
+	content: "Show navigation"
+}
+
+.dropdown-sidenav-hamburger > input[type="checkbox"]:not(#display-bg-checker):checked ~ label.dropdown-label::before {
+	content: "Hide navigation"
 }
 
 .dropdown > .dropdown-content > .dropdown-hider,
@@ -837,16 +867,7 @@ body {
 		width: 90vw;
 	}
 	.sidenav {
-		outline: none;
-		border-style: none;
-		background-image: none;
-		width: 100%;
-		height: 15vh;
-		min-height: 8vh;
-		max-height: 20vh;
-		padding: 0.5rem;
-		position: sticky;
-		overflow: auto;
+		display: none;
 	}
 	.rightbox {
 		outline: none;

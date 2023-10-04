@@ -42,6 +42,19 @@
 	</head>
 
 	<body>
+		<div class="sidenav-hamburger">
+			<section class="dropdown dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
+				<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
+				<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
+				<div class="dropdown-content">
+					<span class="dropdown-hider">
+						<nav>
+							{% include sidebar.html %}
+						</nav>
+					</span>
+				</div>
+			</section>
+		</div>
 		<div class="sidenav">
 			<nav>
 				<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
