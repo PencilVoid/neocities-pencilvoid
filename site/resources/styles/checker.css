@@ -680,6 +680,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 
 .dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content,
 .dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content {
+	overflow: scroll;
 	height: auto;
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 	padding: 0.75rem;
@@ -691,7 +692,6 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 
 .dropdown-display-controls .dropdown-content {
 	max-height: 50vh;
-	overflow: scroll;
 }
 
 .dropdown-display-controls input[type="checkbox"]:not(#display-bg-checker) ~ label.dropdown-label::before {
