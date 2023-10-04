@@ -20,8 +20,13 @@
 			Buttons (animated/flashing images)
 		</span>
 	</header>
-	<input type="checkbox" name="collapse" id="dropdown-sidebar">
-	<label class="dropdown-label" for="dropdown-sidebar"></label>
+	{% if include.hamburger %}
+	<input type="checkbox" name="collapse" id="dropdown-sidebar-buttons-hamburger">
+	<label class="dropdown-label" for="dropdown-sidebar-buttons-hamburger"></label>
+	{% else %}
+	<input type="checkbox" name="collapse" id="dropdown-sidebar-buttons">
+	<label class="dropdown-label" for="dropdown-sidebar-buttons"></label>
+	{% endif %}
 	<div class="dropdown-content">
 		<span class="dropdown-hider">
 			<a href="https://pencilvoid.neocities.org">

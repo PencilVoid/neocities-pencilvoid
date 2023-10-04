@@ -636,7 +636,9 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	padding: 0.75rem;
 	max-width: 100%;
 
-}@media screen and (max-width: 840px) {
+}
+
+@media screen and (max-width: 840px) {
 	.dropdown > input[name="collapse"]:checked ~ .dropdown-content  {
 		padding: 0.5rem;
 	}
