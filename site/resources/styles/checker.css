@@ -720,7 +720,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 
 @media screen and (max-width: 840px) {
 	.sidenav-hamburger {
-		display: block;
+		display: inline-block;
 	}
 	.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content,
 	.dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content {
