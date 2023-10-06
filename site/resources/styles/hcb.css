@@ -1,3 +1,8 @@
+#HCB_comment_box #hcb_form .home-desc a, #HCB_comment_box .home-desc a:visited {
+	color: var(--a-colour,#FF9EBC);
+	text-decoration: none;
+}
+
 #HCB_comment_box #HCB_comment_form_box {
 	padding-bottom:1em
 }
@@ -92,6 +97,7 @@
 	color: var(--a-colour,#FF9EBC);;
 	font-style: italic;
 }
+
 #HCB_comment_box #hcb_form textarea,
 #HCB_comment_box #hcb_form #hcb_form_name_container {
 	margin-bottom: 0.5625rem;
