@@ -493,7 +493,45 @@ span.icon-ufsc-paygate::after {
 	content: url("/resources/images/icons/icon_ufsc_paygate.svg");
 }
 
-/* Dropdowns */
+/* --- Dropdowns --- */
+
+details {
+	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+details > p {
+	border-top: 1px solid var(--tone-colour,#FFFFFF);
+	border-right: 1px dashed var(--tone-colour,#FFFFFF);
+	border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
+	border-left: 1px dashed var(--tone-colour,#FFFFFF);
+	padding: 0.75rem;
+	margin-top: 0;
+	max-width: 100%;
+}
+
+details summary {
+	font-size: 1rem;
+	width: fit-content;
+	padding: 0.5rem;
+	color: var(--tone-colour,#FFFFFF);
+	font-family: var(--main-font,overpass, sans-serif);
+	background-color: var(--tone-colour,#FFFFFF);
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left: 1px solid var(--tone-colour,#FFFFFF);
+	list-style: inside url("/resources/images/icons/icon_dropdown.svg");
+	cursor: pointer;
+}
+
+details summary::marker {
+	transform: rotate(0deg);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+details[open] summary::marker {
+	transform: rotate(90deg);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+/* --- Custom dropdowns --- */
 
 label.dropdown-label {
 	font-size: 1rem;
