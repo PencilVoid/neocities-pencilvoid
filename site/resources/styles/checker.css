@@ -13,6 +13,7 @@ h4,
 h5,
 h6 {
 	color: var(--header-colour,#220029);
+	border-bottom: 1px solid white;
 	padding: 0.1ex;
 	margin: 0.75rem 0;
 	box-sizing: border-box;
