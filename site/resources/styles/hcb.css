@@ -211,3 +211,12 @@
 #hcb_file_label::after {
 	content: "";
 }
+#HCB_comment_box img.hcb-icon[title="next page"] {
+	content: url("/resources/images/icons/hcb_next.svg")
+}
+#HCB_comment_box img.hcb-icon[title="previous page"] {
+	content: url("/resources/images/icons/hcb_prev.svg")
+}
+#HCB_comment_box > a img.hcb-icon[alt="rss"] {
+	content: url("/resources/images/icons/rss.svg")
+}
