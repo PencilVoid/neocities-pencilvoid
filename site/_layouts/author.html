@@ -137,6 +137,7 @@ css:
 				{% endfor %}
 				</ul>
 			</main>
+			{% if page.last_modified_at -%}
 			<hr>
 			<footer>
 				<span class="small-text">
@@ -145,6 +146,7 @@ css:
 					</p>
 				</span>
 			</footer>
+			{%- endif %}
 		</div>
 		<script>
 			function colourThemeDark() {

@@ -141,12 +141,14 @@ css:
 				<p style="text-align: center; clear: both;">
 					<a href="/sieveplate">See all posts</a>
 				</p>
-				<hr>
+				{% if page.last_modified_at -%}
+				<span class="hr-light"></span>
 				<p>
 					<span class="small-text">
 					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
 					</span>
 				</p>
+				{%- endif %}
 			</footer>
 		</div>
 		<script>

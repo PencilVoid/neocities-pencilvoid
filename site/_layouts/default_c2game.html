@@ -105,6 +105,7 @@ css:
 		<main id="main-content">
 		{{ content }}
 		</main>
+		{% if page.last_modified_at -%}
 		<footer>
 			<span class="small-text">
 				<p>
@@ -112,6 +113,7 @@ css:
 				</p>
 			</span>
 		</footer>
+		{%- endif %}
 		<script>
 			function colourThemeDark() {
 				document.documentElement.style.setProperty('--header-colour', '{{ layout.css.dark.header-colour }}');

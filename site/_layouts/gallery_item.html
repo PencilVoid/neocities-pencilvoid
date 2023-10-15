@@ -144,6 +144,7 @@ css:
 					<a href="/art">Back to gallery</a>
 				</p>
 			</main>
+			{% if page.last_modified_at -%}
 			<hr>
 			<footer>
 				<span class="small-text">
@@ -152,6 +153,7 @@ css:
 					</p>
 				</span>
 			</footer>
+			{%- endif %}
 		</div>
 		<script>
 			function colourThemeDark() {
