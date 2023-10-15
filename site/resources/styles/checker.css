@@ -66,7 +66,7 @@ h6 {
 }
 
 /* Smaller headers on small screens*/
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	h1 {
 		font-size: 2.6rem;
 		font-weight: 750;
@@ -114,7 +114,7 @@ body {
 	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	body {
 		font-size: 1rem;
 	}
@@ -260,7 +260,7 @@ div.code-block {
 	padding: 0.25rem;
 }
 
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	span.code-inline,
 	div.code-block {
 		font-size: 1rem;
@@ -420,7 +420,7 @@ div.urgent > .urgent-header {
 	align-self: end;
 }
 
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	.desc {
 		font-size: 1rem;
 	}
@@ -433,7 +433,7 @@ div.urgent > .urgent-header {
 	text-align: center;
 }
 
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	.desc-metadata {
 		font-size: 1rem;
 	}
@@ -600,7 +600,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 
 }
 
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	.dropdown > input[name="collapse"]:checked ~ .dropdown-content  {
 		padding: 0.5rem;
 	}
@@ -678,7 +678,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	max-height: 50vh;
 }
 
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	.sidenav-hamburger {
 		display: inline-block;
 	}
@@ -846,7 +846,7 @@ body {
 	max-width: var(--main-content-width,80ch);
 }
 
-@media screen and (max-width: var(--thin-width-screen)) {
+@media screen and (max-width: 840px) {
 	.content {
 		width: 90vw;
 	}
