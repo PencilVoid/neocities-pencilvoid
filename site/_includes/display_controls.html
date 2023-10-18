@@ -1,9 +1,4 @@
-<noscript>
-	<p>
-		These features require Javascript.
-	</p>
-</noscript>
-<section class="dropdown-display-controls">
+<section class="dropdown-display-controls" style="display: none;">
 	<input type="checkbox" name="collapse" id="dropdown-display-controls" checked>
 	<label class="dropdown-label" for="dropdown-display-controls"></label>
 	<div class="dropdown-content">
@@ -48,3 +43,6 @@
 		</span>
 	</div>
 </section>
+<script>
+	document.getElementsByClassName("dropdown-display-controls")[0].style.display = "block"
+</script>
