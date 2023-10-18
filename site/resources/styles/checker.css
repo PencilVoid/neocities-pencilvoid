@@ -21,7 +21,9 @@ h6 {
 	text-decoration: none;
 	text-align: left;
 	font-family: var(--header-font,inconsolata, monospace);
-	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1), font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1),
+		font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1),
+		font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 h1 {
 	background-color: rgba(255, 255, 255, 0.75);
@@ -65,7 +67,7 @@ h6 {
 	font-stretch: 100%;
 }
 
-/* Smaller headers on small screens*/
+/* --- Smaller headers on small screens --- */
 @media screen and (max-width: 840px) {
 	h1 {
 		font-size: 2.6rem;
@@ -222,6 +224,7 @@ body {
 }
 
 /* --- Horizontal Rule --- */
+
 hr {
 	color: var(--hr-colour,var(--text-colour,#FF417D));
 	display: block;
@@ -386,7 +389,7 @@ div.urgent > .urgent-header {
 	max-height: 100%;
 }
 
-.gallery-large-img img{
+.gallery-large-img img {
 	display: flex;
 	flex-grow: 0;
 	flex-shrink: 0;
@@ -469,7 +472,8 @@ blockquote p:not(.hcb-comment-body) {
 	padding-left: 1rem;
 }
 
-/* Inline icons */
+/* --- Inline icons --- */
+
 span.inline-icon,
 span.inline-icon-from-class::after {
 	display: inline-block;
@@ -615,6 +619,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 }
 
 /* --- Special dropdowns --- */
+
 .rightbox .dropdown-display-controls,
 .sidenav-hamburger .dropdown-sidenav-hamburger {
 	margin: 0.5rem;
@@ -714,6 +719,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 }
 
 /* --- Input --- */
+
 button,
 input[type="number"] {
 	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
@@ -772,6 +778,7 @@ input[type="radio"]:checked {
 }
 
 /* --- Scrollbar --- */
+
 * {
 	scrollbar-color: var(--hr-colour,var(--text-colour,#FF417D)) transparent;
 }
@@ -839,6 +846,7 @@ body {
 }
 
 /* --- Separate main content from sidebar --- */
+
 .content {
 	margin: 0 auto;
 	padding: 0;
