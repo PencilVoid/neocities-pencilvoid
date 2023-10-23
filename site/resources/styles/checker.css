@@ -339,6 +339,13 @@ div.urgent > .urgent-header {
 	font-stretch: 100%;
 }
 
+
+/* --- Red border for alt text-less images --- */
+
+img:not([alt]) {
+	border: dashed red 0.25rem;
+}
+
 /* --- Gallery Styling --- */
 
 .row {
