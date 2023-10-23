@@ -360,12 +360,11 @@ img:not([alt]) {
 
 .gallery {
 	display: flex;
-	flex: 0 0 auto;
-	flex-flow: row wrap;
+	flex: auto;
+	flex-flow: column wrap;
 	margin: 0.25rem;
 	border: 1px solid var(--text-colour,#FFEAFC);
-	width: 320px;
-	max-width: 100%;
+	max-width: fit-content;
 	justify-content: center;
 }
 
@@ -380,11 +379,8 @@ img:not([alt]) {
 }
 
 .gallery-img {
-	display: flex;
-	flex-grow: 0;
-	flex-shrink: 0;
-	flex-flow: column wrap;
 	align-self: end;
+	margin: 0 auto;
 	max-width: 100%;
 	max-height: 100%;
 }
