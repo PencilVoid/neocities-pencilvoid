@@ -78,7 +78,7 @@ customcss: ":root {
 	left: 50%;
 	translate: -50% -50%;
 	z-index: -3;
-	animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 5s infinite ease-in-out;
+	animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 20s infinite ease-in-out;
 	mix-blend-mode: color-dodge;
 }
 .thing-shell {
@@ -135,13 +135,13 @@ customcss: ":root {
 
 @keyframes radiate-rays {
 	0% {
-		scale: calc(var(--thing-scale) * 0.875);
+		scale: calc(0.875);
 	}
 	50% {
-		scale: calc(var(--thing-scale) * 1.75);
+		scale: calc(1.45);
 	}
 	100% {
-		scale: calc(var(--thing-scale) * 0.875);
+		scale: calc(0.875);
 	}
 }
 @keyframes hue-cycle {
