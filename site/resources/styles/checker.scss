@@ -73,6 +73,7 @@ h6 {
 }
 
 /* --- Smaller headers on small screens --- */
+
 @media screen and (max-width: $thin-screen-width) {
 	h1 {
 		font-size: 2.6rem;
@@ -186,12 +187,12 @@ a {
 	}
 
 	&.keyboard-nav-link {
-			position: absolute;
-			left: -10000px;
-			top: auto;
-			width: 1px;
-			height: 1px;
-			overflow: hidden;
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 
 		&:focus {
 			position: static;
@@ -317,15 +318,16 @@ div.urgent > .urgent-content {
 	background-size: auto 120%;
 	padding: 1rem;
 }
+
 div.info > .info-content {
 	background-image: url(/resources/images/backgrounds/watermark_info.svg);
 }
 
-div.warning > .warning-content{
+div.warning > .warning-content {
 	background-image: url(/resources/images/backgrounds/watermark_warning.svg);
 }
 
-div.deny > .deny-content{
+div.deny > .deny-content {
 	background-image: url(/resources/images/backgrounds/watermark_deny.svg);
 }
 
@@ -627,7 +629,7 @@ input[type="checkbox"]:not(#display-bg-checker) {
 }
 
 @media screen and (max-width: $thin-screen-width) {
-	.dropdown > input[name="collapse"]:checked ~ .dropdown-content  {
+	.dropdown > input[name="collapse"]:checked ~ .dropdown-content {
 		padding: 0.5rem;
 	}
 }
@@ -747,17 +749,22 @@ input[type="checkbox"]:not(#display-bg-checker) {
 }
 
 @media screen and (max-width: $thin-screen-width) {
+	.dropdown-display-controls,
+	.dropdown-sidenav-hamburger {
+		> input[name="collapse"]:checked ~ .dropdown-content {
+			padding: 0.5rem;
+		}
+	}
+
 	.sidenav-hamburger {
 		display: inline-block;
 	}
-	.dropdown-display-controls > input[name="collapse"]:checked ~ .dropdown-content,
-	.dropdown-sidenav-hamburger > input[name="collapse"]:checked ~ .dropdown-content {
-		padding: 0.5rem;
-	}
+
 	.rightbox .dropdown-display-controls,
 	.sidenav-hamburger .dropdown-sidenav-hamburger {
 		margin: 0.25rem;
 	}
+
 	.dropdown-display-controls .dropdown-content {
 		max-height: 30vh;
 	}
@@ -908,9 +915,11 @@ body {
 	.content {
 		width: 90vw;
 	}
+
 	.sidenav {
 		display: none;
 	}
+
 	.rightbox {
 		outline: none;
 		border-style: none;
