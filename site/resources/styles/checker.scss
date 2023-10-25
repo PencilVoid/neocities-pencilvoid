@@ -4,7 +4,7 @@
 /* --- Variables --- */
 :root {
 	--main-content-width: 80ch;
-	--thin-screen-width: 840px;
+	$thin-screen-width: 840px;
 }
 
 /* --- Headers --- */
@@ -71,7 +71,7 @@ h6 {
 }
 
 /* --- Smaller headers on small screens --- */
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	h1 {
 		font-size: 2.6rem;
 		font-weight: 750;
@@ -119,7 +119,7 @@ body {
 	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	body {
 		font-size: 1rem;
 	}
@@ -266,7 +266,7 @@ div.code-block {
 	padding: 0.25rem;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	span.code-inline,
 	div.code-block {
 		font-size: 1rem;
@@ -429,7 +429,7 @@ img:not([alt]) {
 	align-self: end;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	.desc {
 		font-size: 1rem;
 	}
@@ -442,7 +442,7 @@ img:not([alt]) {
 	text-align: center;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	.desc-metadata {
 		font-size: 1rem;
 	}
@@ -610,7 +610,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	.dropdown > input[name="collapse"]:checked ~ .dropdown-content  {
 		padding: 0.5rem;
 	}
@@ -689,7 +689,7 @@ input[type="checkbox"]:not(#display-bg-checker):checked {
 	max-height: 50vh;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	.sidenav-hamburger {
 		display: inline-block;
 	}
@@ -860,7 +860,7 @@ body {
 	max-width: var(--main-content-width,80ch);
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: $thin-screen-width) {
 	.content {
 		width: 90vw;
 	}
