@@ -2,15 +2,13 @@
 ---
 
 #HCB_comment_box {
-	& {
 		font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
 		letter-spacing: 0.25;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-	}
 
-		#hcb_form .home-desc a,  .home-desc a:visited {
+	#hcb_form .home-desc a,  .home-desc a:visited {
 		color: var(--a-colour,#FF9EBC);
 		text-decoration: none;
 	}
