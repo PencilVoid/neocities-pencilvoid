@@ -49,16 +49,17 @@ customcss: ":root {
 	Wow, I can draw. Amazing. It's mostly pixel art. I've been doing pixel art for a while now and I'm fairly okay at it. I pretty much only ever draw for fun so it's mostly character art featuring my OCs (no write-ups on any of them, learn about them by playing the games they will eventually be in) and other people's characters occasionally. I'm best at drawing anthropomorphic animals for some reason; I can count the amount of humans I've drawn on one hand. I do have some characters that aren't Funny Animals though. There's also occasional vector art and graphic design work.
 </p>
 <p>
-	Click on any image below to view it enlarged in its own page.
+	Click on any tile below to view the full piece in its own page.
 </p>
 
 <div class="row">
 {%- assign sorted_gallery_items = site.data.gallery_items | sort: "date" | reverse -%}
 {%- for item in sorted_gallery_items -%}
 {%- assign currentindex = forloop.index0 | modulo: 3 -%}
+	<a href="/art/{{item.id}}" nobrackets="true">
 	<div class="gallery">
 		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
-			<a href="/art/{{item.id}}" nobrackets="true"><img src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%"></a>
+			<img src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%">
 		</div>
 		<div class="desc desc-metadata">
 			<span>{{ item.artname | replace: "_", "<wbr>_<wbr>" }}</span>
@@ -66,6 +67,7 @@ customcss: ":root {
 			<span>{{ item.size }}</span>
 		</div>
 	</div>
+	</a>
 {% endfor %}
 </div>
 <h2>

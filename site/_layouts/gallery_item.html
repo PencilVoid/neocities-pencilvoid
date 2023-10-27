@@ -151,28 +151,26 @@ css:
 			</header>
 			<hr>
 			<main id="main-content">
-				<div class="row">
-					<div class="gallery-large">
-						<div class="gallery-large-img">
-							<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text | xml_escape }}"></a>
-						</div>
-						<div class="desc">
-							<p class="desc-metadata">
-								{{ page.artname }}<br>
-								Dimensions: {{ page.width }} x {{ page.height }}<br>
-								File size: {{page.size }}<br>
-								Date: {{ page.date | date_to_long_string }}
-							</p>
-							<details>
-								<summary>Image description</summary>
-								<p>
-									{{ page.image-description }}
-								</p>
-							</details>
+				<div class="gallery-large">
+					<div class="gallery-large-img">
+						<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text | xml_escape }}"></a>
+					</div>
+					<div class="desc-large">
+						<p class="desc-metadata">
+							{{ page.artname }}<br>
+							Dimensions: {{ page.width }} x {{ page.height }}<br>
+							File size: {{page.size }}<br>
+							Date: {{ page.date | date_to_long_string }}
+						</p>
+						<details>
+							<summary>Image description</summary>
 							<p>
-								{{ page.caption }}
+								{{ page.image-description }}
 							</p>
-						</div>
+						</details>
+						<p>
+							{{ page.caption }}
+						</p>
 					</div>
 				</div>
 				<p>
