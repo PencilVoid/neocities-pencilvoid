@@ -1,0 +1,24 @@
+figure {
+	float: right;
+	clear: right;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border: 1px solid var(--text-colour,#FFEAFC);
+	height: fit-content;
+	width: min-content;
+	max-width: 20rem;
+
+	img {
+		max-width: 20rem;
+	}
+}
+
+figcaption {
+	font-size: 0.85rem;
+	border-top: 1px solid var(--hr-colour,var(--text-colour,#FF417D));
+	padding: 0.25rem;
+}
+
+fieldset {
+	border: none;
+}

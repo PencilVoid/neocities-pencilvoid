@@ -1,0 +1,48 @@
+button,
+input[type="number"] {
+	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-size: 1.2rem;
+	text-align: left;
+	border: 1px solid var(--a-colour,#FF9EBC);
+	color: var(--a-colour,#FF9EBC);
+	text-decoration: none;
+	background-color: transparent;
+	line-height: 1.5;
+
+	&:hover {
+		border: 1px solid var(--a-hover-colour,#FBD1FF);
+		color: var(--a-hover-colour,#FBD1FF);
+		text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
+	}
+
+	&:active {
+		border: 1px solid var(--a-active-colour,#FFFFFF);
+		color: var(--a-active-colour,#FFFFFF);
+		text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
+	}
+}
+
+
+input[type="radio"] {
+	appearance: none;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	border: 2px solid var(--a-colour,#FF9EBC);
+	transition: 0.2s all linear;
+	margin-right: 5px;
+	position: relative;
+	top: 4px;
+
+	&:hover {
+		border: 3px solid var(--a-hover-colour,#FBD1FF);
+	}
+
+	&:active {
+		border: 7px solid var(--a-active-colour,#FFFFFF);
+	}
+
+	&:checked {
+		border: 6px solid var(--a-colour,#FF9EBC);
+	}
+}

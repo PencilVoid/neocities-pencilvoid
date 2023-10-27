@@ -1,0 +1,102 @@
+@use "abstracts/variables";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--header-colour,#220029);
+	border-bottom: 1px solid white;
+	padding: 0.1ex;
+	margin: 0.75rem 0;
+	box-sizing: border-box;
+	width: 100%;
+	text-decoration: none;
+	text-align: left;
+	font-family: var(--header-font,inconsolata, monospace);
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1),
+		font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1),
+		font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
+}
+h1 {
+	background-color: rgba(255, 255, 255, 0.75);
+	font-size: 4rem;
+	font-weight: 750;
+	font-stretch: 150%;
+}
+
+h2 {
+	background-color:rgba(255, 255, 255, 0.5);
+	font-size: 2.67rem;
+	font-weight: 650;
+	font-stretch: 137.5%;
+}
+
+h3 {
+	background-color: rgba(255, 255, 255, 0.35);
+	font-size: 2.2rem;
+	font-weight: 550;
+	font-stretch: 125%;
+}
+
+h4 {
+	background-color: rgba(255, 255, 255, 0.2);
+	font-size: 1.67rem;
+	font-weight: 500;
+	font-stretch: 112.5%;
+}
+
+h5 {
+	background-color: rgba(255, 255, 255, 0.15);
+	font-size: 1.5rem;
+	font-weight: 450;
+	font-stretch: 100%;
+}
+
+h6 {
+	background-color: rgba(255, 255, 255, 0.1);
+	font-size: 1.2rem;
+	font-weight: 400;
+	font-stretch: 100%;
+}
+
+/* --- Smaller headers on small screens --- */
+
+@media screen and (max-width: variables.$thin-screen-width) {
+	h1 {
+		font-size: 2.6rem;
+		font-weight: 750;
+		font-stretch: 135%;
+	}
+
+	h2 {
+		font-size: 2.35rem;
+		font-weight: 650;
+		font-stretch: 125%;
+	}
+
+	h3 {
+		font-size: 2rem;
+		font-weight: 550;
+		font-stretch: 112.5%;
+	}
+
+	h4 {
+		font-size: 1.35rem;
+		font-weight: 500;
+		font-stretch: 100%;
+	}
+
+	h5 {
+		font-size: 1.2rem;
+		font-weight: 450;
+		font-stretch: 100%;
+	}
+
+	h6 {
+		font-size: 1rem;
+		font-weight: 400;
+		font-stretch: 100%;
+	}
+}

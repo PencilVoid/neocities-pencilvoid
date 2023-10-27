@@ -1,0 +1,11 @@
+* {
+	scrollbar-color: var(--hr-colour,var(--text-colour,#FF417D)) transparent;
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--hr-colour,var(--text-colour,#FF417D));
+	}
+}

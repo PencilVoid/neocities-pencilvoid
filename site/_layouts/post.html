@@ -42,56 +42,13 @@ css:
 		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
 		<link rel="manifest" href="/icons/site.webmanifest">
-		<link href="/resources/styles/fonts.css" rel="stylesheet" type="text/css" media="all">
-		<link href="/resources/styles/checker.css" rel="stylesheet" type="text/css" media="all">
+		<link href="/resources/styles/main.css" rel="stylesheet" type="text/css" media="all">
 		<title>
 			{{ page.title }} | SievePlate
 		</title>
 		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/sieveplate/feed.xml" title="SievePlate" />
 		{% seo title=false %}
 		<meta name="theme-color" content="{{ layout.css.dark.bg-checkerdark }}">
-		<style>
-			:root {
-				--main-font: atkinson-hyperlegible;
-				--monospace-font: fira-code;
-				--header-font: inconsolata;
-				--alt-font: overpass;
-				--alt-mono-font: overpass-mono;
-				--header-colour: {{ layout.css.dark.header-colour }};
-				--bg-colour: {{ layout.css.dark.bg-colour }};
-				--bg-checkerdark: {{ layout.css.dark.bg-checkerdark }};
-				--bg-checkerlight: {{ layout.css.dark.bg-checkerlight }};
-				--bg-triangle: {{ layout.css.dark.bg-triangle }};
-				--sidebar-colour: {{ layout.css.dark.sidebar-colour }};
-				--text-colour: {{ layout.css.dark.text-colour }};
-				--a-colour: {{ layout.css.dark.a-colour }};
-				--a-visited-colour: {{ layout.css.dark.a-visited-colour }};
-				--a-hover-colour: {{ layout.css.dark.a-hover-colour }};
-				--a-active-colour: {{ layout.css.dark.a-active-colour }};
-				--hr-colour: {{ layout.css.dark.hr-colour }};
-				--tone-colour: {{ layout.css.dark.tone-colour }};
-				--rightbox-colour: {{ layout.css.dark.rightbox-colour }};
-			}
-
-			@media (prefers-color-scheme: light) {
-				:root {
-					--header-colour: {{ page.css.light.header-colour }};
-					--bg-colour: {{ page.css.light.bg-colour }};
-					--bg-checkerdark: {{ page.css.light.bg-checkerlight }};
-					--bg-checkerlight: {{ page.css.light.bg-checkerlight }};
-					--bg-triangle: {{ page.css.light.bg-triangle }};
-					--sidebar-colour: {{ page.css.light.sidebar-colour }};
-					--text-colour: {{ page.css.light.text-colour }};
-					--a-colour: {{ page.css.light.a-colour }};
-					--a-visited-colour: {{ page.css.light.a-visited-colour }};
-					--a-hover-colour: {{ page.css.light.a-hover-colour }};
-					--a-active-colour: {{ page.css.light.a-active-colour }};
-					--hr-colour: {{ page.css.light.hr-colour }};
-					--tone-colour: {{ page.css.light.tone-colour }};
-					--rightbox-colour: {{ page.css.light.rightbox-colour }};
-				}
-			}
-		</style>
 	</head>
 
 	<body>

@@ -1,0 +1,12 @@
+@use "abstracts/variables";
+
+.content {
+	margin: 0 auto;
+	padding: 0;
+	width: 60vw;
+	max-width: var(--main-content-width,80ch);
+
+	@media screen and (max-width: variables.$thin-screen-width) {
+		width: 90vw;
+	}
+}

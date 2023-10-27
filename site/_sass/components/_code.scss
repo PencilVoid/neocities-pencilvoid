@@ -1,0 +1,25 @@
+@use "abstracts/variables";
+
+span.code-inline {
+	font-family: var(--monospace-font,fira-code, monospace);
+	font-size: 1.2rem;
+	background-color: var(--sidebar-colour,#1C0023);
+	color: var(--text-colour,#FFEAFC);
+	padding: 0.125rem;
+
+	@media screen and (max-width: variables.$thin-screen-width) {
+		font-size: 1rem;
+	}
+}
+
+div.code-block {
+	font-family: var(--monospace-font,fira-code, monospace);
+	font-size: 1.2rem;
+	background-color: var(--sidebar-colour,#1C0023);
+	color: var(--text-colour,#FFEAFC);
+	padding: 0.25rem;
+
+	@media screen and (max-width: variables.$thin-screen-width) {
+		font-size: 1rem;
+	}
+}

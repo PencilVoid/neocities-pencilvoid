@@ -1,0 +1,37 @@
+@use "abstracts/variables";
+
+.rightbox {
+	outline: none;
+	border-style: none;
+	background-image: none;
+	width: 13.75vw;
+	min-width: 8.75rem;
+	position: fixed;
+	vertical-align: bottom;
+	z-index: 2;
+	bottom: 0;
+	right: 0;
+	background-color: var(--rightbox-colour,#1c002380);
+	font-size: 1rem;
+
+	@media screen and (max-width: variables.$thin-screen-width) {
+		outline: none;
+		border-style: none;
+		background-image: none;
+		min-width: none;
+		width: 100%;
+		left: 0;
+		right: auto;
+		background-color: var(--sidebar-colour,#1C0023);
+		font-size: 1rem;
+	}
+
+	button {
+		font-size: 1rem;
+	}
+
+	input[type="number"] {
+		width: 4rem;
+		font-size: 1rem;
+	}
+}

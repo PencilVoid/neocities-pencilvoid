@@ -1,0 +1,87 @@
+a {
+	border: none;
+	color: var(--a-colour,#FF9EBC);
+	text-decoration: none;
+
+	&:visited {
+		color: var(--a-visited-colour,#FF7FAC);
+	}
+
+	&:hover {
+		color: var(--a-hover-colour,#FBD1FF);
+	}
+
+	&:active {
+		color: var(--a-active-colour,#FFFFFF);
+	}
+
+	&:not([nobrackets="true"]):not(#section-dropdown-sidebar > div.dropdown-content > span.dropdown-hider > a) {
+		&:hover,
+		&:active {
+			text-decoration: underline;
+		}
+
+		&:not(.btn-secondary) {
+			&:before {
+				content: "[[";
+				opacity: 0.7;
+			}
+
+			&::after {
+				content: "]]";
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&[target="_blank"]:not([nobrackets="true"]):not(#section-dropdown-sidebar > div.dropdown-content > span.dropdown-hider > a):not(btn-secondary),
+	#section-dropdown-sidebar p > & {
+		&::before {
+			content: "[";
+			opacity: 0.7;
+		}
+
+		&::after {
+			content: "]";
+			opacity: 0.7;
+		}
+	}
+
+	&.keyboard-nav-link {
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+
+		&:focus {
+			position: static;
+			left: 0;
+			top: 0;
+			width: auto;
+			height: auto;
+			overflow: auto;
+
+			~ #keyboard-nav-separator {
+				visibility: visible;
+				position: static;
+				left: 0;
+				top: 0;
+				width: auto;
+				height: auto;
+				overflow: auto;
+			}
+		}
+
+		~ #keyboard-nav-separator {
+			visibility: hidden;
+			position: absolute;
+			left: -10000px;
+			top: auto;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+		}
+	}
+}

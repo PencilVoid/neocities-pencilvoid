@@ -1,0 +1,135 @@
+@use "abstracts/variables";
+
+.rightbox .dropdown-display-controls,
+.sidenav-hamburger .dropdown-sidenav-hamburger {
+	margin: 0.5rem;
+}
+
+.dropdown-display-controls {
+	.dropdown-content {
+		overflow: hidden;
+		height: 0;
+		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+		border-top: none;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+		padding-right: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+		max-height: 50vh;
+
+		@media screen and (max-width: variables.$thin-screen-width) {
+			max-height: 30vh;
+		}
+
+		> .dropdown-hider {
+			display: none;
+		}
+	}
+
+	> input[name="collapse"]:checked ~ .dropdown-content {
+		overflow: auto;
+		height: auto;
+		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+		padding: 0.75rem;
+		border-top: 1px solid var(--tone-colour,#FFFFFF);
+		border-right: 1px dashed var(--tone-colour,#FFFFFF);
+		border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
+		border-left: 1px dashed var(--tone-colour,#FFFFFF);
+
+		> .dropdown-hider {
+			display: contents;
+		}
+	}
+
+	input[type="checkbox"]:not(#display-bg-checker) {
+		appearance: none;
+
+		~ label.dropdown-label::before {
+			content: "Show display controls"
+		}
+
+		&:checked ~ label.dropdown-label::before {
+			content: "Hide display controls"
+		}
+	}
+}
+
+.dropdown-sidenav-hamburger {
+	> .dropdown-content {
+		overflow: hidden;
+		height: 0;
+		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+		border-top: none;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+		padding-right: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+
+		> .dropdown-hider {
+			display: none;
+		}
+	}
+
+	> input[name="collapse"]:checked ~ .dropdown-content {
+		overflow: auto;
+		height: auto;
+		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+		padding: 0.75rem;
+		border-top: 1px solid var(--tone-colour,#FFFFFF);
+		border-right: 1px dashed var(--tone-colour,#FFFFFF);
+		border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
+		border-left: 1px dashed var(--tone-colour,#FFFFFF);
+
+		> .dropdown-hider {
+			display: contents;
+		}
+	}
+
+	> input[type="checkbox"]:not(#display-bg-checker) ~ label.dropdown-label::before {
+		content: "Show navigation"
+	}
+
+	> input[type="checkbox"]:not(#display-bg-checker):checked ~ label.dropdown-label::before {
+		content: "Hide navigation"
+	}
+}
+
+.sidenav-hamburger {
+	z-index: 1;
+	background-color: var(--sidebar-colour,#1C0023);
+	position: sticky;
+	top: 0;
+	width: 100%;
+	display: none;
+
+	@media screen and (max-width: variables.$thin-screen-width) {
+		display: inline-block;
+	}
+
+	.dropdown-sidenav-hamburger > input[type="checkbox"]:not(#display-bg-checker):checked ~ .dropdown-content {
+		height: 50vh;
+		max-height: 50vh;
+	}
+}
+
+@media screen and (max-width: variables.$thin-screen-width) {
+	.dropdown-display-controls,
+	.dropdown-sidenav-hamburger {
+		> input[name="collapse"]:checked ~ .dropdown-content {
+			padding: 0.5rem;
+		}
+	}
+
+	.rightbox .dropdown-display-controls,
+	.sidenav-hamburger .dropdown-sidenav-hamburger {
+		margin: 0.25rem;
+	}
+}

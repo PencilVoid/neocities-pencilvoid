@@ -1,0 +1,4 @@
+blockquote p:not(.hcb-comment-body) {
+	border-left: 0.125rem solid var(--text-colour,#FF417D);
+	padding-left: 1rem;
+}

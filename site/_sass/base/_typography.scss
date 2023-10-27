@@ -1,0 +1,29 @@
+@use "abstracts/variables";
+
+body {
+	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-size: 1.2rem;
+	text-align: left;
+	color: var(--text-colour,#FFEAFC);
+	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1);
+}
+
+@media screen and (max-width: variables.$thin-screen-width) {
+	body {
+		font-size: 1rem;
+	}
+}
+
+p,
+ul,
+ol,
+fieldset > div {
+	line-height: 1.5;
+}
+span.post-list-title {
+	font-size: 2rem;
+}
+
+span.small-text {
+	font-size: 0.85rem;
+}
