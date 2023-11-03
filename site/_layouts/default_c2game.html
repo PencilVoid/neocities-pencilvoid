@@ -78,6 +78,40 @@ css:
 			#c2canvasdiv {
 				padding-bottom: 1em;
 			}
+
+			:root {
+				--header-colour: {{ layout.css.dark.header-colour }};
+				--bg-colour: {{ layout.css.dark.bg-colour }};
+				--bg-checkerdark: {{ layout.css.dark.bg-checkerdark }};
+				--bg-checkerlight: {{ layout.css.dark.bg-checkerlight }};
+				--bg-triangle: {{ layout.css.dark.bg-triangle }};
+				--sidebar-colour: {{ layout.css.dark.sidebar-colour }};
+				--text-colour: {{ layout.css.dark.text-colour }};
+				--a-colour: {{ layout.css.dark.a-colour }};
+				--a-visited-colour: {{ layout.css.dark.a-visited-colour }};
+				--a-hover-colour: {{ layout.css.dark.a-hover-colour }};
+				--a-active-colour: {{ layout.css.dark.a-active-colour }};
+				--hr-colour: {{ layout.css.dark.hr-colour }};
+				--tone-colour: {{ layout.css.dark.tone-colour }};
+				--rightbox-colour: {{ layout.css.dark.rightbox-colour }};
+
+				@media (prefers-color-scheme: light) {
+					--header-colour: {{ layout.css.light.header-colour }};
+					--bg-colour: {{ layout.css.light.bg-colour }};
+					--bg-checkerdark: {{ layout.css.light.bg-checkerdark }};
+					--bg-checkerlight: {{ layout.css.light.bg-checkerlight }};
+					--bg-triangle: {{ layout.css.light.bg-triangle }};
+					--sidebar-colour: {{ layout.css.light.sidebar-colour }};
+					--text-colour: {{ layout.css.light.text-colour }};
+					--a-colour: {{ layout.css.light.a-colour }};
+					--a-visited-colour: {{ layout.css.light.a-visited-colour }};
+					--a-hover-colour: {{ layout.css.light.a-hover-colour }};
+					--a-active-colour: {{ layout.css.light.a-active-colour }};
+					--hr-colour: {{ layout.css.light.hr-colour }};
+					--tone-colour: {{ layout.css.light.tone-colour }};
+					--rightbox-colour: {{ layout.css.light.rightbox-colour }};
+				}
+			}
 		</style>
 	</head>
 

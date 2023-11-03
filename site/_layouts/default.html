@@ -21,7 +21,39 @@
 		<style>
 			{{ page.customcss }}
 
+			:root {
+				--header-colour: {{ page.css.dark.header-colour }};
+				--bg-colour: {{ page.css.dark.bg-colour }};
+				--bg-checkerdark: {{ page.css.dark.bg-checkerdark }};
+				--bg-checkerlight: {{ page.css.dark.bg-checkerlight }};
+				--bg-triangle: {{ page.css.dark.bg-triangle }};
+				--sidebar-colour: {{ page.css.dark.sidebar-colour }};
+				--text-colour: {{ page.css.dark.text-colour }};
+				--a-colour: {{ page.css.dark.a-colour }};
+				--a-visited-colour: {{ page.css.dark.a-visited-colour }};
+				--a-hover-colour: {{ page.css.dark.a-hover-colour }};
+				--a-active-colour: {{ page.css.dark.a-active-colour }};
+				--hr-colour: {{ page.css.dark.hr-colour }};
+				--tone-colour: {{ page.css.dark.tone-colour }};
+				--rightbox-colour: {{ page.css.dark.rightbox-colour }};
 
+				@media (prefers-color-scheme: light) {
+					--header-colour: {{ page.css.light.header-colour }};
+					--bg-colour: {{ page.css.light.bg-colour }};
+					--bg-checkerdark: {{ page.css.light.bg-checkerdark }};
+					--bg-checkerlight: {{ page.css.light.bg-checkerlight }};
+					--bg-triangle: {{ page.css.light.bg-triangle }};
+					--sidebar-colour: {{ page.css.light.sidebar-colour }};
+					--text-colour: {{ page.css.light.text-colour }};
+					--a-colour: {{ page.css.light.a-colour }};
+					--a-visited-colour: {{ page.css.light.a-visited-colour }};
+					--a-hover-colour: {{ page.css.light.a-hover-colour }};
+					--a-active-colour: {{ page.css.light.a-active-colour }};
+					--hr-colour: {{ page.css.light.hr-colour }};
+					--tone-colour: {{ page.css.light.tone-colour }};
+					--rightbox-colour: {{ page.css.light.rightbox-colour }};
+				}
+			}
 		</style>
 	</head>
 
