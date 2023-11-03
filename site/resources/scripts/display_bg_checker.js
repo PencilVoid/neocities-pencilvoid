@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	if (cookieDisplayBgChecker) {
 		if (cookieDisplayBgChecker === "false") {
 			bgCheckerInvisible();
-			document.getElementById("display-bg-checker").checked = false;
+			if (document.getElementById("display-bg-checker")) { document.getElementById("display-bg-checker").checked = false; }
 		} else if (cookieDisplayBgChecker === "true") {
 			bgCheckerVisible();
-			document.getElementById("display-bg-checker").checked = true;
+			if (document.getElementById("display-bg-checker")) { document.getElementById("display-bg-checker").checked = true; }
 		}
 	} else {
 		bgCheckerVisible();
-		document.getElementById("display-bg-checker").checked = true;
+		if (document.getElementById("display-bg-checker")) { document.getElementById("display-bg-checker").checked = true; }
 	}
 })
 

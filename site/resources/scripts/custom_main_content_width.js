@@ -14,15 +14,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}
 })
 
-document.getElementById("main-content-width-apply").addEventListener("click", function(event) {
-	let width = document.getElementById("main-content-width").value;
-	let widthInputNotice = document.getElementById("main-content-width-input-notice");
-	if (parseInt(width)) {
-		let numWidth = Math.max(width,1);
-		widthInputNotice.textContent = "";
-		setMainContentWidth(numWidth);
-		localStorage.setItem("main-content-width",numWidth);
-	} else {
-		widthInputNotice.textContent = "Invalid input.";
-	}
-})
+if (document.getElementById("main-content-width-apply")) {
+	document.getElementById("main-content-width-apply").addEventListener("click", function(event) {
+		let width = document.getElementById("main-content-width").value;
+		let widthInputNotice = document.getElementById("main-content-width-input-notice");
+		if (parseInt(width)) {
+			let numWidth = Math.max(width,1);
+			widthInputNotice.textContent = "";
+			setMainContentWidth(numWidth);
+			localStorage.setItem("main-content-width",numWidth);
+		} else {
+			widthInputNotice.textContent = "Invalid input.";
+		}
+	})
+}

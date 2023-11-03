@@ -8,14 +8,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			document.getElementById("dropdown-display-controls").checked = false;
 		}
 	} else {
-		document.getElementById("dropdown-display-controls").checked = !window.matchMedia("screen and (max-width: 840px)").matches;
+		if (document.getElementById("dropdown-display-controls")) { document.getElementById("dropdown-display-controls").checked = !window.matchMedia("screen and (max-width: 840px)").matches; }
 	}
 })
 
-document.getElementById("dropdown-display-controls").addEventListener("change", function(event) {
-	if (document.getElementById("dropdown-display-controls").checked) {
-		sessionStorage.setItem("dropdown-display-controls", "true");
-	} else {
-		sessionStorage.setItem("dropdown-display-controls", "false");
-	}
-})
+if (document.getElementById("dropdown-display-controls")) {
+	document.getElementById("dropdown-display-controls").addEventListener("change", function(event) {
+		if (document.getElementById("dropdown-display-controls").checked) {
+			sessionStorage.setItem("dropdown-display-controls", "true");
+		} else {
+			sessionStorage.setItem("dropdown-display-controls", "false");
+		}
+	})
+}
