@@ -129,14 +129,3 @@
 		transform: rotate(5deg);
 	}
 }
-
-@media (prefers-reduced-motion: reduce) {
-	.eso-deco-tr-leaf-1,
-	.eso-deco-tr-leaf-2,
-	.eso-deco-tr-leaf-3,
-	.eso-deco-br-red-flower-1,
-	.eso-deco-br-red-flower-2,
-	.eso-deco-br-red-flower-3 {
-		animation-play-state: paused;
-	}
-}

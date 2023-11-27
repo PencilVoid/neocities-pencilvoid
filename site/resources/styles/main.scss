@@ -31,3 +31,5 @@
 @use "pages/esoterrarium";
 @use "pages/index";
 @use "pages/ufsc";
+
+@use "components/animators"; /* it only works if it's after the animations for some reason */
