@@ -102,11 +102,9 @@ css:
 				}
 			}
 
-			{% if page.pixelated %}
-			.gallery-large-img {
+			.gallery-pixelated {
 				image-rendering: crisp-edges;
 			}
-			{% endif -%}
 		</style>
 	</head>
 
@@ -144,27 +142,34 @@ css:
 			<hr>
 			<main id="main-content">
 				<div class="gallery-large">
+					{% for img in page.images %}
 					<div class="gallery-large-img">
-						<a href="{{ page.src }}" target="_blank" nobrackets="true"><img src="{{ page.src }}" alt="{{ page.alt-text | xml_escape }}"></a>
+						<a href="{{ img.src }}" target="_blank" nobrackets="true"><img src="{{ img.src }}" alt="{{ img.alt-text | xml_escape }}" {% if img.pixelated %}class="gallery-pixelated"{% endif -%}></a>
 					</div>
+					<details>
+						<summary>Image description</summary>
+						<p>
+							{{ img.image-description }}
+						</p>
+					</details>
+					<details>
+						<summary>Metadata</summary>
+						<p class="desc-metadata">
+							{{ img.filename }}<br>
+							Dimensions: {{ img.width }} x {{ img.height }}<br>
+							File size: {{ img.size }}<br>
+							Date: {{ img.date | date_to_long_string }}
+						</p>
+					</details>
+					{% endfor %}
 					<div class="desc-large">
 						<p class="desc-metadata">
-							{{ page.artname }}<br>
-							Dimensions: {{ page.width }} x {{ page.height }}<br>
-							File size: {{page.size }}<br>
-							Date: {{ page.date | date_to_long_string }}
-						</p>
-						<details>
-							<summary>Image description</summary>
-							<p>
-								{{ page.image-description }}
-							</p>
-						</details>
 						<p>
 							{{ page.caption }}
 						</p>
 					</div>
 				</div>
+				<hr>
 				<p>
 					<a href="/art">Back to gallery</a>
 				</p>
