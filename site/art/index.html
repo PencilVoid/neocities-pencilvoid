@@ -52,8 +52,8 @@ css:
 		</div>
 		<div class="desc desc-metadata">
 			<span>{{ item.artname | replace: "_", "<wbr>_<wbr>" }}</span>
+			<span>"{{ item.fancyname | replace: "_", "<wbr>_<wbr>" }}"</span>
 			<span>{{ item.date | date_to_long_string }}</span>
-			<span>{{ item.size }}</span>
 		</div>
 	</div>
 	</a>
