@@ -38,29 +38,35 @@ feed_meta: sieveplate
 <p>
 	SievePlate is basically a blog. I don't have much to talk about so expect infrequent updates. But as they say, quality over quantity (???)
 </p>
-<h2>By date</h2>
-{% for post in site.posts %}
-	<article>
-		<span class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
-		<b>{{ post.date | date_to_string }}</b>
-		{{ post.excerpt }}
-		{% if forloop.last != true %}
-		<span class="hr-light"></span>
-		{% endif %}
-	</article>
-{% endfor %}
+<section>
+	<h2>
+		By date
+	</h2>
+	{% for post in site.posts %}
+		<article>
+			<span class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+			<b>{{ post.date | date_to_string }}</b>
+			{{ post.excerpt }}
+			{% if forloop.last != true %}
+			<span class="hr-light"></span>
+			{% endif %}
+		</article>
+	{% endfor %}
+</section>
 <section class="dropdown">
-<h2>Browse by tag</h2>
-{% include dropdown_checked.html id="dropdown-taglist" %}
-			{% for tag in site.tags %}
-				<b>{{ tag[0] }}</b>
-				<ul>
-					{% for post in tag[1] %}
-						<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-					{% endfor %}
-				</ul>
-			{% endfor %}
-{% include dropdown_end.html %}
+	<h2>
+		Browse by tag
+	</h2>
+	{% include dropdown_checked.html id="dropdown-taglist" %}
+		{% for tag in site.tags %}
+			<b>{{ tag[0] }}</b>
+			<ul>
+				{% for post in tag[1] %}
+					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+		{% endfor %}
+	{% include dropdown_end.html %}
 </section>
 <hr>
 <p>

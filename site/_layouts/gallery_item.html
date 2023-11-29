@@ -146,28 +146,37 @@ css:
 					<div class="gallery-large-img">
 						<a href="{{ img.src }}" target="_blank" nobrackets="true"><img src="{{ img.src }}" alt="{{ img.alt-text | xml_escape }}" {% if img.pixelated %}class="gallery-pixelated"{% endif -%}></a>
 					</div>
-					<details>
-						<summary>Image description</summary>
-						<p>
-							{{ img.image-description }}
-						</p>
-					</details>
-					<details>
-						<summary>Metadata</summary>
-						<p class="desc-metadata">
-							{{ img.filename }}<br>
-							Dimensions: {{ img.width }} x {{ img.height }}<br>
-							File size: {{ img.size }}<br>
-							Date: {{ img.date | date_to_long_string }}
-						</p>
-					</details>
+					<section>
+						<details>
+							<summary>Image description</summary>
+							<p>
+								{{ img.image-description }}
+							</p>
+						</details>
+					</section>
+					<section>
+						<details>
+							<summary>Metadata</summary>
+							<p class="desc-metadata">
+								{{ img.filename }}<br>
+								Dimensions: {{ img.width }} x {{ img.height }}<br>
+								File size: {{ img.size }}<br>
+								Date: {{ img.date | date_to_long_string }}
+							</p>
+						</details>
+					</section>
 					{% endfor %}
-					<div class="desc-large">
-						<p class="desc-metadata">
-						<p>
-							{{ page.caption }}
-						</p>
-					</div>
+					<section>
+						<h2>
+							Description
+						</h2>
+						<div class="desc-large">
+							<p class="desc-metadata">
+							<p>
+								{{ page.caption }}
+							</p>
+						</div>
+					</section>
 				</div>
 				<hr>
 				<p>
