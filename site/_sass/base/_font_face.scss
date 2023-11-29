@@ -265,3 +265,19 @@
 	font-weight: 300 700;
 	font-style: normal;
 }
+
+/* --- Cascadia Code --- */
+
+@font-face {
+	font-family: 'cascadia-code';
+	src: url("/resources/fonts/CascadiaCode.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'cascadia-code';
+	src: url("/resources/fonts/CascadiaCodeItalic.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-style: italic;
+}
