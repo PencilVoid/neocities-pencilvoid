@@ -10,6 +10,10 @@ defaults:
     values:
       layout: "default_c2game"
   - scope:
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
       path: ""
     values:
       layout: "default"
@@ -32,14 +36,14 @@ author: xpv
 
 source: "./site"
 
+collections:
+  authors:
+    output: true
+    permalink: /:collection/:name/
+
 page_gen-dirs: true
 
 page_gen:
-- data: authors
-  template: author
-  dir: /authors
-  name: id
-  title: fullname
 - data: gallery_items
   template: gallery_item
   dir: /art

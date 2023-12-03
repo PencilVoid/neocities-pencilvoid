@@ -119,9 +119,9 @@ css:
 			</header>
 			<p style="font-style: italic;">
 				{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }}
-				{% assign author = site.data.authors | find: "id", page.author %}
+				{% assign author = site.authors | find: "author_id", page.author %}
 				{% if author %}
-				- written by <a href="/authors/{{ author.id }}">{{ author.fullname }}</a>
+				- written by <a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a>
 				{% else %}
 				- no author found
 				{% endif %}<br>

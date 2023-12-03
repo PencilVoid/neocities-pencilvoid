@@ -34,10 +34,9 @@ css:
     tone-colour: "#152F3C"
     rightbox-colour: "#2BDBC980"
 ---
-{% for author_list in site.data.authors_list %}
+{% for author in site.authors %}
 	<article>
-	{% assign author = site.data.authors[author_list] %}
-		<span class="post-list-title"><a href="/authors/{{ author.id }}">{{ author.fullname }}</a></span>
+		<span class="post-list-title"><a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a></span>
 		<b>{{ author.position }}</b>
 	{% if forloop.last != true %}
 		<span class="hr-light"></span>
