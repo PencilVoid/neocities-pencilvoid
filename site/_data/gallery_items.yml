@@ -199,3 +199,91 @@
       size: 28.44KB
       date: 2021-06-22T00:00:00.000Z
       pixelated: false
+
+- misun:
+  id: misun
+  artname: misun.png
+  fancyname: Misun the Isopod sketch
+  thumbnail: /resources/images/art_gallery/thumbnail/misun.png
+  date: 2023-08-12T00:00:00.000Z
+  thumbnail-alt-text: >-
+    Thumbnail for gallery item "misun.png". It depicts a closeup of a cartoon anthropomorphised isopod, looking at something offscreen.
+  caption: >-
+    A drawing of a design for a Sonic the Hedgehog OC. Isopods are neat.
+  pixelated-thumbnail: true
+  images:
+    - img1:
+      src: /resources/images/art_gallery/misun.png
+      filename: misun.png
+      alt-text: >-
+        A digital art piece depicting a cartoon anthropomorphised isopod, looking at something out of frame.
+      image-description: >-
+        A digital art piece depicting an anthropomorphic cartoony isopod with a green shell. He is wearing white gloves and green shoes with gold buckles. On his right arm is a large handheld drill. He is looking at something out of frame with a blunt expression.
+      width: 400
+      height: 400
+      size: 6.32KB
+      date: 2023-08-12T00:00:00.000Z
+      pixelated: true
+
+- walkin:
+  id: walkin
+  artname: walkin.png
+  fancyname: Out for a walk
+  thumbnail: /resources/images/art_gallery/thumbnail/walkin.png
+  date: 2023-11-28T00:00:00.000Z
+  thumbnail-alt-text: >-
+    Thumbnail for gallery item "walkin.png". It depicts a bust of an anthropomorphic pine tree.
+  caption: >-
+    I meant to do a little more with this one but I didn't and when I got back to it I decided it was fine as it was. Very rarely do I draw more than one character in one image. <br>
+    I promise Yona is very entertained, he just tends towards blank facial expressions.
+  pixelated-thumbnail: true
+  images:
+    - img1:
+      src: /resources/images/art_gallery/walkin.png
+      filename: walkin.png
+      alt-text: >-
+        A digital art piece depicting a tall anthromorphic pine tree with an appearance similar to a hedgehog, walking alongside a relatively short anthropomorphic deer.
+      image-description: >-
+        A digital art piece depicting the anthropomorphic pine tree Yona with an appearance similar to a hedgehog. He is wearing a beige low cut shirt and a teal pencil skirt. He is also wearing a grey mechanical part on his upper left arm, and two jet thrusters are floating behind him. He is walking forwards with a short gait and looking down towards his friend, the anthropomorphic deer Ocha. She is wearing a green sweater with a purple skirt and lighter purple leg warmers. Her light blonde hair is tied into a ponytail by a flower with light blue petals and two large green leaves. She is looking up at him and talking enthusiastically. Her right hand is gesturing and her left hand is held to her body, below her chest.
+      width: 900
+      height: 800
+      size: 20.65KB
+      date: 2023-11-28T00:00:00.000Z
+      pixelated: true
+
+- phytoconnector:
+  id: phytoconnector
+  artname: phytoconnector.png
+  fancyname: Phytoconnector sketch
+  thumbnail: /resources/images/art_gallery/thumbnail/phytoconnector.png
+  date: 2023-04-11T00:00:00.000Z
+  thumbnail-alt-text: >-
+    Thumbnail for gallery item "phytoconnector.png". It depicts a green plant-like bulb.
+  caption: >-
+    It's like a keyboard for plants.
+    <details>
+      <summary>Worldbuilding</summary>
+      <p>
+        Plants, and anthroviridians by extension, have the unique ability to communicate by transmitting chemicals through the flesh. This works surprisingly fast, being almost as fast as pure thought. This form of communication can be used to transmit not only text but images, concepts, emotions, and anything that can be formed into a thought.
+      </p>
+      <p>
+        The phytoconnector was created as a simple and adaptable way to allow anthroviridians to interface with computers. A user must simply make physical contact with the bulb of plant mass and transmit the desired input to it. This method can simulate keyboard, mouse, or game controller input. If the operating system supports it, it also allows for advanced features such as controlling multiple pointers at once. Some phytoconnectors come with software that allows for customised inputs to be created, to further enhance usage.
+      </p>
+      <p>
+        The phytoconnector in the image shown is designed for use alongside a desktop or laptop computer. There are designs which can be worn on the body, allowing the user to recline, stand up, or even walk around while operating a computer. Infrequently, phytoconnectors may provide audiovisual output, allowing for computers to be used discretely. The output of this method is not as "strong" as physical audiovisual output, however, so this technology is usually only used for mobile music players.
+      </p>
+    </details>
+  pixelated-thumbnail: true
+  images:
+    - img1:
+      src: /resources/images/art_gallery/phytoconnector.png
+      filename: phytoconnector.png
+      alt-text: >-
+        A digital art piece depicting a desktop-sized machine with a plant bulb attached.
+      image-description: >-
+        A digital art piece depicting a desktop-sized machine, in a rough isometric view. It has a dark grey baseplate with a power cord plugged into the side. On top of the baseplate is a lighter grey box. The box is connected to the baseplate by two smaller red and blue boxes. On the side of the box are two small, square buttons. Red, blue, and green lights can be seen on the upper edge of the box, alongside a blue switch. The box holds a bulb of plant-like mass, connected to it by a short, square shaft. The bulb is bright green and has a sheen. Pronounced contours and folds can be seen in the bulb, giving it a malleable appearance..
+      width: 640
+      height: 640
+      size: 8.25KB
+      date: 2023-04-11T00:00:00.000Z
+      pixelated: true
