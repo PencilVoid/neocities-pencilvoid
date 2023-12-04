@@ -149,20 +149,24 @@ css:
 					<section>
 						<details>
 							<summary>Image description</summary>
-							<p>
-								{{ img.image-description }}
-							</p>
+							<div class="details-content">
+								<p>
+									{{ img.image-description }}
+								</p>
+							</div>
 						</details>
 					</section>
 					<section>
 						<details>
 							<summary>Metadata</summary>
-							<p class="desc-metadata">
-								{{ img.filename }}<br>
-								Dimensions: {{ img.width }} x {{ img.height }}<br>
-								File size: {{ img.size }}<br>
-								Date: {{ img.date | date_to_long_string }}
-							</p>
+							<div class="details-content">
+								<p class="desc-metadata">
+									{{ img.filename }}<br>
+									Dimensions: {{ img.width }} x {{ img.height }}<br>
+									File size: {{ img.size }}<br>
+									Date: {{ img.date | date_to_long_string }}
+								</p>
+							</div>
 						</details>
 					</section>
 					{% endfor %}
