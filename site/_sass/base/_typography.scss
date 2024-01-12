@@ -17,7 +17,8 @@ body {
 p,
 ul,
 ol,
-fieldset > div {
+fieldset > div,
+dl {
 	line-height: 1.5;
 }
 span.post-list-title {
