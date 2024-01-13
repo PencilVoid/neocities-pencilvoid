@@ -66,7 +66,7 @@ input[type="checkbox"]:not(#display-bg-checker) {
 		padding: 0.75rem;
 		max-width: 100%;
 
-		@media screen and (max-width: variables.$thin-screen-width) {
+		@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 			padding: 0.5rem;
 		}
 

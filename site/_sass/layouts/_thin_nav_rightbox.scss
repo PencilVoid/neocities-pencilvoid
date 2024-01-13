@@ -21,7 +21,7 @@
 		margin-bottom: 0;
 		max-height: 50vh;
 
-		@media screen and (max-width: variables.$thin-screen-width) {
+		@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 			max-height: 30vh;
 		}
 
@@ -110,7 +110,7 @@
 	width: 100%;
 	display: none;
 
-	@media screen and (max-width: variables.$thin-screen-width) {
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		display: inline-block;
 	}
 
@@ -120,7 +120,7 @@
 	}
 }
 
-@media screen and (max-width: variables.$thin-screen-width) {
+@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 	.dropdown-display-controls,
 	.dropdown-sidenav-hamburger {
 		> input[name="collapse"]:checked ~ .dropdown-content {

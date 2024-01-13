@@ -79,7 +79,7 @@
 	align-self: end;
 	border-top: 1px solid var(--text-colour,#FFEAFC);;
 
-	@media screen and (max-width: variables.$thin-screen-width) {
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		font-size: 1rem;
 	}
 }
@@ -90,7 +90,7 @@
 	background-color: rgba(255, 255, 255, 0.15);
 	text-align: center;
 
-	@media screen and (max-width: variables.$thin-screen-width) {
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		font-size: 1rem;
 	}
 }

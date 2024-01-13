@@ -16,7 +16,7 @@
 	font-size: 1rem;
 	overflow: auto;
 
-	@media screen and (max-width: variables.$thin-screen-width) {
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		display: none;
 	}
 }

@@ -7,7 +7,7 @@ span.code-inline {
 	color: var(--text-colour,#FFEAFC);
 	padding: 0.125rem;
 
-	@media screen and (max-width: variables.$thin-screen-width) {
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		font-size: 1rem;
 	}
 }
@@ -19,7 +19,7 @@ div.code-block {
 	color: var(--text-colour,#FFEAFC);
 	padding: 0.25rem;
 
-	@media screen and (max-width: variables.$thin-screen-width) {
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		font-size: 1rem;
 	}
 }

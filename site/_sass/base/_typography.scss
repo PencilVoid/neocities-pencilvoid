@@ -8,7 +8,7 @@ body {
 	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
-@media screen and (max-width: variables.$thin-screen-width) {
+@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 	body {
 		font-size: 1rem;
 	}

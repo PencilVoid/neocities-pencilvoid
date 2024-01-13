@@ -63,7 +63,7 @@ h6 {
 
 /* --- Smaller headers on small screens --- */
 
-@media screen and (max-width: variables.$thin-screen-width) {
+@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 	h1 {
 		font-size: 2.6rem;
 		font-weight: 750;

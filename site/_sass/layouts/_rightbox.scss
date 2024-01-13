@@ -14,7 +14,7 @@
 	background-color: var(--rightbox-colour,#1c002380);
 	font-size: 1rem;
 
-	@media screen and (max-width: variables.$thin-screen-width) {
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		outline: none;
 		border-style: none;
 		background-image: none;
