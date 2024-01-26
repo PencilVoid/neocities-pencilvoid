@@ -1,9 +1,10 @@
 body {
 	background-color: var(--bg-checkerdark,#42004E);
+	/*
 	background-image: linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%),
 	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)),
 	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068));
 	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
 	background-position: 0 0, 32px 32px, 0 0;
-	background-attachment: fixed, scroll, scroll;
+	background-attachment: fixed, scroll, scroll;*/
 }
