@@ -87,79 +87,87 @@ css:
 	</head>
 
 	<body>
-		<div class="sidenav-hamburger">
-			<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
-				<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
-				<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
-						<nav>
-							{% include sidebar.html hamburger=true %}
-						</nav>
-					</span>
+		<div class="body-grid-container">
+			<div class="body-grid-left">
+				<div class="sidenav-hamburger">
+					<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
+						<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
+						<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
+						<div class="dropdown-content">
+							<span class="dropdown-hider">
+								<nav>
+									{% include sidebar.html hamburger=true %}
+								</nav>
+							</span>
+						</div>
+					</section>
 				</div>
-			</section>
-		</div>
-		<div class="sidenav">
-			<nav>
-				<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
-				<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
-				<hr id="keyboard-nav-separator">
-				{% include sidebar.html %}
-			</nav>
-		</div>
-		<div class="rightbox">
-			{% include display_controls.html %}
-		</div>
-		<div class="content">
-			<header>
-				<h1>
-					{{ page.title }}
-				</h1>
-			</header>
-			<p style="font-style: italic;">
-				{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }}
-				{% assign author = site.authors | find: "author_id", page.author %}
-				{% if author %}
-				- written by <a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a>
-				{% else %}
-				- no author found
-				{% endif %}<br>
-				Tags: {% for tag in page.tags %}{{tag}}{% unless forloop.last %}, {% endunless %}{% endfor %}
-			</p>
-			<hr>
-			<main id="main-content">
-				<article>
-					{{ content }}
-				</article>
-			</main>
-			<hr style="clear: both">
-			<footer>
-				<div style="clear: both;">
-					{% if page.next -%}
-					<p style="float: right; text-align: right;">
-						<a href="{{ page.next.url }}">Next post: {{ page.next.title }}</a><br>
-						{{ page.next.date | date_to_string  }}
-					</p>
-					{%- endif %}
-					{% if page.previous -%}
-					<p style="float: left; text-align: left;">
-						<a href="{{ page.previous.url }}">Previous post: {{ page.previous.title }}</a><br>
-						{{ page.previous.date | date_to_string  }}
-					</p>
-					{%- endif %}
+				<div class="sidenav">
+					<nav>
+						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
+						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
+						<hr id="keyboard-nav-separator">
+						{% include sidebar.html %}
+					</nav>
 				</div>
-				<p style="text-align: center; clear: both;">
-					<a href="/sieveplate">See all posts</a>
-				</p>
-				{% if page.last_modified_at -%}
-				<p>
-					<span class="small-text">
-					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
-					</span>
-				</p>
-				{%- endif %}
-			</footer>
+			</div>
+			<div class="body-grid-right">
+				<div class="rightbox">
+					{% include display_controls.html %}
+				</div>
+			</div>
+			<div class="body-grid-centre">
+				<div class="content">
+					<header>
+						<h1>
+							{{ page.title }}
+						</h1>
+					</header>
+					<p style="font-style: italic;">
+						{{ page.date | date: "%d %B %Y, %H:%M (%Z)" }}
+						{% assign author = site.authors | find: "author_id", page.author %}
+						{% if author %}
+						- written by <a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a>
+						{% else %}
+						- no author found
+						{% endif %}<br>
+						Tags: {% for tag in page.tags %}{{tag}}{% unless forloop.last %}, {% endunless %}{% endfor %}
+					</p>
+					<hr>
+					<main id="main-content">
+						<article>
+							{{ content }}
+						</article>
+					</main>
+					<hr style="clear: both">
+					<footer>
+						<div style="clear: both;">
+							{% if page.next -%}
+							<p style="float: right; text-align: right;">
+								<a href="{{ page.next.url }}">Next post: {{ page.next.title }}</a><br>
+								{{ page.next.date | date_to_string  }}
+							</p>
+							{%- endif %}
+							{% if page.previous -%}
+							<p style="float: left; text-align: left;">
+								<a href="{{ page.previous.url }}">Previous post: {{ page.previous.title }}</a><br>
+								{{ page.previous.date | date_to_string  }}
+							</p>
+							{%- endif %}
+						</div>
+						<p style="text-align: center; clear: both;">
+							<a href="/sieveplate">See all posts</a>
+						</p>
+						{% if page.last_modified_at -%}
+						<p>
+							<span class="small-text">
+							Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+							</span>
+						</p>
+						{%- endif %}
+					</footer>
+				</div>
+			</div>
 		</div>
 		{% include js_theme_switcher_layout.html %}
 		<script src="/resources/scripts/settings_management_functions.js"></script>
