@@ -14,11 +14,13 @@
 	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
 	background-position: 0 0, right 32px top 32px, right top;
 	background-attachment: fixed, scroll, scroll;
+	z-index: 0;
 }
 
 .body-grid-centre {
 	order: 1;
 	background-color: var(--bg-triangle,#220029);
+	z-index: 50;
 }
 
 .body-grid-right {
@@ -29,6 +31,7 @@
 	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
 	background-position: 0 0, 32px 32px, 0 0;
 	background-attachment: fixed, scroll, scroll;
+	z-index: 0;
 }
 
 .content {
@@ -80,7 +83,7 @@
 	min-width: 8.75rem;
 	position: fixed;
 	vertical-align: bottom;
-	z-index: 2;
+	z-index: 10;
 	bottom: 0;
 	right: 0;
 	background-color: var(--rightbox-colour,#1c002380);

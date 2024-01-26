@@ -4,7 +4,7 @@
 	right: 0;
 	overflow: visible;
 	image-rendering: crisp-edges;
-	z-index: -1;
+	z-index: 4;
 }
 
 .eso-deco-topright {
@@ -13,7 +13,7 @@
 	right: 0;
 	overflow: visible;
 	image-rendering: crisp-edges;
-	z-index: -1;
+	z-index: 4;
 }
 
 @media screen and (max-width: 840px), screen and (max-height: 512px) {
@@ -27,19 +27,19 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: -1;
+	z-index: 4;
 }
 
 .eso-deco-br-grass-back {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: -3;
+	z-index: 2;
 }
 
 .eso-deco-br-red-flower-1 {
 	position: absolute;
-	z-index: -2;
+	z-index: 3;
 	bottom: 0;
 	right: 104px;
 	animation: flower-wave 5s ease-in-out -2.5s infinite alternate;
@@ -49,7 +49,7 @@
 
 .eso-deco-br-red-flower-2 {
 	position: absolute;
-	z-index: -2;
+	z-index: 3;
 	bottom: 0;
 	right: 241px;
 	animation: flower-wave 9s ease-in-out -4.5s infinite alternate-reverse;
@@ -59,7 +59,7 @@
 
 .eso-deco-br-red-flower-3 {
 	position: absolute;
-	z-index: -2;
+	z-index: 3;
 	bottom: 0;
 	right: 411px;
 	animation: flower-wave 7s ease-in-out -3.5s infinite alternate;
@@ -69,7 +69,7 @@
 
 .eso-deco-tr-leaf-1 {
 	position: absolute;
-	z-index: -2;
+	z-index: 3;
 	top: -16px;
 	right: -24px;
 	animation: leaf-wave-1 3s ease-in-out 0s infinite alternate;
@@ -78,7 +78,7 @@
 
 .eso-deco-tr-leaf-2 {
 	position: absolute;
-	z-index: -3;
+	z-index: 2;
 	top: -16px;
 	right: -24px;
 	animation: leaf-wave-2 5s ease-in-out -0.5s infinite alternate;
@@ -87,7 +87,7 @@
 
 .eso-deco-tr-leaf-3 {
 	position: absolute;
-	z-index: -4;
+	z-index: 1;
 	top: -16px;
 	right: -24px;
 	animation: leaf-wave-3 4s ease-in-out -1s infinite alternate;

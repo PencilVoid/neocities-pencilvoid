@@ -5,6 +5,7 @@
 	top: 2.5vh;
 	left: 97.5vw;
 	overflow: visible;
+	z-index: 5;
 }
 
 @media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
@@ -18,7 +19,7 @@
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
-	z-index: -1;
+	z-index: 5;
 	animation: hue-cycle 30s infinite linear, quiver 0.5s infinite steps(20, jump-none);
 	mix-blend-mode: color-dodge;
 }
@@ -27,7 +28,7 @@
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
-	z-index: -2;
+	z-index: 4;
 	animation: hue-cycle 30s infinite linear, spin-core 7.5s infinite linear;
 	mix-blend-mode: color-dodge;
 }
@@ -36,7 +37,7 @@
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
-	z-index: -3;
+	z-index: 3;
 	animation: hue-cycle 30s infinite linear, spin-rays 15s infinite linear, radiate-rays 20s infinite ease-in-out;
 	mix-blend-mode: color-dodge;
 }
@@ -45,7 +46,7 @@
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
-	z-index: -4;
+	z-index: 2;
 	animation: hue-cycle 30s infinite linear, spin-shell 15s infinite linear;
 	mix-blend-mode: color-dodge;
 }
@@ -54,7 +55,7 @@
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
-	z-index: -5;
+	z-index: 1;
 	animation: hue-cycle 30s infinite linear, spin-fringe 30s infinite linear;
 	mix-blend-mode: color-dodge;
 }
