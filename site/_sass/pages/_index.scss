@@ -6,6 +6,7 @@
 	left: 97.5vw;
 	overflow: visible;
 	z-index: 5;
+	mix-blend-mode: color-dodge;
 }
 
 @media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
