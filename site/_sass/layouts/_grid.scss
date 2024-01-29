@@ -1,0 +1,113 @@
+@use "abstracts/variables";
+
+.body-grid-container {
+	display: grid;
+	grid-template-columns: [grid-left] 1fr [grid-centre] var(--main-content-width,80ch) [grid-right] 1fr;
+	min-height: 100vh;
+	grid-template-areas: "grid-left grid-centre grid-right";
+}
+
+.body-grid-left {
+	order: 0;
+	background-image: linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068));
+	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
+	background-position: 0 0, right 32px top 32px, right top;
+	background-attachment: fixed, scroll, scroll;
+	z-index: 0;
+}
+
+.body-grid-centre {
+	order: 1;
+	background-color: var(--bg-triangle,#220029);
+	z-index: 50;
+}
+
+.body-grid-right {
+	order: 2;
+	background-image: linear-gradient(to bottom left, transparent 0%, transparent 50%, var(--bg-triangle,#220029) 50%, var(--bg-triangle,#220029) 100%),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, transparent 25%, transparent 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068)),
+	linear-gradient(45deg, var(--bg-checkerlight,#680068) 25%, var(--bg-checkerdark,#42004E) 25%, var(--bg-checkerdark,#42004E) 75%, var(--bg-checkerlight,#680068) 75%, var(--bg-checkerlight,#680068));
+	background-size: 100lvw 100lvh, 64px 64px, 64px 64px;
+	background-position: 0 0, 32px 32px, 0 0;
+	background-attachment: fixed, scroll, scroll;
+	z-index: 0;
+}
+
+.content {
+	padding: 0 1em;
+
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
+		width: 90vw;
+	}
+}
+
+.sidenav {
+	outline: none;
+	border-style: none;
+	background-image: none;
+	height: 100%;
+	width: 13.75vw;
+	min-width: 8.75rem;
+	padding: 0.75rem;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: var(--sidebar-colour,#1C0023);
+	font-size: 1rem;
+	overflow: auto;
+
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
+		display: none;
+	}
+}
+
+#section-dropdown-sidebar a {
+	&::before {
+		content: "";
+		opacity: 0.7;
+	}
+
+	&::after {
+		content: "";
+		opacity: 0.7;
+	}
+}
+
+.rightbox {
+	outline: none;
+	border-style: none;
+	background-image: none;
+	width: 13.75vw;
+	min-width: 8.75rem;
+	position: fixed;
+	vertical-align: bottom;
+	z-index: 10;
+	bottom: 0;
+	right: 0;
+	background-color: var(--rightbox-colour,#1c002380);
+	font-size: 1rem;
+
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
+		outline: none;
+		border-style: none;
+		background-image: none;
+		min-width: none;
+		width: 100%;
+		left: 0;
+		right: auto;
+		background-color: var(--sidebar-colour,#1C0023);
+		font-size: 1rem;
+	}
+
+	button {
+		font-size: 1rem;
+	}
+
+	input[type="number"] {
+		width: 4rem;
+		font-size: 1rem;
+	}
+}

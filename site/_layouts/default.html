@@ -58,52 +58,83 @@
 	</head>
 
 	<body>
-		<div class="sidenav-hamburger">
-			<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
-				<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
-				<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
-						<nav>
-							{% include sidebar.html hamburger=true %}
-						</nav>
-					</span>
+		<div class="body-grid-container">
+			<div class="body-grid-left">
+				<div class="sidenav-hamburger">
+					<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
+						<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
+						<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
+						<div class="dropdown-content">
+							<span class="dropdown-hider">
+								<nav>
+									{% include sidebar.html hamburger=true %}
+								</nav>
+							</span>
+						</div>
+					</section>
 				</div>
-			</section>
+				<div class="sidenav">
+					<nav>
+						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
+						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
+						<hr id="keyboard-nav-separator">
+						{% include sidebar.html %}
+					</nav>
+				</div>
+			</div>
+			<div class="body-grid-right">
+				{% if page.decoration == "main" %}
+				<div class="spinner-container" aria-hidden="true">
+					<img class="thing-supercore css-animated" src="/resources/images/decorations/thing_supercore.svg" alt="">
+					<img class="thing-core css-animated" src="/resources/images/decorations/thing_core.svg" alt="" >
+					<img class="thing-rays css-animated" src="/resources/images/decorations/thing_rays.svg" alt="">
+					<img class="thing-shell css-animated" src="/resources/images/decorations/thing_shell.svg" alt="">
+					<img class="thing-fringe css-animated" src="/resources/images/decorations/thing_fringe.svg" alt="">
+				</div>
+				{% endif %}
+				{% if page.decoration == "eso" %}
+				<div class="eso-deco-bottomright" aria-hidden="true">
+					<img class="eso-deco-br-grass-back css-animated" src="/resources/images/eso/deco_bottomright_grass_back.png" alt="">
+					<img class="eso-deco-br-red-flower-1 css-animated" src="/resources/images/eso/deco_red_flower_1.png" alt="">
+					<img class="eso-deco-br-red-flower-2 css-animated" src="/resources/images/eso/deco_red_flower_2.png" alt="">
+					<img class="eso-deco-br-red-flower-3 css-animated" src="/resources/images/eso/deco_red_flower_3.png" alt="">
+					<img class="eso-deco-br-grass-front css-animated"src="/resources/images/eso/deco_bottomright_grass_front.png" alt="">
+				</div>
+				<div class="eso-deco-topright css-animated" aria-hidden="true">
+					<img class="eso-deco-tr-leaf-1 css-animated" src="/resources/images/eso/deco_topright_leaf_1.png" alt="">
+					<img class="eso-deco-tr-leaf-2 css-animated" src="/resources/images/eso/deco_topright_leaf_2.png" alt="">
+					<img class="eso-deco-tr-leaf-3 css-animated" src="/resources/images/eso/deco_topright_leaf_3.png" alt="">
+				</div>
+				{% endif %}
+				<div class="rightbox">
+					{% include display_controls.html %}
+				</div>
+			</div>
+			<div class="body-grid-centre">
+				<div class="content">
+					<header>
+						<h1>
+							{{ page.header }}
+						</h1>
+					</header>
+					<hr>
+					<main id="main-content">
+					{{ content }}
+					</main>
+					{% if page.last_modified_at -%}
+					<hr>
+					<footer>
+						<span class="small-text">
+							<p>
+								Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+							</p>
+						</span>
+					</footer>
+					{%- endif %}
+				</div>
+			</div>
+			{% include js_theme_switcher.html %}
 		</div>
-		<div class="sidenav">
-			<nav>
-				<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
-				<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
-				<hr id="keyboard-nav-separator">
-				{% include sidebar.html %}
-			</nav>
-		</div>
-		<div class="rightbox">
-			{% include display_controls.html %}
-		</div>
-		<div class="content">
-			<header>
-				<h1>
-					{{ page.header }}
-				</h1>
-			</header>
-			<hr>
-			<main id="main-content">
-			{{ content }}
-			</main>
-			{% if page.last_modified_at -%}
-			<hr>
-			<footer>
-				<span class="small-text">
-					<p>
-						Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
-					</p>
-				</span>
-			</footer>
-			{%- endif %}
-		</div>
-		{% include js_theme_switcher.html %}
 		<script src="/resources/scripts/settings_management_functions.js"></script>
 		<script src="/resources/scripts/display_bg_checker.js"></script>
 		<script src="/resources/scripts/dropdown_display_controls.js"></script>

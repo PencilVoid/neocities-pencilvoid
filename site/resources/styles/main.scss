@@ -24,10 +24,8 @@
 @use "components/interjections";
 @use "components/scrollbar";
 
-@use "layouts/content";
 @use "layouts/forms";
-@use "layouts/navigation";
-@use "layouts/rightbox";
+@use "layouts/grid";
 @use "layouts/thin_nav_rightbox";
 
 @use "pages/esoterrarium";

@@ -20,16 +20,16 @@ css:
     bg-colour: "#F3BDFA"
     bg-checkerdark: "#96F7D5"
     bg-checkerlight: "#B6F9DB"
-    bg-triangle: "#81EAD3"
-    sidebar-colour: "#2BDBC9"
+    bg-triangle: "#A9E8D9"
+    sidebar-colour: "#A4DDD2"
     text-colour: "#152F3C"
-    a-colour: "#064D6E"
-    a-visited-colour: "#152F3C"
+    a-colour: "#152F3C"
+    a-visited-colour: "#0E2028"
     a-hover-colour: "#167397"
     a-active-colour: "#2195B2"
     hr-colour: "#188183"
     tone-colour: "#152F3C"
-    rightbox-colour: "#2BDBC980"
+    rightbox-colour: "#A2D8CF80"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -86,77 +86,85 @@ css:
 	</head>
 
 	<body>
-		<div class="sidenav-hamburger">
-			<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
-				<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
-				<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
-						<nav>
-							{% include sidebar.html hamburger=true %}
-						</nav>
-					</span>
+		<div class="body-grid-container">
+			<div class="body-grid-left">
+				<div class="sidenav-hamburger">
+					<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
+						<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
+						<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
+						<div class="dropdown-content">
+							<span class="dropdown-hider">
+								<nav>
+									{% include sidebar.html hamburger=true %}
+								</nav>
+							</span>
+						</div>
+					</section>
 				</div>
-			</section>
+				<div class="sidenav">
+					<nav>
+						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
+						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
+						<hr id="keyboard-nav-separator">
+						{% include sidebar.html %}
+					</nav>
+				</div>
+			</div>
+			<div class="body-grid-right">
+				<div class="rightbox">
+					{% include display_controls.html %}
+				</div>
+			</div>
+			<div class="body-grid-centre">
+				<div class="content">
+					<header>
+						<h1>
+							{{ page.fullname }}
+						</h1>
+					</header>
+					<hr>
+					<main id="main-content">
+						Position: <b>{{ page.position }}</b>
+						<p>
+							{{ page.content }}
+						</p>
+						<h2>
+							Posts
+						</h2>
+						<ul>
+							{% assign filtered_posts = site.posts | where: 'author', page.author_id %}
+							{% for post in filtered_posts %}
+							<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+							{% else %}
+							<li>No posts by this author were found.</li>
+							{% endfor %}
+						</ul>
+						<h2>
+							Author links
+						</h2>
+						<ul>
+						{% for link in page.links %}
+						<li><a href="{{ link.url }}">{{ link.name }}</a></li>
+						{% else %}
+						<li>No links for this author were found.</li>
+						</p>
+						{% endfor %}
+						</ul>
+					</main>
+					{% if page.last_modified_at -%}
+					<hr>
+					<footer>
+						<span class="small-text">
+							<p>
+								Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+							</p>
+						</span>
+					</footer>
+					{%- endif %}
+				</div>
+			</div>
+			{% include js_theme_switcher_layout.html %}
 		</div>
-		<div class="sidenav">
-			<nav>
-				<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
-				<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
-				<hr id="keyboard-nav-separator">
-				{% include sidebar.html %}
-			</nav>
-		</div>
-		<div class="rightbox">
-			{% include display_controls.html %}
-		</div>
-		<div class="content">
-			<header>
-				<h1>
-					{{ page.fullname }}
-				</h1>
-			</header>
-			<hr>
-			<main id="main-content">
-				Position: <b>{{ page.position }}</b>
-				<p>
-					{{ page.content }}
-				</p>
-				<h2>
-					Posts
-				</h2>
-				<ul>
-					{% assign filtered_posts = site.posts | where: 'author', page.author_id %}
-					{% for post in filtered_posts %}
-					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-					{% else %}
-					<li>No posts by this author were found.</li>
-					{% endfor %}
-				</ul>
-				<h2>
-					Author links
-				</h2>
-				<ul>
-				{% for link in page.links %}
-				<li><a href="{{ link.url }}">{{ link.name }}</a></li>
-				{% else %}
-				<li>No links for this author were found.</li>
-				</p>
-				{% endfor %}
-				</ul>
-			</main>
-			{% if page.last_modified_at -%}
-			<hr>
-			<footer>
-				<span class="small-text">
-					<p>
-						Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
-					</p>
-				</span>
-			</footer>
-			{%- endif %}
-		</div>
-		{% include js_theme_switcher.html %}
 		<script src="/resources/scripts/settings_management_functions.js"></script>
 		<script src="/resources/scripts/display_bg_checker.js"></script>
 		<script src="/resources/scripts/dropdown_display_controls.js"></script>

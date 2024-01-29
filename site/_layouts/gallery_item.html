@@ -18,18 +18,18 @@ css:
   light:
     header-colour: "#3B063A"
     bg-colour: "#F3BDFA"
-    bg-checkerdark: "#F9C0B8"
+    bg-checkerdark: "#F9C8C7"
     bg-checkerlight: "#FCD4DE"
-    bg-triangle: "#F78D9A"
-    sidebar-colour: "#EA667A"
+    bg-triangle: "#FFB7C4"
+    sidebar-colour: "#F4A1B7"
     text-colour: "#58032B"
-    a-colour: "#620562"
-    a-visited-colour: "#3E0349"
+    a-colour: "#3E0349"
+    a-visited-colour: "#3F0244"
     a-hover-colour: "#8B0573"
     a-active-colour: "#CA2184"
     hr-colour: "#A01843"
     tone-colour: "#58032B"
-    rightbox-colour: "#DE3E5980"
+    rightbox-colour: "#F4A1B780"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -111,94 +111,102 @@ css:
 	</head>
 
 	<body>
-		<div class="sidenav-hamburger">
-			<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
-				<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
-				<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
-				<div class="dropdown-content">
-					<span class="dropdown-hider">
-						<nav>
-							{% include sidebar.html hamburger=true %}
-						</nav>
-					</span>
-				</div>
-			</section>
-		</div>
-		<div class="sidenav">
-			<nav>
-				<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
-				<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
-				<hr id="keyboard-nav-separator">
-				{% include sidebar.html %}
-			</nav>
-		</div>
-		<div class="rightbox">
-			{% include display_controls.html %}
-		</div>
-		<div class="content">
-			<header>
-				<h1>
-					{{ page.fancyname }}
-				</h1>
-			</header>
-			<hr>
-			<main id="main-content">
-				<div class="gallery-large">
-					{% for img in page.images %}
-					<div class="gallery-large-img">
-						<a href="{{ img.src }}" target="_blank" nobrackets="true"><img src="{{ img.src }}" alt="{{ img.alt-text | xml_escape }}" {% if img.pixelated %}class="gallery-pixelated"{% endif -%}></a>
-					</div>
-					<section>
-						<details>
-							<summary>Image description</summary>
-							<div class="details-content">
-								<p>
-									{{ img.image-description }}
-								</p>
-							</div>
-						</details>
-					</section>
-					<section>
-						<details>
-							<summary>Metadata</summary>
-							<div class="details-content">
-								<p class="desc-metadata">
-									{{ img.filename }}<br>
-									Dimensions: {{ img.width }} x {{ img.height }}<br>
-									File size: {{ img.size }}<br>
-									Date: {{ img.date | date_to_long_string }}
-								</p>
-							</div>
-						</details>
-					</section>
-					{% endfor %}
-					<section>
-						<h2>
-							Description
-						</h2>
-						<div class="desc-large">
-							<p class="desc-metadata">
-							<p>
-								{{ page.caption }}
-							</p>
+		<div class="body-grid-container">
+			<div class="body-grid-left">
+				<div class="sidenav-hamburger">
+					<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
+						<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger">
+						<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
+						<div class="dropdown-content">
+							<span class="dropdown-hider">
+								<nav>
+									{% include sidebar.html hamburger=true %}
+								</nav>
+							</span>
 						</div>
 					</section>
 				</div>
-				<hr>
-				<p>
-					<a href="/art">Back to gallery</a>
-				</p>
-			</main>
-			{% if page.last_modified_at -%}
-			<hr>
-			<footer>
-				<span class="small-text">
-					<p>
-						Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
-					</p>
-				</span>
-			</footer>
-			{%- endif %}
+				<div class="sidenav">
+					<nav>
+						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
+						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
+						<hr id="keyboard-nav-separator">
+						{% include sidebar.html %}
+					</nav>
+				</div>
+			</div>
+			<div class="body-grid-right">
+				<div class="rightbox">
+					{% include display_controls.html %}
+				</div>
+			</div>
+			<div class="body-grid-centre">
+				<div class="content">
+					<header>
+						<h1>
+							{{ page.fancyname }}
+						</h1>
+					</header>
+					<hr>
+					<main id="main-content">
+						<div class="gallery-large">
+							{% for img in page.images %}
+							<div class="gallery-large-img">
+								<a href="{{ img.src }}" target="_blank" nobrackets="true"><img src="{{ img.src }}" alt="{{ img.alt-text | xml_escape }}" {% if img.pixelated %}class="gallery-pixelated"{% endif -%}></a>
+							</div>
+							<section>
+								<details>
+									<summary>Image description</summary>
+									<div class="details-content">
+										<p>
+											{{ img.image-description }}
+										</p>
+									</div>
+								</details>
+							</section>
+							<section>
+								<details>
+									<summary>Metadata</summary>
+									<div class="details-content">
+										<p class="desc-metadata">
+											{{ img.filename }}<br>
+											Dimensions: {{ img.width }} x {{ img.height }}<br>
+											File size: {{ img.size }}<br>
+											Date: {{ img.date | date_to_long_string }}
+										</p>
+									</div>
+								</details>
+							</section>
+							{% endfor %}
+							<section>
+								<h2>
+									Description
+								</h2>
+								<div class="desc-large">
+									<p class="desc-metadata">
+									<p>
+										{{ page.caption }}
+									</p>
+								</div>
+							</section>
+						</div>
+						<hr>
+						<p>
+							<a href="/art">Back to gallery</a>
+						</p>
+					</main>
+					{% if page.last_modified_at -%}
+					<hr>
+					<footer>
+						<span class="small-text">
+							<p>
+								Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+							</p>
+						</span>
+					</footer>
+					{%- endif %}
+				</div>
+			</div>
 		</div>
 		{% include js_theme_switcher.html %}
 		<script src="/resources/scripts/settings_management_functions.js"></script>
