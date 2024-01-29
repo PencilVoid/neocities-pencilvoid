@@ -13,7 +13,6 @@
 		"grid-left"
 		"grid-centre"
 		"grid-right";
-		max-height: 100vh;
 	}
 }
 
@@ -29,7 +28,7 @@
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		z-index: 51;
-		position: fixed;
+		position: sticky;
 		top: 0;
 		align-self: start;
 		min-width: 100vw;
