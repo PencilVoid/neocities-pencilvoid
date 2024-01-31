@@ -2,7 +2,7 @@
 
 .body-grid-container {
 	display: grid;
-	grid-template-columns: [grid-left] 1fr [grid-centre] var(--main-content-width,80ch) [grid-right] 1fr;
+	grid-template-columns: [grid-left] 1fr [grid-centre] fit-content(min(var(--main-content-width,80ch), 60vw)) [grid-right] 1fr;
 	min-height: 100vh;
 	grid-template-areas: "grid-left grid-centre grid-right";
 
