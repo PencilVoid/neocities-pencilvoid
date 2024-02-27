@@ -151,32 +151,34 @@ css:
 					<main id="main-content">
 						<div class="gallery-large">
 							{% for img in page.images %}
-							<div class="gallery-large-img">
-								<a href="{{ img.src }}" target="_blank" nobrackets="true"><img src="{{ img.src }}" alt="{{ img.alt-text | xml_escape }}" {% if img.pixelated %}class="gallery-pixelated"{% endif -%}></a>
+							<div class="gallery-large-item">
+								<div class="gallery-large-img">
+									<a href="{{ img.src }}" target="_blank" nobrackets="true"><img src="{{ img.src }}" alt="{{ img.alt-text | xml_escape }}" {% if img.pixelated %}class="gallery-pixelated"{% endif -%}></a>
+								</div>
+								<section>
+									<details>
+										<summary>Image description</summary>
+										<div class="details-content">
+											<p>
+												{{ img.image-description }}
+											</p>
+										</div>
+									</details>
+								</section>
+								<section>
+									<details>
+										<summary>Metadata</summary>
+										<div class="details-content">
+											<p class="desc-metadata">
+												{{ img.filename }}<br>
+												Dimensions: {{ img.width }} x {{ img.height }}<br>
+												File size: {{ img.size }}<br>
+												Date: {{ img.date | date_to_long_string }}
+											</p>
+										</div>
+									</details>
+								</section>
 							</div>
-							<section>
-								<details>
-									<summary>Image description</summary>
-									<div class="details-content">
-										<p>
-											{{ img.image-description }}
-										</p>
-									</div>
-								</details>
-							</section>
-							<section>
-								<details>
-									<summary>Metadata</summary>
-									<div class="details-content">
-										<p class="desc-metadata">
-											{{ img.filename }}<br>
-											Dimensions: {{ img.width }} x {{ img.height }}<br>
-											File size: {{ img.size }}<br>
-											Date: {{ img.date | date_to_long_string }}
-										</p>
-									</div>
-								</details>
-							</section>
 							{% endfor %}
 							<section>
 								<h2>
