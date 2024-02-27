@@ -59,12 +59,21 @@
 
 .gallery-large-item {
 	margin: 0.5rem 0;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr;
+
+	> section {
+		display: grid;
+		grid-template-columns: subgrid;
+	}
+	details {
+		justify-self: start;
+	}
 }
 
 .gallery-large-img {
 	grid-column: 1;
-	margin: auto;
-	max-width: 100%;
 
 	img {
 		max-width: 100%;

@@ -1,5 +1,6 @@
 details {
 	transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+	max-width: 100%;
 
 	> .details-content {
 		border-top: 1px solid var(--tone-colour,#FFFFFF);
@@ -34,5 +35,9 @@ details {
 	&[open] summary::marker {
 		transform: rotate(90deg);
 		transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+	}
+
+	&[open] summary {
+		margin-bottom: 0;
 	}
 }
