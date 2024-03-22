@@ -1,5 +1,8 @@
 $thin-screen-width: 840px;
 $thin-screen-aspect-ratio: 0.5;
+$sans-serif-font-stack: apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Helvetica, Cantarell, Ubuntu, Roboto, Noto, Arial, ui-sans-serif, sans-serif;
+$serif-font-stack: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", Times, "Source Serif Pro", ui-serif, serif;
+$mono-font-stack: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", ui-monospace, monospace;
 
 :root {
 	--main-content-width: 80ch;

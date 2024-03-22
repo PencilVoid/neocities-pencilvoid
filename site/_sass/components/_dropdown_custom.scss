@@ -5,7 +5,7 @@ label.dropdown-label {
 	display: inline-block;
 	padding: 0.5rem;
 	color: var(--tone-colour,#FFFFFF);
-	font-family: var(--main-font,overpass, sans-serif);
+	font-family: var(--main-font, overpass, variables.$sans-serif-font-stack);
 	background-color: var(--tone-colour,#FFFFFF);
 	background-color: rgba(255, 255, 255, 0.1);
 	border-left: 1px solid var(--tone-colour,#FFFFFF);

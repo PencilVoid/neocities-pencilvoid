@@ -1,6 +1,8 @@
+@use "abstracts/variables";
+
 button,
 input[type="number"] {
-	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-family: var(--main-font, atkinson-hyperlegible, variables.$sans-serif-font-stack);
 	font-size: 1.2rem;
 	text-align: left;
 	border: 1px solid var(--a-colour,#FF9EBC);

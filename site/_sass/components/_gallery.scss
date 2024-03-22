@@ -84,7 +84,7 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
-	font-family: var(--main-font,atkinson-hyperlegible, sans-serif);
+	font-family: var(--main-font, atkinson-hyperlegible, variables.$sans-serif-font-stack);
 	font-size: 1.2rem;
 	color: var(--text-colour);
 	width: 100%;
@@ -98,7 +98,7 @@
 }
 
 .desc-metadata {
-	font-family: var(--alt-mono-font,overpass-mono, monospace);
+	font-family: var(--alt-mono-font, overpass-mono, variables.$mono-font-stack);
 	color: var(--text-colour,#FFEAFC);
 	background-color: rgba(255, 255, 255, 0.15);
 	text-align: center;
