@@ -17,8 +17,8 @@
 		{% if include.no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = true;
 		document.getElementById("colour-theme-light").checked = false;
+		document.getElementById("colour-theme-auto").checked = false;
 		{% endif %}
-		/*document.getElementById("colour-theme-auto").checked = false;*/
 	}
 
 	function colourThemeLight() {
@@ -39,23 +39,23 @@
 		{% if include.no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = false;
 		document.getElementById("colour-theme-light").checked = true;
+		document.getElementById("colour-theme-auto").checked = false;
 		{% endif %}
-		/*document.getElementById("colour-theme-auto").checked = false;*/
 	}
 
 	function colourThemeAuto() {
 		let mediaQueryList = window.matchMedia("(prefers-color-scheme: light)");
 
-		if (!mediaQueryList.matches) {
-			colourThemeDark();
+		if (mediaQueryList.matches) {
+			colourThemeLight();
 		} else {
 			colourThemeDark();
 		}
-		/*
+		{% if include.no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = false;
 		document.getElementById("colour-theme-light").checked = false;
 		document.getElementById("colour-theme-auto").checked = true;
-		*/
+		{% endif %}
 	}
 
 	document.addEventListener("DOMContentLoaded", function(event) {
@@ -83,6 +83,13 @@
 		if (document.getElementById("colour-theme-dark").checked) {
 			colourThemeDark()
 			localStorage.setItem("colour_theme", "dark")
+		}
+	})
+
+	document.getElementById("colour-theme-auto").addEventListener("change", function(event) {
+		if (document.getElementById("colour-theme-auto").checked) {
+			colourThemeAuto()
+			localStorage.removeItem("colour_theme")
 		}
 	})
 	{% endif %}
