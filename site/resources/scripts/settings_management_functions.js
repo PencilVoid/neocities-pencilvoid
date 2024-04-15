@@ -1,5 +1,11 @@
-function deleteAllCookies() {
-	localStorage.clear();
+let settings_keys = [
+	"colour_theme",
+	"display_bg_checker",
+	"main_content_width"
+]
+
+function clearAllOptions() {
+	settings_keys.forEach(item => localStorage.removeItem(item));
 }
 
 function setWithExpiry(key, value, ttl) {
@@ -25,4 +31,4 @@ function getWithExpiry(key) {
 	return item.value
 }
 
-document.getElementById("clear-all-options").addEventListener("click", deleteAllCookies)
+document.getElementById("clear-all-options").addEventListener("click", clearAllOptions)

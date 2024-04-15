@@ -5,7 +5,7 @@ function setMainContentWidth(width) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-	let chosenMainContentWidth = localStorage.getItem("main-content-width");
+	let chosenMainContentWidth = localStorage.getItem("main_content_width");
 
 	if (chosenMainContentWidth) {
 		setMainContentWidth(chosenMainContentWidth);
@@ -22,7 +22,7 @@ if (document.getElementById("main-content-width-apply")) {
 			let numWidth = Math.max(width,1);
 			widthInputNotice.textContent = "";
 			setMainContentWidth(numWidth);
-			localStorage.setItem("main-content-width",numWidth);
+			localStorage.setItem("main_content_width",numWidth);
 		} else {
 			widthInputNotice.textContent = "Invalid input.";
 		}
