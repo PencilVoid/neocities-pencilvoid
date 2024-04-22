@@ -215,5 +215,11 @@ css:
 		<script src="/resources/scripts/display_bg_checker.js"></script>
 		<script src="/resources/scripts/dropdown_display_controls.js"></script>
 		<script src="/resources/scripts/custom_main_content_width.js"></script>
+		<script>
+			const urlParams = new URLSearchParams(window.location.search);
+			if (navigator.userAgent.includes('Screenjesus')) {
+				colourThemeDark()
+			}
+		</script>
 	</body>
 </html>
