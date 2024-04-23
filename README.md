@@ -1,7 +1,7 @@
 # neocities-pencilvoid
 This is the source code for [PencilVoid's website](https://pencilvoid.neocities.org/), hosted by [Neocities](https://neocities.org). Open source, so you can steal as much code as you like. Pages are generated using [Jekyll](https://jekyllrb.com). Website assets are contained within `site`.
 
-Issues and pull requests are open. If you have any questions you can just leave a comment on my website or on any of [my contacts](https://pencilvoid.neocities.org/aboutme/#otherplaces).
+Issues and pull requests are open. If you have any questions you can just leave a comment on my website or on any of [my contacts](https://pencilvoid.neocities.org/aboutme#otherplaces).
 
 ## Licensing
 The website's code (the data used to generate static pages for this website) is licensed under [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html). This means that the code can be modified and distributed freely, even for commercial purposes, as long as it is kept open source (must have the same license or one that's close enough). However, this does not compromise my copyright over the code written. You can still use it, though. Also, I would appreciate if you credited me if you use my code for anything.
