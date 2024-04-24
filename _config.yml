@@ -26,7 +26,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-last-modified-at
-  - jekyll-datapage-generator
 
 title: pencilvoid.neocities.org
 tagline: The Pencilzone
