@@ -42,10 +42,10 @@ css:
 </p>
 
 <div class="row">
-{%- assign sorted_gallery_items = site.data.gallery_items | sort: "date" | reverse -%}
+{%- assign sorted_gallery_items = site.gallery_items | sort: "date" | reverse -%}
 {%- for item in sorted_gallery_items -%}
 {%- assign currentindex = forloop.index0 | modulo: 3 -%}
-	<a href="/art/{{item.id}}" nobrackets="true">
+	<a href="{{item.url}}" nobrackets="true">
 	<div class="gallery">
 		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
 			<img src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%">
