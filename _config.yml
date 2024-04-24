@@ -14,6 +14,10 @@ defaults:
     values:
       layout: "author"
   - scope:
+      type: "gallery_items"
+    values:
+      layout: "gallery_item"
+  - scope:
       path: ""
     values:
       layout: "default"
@@ -39,12 +43,6 @@ collections:
   authors:
     output: true
     permalink: /:collection/:name/
-
-page_gen-dirs: true
-
-page_gen:
-- data: gallery_items
-  template: gallery_item
-  dir: /art
-  name: id
-  title: name
+  gallery_items:
+    output: true
+    permalink: /art/:title/

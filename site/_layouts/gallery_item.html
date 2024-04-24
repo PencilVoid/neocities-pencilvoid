@@ -68,39 +68,39 @@ css:
 		<meta name="twitter:creator" content="@{{ site.twitter.username }}" />
 		<script type="application/ld+json">
 		{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"{{ site.author }}"},"dateModified":"{{ site.time | date_to_xmlschema }}","datePublished":"{{ site.time | date_to_xmlschema }}","headline":"{{ page.fancyname }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"url":"{{ site.url }}{{ page.url }}"}</script>
-		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
+		<meta name="theme-color" content="{{ layout.css.dark.bg-checkerdark }}">
 		<style>
 			:root {
-				--header-colour: {{ page.css.dark.header-colour }};
-				--bg-colour: {{ page.css.dark.bg-colour }};
-				--bg-checkerdark: {{ page.css.dark.bg-checkerdark }};
-				--bg-checkerlight: {{ page.css.dark.bg-checkerlight }};
-				--bg-triangle: {{ page.css.dark.bg-triangle }};
-				--sidebar-colour: {{ page.css.dark.sidebar-colour }};
-				--text-colour: {{ page.css.dark.text-colour }};
-				--a-colour: {{ page.css.dark.a-colour }};
-				--a-visited-colour: {{ page.css.dark.a-visited-colour }};
-				--a-hover-colour: {{ page.css.dark.a-hover-colour }};
-				--a-active-colour: {{ page.css.dark.a-active-colour }};
-				--hr-colour: {{ page.css.dark.hr-colour }};
-				--tone-colour: {{ page.css.dark.tone-colour }};
-				--rightbox-colour: {{ page.css.dark.rightbox-colour }};
+				--header-colour: {{ layout.css.dark.header-colour }};
+				--bg-colour: {{ layout.css.dark.bg-colour }};
+				--bg-checkerdark: {{ layout.css.dark.bg-checkerdark }};
+				--bg-checkerlight: {{ layout.css.dark.bg-checkerlight }};
+				--bg-triangle: {{ layout.css.dark.bg-triangle }};
+				--sidebar-colour: {{ layout.css.dark.sidebar-colour }};
+				--text-colour: {{ layout.css.dark.text-colour }};
+				--a-colour: {{ layout.css.dark.a-colour }};
+				--a-visited-colour: {{ layout.css.dark.a-visited-colour }};
+				--a-hover-colour: {{ layout.css.dark.a-hover-colour }};
+				--a-active-colour: {{ layout.css.dark.a-active-colour }};
+				--hr-colour: {{ layout.css.dark.hr-colour }};
+				--tone-colour: {{ layout.css.dark.tone-colour }};
+				--rightbox-colour: {{ layout.css.dark.rightbox-colour }};
 
 				@media (prefers-color-scheme: light) {
-					--header-colour: {{ page.css.light.header-colour }};
-					--bg-colour: {{ page.css.light.bg-colour }};
-					--bg-checkerdark: {{ page.css.light.bg-checkerdark }};
-					--bg-checkerlight: {{ page.css.light.bg-checkerlight }};
-					--bg-triangle: {{ page.css.light.bg-triangle }};
-					--sidebar-colour: {{ page.css.light.sidebar-colour }};
-					--text-colour: {{ page.css.light.text-colour }};
-					--a-colour: {{ page.css.light.a-colour }};
-					--a-visited-colour: {{ page.css.light.a-visited-colour }};
-					--a-hover-colour: {{ page.css.light.a-hover-colour }};
-					--a-active-colour: {{ page.css.light.a-active-colour }};
-					--hr-colour: {{ page.css.light.hr-colour }};
-					--tone-colour: {{ page.css.light.tone-colour }};
-					--rightbox-colour: {{ page.css.light.rightbox-colour }};
+					--header-colour: {{ layout.css.light.header-colour }};
+					--bg-colour: {{ layout.css.light.bg-colour }};
+					--bg-checkerdark: {{ layout.css.light.bg-checkerdark }};
+					--bg-checkerlight: {{ layout.css.light.bg-checkerlight }};
+					--bg-triangle: {{ layout.css.light.bg-triangle }};
+					--sidebar-colour: {{ layout.css.light.sidebar-colour }};
+					--text-colour: {{ layout.css.light.text-colour }};
+					--a-colour: {{ layout.css.light.a-colour }};
+					--a-visited-colour: {{ layout.css.light.a-visited-colour }};
+					--a-hover-colour: {{ layout.css.light.a-hover-colour }};
+					--a-active-colour: {{ layout.css.light.a-active-colour }};
+					--hr-colour: {{ layout.css.light.hr-colour }};
+					--tone-colour: {{ layout.css.light.tone-colour }};
+					--rightbox-colour: {{ layout.css.light.rightbox-colour }};
 				}
 			}
 
@@ -210,7 +210,7 @@ css:
 				</div>
 			</div>
 		</div>
-		{% include js_theme_switcher.html %}
+		{% include js_theme_switcher_layout.html %}
 		<script src="/resources/scripts/settings_management_functions.js"></script>
 		<script src="/resources/scripts/display_bg_checker.js"></script>
 		<script src="/resources/scripts/dropdown_display_controls.js"></script>
