@@ -17,7 +17,6 @@ images:
       A mural-like pixel art piece depicting various Deltarune references. In the centre Kris Dreemurr is seen, in a reclining pose. Their face is non-articulated and they are wearing Spamton's signature glasses on their forehead. Below them, Susie can be seen falling downwards, into the direction the viewer is facing. Multiple miscellanous objects can be seen: sheets of paper, an egg, some pipis, Lancer plushies, a guitar, a framed picture of the Annoying Dog, ICE-E, a chair with a blue sheet caught on it, a blue closet, a changing room curtain, a half-illuminated television set, a golden Berdly statue, some holly and baubles, a green room, and a scarlet tree. Streaming across the image in the background is an abstract piano keyboard. A low-detail blog post tiles across the black background of the image.
     width: 1708
     height: 960
-    size: 91.94KB
     date: 2022-10-30T00:00:00.000Z
     pixelated: true
 ---

@@ -17,7 +17,6 @@ images:
       A pixel art image of Midnight Ophelia, a black Cat Viskian. She is walking towards the left, looking over her shoulder and upwards. She is making a gesture with her left hand and her right hand is on her hip. Towards the uper left corner of the image there is also a portrait drawing of her. She is looking at the viewer with her head tilted up slightly and sticking her tongue out. Both of these are situated on an abstract pink background.
     width: 1400
     height: 1200
-    size: 31.64KB
     date: 2022-12-14T00:00:00.000Z
     pixelated: true
 ---

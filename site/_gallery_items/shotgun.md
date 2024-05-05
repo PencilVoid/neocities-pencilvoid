@@ -17,7 +17,6 @@ images:
       A drawing of Yona, an anthropomorphic pine tree similar in appearance to a hedgehog. He is wearing a white shirt, a short blue skirt, and boots. He is in the air and holding a stylised shotgun in one hand and a blade in the other. Being a plant, his hands are morphed to fit the items he's holding. His wings are flared upwards behind him.
     width: 800
     height: 600
-    size: 23.30KB
     date: 2024-04-04T00:00:00.000+1
     pixelated: true
   - img2:
@@ -29,7 +28,6 @@ images:
       A collection of 3 filtered version of the previous image. The filters tint the image pink, blue, and yellow respectively.
     width: 1600
     height: 1200
-    size: 81.63KB
     date: 2024-04-04T00:00:00.000+1
     pixelated: true
 ---

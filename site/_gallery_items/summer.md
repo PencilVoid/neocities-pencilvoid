@@ -17,7 +17,6 @@ images:
       A pixel art drawing of Afine, an anthropomorphic sheep. He is seen sitting with his legs to the side, wearing a bra and skirt made of a translucent pink material with purple rims. He is also wearing a similar purple necklace around his neck. The lighting gives his hair and horns a slightly purple colouration. The background is abstract, with colours and shapes reminiscent of a beach.
     width: 854
     height: 480
-    size: 14.43KB
     date: 2024-05-04T00:00:00.000+1
     pixelated: true
   - img2:
@@ -29,7 +28,6 @@ images:
       The same image as before, but with a darker colour scheme for the background. It has a slightly colder tint, as if to represent nighttime.
     width: 854
     height: 480
-    size: 14.43KB
     date: 2024-05-04T00:00:00.000+1
     pixelated: true
 ---

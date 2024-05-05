@@ -17,7 +17,6 @@ images:
       A digital art piece depicting an anthropomorphic cartoony isopod with a green shell. He is wearing white gloves and green shoes with gold buckles. On his right arm is a large handheld drill. He is looking at something out of frame with a blunt expression.
     width: 400
     height: 400
-    size: 6.32KB
     date: 2023-08-12T00:00:00.000Z
     pixelated: true
 ---

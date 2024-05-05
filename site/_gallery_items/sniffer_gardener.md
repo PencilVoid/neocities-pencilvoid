@@ -17,7 +17,6 @@ images:
       A large pixel art drawing of an anthropomorphic Sniffer from Minecraft; a vaguely dinosaur-like creature with red fur, green hair, hoof-like hands and feet, and a distinct large yellow beak. She is wearing blue overalls on top of a purple shirt. She is kneeling on the ground and tending to some crops with a radiant smile, holding various gardening items such as a watering can, a packet of seeds, and a spoonful of bone meal in three of her four hands. Behind her rolling green hills and a blue sky can be seen.
     width: 1024
     height: 1024
-    size: 34.15KB
     date: 2024-02-24T00:00:00.000Z
     pixelated: true
   - img2:
@@ -29,7 +28,6 @@ images:
       A pixel art drawing of an anthropomorphic Sniffer from Minecraft; a vaguely dinosaur-like creature with red fur, green hair, hoof-like hands and feet, and a distinct large yellow beak. She is wearing blue overalls on top of a light purple shirt. She is smiling and making gestures with each of her four arms. Her upper left arm is waving, her lower left arm rests at her side, her upper right arm is outstretched and her lower right arm rests on her hip.
     width: 800
     height: 800
-    size: 12.57KB
     date: 2024-02-04T00:00:00.000Z
     pixelated: true
   - img3:
@@ -41,7 +39,6 @@ images:
       A pixel art drawing of an anthropomorphic Sniffer from Minecraft; a vaguely dinosaur-like creature with red fur, green hair, hoof-like hands and feet, and a distinct large yellow beak. She is wearing a light purple jumper and a dark blue skirt. She is smiling and making gestures with each of her four arms. Her upper left arm is waving, her lower left arm rests at her side, her upper right arm is outstretched and her lower right arm rests on her hip.
     width: 800
     height: 800
-    size: 8.30KB
     date: 2024-02-04T00:00:00.000Z
     pixelated: true
 ---

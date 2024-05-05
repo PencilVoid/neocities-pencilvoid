@@ -17,7 +17,6 @@ images:
       A digital art piece depicting an anthropomorphic cartoony potted plant. He is smiling and waving at the viewer with a placid expression on his face.
     width: 600
     height: 600
-    size: 28.44KB
     date: 2021-06-22T00:00:00.000Z
     pixelated: false
 ---

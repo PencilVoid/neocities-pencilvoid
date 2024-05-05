@@ -17,7 +17,6 @@ images:
       A greyscale ASCII art image of Sonic the Hedgehog in a 3/4 view. He is standing upright and staring straight forward into the distance with an expression of vague concentration. His left hand, which is further from the viewer, is held at his waist and the other hand is relaxed. Towards the upper right corner a signature written in normal text reads: "Sonic the Hedgehog; 2022-08-06; P.V."
     width: 928
     height: 1116
-    size: 6.97KB
     date: 2022-08-06T00:00:00.000Z
     pixelated: true
 ---

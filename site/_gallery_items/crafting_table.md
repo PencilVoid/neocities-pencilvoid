@@ -17,7 +17,6 @@ images:
       An isometric image of a Minecraft-style 3D model of a crafting table with a unique design. The table stands on four legs rather than being a solid cube. A cloth with a grid pattern is draped on top of the table, and a saw and hammer are hung on one side. In the other visible side, a cavity containing some open books can be seen.
     width: 774
     height: 862
-    size: 48.94KB
     date: 2022-01-12T00:00:00.000Z
     pixelated: true
 ---
