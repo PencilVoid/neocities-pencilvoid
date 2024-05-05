@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/midna_secretsanta.png
 date: 2022-12-14T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "midna_secretsanta.png". It depicts the character Midnight Ophelia looking over her back.
-caption: >-
-  Drawing of <a href="https://twitter.com/HypeReis" target="_blank">HypeReis</a>' character Midnight Ophelia. Made for a secret santa event.
 pixelated-thumbnail: true
 images:
   - img1:
@@ -23,3 +21,6 @@ images:
     date: 2022-12-14T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	Drawing of <a href="https://twitter.com/HypeReis" target="_blank">HypeReis</a>' character Midnight Ophelia. Made for a secret santa event.
+</p>

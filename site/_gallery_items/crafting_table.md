@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/crafting_table.png
 date: 2022-01-12T00:00:00.000Z
 thumbnail-alt-text: >-
   A cropped image of a low-spec 3D model of a crafting table from Minecraft.
-caption: >-
-  A Minecraft model I made inspired by an art piece from <a href="https://shockpine.itch.io/" target="_blank">Shockpine</a>. The model doesn't work very well in-game due to technical reasons.
 pixelated-thumbnail: false
 images:
   - img1:
@@ -23,3 +21,6 @@ images:
     date: 2022-01-12T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	A Minecraft model I made inspired by an art piece from <a href="https://shockpine.itch.io/" target="_blank">Shockpine</a>. The model doesn't work very well in-game due to technical reasons.
+</p>

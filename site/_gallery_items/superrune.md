@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/superrune.png
 date: 2022-10-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "superrune.png". It depicts a closeup of Kris Dreemurr in pixel art style.
-caption: >-
-  This one is probably the longest I've ever spent on an artwork. I finished it around a month after I started it. (just in time for Halloween!) The Spamton Sweepstakes were a whole lot of fun. (If you asked me directly I'd probably say I don't care that much about Deltarune or RPGs in general, but the truth is I'm so excited for chapters 3-5.)
 pixelated-thumbnail: true
 images:
   - img1:
@@ -23,3 +21,6 @@ images:
     date: 2022-10-30T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	This one is probably the longest I've ever spent on an artwork. I finished it around a month after I started it. (just in time for Halloween!) The Spamton Sweepstakes were a whole lot of fun. (If you asked me directly I'd probably say I don't care that much about Deltarune or RPGs in general, but the truth is I'm so excited for chapters 3-5.)
+</p>

@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/sniffer_gardener.png
 date: 2024-02-24T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "sniffer_gardener.png". It depicts a closeup of an anthropomorphic Sniffer from Minecraft.
-caption: >-
-  A drawing of my anthropomorphic Sniffer design I did for fun, alongside some concept sketches. I planned to turn it into an in-game model via the Figura mod but I think it'll be some more time before I get around to that. The Sniffer is one of my favourite mobs from recent times. I only wish it got more plants, though.
 pixelated-thumbnail: true
 images:
   - img1:
@@ -47,3 +45,6 @@ images:
     date: 2024-02-04T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	A drawing of my anthropomorphic Sniffer design I did for fun, alongside some concept sketches. I planned to turn it into an in-game model via the Figura mod but I think it'll be some more time before I get around to that. The Sniffer is one of my favourite mobs from recent times. I only wish it got more plants, though.
+</p>

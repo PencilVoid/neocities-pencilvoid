@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/borealis.png
 date: 2022-05-21T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "borealis.png". It depicts a star over a snowy forest at night.
-caption: >-
-  A little landscape piece. I intended for it to have a sketchy look but it got more polished as I went on.
 pixelated-thumbnail: true
 images:
   - img1:
@@ -23,3 +21,6 @@ images:
     date: 2022-05-21T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	A little landscape piece. I intended for it to have a sketchy look but it got more polished as I went on.
+</p>

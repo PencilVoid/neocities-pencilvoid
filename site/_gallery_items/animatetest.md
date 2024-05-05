@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/animate.png
 date: 2021-06-22T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "animate.png". It depicts a closeup of a cartoon potted plant smiling at the viewer.
-caption: >-
-  A drawing made using Adobe Animate, to familiarise myself with the program.
 pixelated-thumbnail: false
 images:
   - img1:
@@ -23,3 +21,6 @@ images:
     date: 2021-06-22T00:00:00.000Z
     pixelated: false
 ---
+<p>
+	A drawing made using Adobe Animate, to familiarise myself with the program.
+</p>

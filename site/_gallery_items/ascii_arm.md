@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/ascii_arm.png
 date: 2022-08-06T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "ascii_arm.png". It depicts a closeup of Sonic the Hedgehog in ASCII art.
-caption: >-
-  My first time messing around with ASCII art. Decided to go with a cool Sonic. Pretty proud of it, but Twitter totally butchered it with the compression. (if the dithering looks strange, try clicking on the image to open it in a new tab)
 pixelated-thumbnail: false
 images:
   - img1:
@@ -23,3 +21,6 @@ images:
     date: 2022-08-06T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	My first time messing around with ASCII art. Decided to go with a cool Sonic. Pretty proud of it, but Twitter totally butchered it with the compression. If the dithering looks strange, you can view it in full size by clicking on it.
+</p>

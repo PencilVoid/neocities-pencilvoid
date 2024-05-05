@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/year_of_the_rabbit.png       
 date: 2023-01-01T00:00:00.000Z                                                  # date of creation (look at file metadata)
 thumbnail-alt-text: >-                                                          # the thumbnail's alt text
   Thumbnail for gallery item "year_of_the_rabbit.png". It depicts the character Miran smiling at the viewer.
-caption: >-                                                                     # talk about the image here
-  I totally messed up the "Go The Entirety Of 2023 Without Drawing" challenge. Miran is fun to draw though, and it's her year anyways.
 pixelated-thumbnail: true                                                       # whether the thumbnail should be scaled with nearest neighbour
 images:
   - img1:                                                                       # this structure should be repeated for each image
@@ -23,3 +21,6 @@ images:
     date: 2023-01-01T00:00:00.000Z
     pixelated: true                                                             # whether the image should be scaled with nearest neighbour
 ---
+<p>
+	I totally messed up the "Go The Entirety Of 2023 Without Drawing" challenge. Miran is fun to draw though, and it's her year anyways.
+</p>

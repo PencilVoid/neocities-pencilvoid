@@ -6,22 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/phytoconnector.png
 date: 2023-04-11T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "phytoconnector.png". It depicts a green plant-like bulb.
-caption: >-
-  It's like a keyboard for plants.
-  <details>
-    <summary>Worldbuilding</summary>
-    <div class="details-content">
-      <p>
-        Plants, and anthroviridians by extension, have the unique ability to communicate by transmitting chemicals through the flesh. This works surprisingly fast, being almost as fast as pure thought. This form of communication can be used to transmit not only text but images, concepts, emotions, and anything that can be formed into a thought.
-      </p>
-      <p>
-        The phytoconnector was created as a simple and adaptable way to allow anthroviridians to interface with computers. A user must simply make physical contact with the bulb of plant mass and transmit the desired input to it. This method can simulate keyboard, mouse, or game controller input. If the operating system supports it, it also allows for advanced features such as controlling multiple pointers at once. Some phytoconnectors come with software that allows for customised inputs to be created, to further enhance usage.
-      </p>
-      <p>
-        The phytoconnector in the image shown is designed for use alongside a desktop or laptop computer. There are designs which can be worn on the body, allowing the user to recline, stand up, or even walk around while operating a computer. Infrequently, phytoconnectors may provide audiovisual output, allowing for computers to be used discretely. The output of this method is not as "strong" as physical audiovisual output, however, so this technology is usually only used for mobile music players.
-      </p>
-    </div>
-  </details>
 pixelated-thumbnail: true
 images:
   - img1:
@@ -37,3 +21,20 @@ images:
     date: 2023-04-11T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	It's like a keyboard for plants.
+	<details>
+		<summary>Worldbuilding</summary>
+		<div class="details-content">
+			<p>
+				Plants, and anthroviridians by extension, have the unique ability to communicate by transmitting chemicals through the flesh. This works surprisingly fast, being almost as fast as pure thought. This form of communication can be used to transmit not only text but images, concepts, emotions, and anything that can be formed into a thought.
+			</p>
+			<p>
+				The phytoconnector was created as a simple and adaptable way to allow anthroviridians to interface with computers. A user must simply make physical contact with the bulb of plant mass and transmit the desired input to it. This method can simulate keyboard, mouse, or game controller input. If the operating system supports it, it also allows for advanced features such as controlling multiple pointers at once. Some phytoconnectors come with software that allows for customised inputs to be created, to further enhance usage.
+			</p>
+			<p>
+				The phytoconnector in the image shown is designed for use alongside a desktop or laptop computer. There are designs which can be worn on the body, allowing the user to recline, stand up, or even walk around while operating a computer. Infrequently, phytoconnectors may provide audiovisual output, allowing for computers to be used discretely. The output of this method is not as "strong" as physical audiovisual output, however, so this technology is usually only used for mobile music players.
+			</p>
+		</div>
+	</details>
+</p>

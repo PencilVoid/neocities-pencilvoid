@@ -7,8 +7,7 @@ date: 2023-11-28T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "walkin.png". It depicts a bust of an anthropomorphic pine tree.
 caption: >-
-  I meant to do a little more with this one but I didn't and when I got back to it I decided it was fine as it was. Very rarely do I draw more than one character in one image. <br>
-  I promise Yona is very entertained, he just tends towards blank facial expressions.
+
 pixelated-thumbnail: true
 images:
   - img1:
@@ -24,3 +23,9 @@ images:
     date: 2023-11-28T00:00:00.000Z
     pixelated: true
 ---
+<p>
+	I meant to do a little more with this one but I didn't and when I got back to it I decided it was fine as it was. Very rarely do I draw more than one character in one image.
+</p>
+<p>
+	I promise Yona is very entertained, he just tends towards blank facial expressions.
+</p>

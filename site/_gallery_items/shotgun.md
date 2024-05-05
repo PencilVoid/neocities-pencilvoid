@@ -6,8 +6,6 @@ thumbnail: /resources/images/art_gallery/thumbnail/shotgun.png
 date: 2024-04-04T00:00:00.000+1
 thumbnail-alt-text: >-
   Thumbnail for gallery item "shotgun.png". It depicts a bust of an anthropomorphic pine tree.
-caption: >-
-  A slightly different sona drawing. I tried changing the colour of his eyes to make it clearer he isn't an animal. I also tried messing around with some filters, which I've collated into one image for your convenience (and mine).
 pixelated-thumbnail: true
 images:
   - img1:
@@ -35,3 +33,6 @@ images:
     date: 2024-04-04T00:00:00.000+1
     pixelated: true
 ---
+<p>
+	A slightly different sona drawing. I tried changing the colour of his eyes to make it clearer he isn't an animal. I also tried messing around with some filters, which I've collated into one image for your convenience (and mine).
+</p>
