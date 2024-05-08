@@ -61,7 +61,9 @@
 	document.addEventListener("DOMContentLoaded", function(event) {
 		let cookieColourScheme = localStorage.getItem("colour_theme");
 
-		if (cookieColourScheme) {
+		if (/headless/i.test(window.navigator.userAgent)) {
+				colourThemeDark()
+		} else if (cookieColourScheme) {
 			if (cookieColourScheme === "light") {
 				colourThemeLight();
 			} else if (cookieColourScheme === "dark") {
