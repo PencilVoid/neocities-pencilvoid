@@ -30,6 +30,7 @@ images:
     height: 1200
     date: 2024-04-04T00:00:00.000+1
     pixelated: true
+    embed: false
 ---
 <p>
 	A slightly different sona drawing. I tried changing the colour of his eyes to make it clearer he isn't an animal. I also tried messing around with some filters, which I've collated into one image for your convenience (and mine).

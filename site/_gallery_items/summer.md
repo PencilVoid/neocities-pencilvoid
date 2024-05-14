@@ -30,6 +30,7 @@ images:
     height: 480
     date: 2024-05-04T00:00:00.000+1
     pixelated: true
+    embed: false
 ---
 <p>
 	A vaporwave-y drawing of my character Afine. I've been listening to a lot of vaporwave music recently which inspired the subject matter and colour choices. This started out as a simple warm-up sketch but I got carried away with the rendering and details... I don't do so that often so it's nice to get some practice in that regard once in a while.
