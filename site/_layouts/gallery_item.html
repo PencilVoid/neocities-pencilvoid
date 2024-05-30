@@ -44,11 +44,9 @@ css:
 		<link rel="manifest" href="/icons/site.webmanifest">
 		<link href="/resources/styles/main.css" rel="stylesheet" type="text/css" media="all">
 		<title>
-			{{ page.fancyname }} | Art Gallery
+			{{ page.fancyname }} | Photosystems
 		</title>
-		{%- if page.feed_meta == "sieveplate" %}
-		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/art/feed.xml" title="Art Gallery" />
-		{% endif %}
+		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/photosystems/feed.xml" title="Photosystems" />
 		<meta name="generator" content="Jekyll v{{ jekyll.version }}" />
 		<meta property="og:title" content="{{ page.fancyname }}" />
 		<meta name="author" content="{{ site.author }}" />
@@ -192,7 +190,7 @@ css:
 						</div>
 						<hr>
 						<p>
-							<a href="/art">Back to gallery</a>
+							<a href="/photosystems">Back to Photosystems</a>
 						</p>
 					</main>
 					{% if page.last_modified_at -%}
