@@ -4,6 +4,7 @@ artname: midna_secretsanta.png
 fancyname: Midna Secret Santa
 thumbnail: /resources/images/art_gallery/thumbnail/midna_secretsanta.png
 date: 2022-12-14T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "midna_secretsanta.png". It depicts the character Midnight Ophelia looking over her back.
 pixelated-thumbnail: true

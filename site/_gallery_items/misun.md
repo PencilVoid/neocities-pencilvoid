@@ -4,6 +4,7 @@ artname: misun.png
 fancyname: Misun the Isopod sketch
 thumbnail: /resources/images/art_gallery/thumbnail/misun.png
 date: 2023-08-12T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "misun.png". It depicts a closeup of a cartoon anthropomorphised isopod, looking at something offscreen.
 pixelated-thumbnail: true

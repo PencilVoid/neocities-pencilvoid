@@ -4,6 +4,7 @@ artname: borealis.png
 fancyname: Borealis
 thumbnail: /resources/images/art_gallery/thumbnail/borealis.png
 date: 2022-05-21T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "borealis.png". It depicts a star over a snowy forest at night.
 pixelated-thumbnail: true

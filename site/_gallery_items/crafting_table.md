@@ -4,6 +4,7 @@ artname: crafting_table.png
 fancyname: Custom crafting table design
 thumbnail: /resources/images/art_gallery/thumbnail/crafting_table.png
 date: 2022-01-12T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   A cropped image of a low-spec 3D model of a crafting table from Minecraft.
 pixelated-thumbnail: false

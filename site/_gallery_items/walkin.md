@@ -4,6 +4,7 @@ artname: walkin.png
 fancyname: Out for a walk
 thumbnail: /resources/images/art_gallery/thumbnail/walkin.png
 date: 2023-11-28T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "walkin.png". It depicts a bust of an anthropomorphic pine tree.
 pixelated-thumbnail: true

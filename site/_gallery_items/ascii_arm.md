@@ -4,6 +4,7 @@ artname: ascii_arm.png
 fancyname: Classic Sonic ASCII Test
 thumbnail: /resources/images/art_gallery/thumbnail/ascii_arm.png
 date: 2022-08-06T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "ascii_arm.png". It depicts a closeup of Sonic the Hedgehog in ASCII art.
 pixelated-thumbnail: false

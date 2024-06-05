@@ -4,6 +4,7 @@ artname: superrune.png
 fancyname: Superrune
 thumbnail: /resources/images/art_gallery/thumbnail/superrune.png
 date: 2022-10-30T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "superrune.png". It depicts a closeup of Kris Dreemurr in pixel art style.
 pixelated-thumbnail: true

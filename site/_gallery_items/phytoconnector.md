@@ -4,6 +4,7 @@ artname: phytoconnector.png
 fancyname: Phytoconnector sketch
 thumbnail: /resources/images/art_gallery/thumbnail/phytoconnector.png
 date: 2023-04-11T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "phytoconnector.png". It depicts a green plant-like bulb.
 pixelated-thumbnail: true

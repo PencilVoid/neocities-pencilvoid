@@ -4,6 +4,7 @@ artname: shotgun.png
 fancyname: Shotgunner Plant
 thumbnail: /resources/images/art_gallery/thumbnail/shotgun.png
 date: 2024-04-04T00:00:00.000+1
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "shotgun.png". It depicts a bust of an anthropomorphic pine tree.
 pixelated-thumbnail: true

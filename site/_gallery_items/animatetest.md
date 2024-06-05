@@ -4,6 +4,7 @@ artname: animate.png
 fancyname: Adobe Animate test
 thumbnail: /resources/images/art_gallery/thumbnail/animate.png
 date: 2021-06-22T00:00:00.000Z
+publish-date: 2024-05-30T00:00:00.000Z
 thumbnail-alt-text: >-
   Thumbnail for gallery item "animate.png". It depicts a closeup of a cartoon potted plant smiling at the viewer.
 pixelated-thumbnail: false
