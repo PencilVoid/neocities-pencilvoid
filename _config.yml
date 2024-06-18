@@ -44,4 +44,4 @@ collections:
     permalink: /:collection/:name/
   gallery_items:
     output: true
-    permalink: /art/:title/
+    permalink: /photosystems/:title/

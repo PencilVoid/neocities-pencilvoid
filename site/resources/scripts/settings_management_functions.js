@@ -6,6 +6,7 @@ let settings_keys = [
 
 function clearAllOptions() {
 	settings_keys.forEach(item => localStorage.removeItem(item));
+	document.getElementById("clear-all-options-input-notice").textContent = "Reload the page to apply changes.";
 }
 
 function setWithExpiry(key, value, ttl) {

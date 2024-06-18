@@ -13,9 +13,12 @@
 		<title>
 			{{ page.title }}
 		</title>
-		{% if page.feed_meta == "sieveplate" %}
+		{%- if page.feed_meta == "sieveplate" -%}
 		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/sieveplate/feed.xml" title="SievePlate" />
-		{% endif %}
+		{% endif -%}
+		{%- if page.feed_meta == "photosystems" -%}
+		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/photosystems/feed.xml" title="Photosystems" />
+		{% endif -%}
 		{% seo title=false %}
 		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
 		<style>
@@ -67,7 +70,7 @@
 						<div class="dropdown-content">
 							<span class="dropdown-hider">
 								<nav>
-									{% include sidebar.html hamburger=true %}
+									{% include sidebar.html hamburger=true -%}
 								</nav>
 							</span>
 						</div>
@@ -78,12 +81,12 @@
 						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
 						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
 						<hr id="keyboard-nav-separator">
-						{% include sidebar.html %}
+						{% include sidebar.html -%}
 					</nav>
 				</div>
 			</div>
 			<div class="body-grid-right">
-				{% if page.decoration == "main" %}
+				{% if page.decoration == "main" -%}
 				<div class="spinner-container" aria-hidden="true">
 					<img class="thing-supercore css-animated" src="/resources/images/decorations/thing_supercore.svg" alt="">
 					<img class="thing-core css-animated" src="/resources/images/decorations/thing_core.svg" alt="" >
@@ -91,8 +94,8 @@
 					<img class="thing-shell css-animated" src="/resources/images/decorations/thing_shell.svg" alt="">
 					<img class="thing-fringe css-animated" src="/resources/images/decorations/thing_fringe.svg" alt="">
 				</div>
-				{% endif %}
-				{% if page.decoration == "eso" %}
+				{% endif -%}
+				{% if page.decoration == "eso" -%}
 				<div class="eso-deco-bottomright" aria-hidden="true">
 					<img class="eso-deco-br-grass-back css-animated" src="/resources/images/eso/deco_bottomright_grass_back.png" alt="">
 					<img class="eso-deco-br-red-flower-1 css-animated" src="/resources/images/eso/deco_red_flower_1.png" alt="">
@@ -105,9 +108,9 @@
 					<img class="eso-deco-tr-leaf-2 css-animated" src="/resources/images/eso/deco_topright_leaf_2.png" alt="">
 					<img class="eso-deco-tr-leaf-3 css-animated" src="/resources/images/eso/deco_topright_leaf_3.png" alt="">
 				</div>
-				{% endif %}
+				{% endif -%}
 				<div class="rightbox">
-					{% include display_controls.html %}
+					{% include display_controls.html -%}
 				</div>
 			</div>
 			<div class="body-grid-centre">
@@ -136,17 +139,11 @@
 					{%- endif %}
 				</div>
 			</div>
-			{% include js_theme_switcher.html %}
 		</div>
+		{% include js_theme_switcher.html -%}
 		<script src="/resources/scripts/settings_management_functions.js"></script>
 		<script src="/resources/scripts/display_bg_checker.js"></script>
 		<script src="/resources/scripts/dropdown_display_controls.js"></script>
 		<script src="/resources/scripts/custom_main_content_width.js"></script>
-		<script>
-			const urlParams = new URLSearchParams(window.location.search);
-			if (navigator.userAgent.includes('Screenjesus')) {
-				colourThemeDark()
-			}
-		</script>
 	</body>
 </html>

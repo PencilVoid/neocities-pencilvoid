@@ -46,7 +46,7 @@ css:
 		<title>
 			{{ page.fullname }} | Authors
 		</title>
-		{% seo title=false %}
+		{% seo title=false -%}
 		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
 		<style>
 			:root {
@@ -95,7 +95,7 @@ css:
 						<div class="dropdown-content">
 							<span class="dropdown-hider">
 								<nav>
-									{% include sidebar.html hamburger=true %}
+									{% include sidebar.html hamburger=true -%}
 								</nav>
 							</span>
 						</div>
@@ -106,13 +106,13 @@ css:
 						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
 						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
 						<hr id="keyboard-nav-separator">
-						{% include sidebar.html %}
+						{% include sidebar.html -%}
 					</nav>
 				</div>
 			</div>
 			<div class="body-grid-right">
 				<div class="rightbox">
-					{% include display_controls.html %}
+					{% include display_controls.html -%}
 				</div>
 			</div>
 			<div class="body-grid-centre">
@@ -166,17 +166,11 @@ css:
 					{%- endif %}
 				</div>
 			</div>
-			{% include js_theme_switcher_layout.html %}
 		</div>
+		{% include js_theme_switcher_layout.html -%}
 		<script src="/resources/scripts/settings_management_functions.js"></script>
 		<script src="/resources/scripts/display_bg_checker.js"></script>
 		<script src="/resources/scripts/dropdown_display_controls.js"></script>
 		<script src="/resources/scripts/custom_main_content_width.js"></script>
-		<script>
-			const urlParams = new URLSearchParams(window.location.search);
-			if (navigator.userAgent.includes('Screenjesus')) {
-				colourThemeDark()
-			}
-		</script>
 	</body>
 </html>
