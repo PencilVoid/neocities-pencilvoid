@@ -38,6 +38,8 @@ author: pencilvoid
 
 source: "./site"
 destination: "./build"
+exclude:
+  - /*.pdn
 
 collections:
   authors:
