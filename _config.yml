@@ -37,6 +37,7 @@ locale: en_GB
 author: pencilvoid
 
 source: "./site"
+destination: "./build"
 
 collections:
   authors:
