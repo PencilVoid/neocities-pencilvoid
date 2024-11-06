@@ -119,18 +119,18 @@ css:
 		<main id="main-content">
 		{{ content }}
 		</main>
-		{% if page.last_modified_at -%}
 		<footer>
 			<span class="small-text">
+				{% if page.last_modified_at -%}
 				<p>
 					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
 				</p>
+				{%- endif %}
 				<p>
 					See <a href="/licensing">licensing information</a>
 				</p>
 			</span>
 		</footer>
-		{%- endif %}
 		{% include js_theme_switcher_layout.html no_switcher=true -%}
 		<!--<script src="/resources/scripts/settings_management_functions.js"></script>-->
 		<script src="/resources/scripts/display_bg_checker.js"></script>

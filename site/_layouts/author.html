@@ -151,19 +151,19 @@ css:
 						{% endfor %}
 						</ul>
 					</main>
-					{% if page.last_modified_at -%}
 					<hr>
 					<footer>
 						<span class="small-text">
+							{% if page.last_modified_at -%}
 							<p>
 								Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
 							</p>
+							{%- endif %}
 							<p>
 								See <a href="/licensing">licensing information</a>
 							</p>
 						</span>
 					</footer>
-					{%- endif %}
 				</div>
 			</div>
 		</div>
