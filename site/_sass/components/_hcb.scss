@@ -122,7 +122,7 @@
 
 	#hcb_form #hcb_form_content,
 	#hcb_form #hcb_form_name_container #hcb_form_name {
-		background-color: var(--rightbox-colour,#1c002380);
+		background-color: rgb(from var(--sidebar-colour,#1C0023) r g b / 0.5);
 	}
 
 	#hcb_form textarea,

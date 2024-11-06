@@ -112,7 +112,7 @@
 	z-index: 10;
 	bottom: 0;
 	right: 0;
-	background-color: var(--rightbox-colour,#1c002380);
+	background-color: rgb(from var(--sidebar-colour,#1C0023) r g b / 0.5);
 	font-size: 1rem;
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {

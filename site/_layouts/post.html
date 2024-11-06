@@ -14,7 +14,6 @@ css:
     a-active-colour: "#FFFFFF"
     hr-colour: "#3FF460"
     tone-colour: "#FFFFFF"
-    rightbox-colour: "#152F3C80"
   light:
     header-colour: "#18294F"
     bg-colour: "#F3BDFA"
@@ -29,7 +28,6 @@ css:
     a-active-colour: "#2195B2"
     hr-colour: "#188183"
     tone-colour: "#152F3C"
-    rightbox-colour: "#A2D8CF80"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +62,6 @@ css:
 				--a-active-colour: {{ layout.css.dark.a-active-colour }};
 				--hr-colour: {{ layout.css.dark.hr-colour }};
 				--tone-colour: {{ layout.css.dark.tone-colour }};
-				--rightbox-colour: {{ layout.css.dark.rightbox-colour }};
 
 				@media (prefers-color-scheme: light) {
 					--header-colour: {{ layout.css.light.header-colour }};
@@ -80,7 +77,6 @@ css:
 					--a-active-colour: {{ layout.css.light.a-active-colour }};
 					--hr-colour: {{ layout.css.light.hr-colour }};
 					--tone-colour: {{ layout.css.light.tone-colour }};
-					--rightbox-colour: {{ layout.css.light.rightbox-colour }};
 				}
 			}
 		</style>
