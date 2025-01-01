@@ -13,6 +13,7 @@
 		document.documentElement.style.setProperty('--a-active-colour', '{{ layout.css.dark.a-active-colour }}');
 		document.documentElement.style.setProperty('--hr-colour', '{{ layout.css.dark.hr-colour }}');
 		document.documentElement.style.setProperty('--tone-colour', '{{ layout.css.dark.tone-colour }}');
+		document.documentElement.style.setProperty('--header-small-colour', '{{ page.css.dark.header-small-colour }}');
 		{% if include.no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = true;
 		document.getElementById("colour-theme-light").checked = false;
@@ -34,6 +35,7 @@
 		document.documentElement.style.setProperty('--a-active-colour', '{{ layout.css.light.a-active-colour }}');
 		document.documentElement.style.setProperty('--hr-colour', '{{ layout.css.light.hr-colour }}');
 		document.documentElement.style.setProperty('--tone-colour', '{{ layout.css.light.tone-colour }}');
+		document.documentElement.style.setProperty('--header-small-colour', '{{ page.css.light.header-small-colour }}');
 		{% if include.no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = false;
 		document.getElementById("colour-theme-light").checked = true;
