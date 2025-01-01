@@ -6,8 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--header-colour,#220029);
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid var(--tone-colour,#FFFFFF);
 	padding: 0.1ex;
 	margin: 0.75rem 0;
 	box-sizing: border-box;
@@ -19,6 +18,19 @@ h6 {
 		font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1),
 		font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
+
+h1,
+h2,
+h3 {
+	color: var(--header-colour,#220029);
+}
+
+h4,
+h5,
+h6 {
+	color: var(--header-small-colour,#FFEAFC);
+}
+
 h1 {
 	background-color: rgba(255, 255, 255, 0.75);
 	font-size: 4rem;
