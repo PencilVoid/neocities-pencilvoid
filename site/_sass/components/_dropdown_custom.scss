@@ -13,7 +13,8 @@ label.dropdown-label {
 
 input[type="checkbox"]:not(#display-bg-checker) {
 	appearance: none;
-	content: url("/resources/images/icons/icon_dropdown.svg");
+	background: var(--tone-colour,#FFFFFF);
+	mask-image: url("/resources/images/icons/icon_dropdown.svg");
 	width: 1rem;
 	height: 1rem;
 	vertical-align: middle;
@@ -25,7 +26,8 @@ input[type="checkbox"]:not(#display-bg-checker) {
 	}
 
 	&:checked {
-		content: url("/resources/images/icons/icon_dropdown.svg");
+		background: var(--tone-colour,#FFFFFF);
+		mask-image: url("/resources/images/icons/icon_dropdown.svg");
 		width: 1rem;
 		height: 1rem;
 		vertical-align: middle;
