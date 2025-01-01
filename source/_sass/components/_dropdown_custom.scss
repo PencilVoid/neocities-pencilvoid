@@ -1,0 +1,79 @@
+@use "abstracts/variables";
+
+label.dropdown-label {
+	font-size: 1rem;
+	display: inline-block;
+	padding: 0.5rem;
+	color: var(--tone-colour,#FFFFFF);
+	font-family: var(--main-font, overpass, variables.$sans-serif-font-stack);
+	background-color: var(--tone-colour,#FFFFFF);
+	background-color: rgba(255, 255, 255, 0.1);
+	border-left: 1px solid var(--tone-colour,#FFFFFF);
+}
+
+input[type="checkbox"]:not(#display-bg-checker) {
+	appearance: none;
+	background: var(--tone-colour,#FFFFFF);
+	mask-image: url("/assets/images/icons/icon_dropdown.svg");
+	width: 1rem;
+	height: 1rem;
+	vertical-align: middle;
+	transform: rotate(0deg);
+	transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+
+	~ label.dropdown-label::before {
+		content: "Show"
+	}
+
+	&:checked {
+		background: var(--tone-colour,#FFFFFF);
+		mask-image: url("/assets/images/icons/icon_dropdown.svg");
+		width: 1rem;
+		height: 1rem;
+		vertical-align: middle;
+		transform:  rotate(90deg);
+		transition: transform 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+
+		~ label.dropdown-label::before {
+			content: "Hide"
+		}
+	}
+}
+
+.dropdown {
+	.dropdown-content {
+		overflow: hidden;
+		height: 0;
+		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+		border-top: 1px solid var(--tone-colour,#FFFFFF);
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+		padding: 0;
+		margin-bottom: 1rem;
+
+		> .dropdown-hider {
+			display: none;
+		}
+	}
+
+	> input[name="collapse"]:checked ~ .dropdown-content {
+		height: auto;
+		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
+		overflow: auto;
+		border-top: 1px solid var(--tone-colour,#FFFFFF);
+		border-right: 1px dashed var(--tone-colour,#FFFFFF);
+		border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
+		border-left: 1px dashed var(--tone-colour,#FFFFFF);
+		padding: 0.75rem;
+		max-width: 100%;
+
+		@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
+			padding: 0.5rem;
+		}
+
+		> .dropdown-hider {
+			display: contents;
+		}
+	}
+}

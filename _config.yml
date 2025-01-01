@@ -36,7 +36,7 @@ twitter:
 locale: en_GB
 author: pencilvoid
 
-source: "./site"
+source: "./source"
 destination: "./build"
 exclude:
   - /*.pdn

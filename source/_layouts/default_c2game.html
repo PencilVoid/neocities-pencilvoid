@@ -1,0 +1,138 @@
+---
+css:
+  dark:
+    header-colour: "#29082C"
+    bg-colour: "#3D112D"
+    bg-checkerdark: "#5C2231"
+    bg-checkerlight: "#782E2E"
+    bg-triangle: "#3D112D"
+    sidebar-colour: "#29082C"
+    text-colour: "#FFE7D1"
+    a-colour: "#FFFF8C"
+    a-visited-colour: "#FDF448"
+    a-hover-colour: "#FFFFCF"
+    a-active-colour: "#FFFFFF"
+    hr-colour: "#FFBD26"
+    tone-colour: "#FFFFFF"
+    header-small-colour: "#FFE7D1"
+  light:
+    header-colour: "#29082C"
+    bg-colour: "#FCF571"
+    bg-checkerdark: "#F9F39A"
+    bg-checkerlight: "#FCF9B8"
+    bg-triangle: "#F2E893"
+    sidebar-colour: "#EBDC89"
+    text-colour: "#381C2E"
+    a-colour: "#641A47"
+    a-visited-colour: "#380837"
+    a-hover-colour: "#9F3F4B"
+    a-active-colour: "#CC6758"
+    hr-colour: "#6C2533"
+    tone-colour: "#381C2E"
+    header-small-colour: "#29082C"
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Cache-Control" content="max-age=86400">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/icons/favicon.ico">
+		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x.png">
+		<link rel="manifest" href="/icons/site.webmanifest">
+		<link href="/assets/styles/main.css" rel="stylesheet" type="text/css" media="all">
+
+		<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
+		<meta name="HandheldFriendly" content="true" />
+
+		<!-- Chrome for Android web app tags -->
+		<meta name="mobile-web-app-capable" content="yes" />
+		<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+		<title>
+			{{ page.title }}
+		</title>
+		{% seo title=false %}
+		<meta name="theme-color" content="{{ layout.css.dark.bg-checkerdark }}">
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			html, body {
+				overflow-x: hidden;
+				touch-action: none;
+				-ms-touch-action: none;
+				text-align: center
+			}
+			canvas {
+				/*touch-action-delay: none;*/
+				touch-action: none;
+				-ms-touch-action: none;
+			}
+			#c2canvasdiv {
+				padding-bottom: 1em;
+			}
+
+			:root {
+				--header-colour: {{ layout.css.dark.header-colour }};
+				--bg-colour: {{ layout.css.dark.bg-colour }};
+				--bg-checkerdark: {{ layout.css.dark.bg-checkerdark }};
+				--bg-checkerlight: {{ layout.css.dark.bg-checkerlight }};
+				--bg-triangle: {{ layout.css.dark.bg-triangle }};
+				--sidebar-colour: {{ layout.css.dark.sidebar-colour }};
+				--text-colour: {{ layout.css.dark.text-colour }};
+				--a-colour: {{ layout.css.dark.a-colour }};
+				--a-visited-colour: {{ layout.css.dark.a-visited-colour }};
+				--a-hover-colour: {{ layout.css.dark.a-hover-colour }};
+				--a-active-colour: {{ layout.css.dark.a-active-colour }};
+				--hr-colour: {{ layout.css.dark.hr-colour }};
+				--tone-colour: {{ layout.css.dark.tone-colour }};
+
+				@media (prefers-color-scheme: light) {
+					--header-colour: {{ layout.css.light.header-colour }};
+					--bg-colour: {{ layout.css.light.bg-colour }};
+					--bg-checkerdark: {{ layout.css.light.bg-checkerdark }};
+					--bg-checkerlight: {{ layout.css.light.bg-checkerlight }};
+					--bg-triangle: {{ layout.css.light.bg-triangle }};
+					--sidebar-colour: {{ layout.css.light.sidebar-colour }};
+					--text-colour: {{ layout.css.light.text-colour }};
+					--a-colour: {{ layout.css.light.a-colour }};
+					--a-visited-colour: {{ layout.css.light.a-visited-colour }};
+					--a-hover-colour: {{ layout.css.light.a-hover-colour }};
+					--a-active-colour: {{ layout.css.light.a-active-colour }};
+					--hr-colour: {{ layout.css.light.hr-colour }};
+					--tone-colour: {{ layout.css.light.tone-colour }};
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<main id="main-content">
+		{{ content }}
+		</main>
+		<footer>
+			<span class="small-text">
+				{% if page.last_modified_at -%}
+				<p>
+					Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+				</p>
+				{%- endif %}
+				<p>
+					See <a href="/licensing">licensing information</a>
+				</p>
+			</span>
+		</footer>
+		{% include js_theme_switcher_layout.html no_switcher=true -%}
+		<!--<script src="/assets/scripts/settings_management_functions.js"></script>-->
+		<script src="/assets/scripts/display_bg_checker.js"></script>
+		<script src="/assets/scripts/dropdown_display_controls.js"></script>
+		<script src="/assets/scripts/custom_main_content_width.js"></script>
+	</body>
+</html>
