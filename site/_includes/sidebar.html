@@ -13,7 +13,7 @@
 <a href="https://neocities.org/site/pencilvoid" target="_blank">Neocities Profile</a>
 <br>
 <a href="https://github.com/PencilVoid/neocities-pencilvoid" target="_blank">Source repo</a>
-	<hr>
+<hr>
 <section class="dropdown" id="section-dropdown-sidebar">
 	<header style="margin-bottom: 0.75rem;">
 		<span style="font-weight: bold">
@@ -149,3 +149,12 @@
 		</span>
 	</div>
 </section>
+<hr>
+{% if include.hamburger -%} <!-- mobile hamburger is first sequentially -->
+<div class='koring'>
+	<script type="text/javascript" src="https://ottr.uk/koring/onionring-variables.js"></script>
+	<script type="text/javascript" src="https://ottr.uk/koring/onionring-widget.multi-alpha.js"></script>
+</div>
+{% else -%}
+<div class="koring"></div>
+{% endif -%}

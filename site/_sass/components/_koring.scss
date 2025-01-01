@@ -1,0 +1,56 @@
+@use "abstracts/variables";
+
+div.koring {
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid var(--tone-colour,#FFFFFF);
+	padding: 0.75ex;
+	box-sizing: border-box;
+
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
+		max-width: 50ch;
+	}
+
+	table tr td {
+		padding: 0;
+		margin: 0;
+
+	}
+
+	table {
+		display: flex;
+		flex-direction: column;
+
+		tr {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		width: 100%;
+		margin: 0 auto;
+
+		td.webring-info {
+			width: 100%;
+			order: 3;
+			text-align: center;
+			margin-top: 1ex;
+
+			span {
+				margin: 0 auto;
+			}
+		}
+
+		td.webring-prev {
+			width: 50%;
+			order: 1;
+			text-align: left;
+		}
+
+		td.webring-next {
+			width: 50%;
+			order: 2;
+			text-align: right;
+		}
+	}
+}
