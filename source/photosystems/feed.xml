@@ -17,7 +17,7 @@ layout: null
 	<updated>{{ site.gallery_items.first.date | date_to_xmlschema }}</updated> <!-- publish date of latest post -->
 	{% for post in site.gallery_items %}
 	<entry>
-		<id>{{ site.url }}/{{ post.slug }}</id>
+		<id>{{ site.url }}/photosystems/{{ post.slug }}</id>
 		<title>
 			{{ post.artname | xml_escape | strip_html }}
 		</title>
