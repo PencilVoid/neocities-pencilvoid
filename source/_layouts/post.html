@@ -156,16 +156,16 @@ css:
 						<p style="text-align: center; clear: both;">
 							<a href="/sieveplate">See all posts</a>
 						</p>
-						{% if page.last_modified_at -%}
-						<p>
-							<span class="small-text">
-							Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
-							</span>
-						</p>
-						{%- endif %}
-						<p>
-							See <a href="/licensing">licensing information</a>
-						</p>
+						<span class="small-text">
+							{% if page.last_modified_at -%}
+							<p>
+								Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+							</p>
+							{%- endif %}
+							<p>
+								See <a href="/licensing">licensing information</a>
+							</p>
+						</span>
 					</footer>
 				</div>
 			</div>
