@@ -1,7 +1,7 @@
 @use "abstracts/variables";
 
 #HCB_comment_box {
-		font-family: var(--main-font, atkinson-hyperlegible, variables.$sans-serif-font-stack);
+		font-family: var(--main-font, atkinson-hyperlegible-next, variables.$sans-serif-font-stack);
 		letter-spacing: 0.25;
 		height: 100%;
 		display: flex;
@@ -127,7 +127,7 @@
 
 	#hcb_form textarea,
 	#hcb_form #hcb_form_name {
-		font-family: var(--main-font, atkinson-hyperlegible, variables.$sans-serif-font-stack);
+		font-family: var(--main-font, atkinson-hyperlegible-next, variables.$sans-serif-font-stack);
 		font-size: 1.2rem;
 		text-align: left;
 		border: 1px solid var(--a-colour,#FF9EBC);
@@ -178,7 +178,7 @@
 
 	#hcb_form .btn,
 	#HCB_comment_form_box .btn {
-		font-family: var(--main-font, atkinson-hyperlegible, variables.$sans-serif-font-stack);
+		font-family: var(--main-font, atkinson-hyperlegible-next, variables.$sans-serif-font-stack);
 		font-size: 1.2rem;
 		text-align: left;
 		border: 1px solid var(--a-colour,#FF9EBC);
@@ -193,7 +193,7 @@
 
 	#hcb_form .btn-secondary,
 	#HCB_comment_form_box .btn-secondary {
-		font-family: var(--main-font, atkinson-hyperlegible, variables.$sans-serif-font-stack);
+		font-family: var(--main-font, atkinson-hyperlegible-next, variables.$sans-serif-font-stack);
 		font-size: 1.2rem;
 		text-align: left;
 		border: 1px solid var(--a-colour,#FF9EBC);

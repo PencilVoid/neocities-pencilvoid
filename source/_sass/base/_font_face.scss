@@ -248,6 +248,24 @@
 		 font-style: italic;
 }
 
+/* --- Atkinson Hyperlegible Next --- */
+
+@font-face {
+	font-family: 'atkinson-hyperlegible-next';
+	src: url("/assets/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2") format(woff2) tech(variations);
+	font-weight: 200 800;
+	font-style: normal;
+}
+
+/* --- Atkinson Hyperlegible Mono --- */
+
+@font-face {
+	font-family: 'atkinson-hyperlegible-mono';
+	src: url("/assets/fonts/AtkinsonHyperlegibleMonoVF-Variable.woff2") format(woff2) tech(variations);
+	font-weight: 200 800;
+	font-style: normal;
+}
+
 /* --- Inconsolata --- */
 
 @font-face {
@@ -261,7 +279,7 @@
 
 @font-face {
 	font-family: 'fira-code';
-	src: url("/assets/fonts/FiraCode-VF.woff2") format("woff2-variations");
+	src: url("/assets/fonts/FiraCode-VF.woff2") format(woff2) tech(variations);
 	font-weight: 300 700;
 	font-style: normal;
 }
@@ -270,14 +288,14 @@
 
 @font-face {
 	font-family: 'cascadia-code';
-	src: url("/assets/fonts/CascadiaCode.woff2") format("woff2-variations");
+	src: url("/assets/fonts/CascadiaCode.woff2") format(woff2) tech(variations);
 	font-weight: 300 700;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'cascadia-code';
-	src: url("/assets/fonts/CascadiaCodeItalic.woff2") format("woff2-variations");
+	src: url("/assets/fonts/CascadiaCodeItalic.woff2") format(woff2) tech(variations);
 	font-weight: 300 700;
 	font-style: italic;
 }

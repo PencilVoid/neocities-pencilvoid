@@ -1,7 +1,7 @@
 @use "abstracts/variables";
 
 span.code-inline {
-	font-family: var(--header-font, fira-code, variables.$mono-font-stack);
+	font-family: var(--monospace-font, atkinson-hyperlegible-mono, variables.$mono-font-stack);
 	font-size: 1.2rem;
 	background-color: var(--sidebar-colour,#1C0023);
 	color: var(--text-colour,#FFEAFC);
@@ -13,7 +13,7 @@ span.code-inline {
 }
 
 div.code-block {
-	font-family: var(--header-font, fira-code, variables.$mono-font-stack);
+	font-family: var(--monospace-font, atkinson-hyperlegible-mono, variables.$mono-font-stack);
 	font-size: 1.2rem;
 	background-color: var(--sidebar-colour,#1C0023);
 	color: var(--text-colour,#FFEAFC);

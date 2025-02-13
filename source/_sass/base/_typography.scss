@@ -1,7 +1,7 @@
 @use "abstracts/variables";
 
 body {
-	font-family: var(--main-font, atkinson-hyperlegible, variables.$sans-serif-font-stack);
+	font-family: var(--main-font, atkinson-hyperlegible-next, variables.$sans-serif-font-stack);
 	font-size: 1.2rem;
 	text-align: left;
 	color: var(--text-colour,#FFEAFC);
