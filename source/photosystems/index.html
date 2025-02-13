@@ -36,19 +36,18 @@ css:
 feed_meta: "photosystems"
 ---
 <p>
-	Wow, I can draw. Amazing. It's mostly pixel art; I've been doing pixel art for a while now and I'm fairly okay at it.
+	Wow, I can draw. Amazing. It's mostly pixel art; I've been doing pixel art for a while now and I would consider myself decent enough at it.
 </p>
 <p>
-	I pretty much only ever draw for fun so it's mostly character art featuring my OCs (no write-ups on any of them, learn about them by playing the games and other creative projects they will eventually be in) and other people's characters occasionally. I'm best at drawing anthropomorphic animals for some reason; I can count the amount of humans I've drawn on one hand. There's also occasional vector art and graphic design work.
+	I pretty much only ever draw for fun so it's mostly character art featuring my original characters (no write-ups on them just yet) and other people's characters from time to time. I'm best at drawing anthropomorphic animals, for some reason; I can count the amount of humans I've drawn on one hand. There's also occasional vector art and miscellaneous graphic design work, or anything else that captures my interest.
 </p>
 <p>
-	The following is a gallery of some of my work I feel is high-quality enough to be featured here. Click on any tile below to view the full piece in its own page.
+	The following is a gallery of some of my work I feel is high-quality or interesting enough to be featured here. Click on any tile below to view the full piece in its own page with an image description.
 </p>
 
 <div class="row">
 {%- assign sorted_gallery_items = site.gallery_items | sort: "date" | reverse -%}
 {%- for item in sorted_gallery_items -%}
-{%- assign currentindex = forloop.index0 | modulo: 3 -%}
 	<a href="{{item.url}}" nobrackets="true">
 	<div class="gallery">
 		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
