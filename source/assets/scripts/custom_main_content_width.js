@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	if (chosenMainContentWidth) {
 		setMainContentWidth(chosenMainContentWidth);
+		document.getElementById("main-content-width").value = chosenMainContentWidth;
 	} else {
 		setMainContentWidth(80);
+		document.getElementById("main-content-width").value = 80;
 	}
 })
 
