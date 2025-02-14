@@ -156,7 +156,7 @@ css:
 								<section>
 									<details>
 										<summary>Image description</summary>
-										<div class="details-content">
+										<div class="details-content gallery-image-description">
 											<p>
 												{{ img.image-description }}
 											</p>
@@ -166,8 +166,8 @@ css:
 								<section>
 									<details>
 										<summary>Metadata</summary>
-										<div class="details-content">
-											<p class="desc-metadata">
+										<div class="details-content gallery-metadata">
+											<p>
 												{{ img.filename }}<br>
 												Dimensions: {{ img.width }} x {{ img.height }}<br>
 												Date: {{ img.date | date_to_long_string }}
