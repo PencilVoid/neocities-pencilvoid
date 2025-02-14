@@ -57,6 +57,7 @@ feed_meta: "photosystems"
 			<span>{{ item.artname | replace: "_", "<wbr>_<wbr>" }}</span>
 			<span>"{{ item.fancyname | replace: "_", "<wbr>_<wbr>" }}"</span>
 			<span>{{ item.date | date_to_long_string }}</span>
+			{%- if item.note -%}<span>Note: {{ item.note }}</span>{%- endif -%}
 		</div>
 	</div>
 	</a>
