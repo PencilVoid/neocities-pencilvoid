@@ -1,5 +1,4 @@
 ---
-slug: summer
 artname: summer.png
 fancyname: Summer Sheep
 thumbnail: /assets/images/art_gallery/thumbnail/summer.png

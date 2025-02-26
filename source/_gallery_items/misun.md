@@ -1,5 +1,4 @@
 ---
-slug: misun
 artname: misun.png
 fancyname: Misun the Isopod sketch
 thumbnail: /assets/images/art_gallery/thumbnail/misun.png

@@ -1,5 +1,4 @@
 ---
-slug: "2am"
 artname: 2am.png
 fancyname: You caught her!!
 thumbnail: /assets/images/art_gallery/thumbnail/2am.png

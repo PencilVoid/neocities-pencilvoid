@@ -1,5 +1,4 @@
 ---
-slug: shotgun
 artname: shotgun.png
 fancyname: Shotgunner Plant
 thumbnail: /assets/images/art_gallery/thumbnail/shotgun.png

@@ -1,5 +1,4 @@
 ---
-slug: phytoconnector
 artname: phytoconnector.png
 fancyname: Phytoconnector sketch
 thumbnail: /assets/images/art_gallery/thumbnail/phytoconnector.png

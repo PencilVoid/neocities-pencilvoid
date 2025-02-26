@@ -1,5 +1,4 @@
 ---
-slug: borealis
 artname: borealis.png
 fancyname: Borealis
 thumbnail: /assets/images/art_gallery/thumbnail/borealis.png

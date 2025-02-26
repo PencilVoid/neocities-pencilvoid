@@ -1,5 +1,4 @@
 ---
-slug: year_of_the_rabbit                                                        # the item's slug
 artname: year_of_the_rabbit.png                                                 # the primary file name
 fancyname: Year of the Rabbit 2023                                              # the "fancy" name, for when a slug in snake case doesn't cut it
 thumbnail: /assets/images/art_gallery/thumbnail/year_of_the_rabbit.png       # location of the image's thumbnail

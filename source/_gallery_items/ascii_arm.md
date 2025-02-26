@@ -1,5 +1,4 @@
 ---
-slug: ascii_arm
 artname: ascii_arm.png
 fancyname: Classic Sonic ASCII Test
 thumbnail: /assets/images/art_gallery/thumbnail/ascii_arm.png

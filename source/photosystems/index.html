@@ -48,7 +48,8 @@ feed_meta: "photosystems"
 <div class="row">
 {%- assign sorted_gallery_items = site.gallery_items | sort: "date" | reverse -%}
 {%- for item in sorted_gallery_items -%}
-	<a href="{{item.url}}" nobrackets="true">
+	{% assign name = item.path | split:"/" | last | split:"." | first %}
+	<a href="{{name}}" nobrackets="true">
 	<div class="gallery">
 		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
 			<img loading="lazy" src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%">

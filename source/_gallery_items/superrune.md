@@ -1,5 +1,4 @@
 ---
-slug: superrune
 artname: superrune.png
 fancyname: Superrune
 thumbnail: /assets/images/art_gallery/thumbnail/superrune.png

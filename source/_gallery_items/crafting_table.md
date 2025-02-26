@@ -1,5 +1,4 @@
 ---
-slug: crafting_table
 artname: crafting_table.png
 fancyname: Custom crafting table design
 thumbnail: /assets/images/art_gallery/thumbnail/crafting_table.png

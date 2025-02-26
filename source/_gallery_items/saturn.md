@@ -1,5 +1,4 @@
 ---
-slug: "saturn"
 artname: saturn.png
 fancyname: Saturn
 thumbnail: /assets/images/art_gallery/thumbnail/saturn.png

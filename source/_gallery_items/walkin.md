@@ -1,5 +1,4 @@
 ---
-slug: walkin
 artname: walkin.png
 fancyname: Out for a walk
 thumbnail: /assets/images/art_gallery/thumbnail/walkin.png

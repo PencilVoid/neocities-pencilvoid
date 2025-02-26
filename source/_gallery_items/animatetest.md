@@ -1,5 +1,4 @@
 ---
-slug: animatetest
 artname: animate.png
 fancyname: Adobe Animate test
 thumbnail: /assets/images/art_gallery/thumbnail/animate.png

@@ -1,5 +1,4 @@
 ---
-slug: midna_secretsanta
 artname: midna_secretsanta.png
 fancyname: Midna Secret Santa
 thumbnail: /assets/images/art_gallery/thumbnail/midna_secretsanta.png

@@ -1,5 +1,4 @@
 ---
-slug: sniffer_gardener
 artname: sniffer_gardener.png
 fancyname: Sniffer Agriculture
 thumbnail: /assets/images/art_gallery/thumbnail/sniffer_gardener.png
