@@ -19,7 +19,7 @@ layout: null
 	<entry>
 		<id>{{ site.url }}/photosystems/{{ post.slug }}</id>
 		<title>
-			{{ post.artname | xml_escape | strip_html }}
+			{{ post.fancyname | xml_escape | strip_html }}
 		</title>
 		<link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" title="{{ post.artname | xml_escape}}" />
 		<published>{{ post.publish-date | date_to_xmlschema }}</published>
