@@ -42,12 +42,16 @@ feed_meta: "photosystems"
 	I pretty much only ever draw for fun so it's mostly character art featuring my original characters (no write-ups on them just yet) and other people's characters from time to time. I'm best at drawing anthropomorphic animals, for some reason; I can count the amount of humans I've drawn on one hand. There's also occasional vector art and miscellaneous graphic design work, or anything else that captures my interest.
 </p>
 <p>
-	The following is a gallery of some of my work I feel is high-quality or interesting enough to be featured here. Click on any tile below to view the full piece in its own page with an image description.
+	The following is a gallery of some of my work I feel is high-quality or interesting enough to be featured here, grouped by year. Click on any tile below to view the full piece in its own page with an image description and some extra context.
 </p>
 
+{% assign items_by_year = site.gallery_items | group_by_exp:"item", "item.date | date: '%Y'" | reverse %}
+
+{%- for year in items_by_year -%}
+
+<h2>{{year.name}}</h2>
 <div class="row">
-{%- assign sorted_gallery_items = site.gallery_items | sort: "date" | reverse -%}
-{%- for item in sorted_gallery_items -%}
+	{%- for item in year.items reversed -%}
 	{% assign name = item.path | split:"/" | last | split:"." | first %}
 	<a href="{{name}}" nobrackets="true">
 	<div class="gallery">
@@ -62,8 +66,10 @@ feed_meta: "photosystems"
 		</div>
 	</div>
 	</a>
-{% endfor %}
+	{% endfor %}
 </div>
+{% endfor %}
+<hr>
 <h2>
 	Atom feed
 </h2>
