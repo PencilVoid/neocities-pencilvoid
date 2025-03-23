@@ -49,7 +49,7 @@ feed_meta: "photosystems"
 
 {%- for year in items_by_year -%}
 
-<h2>{{year.name}}</h2>
+<h2 id="{{year.name}}">{{year.name}}</h2>
 <div class="row">
 	{%- for item in year.items reversed -%}
 	{% assign name = item.path | split:"/" | last | split:"." | first %}
