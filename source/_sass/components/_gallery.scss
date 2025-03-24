@@ -2,9 +2,15 @@
 
 .row {
 	display: grid;
+	justify-content: center;
 	grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
 	gap: 0.875rem;
 	margin: 2rlh 0;
+
+	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
+		grid-template-columns: repeat(auto-fill,200px);
+		gap: 0.25rem;
+	}
 
 	> a {
 		display: grid;
@@ -14,7 +20,6 @@
 
 .gallery {
 	display: grid;
-	grid-template-rows: 1fr auto;
 	grid-template-columns: 1fr;
 	gap: 0;
 	border: 1px solid var(--text-colour,#FFEAFC);
