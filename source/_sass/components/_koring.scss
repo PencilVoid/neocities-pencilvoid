@@ -6,6 +6,8 @@ div.koring {
 	border: 1px solid var(--tone-colour,#FFFFFF);
 	padding: 0.75ex;
 	box-sizing: border-box;
+	line-height: 1.75;
+	font-size: 1.1rem;
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		max-width: 50ch;

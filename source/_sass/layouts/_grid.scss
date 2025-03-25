@@ -81,11 +81,18 @@
 	top: 0;
 	left: 0;
 	background-color: var(--sidebar-colour,#1C0023);
-	font-size: 1rem;
+	font-size: 1.1rem;
 	overflow: auto;
+	line-height: 1.4;
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		display: none;
+	}
+
+	#sidebar-links,
+	.keyboard-nav-link {
+		font-size: 1.3rem;
+		line-height: 1.75;
 	}
 }
 

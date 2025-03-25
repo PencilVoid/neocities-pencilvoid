@@ -9,6 +9,7 @@ label.dropdown-label {
 	background-color: var(--tone-colour,#FFFFFF);
 	background-color: rgba(255, 255, 255, 0.1);
 	border-left: 1px solid var(--tone-colour,#FFFFFF);
+	line-height: normal;
 }
 
 input[type="checkbox"]:not(#display-bg-checker) {
