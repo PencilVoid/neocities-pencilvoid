@@ -204,6 +204,10 @@ css:
 							{%- endif %}
 						</div>
 						<p style="text-align: center; clear: both;">
+							{{ page.date | date_to_string }}<br>
+							{% if page.date != page.publish-date -%}
+							Published on {{ page.publish-date | date_to_string }}<br>
+							{%- endif %}
 							<a href="/photosystems">Back to Photosystems</a>
 						</p>
 						<span class="small-text">
