@@ -1,0 +1,1 @@
+jekyll b && oxipng --zopfli --opt max --preserve --recursive ./build/* && neocities push ./build
