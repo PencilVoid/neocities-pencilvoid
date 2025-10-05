@@ -1,1 +1,1 @@
-jekyll b && oxipng --zopfli --opt max --preserve --recursive ./build/* && neocities push ./build
+jekyll b && echo. && echo [96m==Build complete==[0m && echo. && oxipng --zopfli --opt max --preserve --recursive ./build/* && echo. && echo [96m==PNG optimisation complete==[0m && echo. && neocities push ./build && echo. && echo [96m==Upload complete==[0m && echo. && timeout /t 120
