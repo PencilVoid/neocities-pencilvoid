@@ -56,7 +56,11 @@ feed_meta: "photosystems"
 	<a href="{{name}}" nobrackets="true">
 	<div class="gallery">
 		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
+			{%- if item.thumbnail -%}
 			<img loading="lazy" src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%">
+			{%- else -%}
+			<img loading="lazy" src="/assets/images/art_gallery/thumbnail/{{name}}.png" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%">
+			{%- endif -%}
 		</div>
 		<div class="desc desc-metadata">
 			<span>{{ item.artname | replace: "_", "<wbr>_<wbr>" }}</span>
