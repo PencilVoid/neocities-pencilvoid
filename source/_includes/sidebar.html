@@ -1,91 +1,241 @@
 <div id="sidebar-links">
 	<a href="/">Landing</a>
-	<br>
+	<br />
 	<a href="/about">About</a>
-	<br>
+	<br />
 	<a href="/photosystems">Photosystems</a>
-	<br>
+	<br />
 	<a href="/sieveplate">SievePlate</a>
-	<br>
+	<br />
 	<a href="/esoterrarium">Esoterrarium</a>
-	<br>
+	<br />
 	<a href="https://neocities.org/site/pencilvoid" target="_blank">Neocities Profile</a>
-	<br>
+	<br />
 	<a href="https://github.com/PencilVoid/neocities-pencilvoid" target="_blank">Source repo</a>
 </div>
-<hr>
+<hr />
 <section class="dropdown" id="section-dropdown-sidebar">
-	<header style="margin-bottom: 0.75rem;">
-		<span style="font-weight: bold">
-			Buttons (animated/flashing images)
-		</span>
+	<header style="margin-bottom: 0.75rem">
+		<span style="font-weight: bold"> Buttons (animated/flashing images) </span>
 	</header>
 	{% if include.hamburger -%}
-	<input type="checkbox" name="collapse" id="dropdown-sidebar-buttons-hamburger">
+	<input type="checkbox" name="collapse" id="dropdown-sidebar-buttons-hamburger" />
 	<label class="dropdown-label" for="dropdown-sidebar-buttons-hamburger"></label>
 	{% else -%}
-	<input type="checkbox" name="collapse" id="dropdown-sidebar-buttons">
+	<input type="checkbox" name="collapse" id="dropdown-sidebar-buttons" />
 	<label class="dropdown-label" for="dropdown-sidebar-buttons"></label>
 	{% endif -%}
 	<div class="dropdown-content">
 		<span class="dropdown-hider">
 			<a href="https://pencilvoid.neocities.org">
-				<img loading="lazy" src="/assets/images/buttons/pv.png" alt="88x31 button leading to pencilvoid.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/pv.png"
+					alt="88x31 button leading to pencilvoid.neocities.org"
+				/>
 			</a>
 			<span class="hr-light"></span>
+			<a href="https://alishere.neocities.org" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/alishere.gif"
+					alt="88x31 button leading to alishere.neocities.org"
+				/>
+			</a>
 			<a href="https://arandomsite.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/arandomsite.gif" alt="88x31 button leading to arandomsite.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/arandomsite.gif"
+					alt="88x31 button leading to arandomsite.neocities.org"
+				/>
 			</a>
 			<a href="https://ashifolfi.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/ashifolfi.gif" alt="88x31 button leading to ashifolfi.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/ashifolfi.gif"
+					alt="88x31 button leading to ashifolfi.neocities.org"
+				/>
 			</a>
 			<a href="https://bisha.neocities.org/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/bisha.gif" alt="88x31 button leading to bisha.neocities.org">
+				<img loading="lazy" src="/assets/images/buttons/bisha.gif" alt="88x31 button leading to bisha.neocities.org" />
 			</a>
 			<a href="https://beepbird.net" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/beepbird.gif" alt="88x31 button leading to beepbird.net">
+				<img loading="lazy" src="/assets/images/buttons/beepbird.gif" alt="88x31 button leading to beepbird.net" />
 			</a>
 			<a href="https://chipsfunfun.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/chipsfunfun.png" alt="88x31 button leading to chipsfunfun.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/chipsfunfun.png"
+					alt="88x31 button leading to chipsfunfun.neocities.org"
+				/>
 			</a>
 			<a href="https://cloverbell.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/cloverbell.gif" alt="88x31 button leading to cloverbell.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/cloverbell.gif"
+					alt="88x31 button leading to cloverbell.neocities.org"
+				/>
 			</a>
 			<a href="https://corq.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/corq.png" alt="88x31 button leading to corq.neocities.org">
+				<img loading="lazy" src="/assets/images/buttons/corq.png" alt="88x31 button leading to corq.neocities.org" />
 			</a>
 			<a href="https://corru.observer" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/corru.gif" alt="88x31 button leading to corru.observer">
+				<img loading="lazy" src="/assets/images/buttons/corru.gif" alt="88x31 button leading to corru.observer" />
 			</a>
 			<a href="https://dannarchy.com" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/dannarchy.gif" alt="88x31 button leading to dannarchy.com">
+				<img loading="lazy" src="/assets/images/buttons/dannarchy.gif" alt="88x31 button leading to dannarchy.com" />
 			</a>
 			<a href="https://dawnvoid.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/dawnvoid.gif" alt="88x31 button leading to dawnvoid.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/dawnvoid.gif"
+					alt="88x31 button leading to dawnvoid.neocities.org"
+				/>
+			</a>
+			<div style="height: 31px; width: 88px">
+				<a
+					style="background-color: transparent; color: black; text-decoration: none"
+					href="https://dir.emptiness.io"
+					target="_blank"
+					nobrackets="true"
+					><div
+						style="
+							position: relative;
+							background-color: #e7fa19;
+							color: black;
+							font-family: &quot;Verdana&quot;;
+							font-size: 10px;
+							height: 31px;
+							width: 88px;
+							overflow: hidden;
+							border: 1px black;
+							margin: 0 0 0 0;
+							padding: 0 0 0 0;
+						"
+					>
+						<span
+							style="
+								width: 31px;
+								height: 88px;
+								position: absolute;
+								transform: rotate(-90deg) translatey(-88px);
+								transform-origin: top right;
+								display: flex;
+								justify-content: flex-end;
+								font-size: 2px;
+								font-family: monospace;
+								overflow-wrap: anywhere;
+								top: 0;
+								right: 0;
+							"
+							>this is an 88x31 button made entirely out of text because that is the theme of the website. i am human.
+							we are human. fuck the algorithm. take back the web. this is an 88x31 button made entirely out of text
+							because that is the theme of the website. i am human. we are human. fuck the algorithm. take back the web.
+							this is an 88x31 button made entirely out of text because that is the theme of the website.</span
+						><span style="position: absolute; font-size: 4px; top: 3 px; left: 48px"
+							>&#9654;&#9654;&#9654;&#9654;&#9654;</span
+						><span
+							style="background-color: black; height: 3px; width: 44px; position: absolute; top: 5px; left: 0"
+						></span
+						><span
+							style="background-color: black; width: 5px; height: 31px; position: absolute; top: 0; right: 5px"
+						></span
+						><span
+							style="background-color: black; color: #e7fa19; position: absolute; right: 0; bottom: 5px; z-index: 3"
+							>$DIR&gt;EMPTINESS</span
+						>
+					</div></a
+				>
+			</div>
+			<a href="https://https://eggmothsoup.neocities.org/" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/eggmoth.png"
+					alt="88x31 button leading to eggmothsoup.neocities.org"
+				/>
 			</a>
 			<a href="https://errormine.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/errormine.gif" alt="88x31 button leading to errormine.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/errormine.gif"
+					alt="88x31 button leading to errormine.neocities.org"
+				/>
+			</a>
+			<a href="https://firozah.com" target="_blank">
+				<img loading="lazy" src="/assets/images/buttons/ichomancer.gif" alt="88x31 button leading to firozah.com" />
+			</a>
+			<a href="https://gamepadstudios.neocities.org/" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/gamepadstudios.png"
+					alt="88x31 button leading to gamepadstudios.1neocities.org"
+				/>
+			</a>
+			<a href="https://ironicallyidiotic.neocities.org/" target="_blank">
+				<img
+					style="width: 88px; height: 31px"
+					loading="lazy"
+					src="/assets/images/buttons/ironicallyidiotic.gif"
+					alt="88x31 button leading to ironicallyidiotic.neocities.org"
+				/>
 			</a>
 			<a href="https://jasm1nii.xyz/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/jasm1nii.png" alt="88x31 button leading to jasm1nii.xyz">
+				<img loading="lazy" src="/assets/images/buttons/jasm1nii.png" alt="88x31 button leading to jasm1nii.xyz" />
 			</a>
 			<a href="https://junebugjamboree.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/junebug.gif" alt="88x31 button leading to junebugjamboree.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/junebug.gif"
+					alt="88x31 button leading to junebugjamboree.neocities.org"
+				/>
 			</a>
 			<a href="https://justfluffingaround.neocities.org/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/justfluffingaround.png" alt="88x31 button leading to justfluffingaround.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/justfluffingaround.png"
+					alt="88x31 button leading to justfluffingaround.neocities.org"
+				/>
 			</a>
 			<a href="https://kalechips.net" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/kalechips.png" alt="88x31 button leading to kalechips.net">
+				<img loading="lazy" src="/assets/images/buttons/kalechips.png" alt="88x31 button leading to kalechips.net" />
 			</a>
 			<a href="https://klonpa.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/klonpa.gif" alt="88x31 button leading to klonpa.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/klonpa.gif"
+					alt="88x31 button leading to klonpa.neocities.org"
+				/>
+			</a>
+			<a href="https://https://lambbones.neocities.org" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/lambbones.png"
+					alt="88x31 button leading to lambbones.neocities.org"
+				/>
+			</a>
+			<a href="https://lakes.glamour.ovh/" target="_blank">
+				<img loading="lazy" src="/assets/images/buttons/lakes.png" alt="88x31 button leading to lakes.glamour.ovh" />
 			</a>
 			<a href="https://lapislabel.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/lapislabel.gif" alt="88x31 button leading to lapislabel.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/lapislabel.gif"
+					alt="88x31 button leading to lapislabel.neocities.org"
+				/>
+			</a>
+			<a href="https://lockheartlove.neocities.org/" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/lockheartlove.png"
+					alt="88x31 button leading to lockheartlove.neocities.org"
+				/>
 			</a>
 			<a href="https://luckyplushy.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/luckyplushy.gif" alt="88x31 button leading to luckyplushy.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/luckyplushy.gif"
+					alt="88x31 button leading to luckyplushy.neocities.org"
+				/>
 			</a>
 			<!-- 404
 			<a href="https://leafyeevee.neocities.org">
@@ -93,68 +243,153 @@
 			</a>
 			-->
 			<a href="https://manyface.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/manyface.png" alt="88x31 button leading to manyface.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/manyface.png"
+					alt="88x31 button leading to manyface.neocities.org"
+				/>
 			</a>
 			<a href="https://marea.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/marea.gif" alt="88x31 button leading to marea.neocities.org">
+				<img loading="lazy" src="/assets/images/buttons/marea.gif" alt="88x31 button leading to marea.neocities.org" />
 			</a>
 			<a href="https://medulladeath.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/medulladeath.png" alt="88x31 button leading to medulladeath.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/medulladeath.png"
+					alt="88x31 button leading to medulladeath.neocities.org"
+				/>
 			</a>
 			<a href="https://metaparadox.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/metaparadox.gif" alt="88x31 button leading to metaparadox.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/metaparadox.gif"
+					alt="88x31 button leading to metaparadox.neocities.org"
+				/>
 			</a>
-			<a href="https://oneiric-somnolence.neocities.org/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/oneiric-somnolence.png" alt="88x31 button leading to oneiric-somnolence.neocities.org">
+			<a href="https://nomnomnami.com/" target="_blank">
+				<img loading="lazy" src="/assets/images/buttons/nomnomnami.gif" alt="88x31 button leading to nomnomnami.com" />
+			</a>
+			<a href="https://oneiric-somnolence.neocities.org" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/oneiric-somnolence.png"
+					alt="88x31 button leading to oneiric-somnolence.neocities.org"
+				/>
+			</a>
+			<a href="https://oopsano.neocities.org" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/oopsano.png"
+					alt="88x31 button leading to oopsano.neocities.org"
+				/>
 			</a>
 			<a href="https://pinkvampyr.neocities.org/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/pinkvampyr.gif" alt="88x31 button leading to pinkvampyr.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/pinkvampyr.gif"
+					alt="88x31 button leading to pinkvampyr.neocities.org"
+				/>
+			</a>
+			<a href="https://https://pxhc.neocities.org/">
+				<img loading="lazy" src="/assets/images/buttons/pxhc.gif" alt="88x31 button leading to pxhc.neocities.org" />
 			</a>
 			<a href="https://racc.at" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/raccat.png" alt="88x31 button leading to racc.at">
+				<img loading="lazy" src="/assets/images/buttons/raccat.png" alt="88x31 button leading to racc.at" />
 			</a>
 			<a href="https://sapero.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/sapero.gif" alt="88x31 button leading to sapero.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/sapero.gif"
+					alt="88x31 button leading to sapero.neocities.org"
+				/>
 			</a>
 			<a href="https://sonc.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/sonc.gif" alt="88x31 button leading to sonc.neocities.org">
+				<img loading="lazy" src="/assets/images/buttons/sonc.gif" alt="88x31 button leading to sonc.neocities.org" />
 			</a>
 			<a href="https://space-bar.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/space-bar.gif" width="88" alt="88x31 button leading to space-bar.neocities.org">
+				<img
+					style="width: 88px; height: 31px"
+					loading="lazy"
+					src="/assets/images/buttons/space-bar.gif"
+					alt="88x31 button leading to space-bar.neocities.org"
+				/>
+			</a>
+			<a href="https://strap-biter.neocities.org/" target="_blank">
+				<img
+					style="width: 88px; height: 31px"
+					loading="lazy"
+					src="/assets/images/buttons/strap-biter.gif"
+					alt="88x31 button leading to strap-biter.neocities.org"
+				/>
 			</a>
 			<a href="https://the-canvas-garden.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/the-canvas-garden.gif" alt="88x31 button leading to the-canvas-garden.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/the-canvas-garden.gif"
+					alt="88x31 button leading to the-canvas-garden.neocities.org"
+				/>
+			</a>
+			<a href="https://thegreenherring.art/links/" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/thegreenherring.png"
+					alt="88x31 button leading to thegreenherring.art"
+				/>
 			</a>
 			<a href="https://theki.club" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/theki.gif" alt="88x31 button leading to theki.club">
+				<img loading="lazy" src="/assets/images/buttons/theki.gif" alt="88x31 button leading to theki.club" />
 			</a>
 			<a href="https://unartur.de/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/unartur.gif" alt="88x31 button leading to unartur.de">
+				<img loading="lazy" src="/assets/images/buttons/unartur.gif" alt="88x31 button leading to unartur.de" />
 			</a>
 			<a href="https://umbritzer.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/umbritzer.jpg" alt="88x31 button leading to umbritzer.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/umbritzer.jpg"
+					alt="88x31 button leading to umbritzer.neocities.org"
+				/>
 			</a>
 			<a href="https://veyther.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/veyther.png" alt="88x31 button leading to veyther.neocities.org">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/veyther.png"
+					alt="88x31 button leading to veyther.neocities.org"
+				/>
+			</a>
+			<a href="https://virtually-isolated.neocities.org" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/virtually-isolated.png"
+					alt="88x31 button leading to virtually-isolated.neocities.org"
+				/>
 			</a>
 			<a href="https://vm70.neocities.org" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/vm70.gif" alt="88x31 button leading to vm70.neocities.org">
+				<img loading="lazy" src="/assets/images/buttons/vm70.gif" alt="88x31 button leading to vm70.neocities.org" />
+			</a>
+			<a href="https://voidgazing.neocities.org" target="_blank">
+				<img
+					loading="lazy"
+					src="/assets/images/buttons/voidgazing.gif"
+					alt="88x31 button leading to voidgazing.neocities.org"
+				/>
 			</a>
 			<a href="https://wan-may.art/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/wan-may.png" alt="88x31 button leading to wan-may.art">
+				<img loading="lazy" src="/assets/images/buttons/wan-may.png" alt="88x31 button leading to wan-may.art" />
 			</a>
 			<a href="https://whiona.me/" target="_blank">
-				<img loading="lazy" src="/assets/images/buttons/whiona.png" alt="88x31 button leading to whiona.me">
+				<img loading="lazy" src="/assets/images/buttons/whiona.png" alt="88x31 button leading to whiona.me" />
 			</a>
 			<p>
-				If you want your button here just ask on <a href="https://neocities.org/site/pencilvoid" target="_blank" class="show-brackets">my Neocities profile</a>.
+				If you want your button here just ask on
+				<a href="https://neocities.org/site/pencilvoid" target="_blank" class="show-brackets">my Neocities profile</a>.
 			</p>
 		</span>
 	</div>
 </section>
-<hr>
-{% if include.hamburger -%} <!-- mobile hamburger is first sequentially -->
-<div class='koring'>
+<hr />
+{% if include.hamburger -%}
+<!-- mobile hamburger is first sequentially -->
+<div class="koring">
 	<script type="text/javascript" src="https://ottr.uk/koring/onionring-variables.js"></script>
 	<script type="text/javascript" src="https://ottr.uk/koring/onionring-widget.multi-alpha.js"></script>
 </div>
