@@ -42,5 +42,5 @@ layout: null
 		-->
 	</entry>
 	{% endfor %}
-<very:veryimportant>Hey! If you're seeing this you probably just tried to open the Atom feed in your browser. It's just a bunch of XML code, and not the kind that some web pages are made of. So your browser can't really do anything with it. What you're supposed to do is use your feed reader's "find feeds in current tab" tool to detect the feed. It should work on this page, but it also works on SievePlate's main page and any post. You can use your browser's back button to go back to SievePlate. Thank you for your interest!</very:veryimportant>
+	<very:veryimportant>Hey! If you're seeing this you likely just tried to open the SievePlate Atom feed in your browser. If you were trying to subscribe to the feed, just opening it in your browser won't work. Your feed reader should have a tool that allows you to add this to your reading list. Go to the feed reader's page and look for an "add feed" button. Then you can copy-paste the URL of this page in. Your feed reader might also have a tool to automatically detect and add feeds, which should work on this page or the main SievePlate page or any SievePlate post. You can use your browser's back button to go back to SievePlate. Thank you for your interest!</very:veryimportant>
 </feed>
