@@ -5,17 +5,14 @@ layout: null
 <?xml-stylesheet href="/assets/styles/fonts.css"?>
 <?xml-stylesheet href="/assets/styles/feed.css"?>
 <feed xmlns="http://www.w3.org/2005/Atom"  xmlns:very="{{ site.url }}">
-	<generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">
-		Jekyll
-	</generator>
 	<link href="{{ site.url }}{{ page.url }}" rel="self" type="application/atom+xml" />
 	<link href="{{ site.url }}" rel="alternate" type="text/html" />
 	<id>{{ site.url }}/photosystems</id>
 	<title>
 		Photosystems
 	</title>
-	<updated>{{ site.gallery_items.first.date | date_to_xmlschema }}</updated> <!-- publish date of latest post -->
-	{% for post in site.gallery_items %}
+	<updated>{{ collections.photosystems_items.first.date | date_to_xmlschema }}</updated> <!-- publish date of latest post -->
+	{% for post in collections.photosystems_items %}
 	<entry>
 		<id>{{ site.url }}/photosystems/{{ post.slug }}</id>
 		<title>

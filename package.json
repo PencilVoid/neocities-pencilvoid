@@ -1,0 +1,28 @@
+{
+  "name": "neocities-pencilvoid",
+  "version": "1.0.0",
+  "description": "This is the source code for [PencilVoid's website](https://pencilvoid.neocities.org/), hosted by [Neocities](https://neocities.org). Somewhat open source, so you can steal as much code as you like. Pages are generated using [Jekyll](https://jekyllrb.com). Website assets are contained within `source`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PencilVoid/neocities-pencilvoid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/PencilVoid/neocities-pencilvoid/issues"
+  },
+  "homepage": "https://github.com/PencilVoid/neocities-pencilvoid#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "sass": "^1.104.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}

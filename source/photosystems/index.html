@@ -3,114 +3,163 @@ title: Photosystems
 description: Assorted images
 header: Photosystems
 css:
-  dark:
-    header-colour: "#3B063A"
-    bg-colour: "#42004E"
-    bg-checkerdark: "#560045"
-    bg-checkerlight: "#7F0840"
-    bg-triangle: "#380837"
-    sidebar-colour: "#220029"
-    text-colour: "#FFE7D1"
-    a-colour: "#FFD5B5"
-    a-visited-colour: "#FFB289"
-    a-hover-colour: "#FFEFE0"
-    a-active-colour: "#FFFFFF"
-    hr-colour: "#D46453"
-    tone-colour: "#FFFFFF"
-    header-small-colour: "#FFE7D1"
-  light:
-    header-colour: "#3B063A"
-    bg-colour: "#F3BDFA"
-    bg-checkerdark: "#F9C8C7"
-    bg-checkerlight: "#FCD4DE"
-    bg-triangle: "#FFB7C4"
-    sidebar-colour: "#F4A1B7"
-    text-colour: "#58032B"
-    a-colour: "#3E0349"
-    a-visited-colour: "#3F0244"
-    a-hover-colour: "#8B0573"
-    a-active-colour: "#CA2184"
-    hr-colour: "#A01843"
-    tone-colour: "#58032B"
-    header-small-colour: "#3B063A"
+    dark:
+        header-colour: "#3B063A"
+        bg-colour: "#42004E"
+        bg-checkerdark: "#560045"
+        bg-checkerlight: "#7F0840"
+        bg-triangle: "#380837"
+        sidebar-colour: "#220029"
+        text-colour: "#FFE7D1"
+        a-colour: "#FFD5B5"
+        a-visited-colour: "#FFB289"
+        a-hover-colour: "#FFEFE0"
+        a-active-colour: "#FFFFFF"
+        hr-colour: "#D46453"
+        tone-colour: "#FFFFFF"
+        header-small-colour: "#FFE7D1"
+    light:
+        header-colour: "#3B063A"
+        bg-colour: "#F3BDFA"
+        bg-checkerdark: "#F9C8C7"
+        bg-checkerlight: "#FCD4DE"
+        bg-triangle: "#FFB7C4"
+        sidebar-colour: "#F4A1B7"
+        text-colour: "#58032B"
+        a-colour: "#3E0349"
+        a-visited-colour: "#3F0244"
+        a-hover-colour: "#8B0573"
+        a-active-colour: "#CA2184"
+        hr-colour: "#A01843"
+        tone-colour: "#58032B"
+        header-small-colour: "#3B063A"
 feed_meta: "photosystems"
 ---
+
 <p>
-	Wow, I can draw. Amazing. It's mostly pixel art; I've been doing pixel art for a while now and I would consider myself decent enough at it.
+	Wow, I can draw. Amazing. It's mostly pixel art; I've been doing pixel art for a while now and I would consider
+	myself decent enough at it.
 </p>
 <p>
-	I pretty much only ever draw for fun so it's mostly character art featuring my original characters (no write-ups on them just yet) and other people's characters from time to time. I'm best at drawing anthropomorphic animals, for some reason; I can count the amount of humans I've drawn on one hand. There's also occasional vector art and miscellaneous graphic design work, or anything else that captures my interest.
+	I pretty much only ever draw for fun so it's mostly character art featuring my original characters (no write-ups on
+	them just yet) and other people's characters from time to time. I'm best at drawing anthropomorphic animals, for
+	some reason; I can count the amount of humans I've drawn on one hand. There's also occasional vector art and
+	miscellaneous graphic design work, or anything else that captures my interest.
 </p>
 <p>
-	The following is a gallery of some of my work I feel is high-quality or interesting enough to be featured here, grouped by year. Click on any tile below to view the full piece in its own page with an image description and some extra context.
+	The following is a gallery of some of my work I feel is high-quality or interesting enough to be featured here,
+	grouped by year. Click on any tile below to view the full piece in its own page with an image description and some
+	extra context.
 </p>
 
-{% assign items_by_year = site.gallery_items | group_by_exp:"item", "item.date | date: '%Y'" | reverse %}
-
+{% assign items_by_year = collections.photosystems_items | group_by_exp:"item", "item.date | date: '%Y'" | reverse %}
 {%- for year in items_by_year -%}
 
 <h2 id="{{year.name}}">{{year.name}}</h2>
 <div class="row">
-	{%- for item in year.items reversed -%}
-	{% assign name = item.path | split:"/" | last | split:"." | first %}
+	{%- for item in year.items reversed -%} {% assign name = item.fileSlug | split:"/" | last | split:"." | first %}
 	<a href="{{name}}" nobrackets="true">
-	<div class="gallery">
-		<div class="gallery-img{% if item.pixelated-thumbnail %} pixelated-img{% endif %}">
-			{%- if item.thumbnail -%}
-			<img loading="lazy" src="{{ item.thumbnail }}" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%">
-			{%- else -%}
-			<img loading="lazy" src="/assets/images/art_gallery/thumbnail/{{name}}.png" alt="{{ item.thumbnail-alt-text | xml_escape }}" width="100%" height="100%">
-			{%- endif -%}
+		<div class="gallery">
+			<div class="gallery-img{% if item.data.pixelated-thumbnail %} pixelated-img{% endif %}">
+				{%- if item.data.thumbnail -%}
+				<img
+					loading="lazy"
+					src="{{ item.data.thumbnail }}"
+					alt="{{ item.data.thumbnail-alt-text | xml_escape }}"
+					width="100%"
+					height="100%"
+				/>
+				{%- else -%}
+				<img
+					loading="lazy"
+					src="/assets/images/art_gallery/thumbnail/{{name}}.png"
+					alt="{{ item.data.thumbnail-alt-text | xml_escape }}"
+					width="100%"
+					height="100%"
+				/>
+				{%- endif -%}
+			</div>
+			<div class="desc desc-metadata">
+				<span>{{ item.data.artname | replace: "_", "<wbr />_<wbr />" }}</span>
+				<span>"{{ item.data.fancyname | replace: "_", "<wbr />_<wbr />" }}"</span>
+				<span>{{ item.date | date_to_long_string }}</span>
+				{%- if item.data.note -%}<span>Note: {{ item.data.note }}</span>{%- endif -%}
+			</div>
 		</div>
-		<div class="desc desc-metadata">
-			<span>{{ item.artname | replace: "_", "<wbr>_<wbr>" }}</span>
-			<span>"{{ item.fancyname | replace: "_", "<wbr>_<wbr>" }}"</span>
-			<span>{{ item.date | date_to_long_string }}</span>
-			{%- if item.note -%}<span>Note: {{ item.note }}</span>{%- endif -%}
-		</div>
-	</div>
 	</a>
 	{% endfor %}
 </div>
 {% endfor %}
-<hr>
-<h2>
-	Atom feed
-</h2>
+<hr />
+<h2>Atom feed</h2>
 <p>
 	<a href="/photosystems/feed.xml">
 		<span class="inline-icon">
-			<svg width="16" height="16" version="1.1" viewBox="0 0 4.2333 4.2333" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" aria-hidden="true">
+			<svg
+				width="16"
+				height="16"
+				version="1.1"
+				viewBox="0 0 4.2333 4.2333"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:cc="http://creativecommons.org/ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				aria-hidden="true"
+			>
 				<metadata>
 					<rdf:RDF>
 						<cc:Work rdf:about="">
-						<dc:format>image/svg+xml</dc:format>
-						<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-						<dc:title/>
+							<dc:format>image/svg+xml</dc:format>
+							<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+							<dc:title />
 						</cc:Work>
 					</rdf:RDF>
 				</metadata>
-				<circle cx=".66146" cy="3.5719" r=".39687" fill="var(--text-colour,#ffffff)" style="paint-order:stroke fill markers"/>
-				<path d="m0.52917 2.1167c0.79375 1e-7 1.5875 0.79375 1.5875 1.5875" fill="none" stroke="var(--text-colour,#ffffff)" stroke-linecap="square" stroke-width=".52917"/>
-				<path d="m0.52917 0.52917c1.5875 0 3.175 1.5875 3.175 3.175" fill="none" stroke="var(--text-colour,#ffffff)" stroke-linecap="square" stroke-width=".52917"/>
+				<circle
+					cx=".66146"
+					cy="3.5719"
+					r=".39687"
+					fill="var(--text-colour,#ffffff)"
+					style="paint-order: stroke fill markers"
+				/>
+				<path
+					d="m0.52917 2.1167c0.79375 1e-7 1.5875 0.79375 1.5875 1.5875"
+					fill="none"
+					stroke="var(--text-colour,#ffffff)"
+					stroke-linecap="square"
+					stroke-width=".52917"
+				/>
+				<path
+					d="m0.52917 0.52917c1.5875 0 3.175 1.5875 3.175 3.175"
+					fill="none"
+					stroke="var(--text-colour,#ffffff)"
+					stroke-linecap="square"
+					stroke-width=".52917"
+				/>
 			</svg>
 		</span>
 		<b>Atom Feed</b>
 	</a>
 </p>
 <p>
-	You can use your feed reader's "find feeds in current tab" tool to subscribe to Photosystems' Atom feed, and get notified whenever some new art appears.
+	You can use your feed reader's "find feeds in current tab" tool to subscribe to Photosystems' Atom feed, and get
+	notified whenever some new art appears.
 </p>
-<hr>
-<h2>
-	Extraneous information
-</h2>
+<hr />
+<h2>Extraneous information</h2>
 <p>
-	Most of the time I draw in <a href="https://www.getpaint.net/" target="_blank">Paint.NET</a>. It is essentially a souped-up version of Microsoft Paint. It's not made for pixel art but it works for me. I've also been meaning to learn <a href="https://www.aseprite.org/" target="_blank">Aseprite</a>. It has some invaluable features that make pixel art and animation a lot easier.
+	Most of the time I draw in <a href="https://www.getpaint.net/" target="_blank">Paint.NET</a>. It is essentially a
+	souped-up version of Microsoft Paint. It's not made for pixel art but it works for me. I've also been meaning to
+	learn <a href="https://www.aseprite.org/" target="_blank">Aseprite</a>. It has some invaluable features that make
+	pixel art and animation a lot easier.
 </p>
 <p>
-	For vector art I use <a href="https://inkscape.org/" target="_blank">Inkscape</a>. It is open source and rivals professional-grade software in feature richness and utility. It has a bit of a learning curvem but that can be said for vector art in general.
+	For vector art I use <a href="https://inkscape.org/" target="_blank">Inkscape</a>. It is open source and rivals
+	professional-grade software in feature richness and utility. It has a bit of a learning curvem but that can be said
+	for vector art in general.
 </p>
 <p>
-	For 3D modelling work I normally use <a href="https://www.blockbench.net/" target="_blank">Blockbench</a>. It is primarily designed for Minecraft but it works for general 3D modelling as well. I've been trying to learn <a href="https://www.blender.org/" target="_blank">Blender</a>...!
+	For 3D modelling work I normally use <a href="https://www.blockbench.net/" target="_blank">Blockbench</a>. It is
+	primarily designed for Minecraft but it works for general 3D modelling as well. I've been trying to learn
+	<a href="https://www.blender.org/" target="_blank">Blender</a>...!
 </p>

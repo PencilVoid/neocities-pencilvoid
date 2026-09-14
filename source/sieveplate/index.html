@@ -3,93 +3,118 @@ title: SievePlate
 description: Posts, assorted
 header: SievePlate
 css:
-  dark:
-    header-colour: "#18294F"
-    bg-colour: "#0C4951"
-    bg-checkerdark: "#105154"
-    bg-checkerlight: "#19686D"
-    bg-triangle: "#103B46"
-    sidebar-colour: "#152F3C"
-    text-colour: "#B2FFB2"
-    a-colour: "#8BFF56"
-    a-visited-colour: "#2CE06E"
-    a-hover-colour: "#B2FFB2"
-    a-active-colour: "#FFFFFF"
-    hr-colour: "#3FF460"
-    tone-colour: "#FFFFFF"
-    header-small-colour: "#B2FFB2"
-  light:
-    header-colour: "#18294F"
-    bg-colour: "#F3BDFA"
-    bg-checkerdark: "#96F7D5"
-    bg-checkerlight: "#B6F9DB"
-    bg-triangle: "#A9E8D9"
-    sidebar-colour: "#A4DDD2"
-    text-colour: "#152F3C"
-    a-colour: "#152F3C"
-    a-visited-colour: "#0E2028"
-    a-hover-colour: "#167397"
-    a-active-colour: "#2195B2"
-    hr-colour: "#188183"
-    tone-colour: "#152F3C"
-    header-small-colour: "#18294F"
+    dark:
+        header-colour: "#18294F"
+        bg-colour: "#0C4951"
+        bg-checkerdark: "#105154"
+        bg-checkerlight: "#19686D"
+        bg-triangle: "#103B46"
+        sidebar-colour: "#152F3C"
+        text-colour: "#B2FFB2"
+        a-colour: "#8BFF56"
+        a-visited-colour: "#2CE06E"
+        a-hover-colour: "#B2FFB2"
+        a-active-colour: "#FFFFFF"
+        hr-colour: "#3FF460"
+        tone-colour: "#FFFFFF"
+        header-small-colour: "#B2FFB2"
+    light:
+        header-colour: "#18294F"
+        bg-colour: "#F3BDFA"
+        bg-checkerdark: "#96F7D5"
+        bg-checkerlight: "#B6F9DB"
+        bg-triangle: "#A9E8D9"
+        sidebar-colour: "#A4DDD2"
+        text-colour: "#152F3C"
+        a-colour: "#152F3C"
+        a-visited-colour: "#0E2028"
+        a-hover-colour: "#167397"
+        a-active-colour: "#2195B2"
+        hr-colour: "#188183"
+        tone-colour: "#152F3C"
+        header-small-colour: "#18294F"
 feed_meta: sieveplate
 ---
+
 <p>
-	SievePlate is basically a blog. I don't have much to talk about so expect <em>infrequent</em> updates. But as they say, quality over quantity (???)
+	SievePlate is basically a blog. I don't have much to talk about so expect <em>infrequent</em> updates. But as they
+	say, quality over quantity (???)
 </p>
 <section>
-	<h2>
-		By date
-	</h2>
-	{% for post in site.posts %}
-		<article>
-			<span class="post-list-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
-			<b>{{ post.date | date_to_string }}</b>
-			{{ post.excerpt }}
-			{% if forloop.last != true %}
-			<span class="hr-light"></span>
-			{% endif %}
-		</article>
+	<h2>By date</h2>
+	{% for post in collections.sieveplate_items %}
+
+	<article>
+		<span class="post-list-title"><a href="{{ post.url }}">{{ post.data.title }}</a></span>
+		<b>{{ post.date | date_to_string }}</b>
+		{{ post.data.excerpt }} {% if forloop.last != true %}
+		<span class="hr-light"></span>
+		{% endif %}
+	</article>
 	{% endfor %}
 </section>
 <section class="dropdown">
-	<h2>
-		Browse by tag
-	</h2>
-	{% include dropdown_checked.html id="dropdown-taglist" %}
-		{% for tag in site.tags %}
-			<b>{{ tag[0] }}</b>
-			<ul>
-				{% for post in tag[1] %}
-					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
+	<h2>Browse by tag</h2>
+	{% include dropdown_checked.html id="dropdown-taglist" %} {% for tag in site.tags %}
+	<b>{{ tag[0] }}</b>
+	<ul>
+		{% for post in tag[1] %}
+		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
-	{% include dropdown_end.html %}
+	</ul>
+	{% endfor %} {% include dropdown_end.html %}
 </section>
-<hr>
+<hr />
 <p>
 	<a href="/sieveplate/feed.xml">
 		<span class="inline-icon">
-			<svg width="16" height="16" version="1.1" viewBox="0 0 4.2333 4.2333" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" aria-hidden="true">
+			<svg
+				width="16"
+				height="16"
+				version="1.1"
+				viewBox="0 0 4.2333 4.2333"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:cc="http://creativecommons.org/ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				aria-hidden="true"
+			>
 				<metadata>
 					<rdf:RDF>
 						<cc:Work rdf:about="">
-						<dc:format>image/svg+xml</dc:format>
-						<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-						<dc:title/>
+							<dc:format>image/svg+xml</dc:format>
+							<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+							<dc:title />
 						</cc:Work>
 					</rdf:RDF>
 				</metadata>
-				<circle cx=".66146" cy="3.5719" r=".39687" fill="var(--text-colour,#ffffff)" style="paint-order:stroke fill markers"/>
-				<path d="m0.52917 2.1167c0.79375 1e-7 1.5875 0.79375 1.5875 1.5875" fill="none" stroke="var(--text-colour,#ffffff)" stroke-linecap="square" stroke-width=".52917"/>
-				<path d="m0.52917 0.52917c1.5875 0 3.175 1.5875 3.175 3.175" fill="none" stroke="var(--text-colour,#ffffff)" stroke-linecap="square" stroke-width=".52917"/>
+				<circle
+					cx=".66146"
+					cy="3.5719"
+					r=".39687"
+					fill="var(--text-colour,#ffffff)"
+					style="paint-order: stroke fill markers"
+				/>
+				<path
+					d="m0.52917 2.1167c0.79375 1e-7 1.5875 0.79375 1.5875 1.5875"
+					fill="none"
+					stroke="var(--text-colour,#ffffff)"
+					stroke-linecap="square"
+					stroke-width=".52917"
+				/>
+				<path
+					d="m0.52917 0.52917c1.5875 0 3.175 1.5875 3.175 3.175"
+					fill="none"
+					stroke="var(--text-colour,#ffffff)"
+					stroke-linecap="square"
+					stroke-width=".52917"
+				/>
 			</svg>
 		</span>
 		<b>Atom Feed</b>
 	</a>
 </p>
 <p>
-	You can use your feed reader's "find feeds in current tab" tool to subscribe to SievePlate's Atom feed, and get notified whenever a new post appears.
+	You can use your feed reader's "find feeds in current tab" tool to subscribe to SievePlate's Atom feed, and get
+	notified whenever a new post appears.
 </p>

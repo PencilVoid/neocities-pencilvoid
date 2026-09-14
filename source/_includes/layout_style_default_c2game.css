@@ -1,0 +1,50 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	overflow-x: hidden;
+	touch-action: none;
+	-ms-touch-action: none;
+	text-align: center
+}
+canvas {
+	/*touch-action-delay: none;*/
+	touch-action: none;
+	-ms-touch-action: none;
+}
+#c2canvasdiv {
+	padding-bottom: 1em;
+}
+
+:root {
+	--header-colour: {{ css.dark.header-colour }};
+	--bg-colour: {{ css.dark.bg-colour }};
+	--bg-checkerdark: {{ css.dark.bg-checkerdark }};
+	--bg-checkerlight: {{ css.dark.bg-checkerlight }};
+	--bg-triangle: {{ css.dark.bg-triangle }};
+	--sidebar-colour: {{ css.dark.sidebar-colour }};
+	--text-colour: {{ css.dark.text-colour }};
+	--a-colour: {{ css.dark.a-colour }};
+	--a-visited-colour: {{ css.dark.a-visited-colour }};
+	--a-hover-colour: {{ css.dark.a-hover-colour }};
+	--a-active-colour: {{ css.dark.a-active-colour }};
+	--hr-colour: {{ css.dark.hr-colour }};
+	--tone-colour: {{ css.dark.tone-colour }};
+
+	@media (prefers-color-scheme: light) {
+		--header-colour: {{ css.light.header-colour }};
+		--bg-colour: {{ css.light.bg-colour }};
+		--bg-checkerdark: {{ css.light.bg-checkerdark }};
+		--bg-checkerlight: {{ css.light.bg-checkerlight }};
+		--bg-triangle: {{ css.light.bg-triangle }};
+		--sidebar-colour: {{ css.light.sidebar-colour }};
+		--text-colour: {{ css.light.text-colour }};
+		--a-colour: {{ css.light.a-colour }};
+		--a-visited-colour: {{ css.light.a-visited-colour }};
+		--a-hover-colour: {{ css.light.a-hover-colour }};
+		--a-active-colour: {{ css.light.a-active-colour }};
+		--hr-colour: {{ css.light.hr-colour }};
+		--tone-colour: {{ css.light.tone-colour }};
+	}
+}

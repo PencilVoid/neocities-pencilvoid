@@ -1,0 +1,180 @@
+---
+css:
+    dark:
+        header-colour: "#3B063A"
+        bg-colour: "#42004E"
+        bg-checkerdark: "#560045"
+        bg-checkerlight: "#7F0840"
+        bg-triangle: "#380837"
+        sidebar-colour: "#220029"
+        text-colour: "#FFE7D1"
+        a-colour: "#FFD5B5"
+        a-visited-colour: "#FFB289"
+        a-hover-colour: "#FFEFE0"
+        a-active-colour: "#FFFFFF"
+        hr-colour: "#D46453"
+        tone-colour: "#FFFFFF"
+        header-small-colour: "#FFE7D1"
+    light:
+        header-colour: "#3B063A"
+        bg-colour: "#F3BDFA"
+        bg-checkerdark: "#F9C8C7"
+        bg-checkerlight: "#FCD4DE"
+        bg-triangle: "#FFB7C4"
+        sidebar-colour: "#F4A1B7"
+        text-colour: "#58032B"
+        a-colour: "#3E0349"
+        a-visited-colour: "#3F0244"
+        a-hover-colour: "#8B0573"
+        a-active-colour: "#CA2184"
+        hr-colour: "#A01843"
+        tone-colour: "#58032B"
+        header-small-colour: "#3B063A"
+---
+
+<!DOCTYPE html>
+<!--gallery layout -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Cache-Control" content="max-age=86400" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/assets/icons/favicon.ico" />
+		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link href="/assets/styles/main.css" rel="stylesheet" type="text/css" media="all" />
+		<title>{{ fancyname }} | Photosystems</title>
+		<link
+			type="application/atom+xml"
+			rel="alternate"
+			href="{{ site.url }}/photosystems/feed.xml"
+			title="Photosystems"
+		/>
+		{% for img in images -%} {% unless img.embed == false -%}
+		<meta property="og:image" content="{{ site.url }}{{ img.src }}" />
+		{% endunless -%} {% endfor -%}
+		<meta name="theme-color" content="{{ css.dark.bg-checkerdark }}" />
+		<style>
+			{% include layout_style_post.css %}
+		</style>
+	</head>
+
+	<body>
+		<div class="body-grid-container">
+			<div class="body-grid-left">
+				<div class="sidenav-hamburger">
+					<section class="dropdown-sidenav-hamburger" id="section-dropdown-sidebar-hamburger">
+						<input type="checkbox" name="collapse" id="dropdown-sidebar-hamburger" />
+						<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
+						<div class="dropdown-content">
+							<span class="dropdown-hider">
+								<nav>{% include sidebar.html hamburger=true %}</nav>
+							</span>
+						</div>
+					</section>
+				</div>
+				<div class="sidenav">
+					<nav>
+						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
+						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
+						<hr id="keyboard-nav-separator" />
+						{% include sidebar.html %}
+					</nav>
+				</div>
+			</div>
+			<div class="body-grid-right">
+				<div class="rightbox">{% include display_controls.html %}</div>
+			</div>
+			<div class="body-grid-centre">
+				<div class="content">
+					<header>
+						<h1>{{ fancyname }}</h1>
+					</header>
+					<hr />
+					<main id="main-content">
+						<div class="gallery-large">
+							{% for img in images %}
+							<div class="gallery-large-item">
+								<div class="gallery-large-img">
+									<a href="{{ img.src }}" target="_blank" nobrackets="true"
+										><img
+											src="{{ img.src }}"
+											alt="{{ img.alt-text | xml_escape }}"
+											{%
+											if
+											img.pixelated
+											%}class="gallery-pixelated"
+											{%
+											endif
+											-%}
+									/></a>
+								</div>
+								<section>
+									<details>
+										<summary>Image description</summary>
+										<div class="details-content gallery-image-description">
+											<p>{{ img.image-description }}</p>
+										</div>
+									</details>
+								</section>
+								<section>
+									<details>
+										<summary>Metadata</summary>
+										<div class="details-content gallery-metadata">
+											<p>
+												{{ img.filename }}<br />
+												Dimensions: {{ img.width }} x {{ img.height }}<br />
+												Date: {{ img.date | date_to_long_string }}
+											</p>
+										</div>
+									</details>
+								</section>
+							</div>
+							{% endfor %}
+							<section>
+								<h2>Description</h2>
+								<div class="desc-large">{{ content }}</div>
+							</section>
+						</div>
+					</main>
+					<hr />
+					<footer>
+						<div style="clear: both">
+							{% if page.next -%}
+							<p style="float: right; text-align: right">
+								<a href="{{ page.next.url }}">Next item: {{ page.next.fancyname }}</a><br />
+								{{ page.next.date | date_to_string }}
+							</p>
+							{%- endif %} {% if page.previous -%}
+							<p style="float: left; text-align: left">
+								<a href="{{ page.previous.url }}">Previous item: {{ page.previous.fancyname }}</a><br />
+								{{ page.previous.date | date_to_string }}
+							</p>
+							{%- endif %}
+						</div>
+						<p style="text-align: center; clear: both">
+							{{ page.date | date_to_string }}<br />
+							{% if page.date != publish-date -%} Published on {{ publish-date | date_to_string
+							}}<br />
+							{%- endif %}
+							<a href="/photosystems">Back to Photosystems</a>
+						</p>
+						<span class="small-text">
+							{% if page.last_modified_at -%}
+							<p>Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}</p>
+							{%- endif %}
+							<p>See <a href="/licensing">licensing information</a></p>
+						</span>
+					</footer>
+				</div>
+			</div>
+		</div>
+		{% include js_theme_switcher_layout.html %}
+		<script src="/assets/scripts/settings_management_functions.js"></script>
+		<script src="/assets/scripts/display_bg_checker.js"></script>
+		<script src="/assets/scripts/dropdown_display_controls.js"></script>
+		<script src="/assets/scripts/custom_main_content_width.js"></script>
+	</body>
+</html>

@@ -32,6 +32,7 @@ css:
     header-small-colour: "#18294F"
 ---
 <!DOCTYPE html>
+<!--author layout -->
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
@@ -44,43 +45,12 @@ css:
 		<link rel="manifest" href="/site.webmanifest">
 		<link href="/assets/styles/main.css" rel="stylesheet" type="text/css" media="all">
 		<title>
-			{{ page.title }} | SievePlate
+			{{ page.fullname }} | Authors
 		</title>
-		<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/sieveplate/feed.xml" title="SievePlate" />
-		{% seo title=false %}
-		<meta name="theme-color" content="{{ layout.css.dark.bg-checkerdark }}">
+		{% seo title=false -%}
+		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
 		<style>
-			:root {
-				--header-colour: {{ layout.css.dark.header-colour }};
-				--bg-colour: {{ layout.css.dark.bg-colour }};
-				--bg-checkerdark: {{ layout.css.dark.bg-checkerdark }};
-				--bg-checkerlight: {{ layout.css.dark.bg-checkerlight }};
-				--bg-triangle: {{ layout.css.dark.bg-triangle }};
-				--sidebar-colour: {{ layout.css.dark.sidebar-colour }};
-				--text-colour: {{ layout.css.dark.text-colour }};
-				--a-colour: {{ layout.css.dark.a-colour }};
-				--a-visited-colour: {{ layout.css.dark.a-visited-colour }};
-				--a-hover-colour: {{ layout.css.dark.a-hover-colour }};
-				--a-active-colour: {{ layout.css.dark.a-active-colour }};
-				--hr-colour: {{ layout.css.dark.hr-colour }};
-				--tone-colour: {{ layout.css.dark.tone-colour }};
-
-				@media (prefers-color-scheme: light) {
-					--header-colour: {{ layout.css.light.header-colour }};
-					--bg-colour: {{ layout.css.light.bg-colour }};
-					--bg-checkerdark: {{ layout.css.light.bg-checkerdark }};
-					--bg-checkerlight: {{ layout.css.light.bg-checkerlight }};
-					--bg-triangle: {{ layout.css.light.bg-triangle }};
-					--sidebar-colour: {{ layout.css.light.sidebar-colour }};
-					--text-colour: {{ layout.css.light.text-colour }};
-					--a-colour: {{ layout.css.light.a-colour }};
-					--a-visited-colour: {{ layout.css.light.a-visited-colour }};
-					--a-hover-colour: {{ layout.css.light.a-hover-colour }};
-					--a-active-colour: {{ layout.css.light.a-active-colour }};
-					--hr-colour: {{ layout.css.light.hr-colour }};
-					--tone-colour: {{ layout.css.light.tone-colour }};
-				}
-			}
+			{% include layout_style_author.css %}
 		</style>
 	</head>
 
@@ -118,44 +88,40 @@ css:
 				<div class="content">
 					<header>
 						<h1>
-							{{ page.title }}
+							{{ page.fullname }}
 						</h1>
 					</header>
-					<p style="font-style: italic;">
-						{{ page.date | date: "%d %B %Y (%Z)" }}
-						{% assign author = site.authors | find: "author_id", page.author %}
-						{% if author -%}
-						- written by <a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a>
-						{% else -%}
-						- no author found
-						{% endif -%}<br>
-						Tags: {% for tag in page.tags %}{{tag}}{% unless forloop.last %}, {% endunless %}{% endfor %}
-					</p>
 					<hr>
 					<main id="main-content">
-						<article>
-							{{ content }}
-						</article>
-					</main>
-					<hr style="clear: both">
-					<footer>
-						<div style="clear: both;">
-							{% if page.next -%}
-							<p style="float: right; text-align: right;">
-								<a href="{{ page.next.url }}">Next post: {{ page.next.title }}</a><br>
-								{{ page.next.date | date_to_string  }}
-							</p>
-							{%- endif %}
-							{% if page.previous -%}
-							<p style="float: left; text-align: left;">
-								<a href="{{ page.previous.url }}">Previous post: {{ page.previous.title }}</a><br>
-								{{ page.previous.date | date_to_string  }}
-							</p>
-							{%- endif %}
-						</div>
-						<p style="text-align: center; clear: both;">
-							<a href="/sieveplate">See all posts</a>
+						Position: <b>{{ page.position }}</b>
+						<p>
+							{{ page.content }}
 						</p>
+						<h2>
+							Posts
+						</h2>
+						<ul>
+							{% assign filtered_posts = collections.sieveplate_items | where: 'author', page.author_id %}
+							{% for post in filtered_posts %}
+							<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+							{% else %}
+							<li>No posts by this author were found.</li>
+							{% endfor %}
+						</ul>
+						<h2>
+							Author links
+						</h2>
+						<ul>
+						{% for link in page.links %}
+						<li><a href="{{ link.url }}">{{ link.name }}</a></li>
+						{% else %}
+						<li>No links for this author were found.</li>
+						</p>
+						{% endfor %}
+						</ul>
+					</main>
+					<hr>
+					<footer>
 						<span class="small-text">
 							{% if page.last_modified_at -%}
 							<p>
@@ -170,7 +136,7 @@ css:
 				</div>
 			</div>
 		</div>
-		{% include js_theme_switcher_layout.html %}
+		{% include js_theme_switcher_layout.html -%}
 		<script src="/assets/scripts/settings_management_functions.js"></script>
 		<script src="/assets/scripts/display_bg_checker.js"></script>
 		<script src="/assets/scripts/dropdown_display_controls.js"></script>
