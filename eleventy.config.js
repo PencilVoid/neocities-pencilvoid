@@ -53,6 +53,10 @@ export default function (eleventyConfig) {
 	eleventyConfig.addTemplateFormats("scss");
 
 	eleventyConfig.addPassthroughCopy("source/assets");
+	eleventyConfig.addPassthroughCopy("source/games/c2/**/*.js");
+	eleventyConfig.addPassthroughCopy("source/games/c2/**/*.json");
+	eleventyConfig.addPassthroughCopy("source/games/c2/**/*.png");
+	eleventyConfig.addPassthroughCopy("source/site.webmanifest");
 
 	eleventyConfig.addTransform("prettier", function (content) {
 		if ((this.page.outputPath || "").endsWith(".html")) {
