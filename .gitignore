@@ -1,5 +1,3 @@
-**/desktop.ini
 /build
 **/.jekyll-metadata
-/.vscode
 /node_modules
