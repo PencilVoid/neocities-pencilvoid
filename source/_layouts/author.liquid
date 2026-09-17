@@ -45,10 +45,9 @@ css:
 		<link rel="manifest" href="/site.webmanifest">
 		<link href="/assets/styles/main.css" rel="stylesheet" type="text/css" media="all">
 		<title>
-			{{ page.fullname }} | Authors
+			{{ fullname }} | Authors
 		</title>
-		{% seo title=false -%}
-		<meta name="theme-color" content="{{ page.css.dark.bg-checkerdark }}">
+		<meta name="theme-color" content="{{ css.dark.bg-checkerdark }}">
 		<style>
 			{% include layout_style_author.css %}
 		</style>
@@ -88,22 +87,22 @@ css:
 				<div class="content">
 					<header>
 						<h1>
-							{{ page.fullname }}
+							{{ fullname }}
 						</h1>
 					</header>
 					<hr>
 					<main id="main-content">
-						Position: <b>{{ page.position }}</b>
+						Position: <b>{{ position }}</b>
 						<p>
-							{{ page.content }}
+							{{ content }}
 						</p>
 						<h2>
 							Posts
 						</h2>
 						<ul>
-							{% assign filtered_posts = collections.sieveplate_items | where: 'author', page.author_id %}
+							{% assign filtered_posts = collections.sieveplate_items | where: 'data.author', author_id %}
 							{% for post in filtered_posts %}
-							<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+							<li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
 							{% else %}
 							<li>No posts by this author were found.</li>
 							{% endfor %}
@@ -112,20 +111,19 @@ css:
 							Author links
 						</h2>
 						<ul>
-						{% for link in page.links %}
+						{% for link in links %}
 						<li><a href="{{ link.url }}">{{ link.name }}</a></li>
 						{% else %}
 						<li>No links for this author were found.</li>
-						</p>
 						{% endfor %}
 						</ul>
 					</main>
 					<hr>
 					<footer>
 						<span class="small-text">
-							{% if page.last_modified_at -%}
+							{% if last_modified_at -%}
 							<p>
-								Page last modified: {{ page.last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
+								Page last modified: {{ last_modified_at | date: "%d %B %Y %H:%M:%S UTC%z" }}
 							</p>
 							{%- endif %}
 							<p>

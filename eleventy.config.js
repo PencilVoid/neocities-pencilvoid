@@ -17,6 +17,9 @@ export default function (eleventyConfig) {
 	eleventyConfig.addCollection("sieveplate_items", async (collectionsApi) => {
 		return collectionsApi.getFilteredByGlob("source/_posts/*.*");
 	});
+	eleventyConfig.addCollection("authors", async (collectionsApi) => {
+		return collectionsApi.getFilteredByGlob("source/_authors/*.*");
+	});
 
 	eleventyConfig.addGlobalData("layout", "default.liquid");
 

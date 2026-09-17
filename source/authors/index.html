@@ -35,10 +35,10 @@ css:
         header-small-colour: "#18294F"
 ---
 
-{% for author in site.authors %}
+{% for author in collections.authors %}
 <article>
-	<span class="post-list-title"><a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a></span>
-	<b>{{ author.position }}</b>
+	<span class="post-list-title"><a href="/authors/{{ author.data.author_id }}">{{ author.data.fullname }}</a></span>
+	<b>{{ author.data.position }}</b>
 	{% if forloop.last != true %}
 	<span class="hr-light"></span>
 	{% endif %}
