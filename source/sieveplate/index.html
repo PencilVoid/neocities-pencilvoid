@@ -55,14 +55,14 @@ feed_meta: sieveplate
 </section>
 <section class="dropdown">
 	<h2>Browse by tag</h2>
-	{% include dropdown_checked.html id="dropdown-taglist" %} {% for tag in site.tags %}
+	{% include dropdown_checked.liquid id="dropdown-taglist" %} {% for tag in site.tags %}
 	<b>{{ tag[0] }}</b>
 	<ul>
 		{% for post in tag[1] %}
 		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
 	</ul>
-	{% endfor %} {% include dropdown_end.html %}
+	{% endfor %} {% include dropdown_end.liquid %}
 </section>
 <hr />
 <p>

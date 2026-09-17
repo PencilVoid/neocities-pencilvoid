@@ -29,7 +29,7 @@
 						<label class="dropdown-label" for="dropdown-sidebar-hamburger"></label>
 						<div class="dropdown-content">
 							<span class="dropdown-hider">
-								<nav>{% include sidebar.html hamburger=true %}</nav>
+								<nav>{% include sidebar.liquid hamburger=true %}</nav>
 							</span>
 						</div>
 					</section>
@@ -39,7 +39,7 @@
 						<a class="keyboard-nav-link" href="#main-content">Jump to main content</a>
 						<a class="keyboard-nav-link" href="#colour-theme-choice">Jump to display controls</a>
 						<hr id="keyboard-nav-separator" />
-						{% include sidebar.html -%}
+						{% include sidebar.liquid -%}
 					</nav>
 				</div>
 			</div>
@@ -102,7 +102,7 @@
 					/>
 				</div>
 				{% endif -%}
-				<div class="rightbox">{% include display_controls.html -%}</div>
+				<div class="rightbox">{% include display_controls.liquid -%}</div>
 			</div>
 			<div class="body-grid-centre">
 				<div class="content">
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 		</div>
-		{% include js_theme_switcher.html -%}
+		{% include js_theme_switcher.liquid -%}
 		<script src="/assets/scripts/settings_management_functions.js"></script>
 		<script src="/assets/scripts/display_bg_checker.js"></script>
 		<script src="/assets/scripts/dropdown_display_controls.js"></script>
