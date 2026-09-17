@@ -1,5 +1,5 @@
 hr {
-	color: var(--hr-colour,var(--text-colour,#FF417D));
+	color: var(--hr-colour, var(--text-colour, #ff417d));
 	display: block;
 	border: none;
 	height: 0;
@@ -9,7 +9,7 @@ hr {
 }
 
 span.hr-light {
-	color: var(--tone-colour,#FFFFFF);
+	color: var(--tone-colour, #ffffff);
 	display: block;
 	border: 1px dotted;
 	max-height: 1px;

@@ -3,8 +3,8 @@ figure {
 	clear: right;
 	margin: 0.5rem;
 	padding: 0.5rem;
-	background-color: var(--bg-triangle,#220029);
-	border: 1px solid var(--text-colour,#FFEAFC);
+	background-color: var(--bg-triangle, #220029);
+	border: 1px solid var(--text-colour, #ffeafc);
 	height: fit-content;
 	width: min-content;
 	max-width: 20rem;
@@ -17,7 +17,7 @@ figure {
 
 figcaption {
 	font-size: 0.85rem;
-	border-top: 1px solid var(--hr-colour,var(--text-colour,#FF417D));
+	border-top: 1px solid var(--hr-colour, var(--text-colour, #ff417d));
 	padding: 0.25rem;
 }
 

@@ -5,46 +5,45 @@ input[type="number"] {
 	font-family: var(--main-font, atkinson-hyperlegible-next, variables.$sans-serif-font-stack);
 	font-size: 1.2rem;
 	text-align: left;
-	border: 1px solid var(--a-colour,#FF9EBC);
-	color: var(--a-colour,#FF9EBC);
+	border: 1px solid var(--a-colour, #ff9ebc);
+	color: var(--a-colour, #ff9ebc);
 	text-decoration: none;
 	background-color: transparent;
 	line-height: 1.5;
 
 	&:hover {
-		border: 1px solid var(--a-hover-colour,#FBD1FF);
-		color: var(--a-hover-colour,#FBD1FF);
-		text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
+		border: 1px solid var(--a-hover-colour, #fbd1ff);
+		color: var(--a-hover-colour, #fbd1ff);
+		text-decoration: underline dotted var(--a-hover-colour, #fbd1ff);
 	}
 
 	&:active {
-		border: 1px solid var(--a-active-colour,#FFFFFF);
-		color: var(--a-active-colour,#FFFFFF);
-		text-decoration: underline dotted var(--a-hover-colour,#FBD1FF);
+		border: 1px solid var(--a-active-colour, #ffffff);
+		color: var(--a-active-colour, #ffffff);
+		text-decoration: underline dotted var(--a-hover-colour, #fbd1ff);
 	}
 }
-
 
 input[type="radio"] {
 	appearance: none;
 	border-radius: 50%;
 	width: 16px;
 	height: 16px;
-	border: 2px solid var(--a-colour,#FF9EBC);
+	border: 2px solid var(--a-colour, #ff9ebc);
 	transition: 0.2s all linear;
 	margin-right: 5px;
 	position: relative;
 	top: 4px;
 
 	&:hover {
-		border: 3px solid var(--a-hover-colour,#FBD1FF);
+		border: 3px solid var(--a-hover-colour, #fbd1ff);
 	}
 
 	&:active {
-		border: 7px solid var(--a-active-colour,#FFFFFF);
+		border: 7px solid var(--a-active-colour, #ffffff);
 	}
 
 	&:checked {
-		border: 6px solid var(--a-colour,#FF9EBC);
+		border: 6px solid var(--a-colour, #ff9ebc);
 	}
 }

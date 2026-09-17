@@ -35,10 +35,10 @@
 		height: auto;
 		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 		padding: 0.75rem;
-		border-top: 1px solid var(--tone-colour,#FFFFFF);
-		border-right: 1px dashed var(--tone-colour,#FFFFFF);
-		border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
-		border-left: 1px dashed var(--tone-colour,#FFFFFF);
+		border-top: 1px solid var(--tone-colour, #ffffff);
+		border-right: 1px dashed var(--tone-colour, #ffffff);
+		border-bottom: 1px dashed var(--tone-colour, #ffffff);
+		border-left: 1px dashed var(--tone-colour, #ffffff);
 
 		> .dropdown-hider {
 			display: contents;
@@ -49,11 +49,11 @@
 		appearance: none;
 
 		~ label.dropdown-label::before {
-			content: "Show display controls"
+			content: "Show display controls";
 		}
 
 		&:checked ~ label.dropdown-label::before {
-			content: "Hide display controls"
+			content: "Hide display controls";
 		}
 	}
 }
@@ -83,10 +83,10 @@
 		height: auto;
 		transition: height 0.375s cubic-bezier(0, 0.5, 0.25, 1);
 		padding: 0.75rem;
-		border-top: 1px solid var(--tone-colour,#FFFFFF);
-		border-right: 1px dashed var(--tone-colour,#FFFFFF);
-		border-bottom: 1px dashed var(--tone-colour,#FFFFFF);
-		border-left: 1px dashed var(--tone-colour,#FFFFFF);
+		border-top: 1px solid var(--tone-colour, #ffffff);
+		border-right: 1px dashed var(--tone-colour, #ffffff);
+		border-bottom: 1px dashed var(--tone-colour, #ffffff);
+		border-left: 1px dashed var(--tone-colour, #ffffff);
 
 		> .dropdown-hider {
 			display: contents;
@@ -94,17 +94,17 @@
 	}
 
 	> input[type="checkbox"]:not(#display-bg-checker) ~ label.dropdown-label::before {
-		content: "Show navigation"
+		content: "Show navigation";
 	}
 
 	> input[type="checkbox"]:not(#display-bg-checker):checked ~ label.dropdown-label::before {
-		content: "Hide navigation"
+		content: "Hide navigation";
 	}
 }
 
 .sidenav-hamburger {
 	z-index: 1;
-	background-color: var(--sidebar-colour,#1C0023);
+	background-color: var(--sidebar-colour, #1c0023);
 	position: sticky;
 	top: 0;
 	width: 100%;

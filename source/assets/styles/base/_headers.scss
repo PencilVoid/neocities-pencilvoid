@@ -6,7 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-	border-bottom: 1px solid var(--tone-colour,#FFFFFF);
+	border-bottom: 1px solid var(--tone-colour, #ffffff);
 	padding: 0.1ex;
 	margin: 0.75rem 0;
 	box-sizing: border-box;
@@ -14,7 +14,8 @@ h6 {
 	text-decoration: none;
 	text-align: left;
 	font-family: var(--header-font, inconsolata, variables.$mono-font-stack);
-	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1),
+	transition:
+		font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1),
 		font-weight 0.5s cubic-bezier(0, 0.5, 0.25, 1),
 		font-stretch 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
@@ -22,13 +23,13 @@ h6 {
 h1,
 h2,
 h3 {
-	color: var(--header-colour,#220029);
+	color: var(--header-colour, #220029);
 }
 
 h4,
 h5,
 h6 {
-	color: var(--header-small-colour,#FFEAFC);
+	color: var(--header-small-colour, #ffeafc);
 }
 
 h1 {
@@ -39,7 +40,7 @@ h1 {
 }
 
 h2 {
-	background-color:rgba(255, 255, 255, 0.625);
+	background-color: rgba(255, 255, 255, 0.625);
 	font-size: 2.67rem;
 	font-weight: 650;
 	font-stretch: 137.5%;

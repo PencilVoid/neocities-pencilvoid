@@ -3,8 +3,8 @@
 span.code-inline {
 	font-family: var(--monospace-font, atkinson-hyperlegible-mono, variables.$mono-font-stack);
 	font-size: 1.2rem;
-	background-color: var(--sidebar-colour,#1C0023);
-	color: var(--text-colour,#FFEAFC);
+	background-color: var(--sidebar-colour, #1c0023);
+	color: var(--text-colour, #ffeafc);
 	padding: 0.125rem;
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
@@ -15,8 +15,8 @@ span.code-inline {
 div.code-block {
 	font-family: var(--monospace-font, atkinson-hyperlegible-mono, variables.$mono-font-stack);
 	font-size: 1.2rem;
-	background-color: var(--sidebar-colour,#1C0023);
-	color: var(--text-colour,#FFEAFC);
+	background-color: var(--sidebar-colour, #1c0023);
+	color: var(--text-colour, #ffeafc);
 	padding: 0.25rem;
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {

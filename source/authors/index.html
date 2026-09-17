@@ -3,43 +3,44 @@ title: Authors
 description: Authors
 header: Authors
 css:
-  dark:
-    header-colour: "#18294F"
-    bg-colour: "#0C4951"
-    bg-checkerdark: "#105154"
-    bg-checkerlight: "#19686D"
-    bg-triangle: "#103B46"
-    sidebar-colour: "#152F3C"
-    text-colour: "#B2FFB2"
-    a-colour: "#8BFF56"
-    a-visited-colour: "#2CE06E"
-    a-hover-colour: "#B2FFB2"
-    a-active-colour: "#FFFFFF"
-    hr-colour: "#3FF460"
-    tone-colour: "#FFFFFF"
-    header-small-colour: "#B2FFB2"
-  light:
-    header-colour: "#18294F"
-    bg-colour: "#F3BDFA"
-    bg-checkerdark: "#96F7D5"
-    bg-checkerlight: "#B6F9DB"
-    bg-triangle: "#A9E8D9"
-    sidebar-colour: "#A2D8CF"
-    text-colour: "#152F3C"
-    a-colour: "#064D6E"
-    a-visited-colour: "#152F3C"
-    a-hover-colour: "#167397"
-    a-active-colour: "#2195B2"
-    hr-colour: "#188183"
-    tone-colour: "#152F3C"
-    header-small-colour: "#18294F"
+    dark:
+        header-colour: "#18294F"
+        bg-colour: "#0C4951"
+        bg-checkerdark: "#105154"
+        bg-checkerlight: "#19686D"
+        bg-triangle: "#103B46"
+        sidebar-colour: "#152F3C"
+        text-colour: "#B2FFB2"
+        a-colour: "#8BFF56"
+        a-visited-colour: "#2CE06E"
+        a-hover-colour: "#B2FFB2"
+        a-active-colour: "#FFFFFF"
+        hr-colour: "#3FF460"
+        tone-colour: "#FFFFFF"
+        header-small-colour: "#B2FFB2"
+    light:
+        header-colour: "#18294F"
+        bg-colour: "#F3BDFA"
+        bg-checkerdark: "#96F7D5"
+        bg-checkerlight: "#B6F9DB"
+        bg-triangle: "#A9E8D9"
+        sidebar-colour: "#A2D8CF"
+        text-colour: "#152F3C"
+        a-colour: "#064D6E"
+        a-visited-colour: "#152F3C"
+        a-hover-colour: "#167397"
+        a-active-colour: "#2195B2"
+        hr-colour: "#188183"
+        tone-colour: "#152F3C"
+        header-small-colour: "#18294F"
 ---
+
 {% for author in site.authors %}
-	<article>
-		<span class="post-list-title"><a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a></span>
-		<b>{{ author.position }}</b>
+<article>
+	<span class="post-list-title"><a href="/authors/{{ author.author_id }}">{{ author.fullname }}</a></span>
+	<b>{{ author.position }}</b>
 	{% if forloop.last != true %}
-		<span class="hr-light"></span>
-		{% endif %}
-	</article>
+	<span class="hr-light"></span>
+	{% endif %}
+</article>
 {% endfor %}

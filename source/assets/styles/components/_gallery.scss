@@ -3,12 +3,12 @@
 .row {
 	display: grid;
 	justify-content: center;
-	grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	gap: 0.875rem;
 	margin: 2rlh 0;
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
-		grid-template-columns: repeat(auto-fill,200px);
+		grid-template-columns: repeat(auto-fill, 200px);
 		gap: 0.25rem;
 	}
 
@@ -22,10 +22,10 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 0;
-	border: 1px solid var(--text-colour,#FFEAFC);
+	border: 1px solid var(--text-colour, #ffeafc);
 
 	&:hover {
-		border: 1px solid var(--a-hover-colour,#FBD1FF);
+		border: 1px solid var(--a-hover-colour, #fbd1ff);
 	}
 }
 
@@ -34,7 +34,7 @@
 	flex: 0 0 auto;
 	flex-flow: row wrap;
 	margin: 0.5rem;
-	border: 1px solid var(--text-colour,#FFEAFC);
+	border: 1px solid var(--text-colour, #ffeafc);
 	max-width: 100%;
 	max-height: min-content;
 }
@@ -94,7 +94,7 @@
 	width: 100%;
 	max-height: fit-content;
 	align-self: end;
-	border-top: 1px solid var(--text-colour,#FFEAFC);;
+	border-top: 1px solid var(--text-colour, #ffeafc);
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {
 		font-size: 1rem;
@@ -103,7 +103,7 @@
 
 .desc-metadata {
 	font-family: var(--monospace-font, atkinson-hyperlegible-mono, variables.$mono-font-stack);
-	color: var(--text-colour,#FFEAFC);
+	color: var(--text-colour, #ffeafc);
 	background-color: rgba(255, 255, 255, 0.15);
 	text-align: center;
 	line-height: 1.5;
@@ -115,7 +115,7 @@
 
 .gallery-metadata {
 	font-family: var(--monospace-font, atkinson-hyperlegible-mono, variables.$mono-font-stack);
-	color: var(--text-colour,#FFEAFC);
+	color: var(--text-colour, #ffeafc);
 	background-color: rgba(255, 255, 255, 0.15);
 
 	@media (max-width: variables.$thin-screen-width) or (max-aspect-ratio: variables.$thin-screen-aspect-ratio) {

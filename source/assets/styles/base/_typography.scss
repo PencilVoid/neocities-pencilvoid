@@ -4,7 +4,7 @@ body {
 	font-family: var(--main-font, atkinson-hyperlegible-next, variables.$sans-serif-font-stack);
 	font-size: 1.2rem;
 	text-align: left;
-	color: var(--text-colour,#FFEAFC);
+	color: var(--text-colour, #ffeafc);
 	transition: font-size 0.5s cubic-bezier(0, 0.5, 0.25, 1);
 }
 
