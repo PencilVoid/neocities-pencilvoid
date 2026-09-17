@@ -145,52 +145,28 @@ css:
 	>
 </p>
 <hr />
-<div class="info">
-	<div class="info-header">Information</div>
-	<div class="info-content">
-		<p>
-			This is an information box. It contains additional information that is not a warning and is not urgent. Some
-			application examples include a notice about the content of a blog post or some important information about a
-			form.
-		</p>
-	</div>
-</div>
-<div class="warning">
-	<div class="warning-header">
-		<strong>Warning</strong>
-	</div>
-	<div class="warning-content">
-		<p>
-			This is a warning box. It contains warning information and should be paid attention to. It should be used
-			when it is important that the user knows the information it conveys. For example, it may be used if a form
-			requires certain input or a widget only works in certain browsers.
-		</p>
-	</div>
-</div>
-<div class="deny">
-	<div class="deny-header">
-		<b>Denied</b>
-	</div>
-	<div class="deny-content">
-		<p>
-			This is an denial box. It indicates that some action has been denied. It should be used when an evaluation
-			has been performed on the user agent and/or user input and it has determined that the attempted action
-			cannot be carried out.
-		</p>
-	</div>
-</div>
-<div class="urgent">
-	<div class="urgent-header">
-		<strong>URGENT</strong>
-	</div>
-	<div class="urgent-content">
-		<p>
-			This is an urgent box. It is like the warning box but more urgent. It should be used when the user must know
-			the information it conveys as quickly as possible, and there is a high risk of substantial consequences if
-			they do not.
-		</p>
-	</div>
-</div>
+{% include interjection.liquid, type: "info", interjection-header: "Information", content: "
+<p>
+	This is an information box. It contains additional information that is not a warning and is not urgent. Some
+	application examples include a notice about the content of a blog post or some important information about a form.
+</p>
+" -%} {% include interjection.liquid, type: "warning", interjection-header: "Warning", content: "
+<p>
+	This is a warning box. It contains warning information and should be paid attention to. It should be used when it is
+	important that the user knows the information it conveys. For example, it may be used if a form requires certain
+	input or a widget only works in certain browsers.
+</p>
+" -%} {% include interjection.liquid, type: "deny", interjection-header: "Denied", content: "
+<p>
+	This is an denial box. It indicates that some action has been denied. It should be used when an evaluation has been
+	performed on the user agent and/or user input and it has determined that the attempted action cannot be carried out.
+</p>
+" -%} {% include interjection.liquid, type: "urgent", interjection-header: "URGENT", content: "
+<p>
+	This is an urgent box. It is like the warning box but more urgent. It should be used when the user must know the
+	information it conveys as quickly as possible, and there is a high risk of substantial consequences if they do not.
+</p>
+" -%}
 <hr />
 <h4>Lists</h4>
 <ul>
@@ -224,7 +200,7 @@ css:
 <hr />
 <section class="dropdown">
 	<h2>Checked dropdown</h2>
-	{% include dropdown_checked.liquid id="dropdown-checked" %}
+	{% include dropdown_checked.liquid, id: "dropdown-checked" %}
 	<p>
 		This is a dropdown section. It is checked by default. This means it will be open upon page load. The show/hide
 		label can be clicked to open or close it. The HTML for dropdown sections is inserted using Jekyll's include
@@ -234,7 +210,7 @@ css:
 </section>
 <section class="dropdown">
 	<h2>Unchecked dropdown</h2>
-	{% include dropdown_unchecked.liquid id="dropdown-unchecked" %}
+	{% include dropdown_unchecked.liquid, id: "dropdown-unchecked" %}
 	<p>
 		This is a dropdown section. It is unchecked by default. This means it will be closed upon page load. The
 		show/hide label can be clicked to open or close it. The HTML for dropdown sections is inserted using Jekyll's

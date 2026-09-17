@@ -14,7 +14,7 @@
 		document.documentElement.style.setProperty('--hr-colour', '{{ css.dark.hr-colour }}');
 		document.documentElement.style.setProperty('--tone-colour', '{{ css.dark.tone-colour }}');
 		document.documentElement.style.setProperty('--header-small-colour', '{{ css.dark.header-small-colour }}');
-		{% if include.no_switcher != true %}
+		{% if no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = true;
 		document.getElementById("colour-theme-light").checked = false;
 		document.getElementById("colour-theme-auto").checked = false;
@@ -36,7 +36,7 @@
 		document.documentElement.style.setProperty('--hr-colour', '{{ css.light.hr-colour }}');
 		document.documentElement.style.setProperty('--tone-colour', '{{ css.light.tone-colour }}');
 		document.documentElement.style.setProperty('--header-small-colour', '{{ css.light.header-small-colour }}');
-		{% if include.no_switcher != true %}
+		{% if no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = false;
 		document.getElementById("colour-theme-light").checked = true;
 		document.getElementById("colour-theme-auto").checked = false;
@@ -51,7 +51,7 @@
 		} else {
 			colourThemeDark();
 		}
-		{% if include.no_switcher != true %}
+		{% if no_switcher != true %}
 		document.getElementById("colour-theme-dark").checked = false;
 		document.getElementById("colour-theme-light").checked = false;
 		document.getElementById("colour-theme-auto").checked = true;
@@ -73,7 +73,7 @@
 			colourThemeAuto();
 		}
 	})
-	{% if include.no_switcher != true %}
+	{% if no_switcher != true %}
 	document.getElementById("colour-theme-light").addEventListener("change", function(event) {
 		if (document.getElementById("colour-theme-light").checked) {
 			colourThemeLight()
