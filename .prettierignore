@@ -1,2 +1,2 @@
-/source/games/c2/*.js
-/source/games/c2/*.json
+/source/games/c2/**/*.js
+/source/games/c2/**/*.json
