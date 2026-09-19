@@ -2,23 +2,32 @@ import prettier from "prettier";
 import { DateTime } from "luxon";
 import path from "node:path";
 import * as sass from "sass";
+import rssPlugin from "@11ty/eleventy-plugin-rss";
 
 const TIME_ZONE = "system";
 
 export default function (eleventyConfig) {
+	eleventyConfig.addPlugin(rssPlugin);
+
 	eleventyConfig.addGlobalData("site", {
-		url: "https://pencilvoid.neocities.org",
+		url: "https://pencilvoid.neocities.org/",
 		title: "pencilvoid.neocities.org",
 	});
 
-	eleventyConfig.addCollection("photosystems_items", async (collectionsApi) => {
-		return collectionsApi.getFilteredByGlob("source/_gallery_items/*.*");
+	eleventyConfig.addCollection("photosystems_items", (collectionsApi) => {
+		return collectionsApi.getAll().filter((item) => {
+			return item.inputPath.startsWith("./source/_gallery_items/");
+		});
 	});
-	eleventyConfig.addCollection("sieveplate_items", async (collectionsApi) => {
-		return collectionsApi.getFilteredByGlob("source/_posts/*.*");
+	eleventyConfig.addCollection("sieveplate_items", (collectionsApi) => {
+		return collectionsApi.getAll().filter((item) => {
+			return item.inputPath.startsWith("./source/_posts/");
+		});
 	});
-	eleventyConfig.addCollection("authors", async (collectionsApi) => {
-		return collectionsApi.getFilteredByGlob("source/_authors/*.*");
+	eleventyConfig.addCollection("authors", (collectionsApi) => {
+		return collectionsApi.getAll().filter((item) => {
+			return item.inputPath.startsWith("./source/_authors/");
+		});
 	});
 
 	eleventyConfig.addGlobalData("layout", "default.liquid");
@@ -29,10 +38,7 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.addExtension("scss", {
 		outputFileExtension: "css",
-
-		// opt-out of Eleventy Layouts
 		useLayouts: false,
-
 		compile: async function (inputContent, inputPath) {
 			let parsed = path.parse(inputPath);
 			// Don’t compile file names that start with an underscore

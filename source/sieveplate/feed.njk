@@ -1,0 +1,55 @@
+---
+{
+    "layout": false,
+    "permalink": "sieveplate/feed.xml",
+    "eleventyExcludeFromCollections": true,
+    "type": "atom",
+    "outputPath": "sieveplate/feed.xml",
+    "collection": { "name": "sieveplate_items", "limit": 0 },
+    "metadata":
+        {
+            "language": "en",
+            "title": "SievePlate",
+            "description": "This is a longer description about your blog.",
+            "base": "https://pencilvoid.neocities.org/",
+            "author": { "name": "PencilVoid" },
+        },
+    "stylesheet": "/assets/styles/feed.css",
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/assets/styles/fonts.css"?>
+<?xml-stylesheet href="/assets/styles/feed.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}" xmlns:very="{{ metadata.base | addPathPrefixToFullUrl }}">
+	<title>{{ metadata.title }}</title>
+	<subtitle>{{ metadata.description }}</subtitle>
+	<link href="{{ metadata.base | addPathPrefixToFullUrl }}{{ permalink }}" rel="self" type="application/atom+xml" />
+	<link href="{{ metadata.base | addPathPrefixToFullUrl }}" rel="alternate" type="text/html" />
+	<updated>{{ collections.sieveplate_items | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+	</author>
+	{%- for post in collections.sieveplate_items | reverse %} {%- if (loop.index <= collection.limit ) or collection.limit < 1 %} {%- set absolutePostUrl %}{{ post.url |
+	htmlBaseUrl(metadata.base) }}{% endset %}
+	<entry>
+		<title>{{ post.data.title }}</title>
+		<author>
+			<name>{{ metadata.author.name }}</name>
+		</author>
+		<link href="{{ absolutePostUrl }}"></link>
+		<updated>{{ post.date | dateToRfc3339 }}</updated>
+		<id>{{ absolutePostUrl }}</id>
+		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+	</entry>
+	{%- endif %} {%- endfor %}
+	<very:veryimportant
+		>Hey! If you're seeing this you likely just tried to open the SievePlate Atom feed in your browser. If you were
+		trying to subscribe to the feed, just opening it in your browser won't work. Your feed reader should have a tool
+		that allows you to add this to your reading list. Go to the feed reader's page and look for an "add feed"
+		button. Then you can copy-paste the URL of this page in. Your feed reader might also have a tool to
+		automatically detect and add feeds, which should work on this page or the main SievePlate page or any SievePlate
+		post. You can use your browser's back button to go back to SievePlate. Thank you for your
+		interest!</very:veryimportant
+	>
+</feed>

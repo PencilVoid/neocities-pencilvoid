@@ -45,13 +45,13 @@ css:
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link href="/assets/styles/main.css" rel="stylesheet" type="text/css" media="all" />
-		<title>{{ fancyname }} | Photosystems</title>
 		<link
 			type="application/atom+xml"
 			rel="alternate"
-			href="{{ site.url }}/photosystems/feed.xml"
+			href="/photosystems/feed.xml"
 			title="Photosystems"
 		/>
+		<title>{{ fancyname }} | Photosystems</title>
 		{% for img in images -%} {% unless img.embed == false -%}
 		<meta property="og:image" content="{{ site.url }}{{ img.src }}" />
 		{% endunless -%} {% endfor -%}

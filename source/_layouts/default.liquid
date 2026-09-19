@@ -11,6 +11,21 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link href="/assets/styles/main.css" rel="stylesheet" type="text/css" media="all" />
+		{%- if feed_meta == "photosystems" -%}
+		<link
+			type="application/atom+xml"
+			rel="alternate"
+			href="/photosystems/feed.xml"
+			title="Photosystems"
+		/>
+		{%- elsif feed_meta == "sieveplate" -%}
+		<link
+			type="application/atom+xml"
+			rel="alternate"
+			href="/sieveplate/feed.xml"
+			title="SievePlate"
+		/>
+		{%- endif -%}
 		<title>{{ title }}</title>
 		<meta name="theme-color" content="{{ css.dark.bg-checkerdark }}" />
 		<style>

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/PencilVoid/neocities-pencilvoid#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
     "sass": "^1.104.1"
   },
   "devDependencies": {
