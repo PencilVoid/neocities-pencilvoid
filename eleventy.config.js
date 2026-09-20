@@ -14,11 +14,6 @@ export default function (eleventyConfig) {
 		title: "pencilvoid.neocities.org",
 	});
 
-	eleventyConfig.addCollection("photosystems_items", (collectionsApi) => {
-		return collectionsApi
-			.getFilteredByGlob(["source/_gallery_items/*.md", "source/_gallery_items/*.html"])
-			.sort((a, b) => a.date - b.date); /* why does this make it work?????????????? */
-	});
 	eleventyConfig.addCollection("sieveplate_items", (collectionsApi) => {
 		return collectionsApi
 			.getFilteredByGlob(["source/_posts/*.md", "source/_posts/*.html"])
@@ -28,6 +23,13 @@ export default function (eleventyConfig) {
 		return collectionsApi
 			.getFilteredByGlob(["source/_authors/*.md", "source/_authors/*.html"])
 			.sort((a, b) => a.date - b.date);
+	});
+	eleventyConfig.addCollection("photosystems_items", (collectionsApi) => {
+		return collectionsApi
+			.getFilteredByGlob(["source/_gallery_items/*.md", "source/_gallery_items/*.html"])
+			.sort(
+				(a, b) => a.data["create-date"] - b.data["create-date"],
+			); /* why does this make it work?????????????? */
 	});
 
 	eleventyConfig.addGlobalData("layout", "default.liquid");

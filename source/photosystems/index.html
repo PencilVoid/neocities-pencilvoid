@@ -52,8 +52,8 @@ feed_meta: "photosystems"
 	extra context.
 </p>
 
-{% assign items_by_year = collections.photosystems_items | group_by_exp:"item", "item.date | date: '%Y'" | reverse %}
-{%- for year in items_by_year -%}
+{% assign items_by_year = collections.photosystems_items | group_by_exp:"item", "item.data.create-date | date: '%Y'" |
+reverse %} {%- for year in items_by_year -%}
 
 <h2 id="{{year.name}}">{{year.name}}</h2>
 <div class="row">
@@ -82,7 +82,7 @@ feed_meta: "photosystems"
 			<div class="desc desc-metadata">
 				<span>{{ item.data.artname | replace: "_", "<wbr />_<wbr />" }}</span>
 				<span>"{{ item.data.fancyname | replace: "_", "<wbr />_<wbr />" }}"</span>
-				<span>{{ item.date | date_to_long_string }}</span>
+				<span>{{ item.data.create-date | date_to_long_string }}</span>
 				{%- if item.data.note -%}<span>Note: {{ item.data.note }}</span>{%- endif -%}
 			</div>
 		</div>
