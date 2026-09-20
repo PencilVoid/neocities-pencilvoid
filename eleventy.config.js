@@ -15,19 +15,19 @@ export default function (eleventyConfig) {
 	});
 
 	eleventyConfig.addCollection("photosystems_items", (collectionsApi) => {
-		return collectionsApi.getAll().filter((item) => {
-			return item.inputPath.startsWith("./source/_gallery_items/");
-		});
+		return collectionsApi
+			.getFilteredByGlob(["source/_gallery_items/*.md", "source/_gallery_items/*.html"])
+			.sort((a, b) => a.date - b.date); /* why does this make it work?????????????? */
 	});
 	eleventyConfig.addCollection("sieveplate_items", (collectionsApi) => {
-		return collectionsApi.getAll().filter((item) => {
-			return item.inputPath.startsWith("./source/_posts/");
-		});
+		return collectionsApi
+			.getFilteredByGlob(["source/_posts/*.md", "source/_posts/*.html"])
+			.sort((a, b) => a.date - b.date);
 	});
 	eleventyConfig.addCollection("authors", (collectionsApi) => {
-		return collectionsApi.getAll().filter((item) => {
-			return item.inputPath.startsWith("./source/_authors/");
-		});
+		return collectionsApi
+			.getFilteredByGlob(["source/_authors/*.md", "source/_authors/*.html"])
+			.sort((a, b) => a.date - b.date);
 	});
 
 	eleventyConfig.addGlobalData("layout", "default.liquid");
